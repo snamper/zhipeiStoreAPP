@@ -1,0 +1,626 @@
+/*修理厂端国际目录*/
+.es-internationalBrandBox {
+  width: 100%;
+  margin-top: -1px;
+  background: #fff url(../images/title_internationalBrand.png) no-repeat center top;
+  background-size: 5.76rem;
+  padding-top: 1.28rem;
+  border-top: 1px solid #f3f5f7;
+  position: relative;
+  z-index: 3;
+  float: left;
+  clear: left;
+}
+.es-internationalBrandBox ul {
+  width: 100%;
+  border-top: 1px solid #f3f5f7;
+  float: left;
+  clear: left;
+}
+.es-internationalBrandBox ul li {
+  width: 25%;
+  height: 2rem;
+  border-bottom: 1px solid #f3f5f7;
+  border-right: 1px solid #f3f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  clear: none;
+}
+.es-internationalBrandBox ul li>span.es-labelBox {
+  width: auto;
+  height: .44rem;
+  padding: 0 .08rem;
+  background: url(../images/label_purchase.png) no-repeat top center;
+  background-size: 100% .44rem;
+  font-size: .24rem;
+  line-height: .36rem;
+  text-align: center;
+  color: #fff;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: .16rem;
+  z-index: 3;
+}
+.es-internationalBrandBox ul li.es-purchaseBox>span.es-labelBox {
+  display: block;
+}
+.es-internationalBrandMain {
+  width: 100%;
+  float: left;
+  clear: none;
+}
+.es-internationalBrandMain>p.es-internationalBrandName {
+  width: 100%;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #000;
+  float: left;
+  clear: none;
+}
+.es-internationalBrandMain>a.es-renewButton {
+  width: 100%;
+  font-size: .28rem;
+  line-height: .56rem;
+  text-align: center;
+  color: #377de8;
+  display: none;
+  float: left;
+  clear: none;
+}
+.es-internationalBrandBox ul li.es-purchaseBox .es-renewBox>a.es-renewButton {
+  display: block;
+}
+.es-followBrandBox ul li.et-moreBox {
+  height: 2.24rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.es-followBrandBox ul li.et-moreBox>p {
+  width: 100%;
+  height: auto;
+  background: url(../images/pic_more.png) no-repeat top center;
+  background-size: .48rem;
+  padding: .48rem 0 .12rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: center;
+  color: #000;
+  float: left;
+  clear: left;
+}
+
+.et-adPosition {
+  width: 100%;
+  height: auto;
+  min-height: 6.4rem;
+  float: left;
+  clear: left;
+}
+
+.et-resultDistributorPage {
+  background: none;
+  padding: 0;
+}
+.et-resultDistributorPage .ec-scavengingResultTopBox {
+  border-radius: 0 0 .24rem .24rem;
+  margin-top: 0;
+  border-bottom: 0;
+}
+.et-resultDistributorPage .ec-carInfoBox dd {
+  width: 7.6rem;
+}
+.et-resultDistributorPage .ec-modularBox {
+  width: 92%;
+  margin-left: 4%;
+}
+.ec-modularTitle {
+  width: 100%;
+  height: 1.12rem;
+  background: #f6f6f6 url(../images/pic_decorate.png) no-repeat .4rem center;
+  background-size: .08rem;
+  padding-left: .72rem;
+  padding-right: .4rem;
+  float: left;
+  clear: left;
+}
+.ec-modularTitle>p {
+  width: auto;
+  font-size: .4rem;
+  line-height: 1.12rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: left;
+}
+.ec-modularTitle>span {
+  width: auto;
+  font-size: .32rem;
+  line-height: 1.12rem;
+  text-align: center;
+  color: #e74c3c;
+  float: right;
+  clear: none;
+}
+.ec-modularTitle>span.ec-moneyText {
+  font-size: .4rem;
+}
+.ec-modularTitleRight {
+  width: auto;
+  height: .64rem;
+  margin-top: .24rem;
+  margin-left: .32rem;
+  border-left: 1px solid #d8d8d8;
+  float: right;
+  clear: none;
+}
+.ec-modularTitleRight>a {
+  width: auto;
+  margin-left: .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #377de8;
+  float: left;
+  clear: none;
+}
+.vinResultPage .ec-modularBox {
+  width: 92%;
+  margin-left: 4%;
+  margin-bottom: 1.2rem;
+  margin-top: .4rem;
+}
+/*修理厂端常规目录*/
+.es-followBrandBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.es-followBrandBox ul {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.es-followBrandBox ul li {
+  width: 25%;
+  border-right: 1px solid #f3f5f7;
+  border-bottom: 1px solid #f3f5f7;
+  float: left;
+  clear: none;
+}
+.es-followBrandBox ul li>span.es-brandCataloguePic {
+  width: 100%;
+  height: 1.28rem;
+  margin-top: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.es-followBrandBox ul li>span.es-brandCataloguePic img {
+  width: auto;
+  height: auto;
+  max-width: 1.76rem;
+  max-height: 1.28rem;
+}
+.es-followBrandBox ul li>p.es-brandCatalogueName {
+  width: 100%;
+  height: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #000;
+  float: left;
+  clear: left;
+}
+.ec-modularBox {
+  width: 100%;
+  background: #fff;
+  margin-bottom: .4rem;
+  box-shadow: 0 0 .2rem rgba(0,0,0,0.1);
+  border-radius: .2rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+
+/*轮播眼样式*/
+.mint-swipe {
+  height: 200px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mint-swipe-item {
+  line-height: 200px;
+  /*background: red;*/
+}
+
+.slide1 {
+  background-color: #0089dc;
+  color: #fff;
+}
+
+.slide2 {
+  background-color: #ffd705;
+  color: #000;
+}
+
+.slide3 {
+  background-color: #ff2d4b;
+  color: #fff;
+}
+#sweper .mint-swipe .mint-swipe-indicators .mint-swipe-indicator{
+  opacity: 0.5;
+  border: 1px solid #fff;
+  background: rgba(0,0,0,0.36);
+}
+#sweper .mint-swipe-indicators .is-active {
+  background-color: #d53533;
+}
+.et-adPosition {
+  width: 100%;
+  height: 11rem;
+  /* min-height: 6.4rem; */
+  overflow: hidden;
+  position: relative;
+  float: left;
+  clear: left;
+  margin-top: -1.2rem;
+}
+.et-adPosition>span {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.et-adPosition>span>img {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.et-closeAdBox {
+  width: auto;
+  padding: .24rem 0;
+  background: rgba(0,0,0,0.78);
+  border-radius: .12rem;
+  position: absolute;
+  right: .4rem;
+  top: .4rem;
+
+  /*margin-top: 1.2rem;*/
+}
+.et-closeAdBox>span {
+  width: 1.2rem;
+  /*padding: 0 .24rem;*/
+  height: .4rem;
+  border-right: 1px solid #fff;
+  font-size: .32rem;
+  line-height: .45rem;
+  text-align: center;
+  overflow: hidden;
+  color: #f1c40f;
+  float: left;
+  clear: left;
+}
+.et-closeAdBox>a {
+  width: auto;
+  height: .4rem;
+  /*border-right: 1px solid #fff;*/
+  padding: 0 .48rem 0 .2rem;
+  margin-right: .2rem;
+  background: url(../images/icon_closeWhite.png) no-repeat right center;
+  background-size: .48rem;
+  font-size: .32rem;
+  line-height: .4rem;
+  text-align: center;
+  color: #fff;
+  float: left;
+  clear: none;
+}
+.es-followBrandBox ul li.et-moreBox>p.et-newBox {
+  background: url(../images/icon_newsRed.png) no-repeat top center;
+  background-size: .48rem;
+  padding: .68rem 0 .1rem;
+}
+
+
+
+/*20190211é«˜å³°æ—¶é—´æ®µæç¤ºä¼˜åŒ–æ ·å¼*/
+.fa-lineUpTips {
+	width: 100%;
+	padding: 1.6rem 0 2.08rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.fa-lineUpTips>dl>dt {
+	width: 100%;
+	padding: 1.84rem 0 .48rem;
+	background: url(../images/pic_lineUp.gif) no-repeat center top;
+	background-size: 1.44rem;
+	font-size: .4rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #282828;
+	float: left;
+	clear: left;
+}
+.fa-lineUpTips>dl>dd {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.fa-lineUpTips>dl>dd>span {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.fa-lineUpTips>dl>dd>span>a {
+	width: 4rem;
+	height: auto;
+	border-radius: .48rem;
+	background-image: linear-gradient(to bottom, #ff7070 0%, #e74c3c 100%);
+	font-size: .4rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #fff;
+	display: block;
+}
+.fa-lineUpTips>dl>dd>p {
+	width: 100%;
+	padding-top: .12rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.fa-lineUpTips>dl>dd>p>a {
+	width: auto;
+	height: auto;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #377de8;
+	display: block;
+}
+
+/*0212è¡¥å……çš„æ ·å¼*/
+.fa-lineUpTips>dl.fa-lineUpFail {
+	padding: .48rem 0;
+}
+.fa-lineUpTips>dl.fa-lineUpFail>dt {
+	width: 100%;
+	padding: 1.84rem 0 .48rem;
+	background: url(../images/pic_lineUpFail.png) no-repeat center top;
+	background-size: 1.44rem;
+	font-size: .4rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #282828;
+	float: left;
+	clear: left;
+}
+
+
+/*0220新增样式*/
+.es-followBrandBox ul li {
+	padding: .36rem 0;
+	position: relative;
+}
+.es-followBrandBox ul li>span.es-brandCataloguePic {
+	height: .96rem;
+	margin-top: 0;
+}
+.es-followBrandBox ul li>span.es-brandCataloguePic b {
+	width: .96rem;
+	height: .96rem;
+	border-radius: .08rem;
+	background: #fff;
+	font-size: .36rem;
+	font-weight: normal;
+	line-height: .96rem;
+	text-align: center;
+	color: #333;
+	display: block;
+}
+.es-followBrandBox ul li>span.es-brandCataloguePic b.fc-brandBig {
+	background: #f6f6f6;
+}
+.es-followBrandBox ul li>span.es-brandCataloguePic b.fc-newsBig {
+	background: url(../images/icon_newsBig.png) no-repeat center center;
+	background-size: 100%;
+}
+.es-followBrandBox ul li>p.es-brandCatalogueName {
+	margin: .32rem 0 0;
+	line-height: .56rem;
+  font-size: .36rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*0221 附近在售品牌*/
+.fc-nearbyBrandBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.fc-nearbyBrandTitle {
+	width: 100%;
+	height: 1.28rem;
+	padding: 0 .4rem;
+	border-bottom: 1px solid #f2f2f2;
+	float: left;
+	clear: left;
+}
+.fc-nearbyBrandTitle>dl>dt {
+	width: auto;
+	font-size: .36rem;
+	line-height: 1.28rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.fc-nearbyBrandTitle>dl>dd {
+	width: auto;
+	float: right;
+	clear: none;
+}
+.fc-nearbyBrandTitle>dl>dd>a {
+	width: auto;
+	height: 1.28rem;
+	font-size: .32rem;
+	line-height: 1.28rem;
+	text-align: left;
+	color: #0B85F5;
+	float: left;
+	clear: none;
+}
+.fc-nearbyBrandTitle>dl>dd>a.fc-changeLink {
+	padding-left: .48rem;
+	background: url(../images/icon_replace.png) no-repeat left center;
+	background-size: auto .32rem;
+	margin-right: .4rem;
+}
+.es-followBrandBox ul li>span.fc-buttonAdd {
+	width: 100%;
+	padding-top: .24rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.es-followBrandBox ul li>span.fc-buttonAdd>a {
+	width: 1.44rem;
+	height: .64rem;
+	border-radius: .16rem;
+	background: #e74c3c;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: none;
+}
+.es-followBrandBox ul li>span.fc-newsLabel {
+	width: auto;
+	height: auto;
+	padding: 0 .08rem;
+	border-radius: .24rem .04rem .24rem .04rem;
+	background: #feede8;
+	font-size: .2rem;
+	line-height: .32rem;
+	text-align: center;
+	color: #e74c3c;
+	position: absolute;
+	top: .2rem;
+	right: .2rem;
+	z-index: 3;
+}
+
+/*0221新品招商*/
+.fc-advertisementBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.fc-advertisementTitle {
+	width: 100%;
+	height: 1.28rem;
+	padding: 0 .4rem;
+	border-bottom: 1px solid #f2f2f2;
+	float: left;
+	clear: left;
+}
+.fc-advertisementTitle>p {
+	width: auto;
+	font-size: .36rem;
+	line-height: 1.28rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.fc-advertisementMain {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.fc-advertisementMain>ul>li {
+	width: 50%;
+	height: 2rem;
+    border-right: 1px solid #f3f5f7;
+    border-bottom: 1px solid #f3f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    float: left;
+    clear: none;
+}
+.fc-advertisementMain>ul>li {
+	width: 50%;
+	height: 2rem;
+    border-right: 1px solid #f3f5f7;
+    border-bottom: 1px solid #f3f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    float: left;
+    clear: none;
+}
+.fc-advertisementMain>ul>li>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/*新收录品牌提醒*/
+.fc-newIncludedBrands {
+	width: 100%;
+    margin: 0 0 .4rem 0;
+    background: #fff;
+	border: 1px solid #FFAFAF;
+	border-radius: .08rem;
+	background: #FFF3F3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    float: left;
+    clear: left;
+}
+.fc-newIncludedBrands>span {
+	width: auto;
+	margin-right: .4rem;
+	font-size: .36rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #F51F1F;
+	float: left;
+	clear: none;
+}
+.fc-newIncludedBrands>a {
+	width: auto;
+	font-size: .36rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #0B85F5;
+	float: left;
+	clear: none;
+}

@@ -1,0 +1,95 @@
+/*配件更换周期*/
+.ec-replaceCycleBox {
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: .4rem;
+  background: #fafafa;
+  border-radius: 0 0 .32rem .32rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: none;
+  float: left;
+  clear: left;
+}
+
+.ec-replaceCycleBox .ec-modularTitle {
+  width: 100%;
+  height: auto;
+  background: none;
+  padding: 0;
+  font-size: .32rem;
+  line-height: .72rem;
+  margin-top: .5rem;
+  text-align: center;
+  color: #bcbcbc;
+}
+
+.ec-replaceCycleBox .ec-maintainSchedule {
+  margin-top: -.32rem;
+}
+
+.ec-replaceCycleBox .ec-maintainSchedule li {
+  width: 2.8rem;
+  margin-bottom: 0;
+  background: #fff;
+  padding: .12rem 0;
+}
+
+.ec-replaceCycleBox .ec-maintainSchedule li>span {
+  line-height: .48rem;
+}
+
+.ec-replaceCycleBox .ec-modularFool {
+  border: 0;
+}
+
+/*保养周期表*/
+.ec-maintainSchedule {
+  width: 100%;
+  max-height: 1.96rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainSchedule li {
+  width: 2.533rem;
+  margin: .32rem 0 .32rem .4rem;
+  padding: .2rem 0;
+  border: 1px solid #e8e8e8;
+  border-radius: .08rem;
+  float: left;
+  clear: none;
+}
+
+.ec-maintainSchedule li>p {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainSchedule li>p>a {
+  color: #282828;
+}
+
+.ec-maintainSchedule li>span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.ec-openBox {
+  height: auto;
+  max-height: none;
+}
+
+.ec-openBox li>p>a {
+  color: #377de8;
+}

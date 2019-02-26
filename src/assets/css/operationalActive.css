@@ -1,0 +1,603 @@
+
+/*1106运营活动*/
+.pageBox {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  display: block;
+  background: #fd891a url(../images/operationalActive/banner_01.png) no-repeat center top;
+  background-size: 100%;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+/*领取模块样式*/
+.boxBG {
+  width: 100%;
+  height: auto;
+  padding: .4rem;
+  margin-bottom: .64rem;
+  background: #fff2e3;
+  border-radius: .08rem;
+  box-shadow: 0 .12rem .2rem #e42f12;
+  float: left;
+  clear: left;
+}
+
+.progressBox {
+  padding-top: 1.44rem;
+}
+.progressBarBox {
+  width: 7.92rem;
+  height: .48rem;
+  margin-left: .24rem;
+  background: #ffe6ca;
+  border-radius: .24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.progressBarBorder {
+  width: 7.8rem;
+  height: .36rem;
+  border-radius: .18rem;
+  position: relative;
+  float: left;
+  clear: left;
+}
+.progressBarBorder>p {
+  width: 2rem;
+  height: 1.16rem;
+  margin-left: -1rem;
+  background: url(../images/operationalActive/icon_location.png) no-repeat center top;
+  background-size: 100%;
+  font-size: .32rem;
+  line-height: .92rem;
+  text-align: center;
+  color: #fff2e3;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: .24rem;
+  z-index: 300;
+}
+.progressBarBG {
+  width: 7.8rem;
+  height: .36rem;
+  background: #ffba7e;
+  border-radius: .18rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+.progressBarBG>span {
+  width: auto;
+  height: .36rem;
+  background: url(../images/operationalActive/pic_progressBar.png) repeat left center;
+  background-size: auto 100%;
+  display: block;
+  float: left;
+  clear: left;
+}
+.progressBarNumber {
+  width: 7.92rem;
+  height: .68rem;
+  margin-left: .24rem;
+  position: relative;
+  float: left;
+  clear: left;
+}
+.progressBarNumber span {
+  width: .96rem;
+  height: .68rem;
+  font-size: .32rem;
+  line-height: .68rem;
+  text-align: center;
+  color: #ffba7e;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.progressBarNumber span.leftBox {
+  left: -.36rem;
+}
+.progressBarNumber span.rightBox {
+  right: -.36rem;
+}
+
+.progressText {
+  width: 100%;
+  height: auto;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  float: left;
+  clear: left;
+}
+.textRed {
+  color: #e74c3c;
+}
+.textGreen {
+  color: #1abc9c;
+}
+
+.progressButton {
+  width: 100%;
+  height: auto;
+  padding-bottom: .72rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.progressButton>a {
+  width: 3.2rem;
+  height: .8rem;
+  background: #ea422f;
+  border-radius: .4rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #fff2e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.progressButton>a.disableButton {
+  background: #ffdab4;
+  color: #f0974a;
+}
+
+.receiveBox {
+  width: 100%;
+  border-top: 1px solid #ffdab4;
+  float: left;
+  clear: left;
+}
+.receiveBox dt {
+  width: 100%;
+  padding-top: .16rem;
+  font-size: .4rem;
+  line-height: .84rem;
+  text-align: left;
+  color: #181818;
+  float: left;
+  clear: left;
+}
+.receiveBox dd {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: left;
+}
+.receiveBox dd p {
+  width: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: none;
+}
+.receiveBox dd span {
+  width: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #acacac;
+  float: right;
+  clear: none;
+}
+
+/*活动介绍*/
+.activityText {
+  width: 100%;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: justify;
+  color: #ea422f;
+  float: left;
+  clear: left;
+}
+.activityShop {
+  width: 100%;
+  margin-top: .32rem;
+  border-top: 1px solid #ffdab4;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+.activityShop dt {
+  width: 100%;
+  background: #fff2e3;
+  font-size: .32rem;
+  line-height: 1.12rem;
+  text-align: left;
+  color: #181818;
+  position: relative;
+  z-index: 3;
+  float: left;
+  clear: left;
+}
+.activityShop dd {
+  width: 100%;
+  height: auto;
+  /*max-height: 6.82rem;*/
+  /*margin-top: -.32rem;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  float: left;
+  clear: left;
+}
+.activityShop dd >a {
+  width: 2.58rem;
+  height: 1.16rem;
+  margin: .32rem .32rem 0 0;
+  background: #fff;
+  border: 1px solid #ffdab4;
+  font-size: .32rem;
+  line-height: .54rem;
+  text-align: center;
+  color: #ea422f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+
+/*现金奖励规则*/
+.ruleBox dt {
+  width: 100%;
+  height: .84rem;
+  margin-bottom: .16rem;
+  background: url(../images/operationalActive/title_01.png) no-repeat center center;
+  background-size: auto .44rem;
+  float: left;
+  clear: left;
+}
+.ruleBox dd {
+  width: 100%;
+  height: auto;
+  padding-left: .36rem;
+  float: left;
+  clear: left;
+}
+.ruleBox dd span {
+  width: .36rem;
+  margin-left: -.36rem;
+  font-size: .2rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #fd891a;
+  float: left;
+  clear: none;
+}
+.ruleBox dd p {
+  width: 100%;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #333;
+  float: left;
+  clear: none;
+}
+.ruleBox dd p b {
+  color: #ea422f;
+}
+
+/*分期支付的3大好处*/
+.introduceBox dt {
+  width: 100%;
+  height: .84rem;
+  margin-bottom: -.32rem;
+  background: url(../images/operationalActive/title_02.png) no-repeat center center;
+  background-size: auto .44rem;
+  float: left;
+  clear: left;
+}
+.introduceBox dd {
+  width: 100%;
+  height: auto;
+  padding-top: .64rem;
+  float: left;
+  clear: left;
+}
+.introduceBox dd p {
+  width: 100%;
+  height: auto;
+  margin-bottom: .2rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #666;
+  float: left;
+  clear: left;
+}
+.introduceBox dd p.foolBox {
+  text-align: center;
+}
+.introduceBox dd p.foolBox b {
+  width: 100%;
+  font-size: .48rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.introduceBox dd span {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: left;
+}
+.introduceBox dd span img {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: left;
+}
+
+/*小元素*/
+.decorateBox {
+  width: 2.92rem;
+  height: 4.64rem;
+  background: url(../images/operationalActive/pic_01.png) no-repeat left top;
+  background-size: auto 100%;
+  position: absolute;
+  left: 0;
+  z-index: 3;
+}
+
+/*门店信息弹层*/
+.shopPop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.48);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 70;
+}
+.shopPopBox {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 56;
+}
+.popHead {
+  width: 100%;
+  height: 1.04rem;
+  background: #f6f6f6;
+  border-bottom: 1px solid #ccdae8;
+  float: left;
+  clear: left;
+}
+.popHead p {
+  width: auto;
+  height: 1.04rem;
+  margin-left: .32rem;
+  font-size: .4rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #454545;
+  float: left;
+  clear: left;
+}
+.popHead a {
+  width: auto;
+  height: 1.04rem;
+  margin-right: .32rem;
+  font-size: .56rem;
+  line-height: .96rem;
+  text-align: left;
+  color: #d53533;
+  float: right;
+  clear: none;
+}
+.popMain {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.shopThead {
+  width: 100%;
+  background: #efefef;
+  float: left;
+  clear: left;
+}
+.shopThead li {
+  height: .84rem;
+  font-size: .32rem;
+  line-height: .84rem;
+  text-align: center;
+  color: #787878;
+  float: left;
+  clear: none;
+}
+.shopName {
+  width: 62%;
+}
+.contacts {
+  width: 22%;
+}
+.telephone {
+  width: 16%;
+}
+
+.shopTbody {
+  width: 100%;
+  height: 8rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-left: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  /*float: left;*/
+  /*clear: left;*/
+}
+.shopTbody table {
+  width: 100%;
+  /*float: left;*/
+  /*clear: left;*/
+}
+.shopTbody table td {
+  font-size: .36rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #333;
+  border-right: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+.shopTbody table td.shopName {
+  text-align: left;
+  padding-left: .32rem;
+}
+.shopTbody table td.telephone a {
+  width: 100%;
+  height: 1.04rem;
+  background: url(../images/operationalActive/icon_telOfferResult.png) no-repeat center center;
+  background-size: .48rem;
+  float: left;
+  clear: left;
+}
+/*é—¨åº—ä¿¡æ¯ç›´æŽ¥å±•ç¤º*/
+.activityShopTable {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  float: left;
+  clear: left;
+}
+.activityShopTable .shopName {
+  width: 62%;
+}
+.activityShopTable .contacts {
+  width: 20%;
+}
+.activityShopTable .telephone {
+  width: 18%;
+}
+.activityShopTable .shopThead {
+  background: #ffdab4;
+}
+.activityShopTable .shopThead li {
+  color: #181818;
+}
+.activityShopTable .shopTbody {
+  height: auto;
+  max-height: 5.72rem;
+}
+.activityShopTable .shopTbody table td {
+  line-height: .64rem;
+  padding: .2rem 0;
+}
+.activityShopTable .shopTbody table td.shopName {
+  padding: .2rem .2rem;
+}
+
+
+/*å¯å±å¹¿å‘Šç€é™†é¡µ*/
+.pageBG01 {
+  background-image: url(../images/banner_01.png);
+  padding: 7.92rem .4rem .4rem;
+}
+.pageBG01 .decorateBox {
+  top: 5.6rem;
+}
+
+/*æ‰«ç ç»“æžœé¡µå¹¿å‘Šç€é™†é¡µ*/
+.pageBG02 {
+  background-image: url(../images/banner_02.png);
+  padding: 7.92rem .4rem .4rem;
+}
+.pageBG02 .decorateBox {
+  top: 5.6rem;
+}
+
+/*门店信息直接展示*/
+.activityShopTable {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  float: left;
+  clear: left;
+}
+.activityShopTable .shopName {
+  width: 62%;
+}
+.activityShopTable .contacts {
+  width: 20%;
+}
+.activityShopTable .telephone {
+  width: 18%;
+}
+.activityShopTable .shopThead {
+  background: #ffdab4;
+}
+.activityShopTable .shopThead li {
+  color: #181818;
+}
+.activityShopTable .shopTbody {
+  height: auto;
+  max-height: 5.72rem;
+}
+.activityShopTable .shopTbody table td {
+  line-height: .64rem;
+  padding: .2rem 0;
+}
+.activityShopTable .shopTbody table td.shopName {
+  padding: .2rem .2rem;
+}
+/*启屏广告着陆页*/
+.pageBG01 {
+  background-image: url(../images/operationalActive/banner_01.png);
+  padding: 7.92rem .4rem .4rem;
+}
+.pageBG01 .decorateBox {
+  top: 5.6rem;
+}
+
+/*扫码结果页广告着陆页*/
+.pageBG02 {
+  background-image: url(../images/operationalActive/banner_02.png);
+  padding: 7.92rem .4rem .4rem;
+}
+.pageBG02 .decorateBox {
+  top: 5.6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

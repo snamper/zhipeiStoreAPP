@@ -1,0 +1,453 @@
+/*爱车保养*/
+.ec-carMaintainPage {
+  width: 100%;
+  padding: 0 .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-carMaintainTop {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.ec-carMaintainTop-relative {
+  position: relative;
+}
+
+/*修理厂信息*/
+.ec-shopBox {
+  width: 100%;
+  height: auto;
+  padding: .4rem .4rem 1.2rem;
+  background: url(../images/pic_repairShop.png) no-repeat center top;
+  background-size: 100%;
+  position: relative;
+  z-index: 2;
+  float: left;
+  clear: left;
+}
+
+/*1213è°ƒæ•´*/
+.en-paymentBox {
+  width: 100%;
+  /*border-top: 1px solid #e8e8e8;*/
+  padding-right: .4rem;
+  padding-bottom: .4rem;
+  float: left;
+  clear: left;
+}
+.en-paymentBox dt {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.en-paymentBox dt p {
+  width: 100%;
+  font-size: .4rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+.en-paymentBox dt span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #999;
+  float: left;
+  clear: left;
+}
+.en-paymentBox dd {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.en-paymentBox dd p {
+  width: 100%;
+  font-size: .45rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+.en-paymentBox dd span {
+  width: 100%;
+  height: 3.2rem;
+  float: left;
+  clear: left;
+}
+.en-paymentBox dd span {
+  width: 100%;
+  margin: .2rem 0;
+  height: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #999;
+  position: relative;
+  float: left;
+  clear: left;
+}
+.en-paymentBox dd span img {
+  width: auto;
+  max-width: 6rem;
+  height: auto;
+}
+.en-paymentBox dd span b {
+  width: 6rem;
+  height: 100%;
+  background: rgba(0,0,0,0.78);
+  margin-left: -3rem;
+  font-size: .4rem;
+  font-weight: normal;
+  line-height: .64rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+}
+.en-paymentBox dd a {
+  width: 100%;
+  /* margin-left: 30%; */
+  margin-top: .2rem;
+  /* border: 1px solid #e74c3c; */
+  /* border-radius: .4rem; */
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.ec-shopBox dl {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-shopBox dt {
+  width: 100%;
+  padding: .2rem 0;
+  float: left;
+  clear: left;
+}
+
+.ec-shopBox dt p {
+  width: auto;
+  height: .64rem;
+  font-size: .48rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #fff;
+  float: left;
+  clear: none;
+}
+
+.ec-shopBox dt a {
+  width: .64rem;
+  height: .64rem;
+  margin-left: .32rem;
+  border-radius: .32rem;
+  background: #1abc9c url(../images/icon_telWhite.png) no-repeat center center;
+  background-size: .36rem;
+  float: left;
+  clear: none;
+}
+
+.ec-shopBox dd {
+  width: auto;
+  /* height: .64rem; */
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #fff;
+  float: left;
+  clear: left;
+}
+
+/*车型信息*/
+.ec-carInfoBox {
+  width: 92%;
+  padding: .4rem;
+  margin-left: 4%;
+  margin-top: -1.04rem;
+  background: #fff;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.1);
+  border-radius: .2rem .2rem 0 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dl {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dt {
+  width: 1.28rem;
+  height: 1.28rem;
+  border: 1px solid #e8e8e8;
+  border-radius: .2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dt>img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ec-carInfoBox dd {
+  width: 6.8rem;
+  height: auto;
+  float: right;
+  clear: none;
+}
+
+.ec-carInfoBox dd>p {
+  width: 100%;
+  height: auto;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dd>span {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dd>span>b {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dd>span>a {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: left;
+  color: #377DE8;
+  float: right;
+  clear: none;
+}
+
+
+/*收藏引导弹层*/
+.ec-guideBox {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.78);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25;
+}
+
+.ec-guideMainBox-wechat {
+  width: 8.32rem;
+  height: auto;
+  padding-top: 6.04rem;
+  background: url(../images/pic_guideCollection-wechat.png) no-repeat center top;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: .6rem;
+  top: .32rem;
+  z-index: 3;
+}
+.ec-guideMainBox-ios {
+  width: 8.32rem;
+  height: auto;
+  padding-top: 6.04rem;
+  background: url(../images/pic_guideCollection-ios.png) no-repeat center top;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: .6rem;
+  top: .32rem;
+  z-index: 3;
+}
+.ec-guideMainBox-android {
+  width: 8.32rem;
+  height: auto;
+  padding-top: 8.96rem;
+  background: url(../images/pic_guideCollection-android.png) no-repeat center top;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: .88rem;
+  top: .32rem;
+  z-index: 3;
+}
+
+.ec-guideMainBox-wechat a, .ec-guideMainBox-ios a, .ec-guideMainBox-android a  {
+  width: 2.4rem;
+  height: 1.2rem;
+  background: url(../images/pic_guideButton.png) no-repeat center center;
+  background-size: 100%;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+/*保存下次再看的按钮*/
+.ec-guideButton {
+  width: 100%;
+  margin-bottom: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-guideButton a {
+  width: 3.2rem;
+  height: auto;
+  border-radius: .4rem;
+  border: 1px solid #e74c3c;
+  background: #fff;
+  font-size: .36rem;
+  line-height: .76rem;
+  text-align: center;
+  color: #e74c3c;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+
+
+.ec-carMaintainPage .ec-replaceCycleBox {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1);
+  border: 0;
+}
+
+
+.ec-carMaintainPage .ec-replaceCycleBox .ec-maintainSchedule li {
+  width: 2.53rem;
+}
+
+
+/*底部说明文案*/
+.ec-integralExplain {
+  width: 100%;
+  margin: -.32rem 0 .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #d1d1d1;
+  float: left;
+  clear: left;
+}
+
+/*顶部积分展示*/
+.ec-integralExhibition {
+  width: 100%;
+  margin-bottom: -.32rem;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #e74c3c;
+  position: relative;
+  z-index: 3;
+  float: left;
+  clear: left;
+}
+.em-maintainRecordButton {
+	width: 100%;
+	padding: .32rem 0;
+	border-top: 1px solid #e8e8e8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.em-maintainRecordButton>a {
+	width: 40%;
+	background: #e74c3c;
+	border-radius: .4rem;
+	font-size: .36rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.em-maintainRecordButton .disable {
+  background-color: #e8e8e8;
+  color: #bcbcbc;
+}
+
+/*1221 è°ƒæ•´*/
+.ec-carInfoBox dd>span>b.eq-licensePlate {
+  float: right;
+  clear: none;
+}
+.eq-timeBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.eq-timeBox>span {
+  width: auto;
+  /*margin-right: .32rem;*/
+  font-size: .28rem;
+  line-height: .56rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: none;
+}
+.eq-timeBox>span.eq-vehicleInspection {
+  margin-right: .2rem;
+}
+.eq-timeBox>span>b {
+  font-size: .32rem;
+  font-weight: normal;
+  color: #333;
+}

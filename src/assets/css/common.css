@@ -1,0 +1,392 @@
+.bodyBox {
+	width: 100%;
+	background: #ffd500;
+	padding-bottom: .48rem;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 30;
+}
+
+.picMain {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.picMain img {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+/*机油券部分的样式*/
+.voucherBox {
+	width: 100%;
+	height: 4.96rem;
+	margin-bottom: .48rem; 
+	padding: 0 1.04rem;
+	background: url(../images/pic_voucher.png) no-repeat center center;
+	background-size: 92%;
+	float: left;
+	clear: left;
+}
+.voucherMain {
+	width: 68%;
+	height: auto;
+	padding-top: .78rem;
+	float: left;
+	clear: left;
+}
+.voucherMain p {
+	width: 100%;
+	height: auto;
+	font-size: .48rem;
+	line-height: .84rem;
+	text-align: left;
+	color: #282828;
+	float: left;
+	clear: none;
+}
+.voucherMain p b {
+	font-size: .6rem;
+}
+.voucherMain span {
+	width: 100%;
+	height: 1.28rem;
+	margin-bottom: .2rem;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #e11c1c;
+	float: left;
+	clear: none;
+}
+.voucherMain a.button {
+	width: 3.2rem;
+	height: 1.04rem;
+	background: #ee3218;
+	border-radius: .52rem;
+	font-size: .48rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff12e;
+	float: left;
+	clear: none;
+}
+.voucherMain a.textLink {
+	width: auto;
+	height: 1.04rem;
+	font-size: .32rem;
+	line-height: 1.04rem;
+	text-align: right;
+	color: #1a6ee1;
+	float: right;
+	clear: none;
+}
+.stateBox a.textLink {
+	width: 100%;
+	height: 1.04rem;
+	font-size: .32rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #1a6ee1;
+	float: left;
+	clear: none;
+}
+
+
+.voucherPicBox {
+	width: 30%;
+	height: 2.88rem;
+	background: url(../images/pic_engineOilYellow.png) no-repeat center bottom;
+	background-size: 2.2rem;
+	margin-top: .96rem;
+	position: relative;
+	float: right;
+	clear: none;
+}
+.voucherPicBox span {
+	width: 100%;
+	height: 2.88rem;
+	background: url(../images/pic_engineOilRed.png) no-repeat center bottom;
+	background-size: 2.2rem;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+
+
+/*已经兑换*/
+.stateBox {
+	width: 100%;
+	font-size: .48rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #e11c1c;
+	padding: 1.12rem 0 0;
+	margin-top: .64rem;
+	float: left;
+	clear: left;
+}
+.exchangeBox {
+	background: url(../images/icon_engineOil.png) no-repeat center top;
+	background-size: .88rem;
+}
+.feedbackButton a.textLink {
+	width: 100%;
+	height: auto;
+	margin-top: .36rem;
+	line-height: .64rem;
+	text-align: center;
+}
+
+/*已经发货*/
+.deliveryBox {
+	background: url(../images/icon_delivery.png) no-repeat center .04rem;
+	background-size: 1.18rem;
+}
+
+/*无兑换资格*/
+.deliveryNoBox {
+	margin-top: .96rem;
+	background: url(../images/icon_exchangeNo.png) no-repeat center top;
+	background-size: auto 1.12rem;
+	font-size: .44rem;
+}
+.deliveryNoBox span {
+	font-size: .36rem;
+	color: #666;
+}
+
+/*预热*/
+.preheatBox {
+	width: 100%;
+	padding: .78rem 0 1.28rem;
+	font-size: .64rem;
+	line-height: 1.2rem;
+	text-align: center;
+	color: #e11c1c;
+	font-weight: bold;
+	float: left;
+	clear: left;
+}
+
+/*活动规则*/
+.ruleBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.ruleBox>img {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.ruleMain {
+	width: 100%;
+	height: auto;
+	padding: .48rem .96rem .12rem;
+	background: url(../images/pic.png) repeat-y center top;
+	background-size: 100%;
+	float: left;
+	clear: left;
+}
+.ruleMain li {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.ruleMain li span,.ruleMain li p {
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #c11e20;
+	clear: none;
+}
+.ruleMain li span {
+	width: .64rem;
+	float: left;
+}
+.ruleMain li p {
+	width: 7.44rem;
+	float: right;
+}
+
+/*反馈弹层*/
+.feedbackPop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 60;
+}
+.feedbackBox {
+	width: 88%;
+	height: 5.12rem;
+	border-radius: .32rem;
+	background: #fff;
+	overflow: hidden;
+	position: fixed;
+	top: 3.8rem;
+	left: 6%;
+	z-index: 66;
+}
+.feedbackBox li {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.feedbackBox li.feedbackInput {
+	padding: .4rem;
+	border-bottom: 1px solid #d8d8d8;
+}
+.feedbackBox li.feedbackInput textarea {
+	width: 100%;
+	height: 2.96rem;
+	border-radius: .2rem;
+	padding: 0 .2rem;
+	border: 1px solid #e8e8e8;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.feedbackBox li.feedbackInput textarea::-webkit-input-placeholder {
+	color: #ccc;
+}
+.feedbackBox li.feedbackButton {
+	height: 1.36rem;
+}
+.feedbackBox li.feedbackButton a {
+	width: 50%;
+	height: 1.36rem;
+	font-size: .48rem;
+	line-height: 1.36rem;
+	text-align: center;
+	color: #1a6ee1;
+	float: left;
+	clear: none;
+}
+.feedbackBox li.feedbackButton a.left {
+	border-right: 1px solid #d8d8d8;
+}
+
+
+/*机油券明细*/
+.detaildeBox {
+	width: 100%;
+	background: #fff;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 30;
+}
+
+
+.detaildeTop {
+	width: 100%;
+	padding: .64rem 0;
+	background: #edf2f7;
+	float: left;
+	clear: left;
+}
+.detaildeTop span {
+	width: 100%;
+	background: url(../images/icon_voucher.png) no-repeat center top;
+	background-size: 1.12rem;
+	padding-top: 1.68rem;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #303030;
+	float: left;
+	clear: left;
+}
+.detaildeTop p {
+	width: 100%;
+	height: .96rem;
+	font-size: .84rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #303030;
+	float: left;
+	clear: left;
+}
+
+.detaildeLine {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.detaildeLine li {
+	width: 100%;
+	padding: .16rem .8rem .16rem .32rem;
+	background: #fff url(../images/arrow_gray.png) no-repeat 9.52rem center;
+	background-size: .16rem;
+	border-top: 1px solid #dce6ef;
+	float: left;
+	clear: left;
+}
+.detaildeLine li span {
+	width: 75%;
+	float: left;
+	clear: none;
+}
+.detaildeLine li span b {
+	width: 100%;
+	font-weight: normal;
+}
+.detaildeLine li span b.shopName {
+	height: .76rem;
+	font-size: .44rem;
+	line-height: .76rem;
+	text-align: left;
+	color: #303030;
+	float: left;
+	clear: none;
+}
+.detaildeLine li span b.time {
+	width: auto;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #acacac;
+	float: left;
+	clear: none;
+}
+
+.detaildeLine li span.right {
+	width: 25%;
+	height: 1.4rem;
+	font-size: .36rem;
+	line-height: 1.4rem;
+	text-align: right;
+	color: #e11c1c;
+	float: right;
+	clear: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

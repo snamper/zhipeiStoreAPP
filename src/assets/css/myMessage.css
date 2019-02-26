@@ -1,0 +1,128 @@
+.aa-messageListMain {
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: left;
+    /*padding-top: 1.16rem;*/
+}
+.aa-messageListOne {
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: left;
+}
+.aa-messageListOne span.aa-infoTime {
+    width: 100%;
+    height: .84rem;
+    font-size: .32rem;
+    line-height: .84rem;
+    text-align: center;
+    color: #c2d1e0;
+    float: left;
+    clear: left;
+}
+.aa-messageListOne ul {
+    width: 100%;
+    height: auto;
+    padding: .16rem .8rem;
+    background: #fff;
+    border-top: 1px solid #dce6ef;
+    border-bottom: 1px solid #dce6ef;
+    position: relative;
+    float: left;
+    clear: left;
+}
+.aa-messageListOne li.aa-infoLeft {
+    width: .16rem;
+    height: .16rem;
+    background: url(../images/icon_spotRed.png) no-repeat center center;
+    background-size: 100%;
+    border-radius: .08rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -.08rem;
+    left: .32rem;
+    z-index: 4;
+}
+.aa-messageListOne li.aa-infoCenter {
+    width: 100%;
+    float: left;
+    clear: left;
+}
+.aa-messageListOne li.aa-infoCenter p {
+    width: 100%;
+    float: left;
+    clear: left;
+}
+.aa-messageListOne li.aa-infoCenter p.aa-orderStatusText {
+    font-size: .36rem;
+    line-height: .68rem;
+    text-align: left;
+    color: #333;
+}
+.aa-messageListOne li.aa-infoCenter p.aa-messageContent {
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #333;
+}
+.aa-messageListOne li.aa-infoCenter p.aa-messageContent b {
+    margin-right: .08rem;
+    color: #666;
+    font-weight: normal;
+    float: left;
+    clear: none;
+}
+.aa-messageListOne li.aa-infoCenter p.aa-messageContent span {
+    margin-right: .08rem;
+    color: #acacac;
+    float: left;
+    clear: none;
+}
+.aa-messageListOne li.aa-infoCenter p.aa-messageContent b {
+    margin-right: .08rem;
+    color: #666;
+    font-weight: normal;
+    float: left;
+    clear: none;
+}
+.aa-messageListOne li.aa-infoCenter p.aa-messageContent span {
+    margin-right: .08rem;
+    color: #acacac;
+    float: left;
+    clear: none;
+}
+.aa-messageListOne li.aa-infoCenter p.aa-messageContent b {
+    margin-right: .08rem;
+    color: #666;
+    font-weight: normal;
+    float: left;
+    clear: none;
+}
+.aa-messageListOne li.aa-infoRight {
+    width: .48rem;
+    height: .48rem;
+    background: url(../images/arrow_link_gray.png) no-repeat center center;
+    background-size: .48rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -.24rem;
+    right: .16rem;
+    z-index: 4;
+}
+/*无消息的展示*/
+.aa-nodataBox {
+    width: 100%;
+    padding: 3rem;
+    float: left;
+    clear: left;
+}
+.aa-noInfoPic {
+    width: 100%;
+    height: 2.8rem;
+    background: url(../images/icon_infoNo.png) no-repeat center center;
+    background-size: 2.8rem;
+    display: block;
+    float: left;
+    clear: left;
+}

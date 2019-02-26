@@ -1,0 +1,292 @@
+.el-discountChoicePop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.48);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+}
+.el-discountChoiceBox {
+  width: 92%;
+  position: fixed;
+  bottom: .4rem;
+  left: .4rem;
+  z-index: 3;
+}
+.el-discountChoiceMain {
+  width: 100%;
+  height: auto;
+  min-height: 4.8rem;
+  background: #fff;
+  padding: 0 .4rem .2rem;
+  border-radius: .2rem;
+  float: left;
+  clear: left;
+}
+.el-discountChoiceMain dt {
+  width: 100%;
+  padding: .4rem 0 .32rem;
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: .2rem;
+  float: left;
+  clear: left;
+}
+.el-discountChoiceMain dt p {
+  width: auto;
+  font-size: .36rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #F39C12;
+  float: left;
+  clear: none;
+}
+.el-discountChoiceMain dt span {
+  width: auto;
+  font-size: .36rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #454545;
+  float: right;
+  clear: none;
+}
+.el-discountChoiceMain dt span b {
+  width: auto;
+  font-size: .44rem;
+  font-weight: normal;
+  line-height: .48rem;
+  text-align: left;
+  color: #e74c3c;
+  float: right;
+  clear: none;
+}
+.el-discountChoiceMain dt span a {
+  font-size: .44rem;
+  /*text-decoration: underline;*/
+  color: #e74c3c;
+}
+.el-discountChoiceMain dd {
+  width: 100%;
+  padding: .24rem 0 .24rem .6rem;
+  background: url(../images/choice_default.png) no-repeat left center;
+  background-size: .4rem;
+  float: left;
+  clear: left;
+}
+.el-discountChoiceMain dd.el-selected {
+  background-image: url(../images/choice_current.png);
+}
+.el-discountChoiceMain dd p {
+  width: auto;
+  font-size: .36rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+.el-discountChoiceMain dd p b {
+  width: auto;
+  margin: 0 .12rem;
+  font-size: .4rem;
+  font-weight: normal;
+  line-height: .48rem;
+  text-align: left;
+  color: #e74c3c;
+  display: inline-block;
+}
+.el-discountChoiceMain dd span {
+  width: auto;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #F39C12;
+  float: left;
+  clear: left;
+}
+.el-discountChoiceMain dd span b {
+  width: auto;
+  margin: 0 .12rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #E67E22;
+  display: inline-block;
+}
+
+.el-discountChoiceFool {
+  width: 100%;
+  margin-top: .32rem;
+  background: #fff;
+  border-radius: .2rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+.el-discountChoiceFool a {
+  width: 100%;
+  background: #fff;
+  font-size: .48rem;
+  line-height: 1.08rem;
+  text-align: center;
+  color: #e74c3c;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+/*1207 选择优惠方式的调整*/
+.el-couponPopBox {
+  background: #fafafa;
+  padding: 0;
+  overflow: hidden;
+}
+.el-couponPopBox dt {
+  background: #fff;
+  padding: 0 .4rem;
+  margin: 0;
+}
+.el-couponPopBox dt>p,.el-couponPopBox dt>span {
+  line-height: 1.28rem;
+}
+.el-couponPopBox dd {
+  height: auto;
+  max-height: 10.32rem;
+  padding: 0 .4rem .4rem;
+  background: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.el-discountChoiceMain dd .el-couponBox {
+  width: 100%;
+  height: auto;
+  margin-top: .4rem;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: .16rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+.el-discountChoiceMain dd .el-couponBox>span {
+  width: 100%;
+  height: .28rem;
+  background: url(../images/pic_coupon.png) no-repeat center bottom;
+  background-size: 100%;
+  display: block;
+  float: left;
+  clear: left;
+}
+.el-couponMainBox {
+  width: 100%;
+  padding: .2rem 1.2rem .2rem .4rem;
+  position: relative;
+  float: left;
+  clear: left;
+}
+.el-discountChoiceMain dd .el-couponMainBox>p {
+  width: 100%;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+.el-discountChoiceMain dd .el-couponMainBox>p b {
+  margin: 0 .12rem;
+  font-size: .56rem;
+  font-weight: normal;
+  color: #e74c3c;
+}
+.el-discountChoiceMain dd .el-couponMainBox>span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #F39C12;
+  float: left;
+  clear: left;
+}
+.el-discountChoiceMain dd .el-couponMainBox>span b {
+  display: inline-block;
+}
+.el-discountChoiceMain dd .el-couponMainBox>span.el-couponChoice {
+  width: .44rem;
+  height: .44rem;
+  margin-top: -.22rem;
+  background: url(../images/choice_default.png) no-repeat center center;
+  background-size: .4rem;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: .38rem;
+  z-index: 2;
+}
+.el-discountChoiceMain dd .el-couponMainBox>span.el-couponSelected {
+  background-image: url(../images/choice_current.png);
+}
+.el-discountChoiceMain dd .el-couponMainBox>span.el-couponProhibit {
+  background-image: url(../images/choice_prohibit.png);
+}
+.el-discountChoiceMain dd .el-discountNo>span {
+  display: none;
+}
+.el-couponPopBox dd.el-integralNo {
+  height: auto;
+  min-height: 0;
+  padding: 0;
+  background: #FEF5F4;
+  border-bottom: 1px solid #F5B7B1;
+  font-size: .34rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+/*1218调整*/
+.el-couponPopBox dd.el-integralNo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.el-couponPopBox dd.el-integralNo>p {
+  width: auto;
+  margin-right: .4rem;
+  max-width: 6.5rem;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: none;
+}
+.el-couponPopBox dd.el-integralNo>a {
+  width: auto;
+  font-size: .36rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #377de8;
+  float: left;
+  clear: none;
+}
+.el-paymentDiscount dd.el-selected {
+  position: relative;
+}
+.el-paymentDiscount dd.el-selected>a {
+  width: auto;
+  margin-top: -.48rem;
+  font-size: .32rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #377de8;
+  position: absolute;
+  top: 50%;
+  right: .4rem;
+}
+
+
+
+

@@ -1,0 +1,711 @@
+
+/*报价列表页-修理厂*/
+.bs-offerBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+/*报价提醒框的样式*/
+.bs-remindBox {
+	width: 100%;
+	height: auto;
+	padding: 0 .32rem;
+	background: #fff5f5;
+	border-bottom: 1px solid #fcdedc;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 6;
+}
+.bs-remindBox p {
+	width: 8.4rem;
+	height: 1.04rem;
+	background: url(../images/icon_hornRed.png) no-repeat center left;
+	background-size: .48rem;
+	padding-left: .68rem;
+	font-size: .36rem;
+	line-height: 1.04rem;
+	text-align: left;
+	color: #e74c3c;
+	white-space: nowrap;
+	user-select: none;
+	float: left;
+	clear: left;
+}
+.bs-remindBox p b {
+	width: 7.72rem;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	clear: left;
+}
+.bs-remindBox p b div.str_move {
+	width: 12rem;
+	font-weight: normal;
+	white-space: nowrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: inherit;
+}
+.bs-remindBox a {
+	width: auto;
+	height: 1.04rem;
+	font-size: .32rem;
+	line-height: 1.04rem;
+	text-align: left;
+	color: #2c83e6;
+	float: right;
+	clear: none;
+}
+
+/*单个报价订单的样式*/
+.bs-offerOrderOneBox {
+	width: 100%;
+	background: #fff;
+	border: 1px solid #d3dce6;
+	/*margin: .32rem 0 0 3.2%;*/
+	float: left;
+	clear: left;
+}
+
+/*单个报价订单车型信息的样式*/
+.bs-carInfoBox {
+	width: 100%;
+	height: auto;
+	padding: .32rem;
+	box-sizing: border-box;
+	background: #fff7db;
+	border-bottom: 1px solid #ebf0f5;
+	float: left;
+	clear: left;
+}
+
+.bs-carPic {
+	width: .96rem;
+	height: .96rem;
+	background: #fff;
+	border-radius: .44rem;
+	box-shadow: 0 0 .16rem #d3dce6;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.bs-carPic img {
+	width: auto;
+	height: auto;
+	max-width: .84rem;
+	max-height: .84rem;
+}
+.bs-carMain {
+	width: 7.44rem;
+	height: auto;
+	padding-right: 1.6rem;
+	position: relative;
+	float: right;
+	clear: none;
+}
+.bs-carMain p {
+	width: 100%;
+	height: auto;
+	font-size: .36rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.bs-carMain span {
+	width: 100%;
+	height: auto;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: left;
+}
+.bs-carMain a {
+	width: auto;
+	height: auto;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #2c83e6;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -.24rem;
+}
+.bs-carMain span.bs-cancelOrderText {
+	width: auto;
+	height: auto;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #bcbcbc;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -.24rem;
+}
+
+/*单个报价订单订单详情的样式*/
+.bs-offerOrderMain {
+	width: 100%;
+	padding: 0 .32rem;
+	box-sizing: border-box;
+	float: left;
+	clear: left;
+}
+
+/*报价清单相关的样式*/
+.bs-offerList {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.bs-offerListTitle {
+	width: 100%;
+	padding: .2rem 0;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.bs-offerListMain {
+	width: 100%;
+	background: #f6f9fb;
+	border-top: 1px solid #eaeef3;
+	float: left;
+	clear: left;
+}
+.bs-offerListMain li {
+	width: 100%;
+	border-bottom: 1px solid #edf3f7;
+	padding: .16rem .32rem;
+	float: left;
+	clear: left;
+}
+.bs-offerListMain li p {
+	width: auto;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.bs-offerListMain li span {
+	width: auto;
+	font-size: .32rem;
+	font-weight: normal;
+	line-height: .64rem;
+	text-align: left;
+	color: #bcbcbc;
+	float: right;
+	clear: none;
+}
+
+/*单个店铺报价的样式*/
+.bs-offerShopOne {
+	width: 100%;
+	border-top: 1px solid #afbecf;
+	float: left;
+	clear: left;
+}
+
+/*单个店铺报价-店铺信息的样式*/
+.bs-offerShopTop {
+	width: 100%;
+	padding: .2rem 0;
+	float: left;
+	clear: left;
+}
+.bs-offerShopTop p {
+	width: auto;
+	max-width: 4.02rem;
+	height: auto;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	display: flex;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all;
+	float: left;
+	clear: left;
+}
+.bs-offerShopTop a {
+	width: .8rem;
+	height: .64rem;
+	margin-left: .2rem;
+	border: 1px solid #1abc9c;
+	border-radius: .08rem;
+	background: #fff url(../images/icon_telOfferResult.png) no-repeat center center;
+	background-size: .48rem;
+	display: block;
+	float: left;
+	clear: none;
+}
+.bs-offerShopTop span {
+	width: auto;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: right;
+	float: right;
+	clear: none;
+}
+.bs-offerShopTop span.bs-offerShopTime {
+	color: #bcbcbc;
+}
+
+/*单个店铺报价-订单详情的样式*/
+.bs-offerShopMain {
+	width: 100%;
+	background: #f6f9fb;
+	border-top: 1px solid #eaeef3;
+	float: left;
+	clear: left;
+}
+.bs-offerShopMain li {
+	width: 100%;
+	border-bottom: 1px solid #edf3f7;
+	padding: .16rem .32rem;
+	float: left;
+	clear: left;
+}
+.bs-offerShopMain li p {
+	width: 100%;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.bs-offerShopMain li span {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.bs-offerShopMain li span b {
+	line-height: .68rem;
+	font-weight: normal;
+}
+.bs-offerShopMain li span b.bs-offerOrderCommodity {
+	width: 53%;
+	font-size: .32rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.bs-offerShopMain li span b.bs-offerOrderNumber {
+	width: 9%;
+	font-size: .32rem;
+	text-align: left;
+	color: #bcbcbc;
+	float: left;
+	clear: none;
+}
+.bs-offerShopMain li span b.bs-offerOrderPrice {
+	width: auto;
+	font-size: .32rem;
+	text-align: left;
+	color: #d53533;
+	float: right;
+	clear: none;
+}
+
+/*单个店铺报价-订单总价及操作按钮的样式*/
+.bs-offerShopFool {
+	width: 100%;
+	padding: .2rem 0;
+	float: left;
+	clear: left;
+}
+.bs-offerShopFool p {
+	width: auto;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.bs-offerShopFool p b {
+	font-weight: normal;
+	color: #d53533;
+}
+
+.bs-offerShopFool span {
+	width: auto;
+	float: right;
+	clear: none;
+}
+.bs-offerShopFool span a {
+	height: .72rem;
+	display: block;
+	float: left;
+	clear: none;
+}
+.bs-offerShopFool span a.bs-offerButton {
+	width: auto;
+	padding: 0 .2rem;
+	background: #d53533;
+	border-radius: .12rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: center;
+	color: #fff;
+}
+.bs-offerShopFool span a.bs-redPacketLink {
+	width: .6rem;
+	background: url(../images/icon_redPacketRed.png) no-repeat center right;
+	background-size: .4rem;
+}
+.bs-offerShopFool span b {
+	width: auto;
+	height: .72rem;
+	font-size: .32rem;
+	font-weight: normal;
+	line-height: .72rem;
+	text-align: center;
+	color: #1abc9c;
+	display: block;
+	float: left;
+	clear: none;
+}
+
+
+/*经销商忽略报价订单后的提醒样式*/
+.bs-offerShopTop span.bs-offerShopNot {
+	color: #e74c3c;
+}
+
+/*经销商报价中的提醒样式*/
+.bs-offerShopTop span.bs-offerShopQuotation {
+	color: #f39c12;
+}
+
+/*没有更多数据的样式*/
+.bs-moreDataNoBox {
+	width: 100%;
+	height: 1.12rem;
+	font-size: .36rem;
+	line-height: 1.12rem;
+	text-align: left;
+	color: #8fa3b8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+
+/*下拉手势示意的样式*/
+.bs-gestureDown {
+	width: 2.24rem;
+	height: 2.24rem;
+	margin: -1.12rem 0 0 -1.12rem;
+	border-radius: .24rem;
+	background: url(../images/gesture_dropdown.gif) no-repeat center center;
+	background-size: 1.76rem;
+	background-color: rgba(0,0,0,0.72);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 40;
+}
+
+/*确认弹层的样式*/
+.bs-confirmPop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.48);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 52;
+}
+.bs-confirmPopBox {
+	width: 80%;
+	height: 4.72rem;
+	margin-top: -2.86rem;
+	border-radius: .32rem;
+	background-color: #fff;
+	position: fixed;
+	left: 10%;
+	top: 50%;
+	z-index: 55;
+}
+.bs-confirmPopBox p {
+	width: 100%;
+	height: 3.44rem;
+	padding: 0 .48rem;
+	font-size: .4rem;
+	line-height: .72rem;
+	text-align: center;
+	color: #666;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.bs-confirmPopBox span {
+	width: 100%;
+	height: 1.28rem;
+	border-top: 1px solid #ccc;
+	float: left;
+	clear: left;
+}
+.bs-confirmPopBox span a {
+	width: 50%;
+	height: 1.28rem;
+	border-top: 1px solid #ccc;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #2c83e6;
+	float: left;
+	clear: none;
+}
+.bs-confirmPopBox span a.bs-leftButton {
+	border-right: 1px solid #ccc;
+}
+
+/*确认汽配店发货成功的toast提醒*/
+.bs-deliverySuccessToast {
+	width: 3.2rem;
+	height: 1.04rem;
+	margin: -.52rem 0 0 -1.6rem;
+	border-radius: .24rem;
+	background-color: rgba(0,0,0,0.78);
+	font-size: .4rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: 52;
+}
+
+/*报价列表 空页面*/
+.bo-offerOrderEmpty {
+	width: 100%;
+	margin-top: 2.4rem;
+	padding-top: 3.6rem;
+	background: url(../images/pic_offerOrderNo.png) no-repeat center top;
+	background-size: 4.08rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #9bb1bf;
+	float: left;
+	clear: left;
+}
+
+
+/*单个报价订单收货人的样式*/
+.bs-consigneeBox {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	padding: .32rem 0;
+	padding-right: 1.36rem;
+	border-top: 1px solid #d3dce6;
+	border-bottom: 1px solid #d3dce6;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.bs-offerOrderOneBox .bs-consigneeBox,.bs-offerOrderOneBox .bs-messageBox {
+	padding: .32rem;
+}
+.bs-consigneeBox ul,.bs-consigneeBox li {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: left;
+}
+.bs-consigneeBox li.bs-consigneeUser {
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+}
+.bs-consigneeBox li.bs-consigneeAdd {
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #999;
+}
+.bs-consigneeBox a {
+	width: 1.04rem;
+	height: 1.04rem;
+	background: #1abc9c url(../images/icon_telephone.png) no-repeat center center;
+	background-size: .48rem;
+	border-radius: .52rem;
+	margin-top: -.52rem;
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+
+
+/*0528新增样式*/
+.bs-consigneeBox>span {
+	width: 2.08rem;
+	height: .6rem;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: center;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: -.08rem;
+	right: .32rem;
+	z-index: 3;
+}
+.bs-consigneeBox>span.bv-labelG {
+	background: url(../images/label_green.png) no-repeat center top;
+	background-size: 100%;
+}
+.bs-consigneeBox>span.bv-labelY {
+	background: url(../images/label_yellow.png) no-repeat center top;
+	background-size: 100%;
+}
+.bs-consigneeBox>span.bv-labelR {
+	background: url(../images/label_red.png) no-repeat center top;
+	background-size: 100%;
+}
+
+.bs-consigneeBox>span.bv-distributorLabel {
+	right: 1.36rem;
+}
+
+.bs-singleOfferOrderBox .bs-carInfo li.bs-carMain {
+	padding-right: 1.6rem;
+}
+
+.bv-carInfoBox {
+	width: 100%;
+	padding: 0 .32rem;
+	background: #fff;
+	border-bottom: 1px solid #d3dce6;
+	float: left;
+	clear: left;
+}
+.bv-carInfoBox li {
+	width: 100%;
+	padding: .2rem 0;
+	border-top: 1px solid #e8e8e8;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	float: left;
+	clear: left;
+}
+.bv-carInfoBox li span {
+	width: 28%;
+	height: auto;
+	text-align: left;
+	font-size: 0.32rem;
+	line-height: 0.48rem;
+	color: #999;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.bv-carInfoBox li p {
+	width: 72%;
+	height: auto;
+	text-align: left;
+	font-size: 0.36rem;
+	line-height: 0.48rem;
+	color: #333;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.bv-carInfoBox li a {
+	width: 100%;
+	height: .64rem;
+	text-align: center;
+	font-size: 0.32rem;
+	line-height: 0.48rem;
+	color: #2c83e6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+
+
+
+/*语音留言相关部分的样式*/
+.bs-messageBox {
+	width: 100%;
+	height: auto;
+	padding: .32rem 0;
+	border-bottom: 1px solid #d3dce6;
+	float: left;
+	clear: left;
+}
+.bs-messageBox p {
+	width: auto;
+	height: .72rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.bs-messageBox span {
+	width: 2.12rem;
+	height: .72rem;
+	padding-left: .52rem;
+	background: #d53533 url(../images/icon_voice.png) no-repeat .16rem center;
+	background-size: .32rem;
+	border-radius: .36rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #fff;
+	float: left;
+	clear: none;
+}
+
+/*经销商端增加状态*/
+.bs-carMain span b {
+	width: auto;
+	font-weight: normal;
+	color: #f39c12;
+	float: right;
+	clear: none;
+}
+.bs-carMain span b.bt-pending {
+	color: #f39c12;
+}
+.bs-carMain span b.bt-complete {
+	color: #1abc9c;
+}

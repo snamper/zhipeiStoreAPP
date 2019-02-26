@@ -1,0 +1,3179 @@
+/*修理产端扫码结果页*/
+.ec-scavengingResultPage {
+  width: 100%;
+  height: 100%;
+  padding: 0 .4rem;
+  background: url(../images/pic_topBG.png) no-repeat center top;
+  background-size: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  float: left;
+  clear: left;
+}
+
+/*扫码结果页顶部固定*/
+.ec-scavengingResultTopBox {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin: .08rem 0 .4rem;
+  padding: 0 .4rem;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.1);
+  border-bottom: .12rem solid #e74c3c;
+  border-radius: .2rem;
+  float: left;
+  clear: left;
+}
+
+/*扫码结果 车型信息*/
+.ec-carInfoBox {
+  width: 100%;
+  margin: .28rem 0 .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dl {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dt {
+  width: 1.28rem;
+  height: 1.28rem;
+  border: 1px solid #e8e8e8;
+  border-radius: .2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dt>img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ec-carInfoBox dd {
+  width: 6.8rem;
+  height: auto;
+  float: right;
+  clear: none;
+}
+
+.ec-carInfoBox dd>p {
+  width: 100%;
+  height: auto;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #282828;
+  float: left;
+  clear: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ec-carInfoBox dd>span {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dd>span>b {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.ec-carInfoBox dd>span>a {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: left;
+  color: #377DE8;
+  float: right;
+  clear: none;
+}
+
+/*4S店价格和紧急调货*/
+.ec-shoppingBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+/*初始状态*/
+.ec-initialBox {
+  width: 100%;
+  border-top: 1px solid #e8e8e8;
+  padding: .2rem 0;
+  float: left;
+  clear: left;
+}
+
+.ec-initialBox>a {
+  width: 50%;
+  height: auto;
+  font-size: .4rem;
+  line-height: .76rem;
+  text-align: center;
+  color: #e74c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+
+.ec-initialBox>a b {
+  width: auto;
+  height: auto;
+  padding-right: .52rem;
+  font-weight: normal;
+  background: url(../images/arrow_openRed.png) no-repeat right center;
+  background-size: .32rem;
+  float: left;
+  clear: left;
+}
+
+.ec-initialBox>a.ec-rightBorder {
+  border-right: 1px solid #e8e8e8;
+}
+
+/*4S店价格 详情*/
+.ec-shoppingMain {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+/*顶部切换状态*/
+.ec-shoppingMainTab {
+  width: 100%;
+  height: auto;
+  background: url(../images/pic_tabBG.png) repeat-x center bottom;
+  background-size: auto 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-tabBox {
+  width: 8rem;
+  float: left;
+  clear: left;
+}
+
+.ec-tabBox>a {
+  width: 50%;
+  height: .96rem;
+  margin-top: .2rem;
+  background: #f6f6f6;
+  border-radius: 0 .2rem 0 0;
+  font-size: .4rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #bcbcbc;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ec-tabBox>a.ec-selected {
+  width: 50%;
+  height: 1.2rem;
+  border: .04rem solid #e74c3c;
+  border-bottom: 0;
+  border-radius: .2rem .2rem 0 0;
+  margin-top: 0;
+  padding-top: .16rem;
+  background: #fff;
+  font-size: .4rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #e74c3c;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+/*顶部提醒*/
+.ec-paymentRemind {
+  width: 100%;
+  height: auto;
+  margin-top: .32rem;
+  border: 1px solid #f39c12;
+  border-radius: .08rem;
+  background: #fef3e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-paymentRemind p {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #e67e22;
+  float: left;
+  clear: left;
+}
+
+.ec-paymentRemind a {
+  width: auto;
+  height: auto;
+  margin-left: .32rem;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #377de8;
+  float: left;
+  clear: left;
+}
+
+/*品类筛选*/
+.ec-categoryBox {
+  width: 8.8rem;
+  height: auto;
+  margin-left: -.4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-categoryBox li {
+  width: 1.8rem;
+  height: auto;
+  border: 1px solid #e8e8e8;
+  padding: .12rem 0;
+  border-radius: .08rem;
+  margin-left: .4rem;
+  margin-top: .32rem;
+  float: left;
+  clear: none;
+}
+
+.ec-categoryBox li>p {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-categoryBox li>span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.ec-categoryBox li>span>a {
+  color: #377de8;
+}
+
+.ec-categoryBox li>span>b {
+  font-weight: normal;
+  color: #bcbcbc;
+}
+
+.ec-categoryBox li.ec-selected {
+  border: 1px solid #e74c3c;
+  background: url(../images/icon_screenSelected.png) no-repeat bottom right;
+  background-size: .48rem;
+}
+
+.ec-categoryBox li.ec-disable {
+  border: 1px solid #e8e8e8;
+  background: #f6f6f6;
+}
+
+.ec-categoryBox li.ec-disable>p {
+  color: #bcbcbc;
+  line-height: 1.18rem;
+}
+
+.ec-categoryBox li.ec-disable>span {
+  display: none;
+}
+
+/*门店筛选*/
+.ec-shopBox {
+  width: 100%;
+  margin-top: .4rem;
+  float: left;
+  clear: left;
+}
+
+/*单个门店*/
+.ec-shopOneBox {
+  width: 100%;
+  border-top: 1px solid #e8e8e8;
+  padding: .32rem 0;
+  float: left;
+  clear: left;
+}
+
+.ec-shopOneBox dl {
+  width: 100%;
+  padding-left: 2.16rem;
+  float: left;
+  clear: left;
+}
+
+.ec-shopOneBox dl dt {
+  width: 1.84rem;
+  height: 1.84rem;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  border-radius: .2rem;
+  margin-left: -2.16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-shopOneBox dl dd {
+  width: 100%;
+  float: left;
+  clear: none;
+}
+
+.ec-shopOneBox dl dd.ec-shopName {
+  font-size: .4rem;
+  line-height: .6rem;
+  text-align: left;
+  color: #282828;
+}
+
+.ec-shopOneBox dl dd.ec-activity {
+  padding: .16rem 0 .16rem 1rem;
+  background: url(../images/arrow_openRed.png) no-repeat right center;
+  background-size: .24rem;
+}
+
+.ec-shopOneBox dl dd.ec-activity>span {
+  width: .8rem;
+  height: .44rem;
+  margin-left: -1rem;
+  border-radius: .08rem;
+  background: #f39c12;
+  font-size: .28rem;
+  line-height: .44rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ec-shopOneBox dl dd.ec-activity>p {
+  width: 100%;
+  height: auto;
+  font-size: .32rem;
+  line-height: .44rem;
+  text-align: left;
+  color: #f39c12;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ec-shopOneBox dl dd.ec-button a {
+  width: 1.84rem;
+  height: .64rem;
+  border: 1px solid #e74c3c;
+  border-radius: .08rem;
+  background: #e74c3c;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ec-shopOneBox dl dd.ec-button a.ec-buttonPrice {
+  margin-left: .32rem;
+  background: #fff;
+  color: #e74c3c;
+}
+
+/*紧急调货*/
+.ec-urgentShop .ec-tabBox>a {
+  border-radius: .2rem 0 0 0;
+}
+
+.ec-urgentShop .ec-tabBox>a.ec-selected {
+  border-radius: .2rem .2rem 0 0;
+}
+
+.ec-urgentShop .ec-categoryBox li>p {
+  line-height: 1.2rem;
+}
+
+.ec-urgentShop .ec-categoryBox li>span {
+  display: none;
+}
+
+/*其他模块公用样式*/
+.ec-modularBox {
+  width: 100%;
+  background: #fff;
+  margin-bottom: .4rem;
+  box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.1);
+  border-radius: .2rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+
+.ec-modularTitle {
+  width: 100%;
+  height: 1.12rem;
+  background: #f6f6f6 url(../images/pic_decorate.png) no-repeat .4rem center;
+  background-size: .08rem;
+  padding-left: .72rem;
+  padding-right: .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-modularTitle>p {
+  width: auto;
+  font-size: .4rem;
+  line-height: 1.12rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.ec-modularTitle>span {
+  width: auto;
+  font-size: .32rem;
+  line-height: 1.12rem;
+  text-align: center;
+  color: #e74c3c;
+  float: right;
+  clear: none;
+}
+
+.ec-modularTitle>span.ec-moneyText {
+  font-size: .4rem;
+}
+
+.ec-modularTitleRight {
+  width: auto;
+  height: .64rem;
+  margin-top: .24rem;
+  margin-left: .32rem;
+  border-left: 1px solid #d8d8d8;
+  float: right;
+  clear: none;
+}
+
+.ec-modularTitleRight>a {
+  width: auto;
+  margin-left: .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #377de8;
+  float: left;
+  clear: none;
+}
+
+.ec-modularFool {
+  width: 91.3%;
+  margin: 0 4.35%;
+  border-top: 1px solid #e8e8e8;
+  padding: .2rem 0;
+  float: left;
+  clear: left;
+}
+
+.ec-modularFool>a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-modularFool>a>span {
+  width: auto;
+  padding-left: .44rem;
+  background: url(../images/arrow_down_blue.png) no-repeat left center;
+  background-size: .24rem;
+  font-size: .32rem;
+  line-height: .56rem;
+  color: #377de8;
+  float: left;
+  clear: left;
+}
+
+.ec-modularFool>a>.closeCalss {
+  background: url(../images/arrow_up_blue.png) no-repeat left center;
+  background-size: .24rem;
+}
+
+.ec-modularFool>a.ec-takeUp>span {
+  background: url(../images/arrow_down_blue.png) no-repeat left center;
+  background-size: .24rem;
+}
+
+
+/*机油用量/配件参数*/
+.ec-numberParameter {
+  width: 100%;
+  height: auto;
+  /*max-height: 2.48rem;*/
+  overflow: hidden;
+  padding: .2rem .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-categoryOneBox {
+  width: 100%;
+  padding: .2rem 0 .2rem 2.32rem;
+  float: left;
+  clear: left;
+}
+
+.ec-categoryOneBox dt {
+  width: 2rem;
+  margin-left: -2.32rem;
+  padding-right: .096rem;
+  background: url(../images/pic_categoryBG.png) no-repeat left center;
+  background-size: 100% 100%;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.ec-categoryOneBox dd {
+  width: 100%;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+
+.ec-categoryOneBox dd b {
+  width: auto;
+  margin-right: .32rem;
+  font-size: .36rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: left;
+  color: #282828;
+  display: inline-block;
+  float: left;
+  clear: none;
+}
+
+.ec-categoryOneBox dd a {
+  width: auto;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #377de8;
+  display: inline-block;
+  float: left;
+  clear: none;
+}
+
+.ec-categoryOneBox dd.ec-picBox {
+  width: 6.8rem;
+  margin-left: -.4rem;
+  float: left;
+  /*clear: left;*/
+}
+
+.ec-categoryOneBox dd.ec-picBox span {
+  width: 1.22rem;
+  height: 1.22rem;
+  margin: .32rem 0 0 .4rem;
+  border: 1px solid #e8e8e8;
+  border-radius: .08rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+
+.ec-categoryOneBox dd.ec-picBox span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*保养记录*/
+/*保养周期表*/
+.ec-maintainSchedule {
+  width: 100%;
+  max-height: 2.8rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainSchedule li {
+  width: 2.533rem;
+  margin: .32rem 0 0 .4rem;
+  padding: .2rem 0;
+  border: 1px solid #e8e8e8;
+  border-radius: .08rem;
+  float: left;
+  clear: none;
+}
+
+.ec-maintainSchedule li>p {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainSchedule li>p>a {
+  color: #282828;
+}
+
+.ec-maintainSchedule li>span {
+  width: 100%;
+  font-size: .28rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.ec-openBox {
+  height: auto;
+  max-height: none;
+}
+
+.ec-openBox li>p>a {
+  color: #377de8;
+}
+
+/*保养记录*/
+.ec-maintainRecord {
+  width: 100%;
+  padding: 0 0 0 .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainRecord>span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #bcbcbc;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainRecord>span b {
+  font-weight: normal;
+  color: #e74c3c;
+  float: right;
+  clear: none;
+}
+
+.ec-maintainRecordPic {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainRecordPic ul {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainRecordPic li {
+  width: 1.8rem;
+  height: auto;
+  border: 1px solid #e8e8e8;
+  margin: 0 .4rem .32rem 0;
+  position: relative;
+  float: left;
+  clear: none;
+}
+
+.ec-maintainRecordPic li>span {
+  width: 100%;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+
+.ec-maintainRecordPic li>span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ec-maintainRecordPic li>p {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.68);
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.ec-maintainRecordPic li>a {
+  width: .48rem;
+  height: .48rem;
+  background: url(../images/icon_empty.png) no-repeat center center;
+  background-size: 100%;
+  position: absolute;
+  top: -.2rem;
+  right: -.2rem;
+  z-index: 3;
+  display: none;
+}
+
+/*语音留言*/
+.ec-voiceBox {
+  width: 100%;
+  border-top: 1px solid #e8e8e8;
+  padding: .32rem 0 0 1.8rem;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.ec-voiceBox p {
+  width: 2rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #999;
+  position: absolute;
+  left: 0;
+  top: .32rem;
+  z-index: 2;
+}
+
+.ec-voiceMain {
+  width: 100%;
+  float: right;
+  clear: none;
+}
+
+.ec-voiceMain span {
+  width: 1.99rem;
+  margin-right: .32rem;
+  margin-bottom: .32rem;
+  background: #fff url(../images/icon_voice.png) no-repeat .2rem center;
+  background-size: .2rem;
+  padding-left: .52rem;
+  border: 1px solid #e74c3c;
+  border-radius: .32rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #e74c3c;
+  overflow: hidden;
+  float: left;
+  clear: none;
+}
+
+
+
+/*xinjiaxe */
+.ec-voiceMain span a {
+  width: .64rem;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: center;
+  color: #e74c3c;
+  display: none;
+  float: right;
+  clear: none;
+}
+
+.ec-voiceMain span.ec-selected {
+  background: #e74c3c url(../images/icon_voiceWhite.png) no-repeat .2rem center !important;
+  background-size: .2rem !important;
+  color: #fff !important;
+}
+
+.ec-voiceMain span.ec-selected a {
+  color: #fff !important;
+}
+
+.ec-voiceMain span.ec-voiceTextBox {
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  padding: 0 .4rem 0 0;
+  margin: 0 0 .4rem 0;
+  float: left;
+  clear: left;
+}
+
+.ec-voiceMain span.ec-voiceTextBox textarea {
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  border-radius: 0 .08rem;
+  padding: .16rem;
+  font-size: .32rem;
+  line-height: .56rem;
+  text-align: justify;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-voiceMain span.ec-voiceTextBox textarea.ec-readonly {
+  border: none;
+}
+
+.ec-voiceMain span.ec-voiceTextBox b {
+  width: 100%;
+  background: #fef4f4;
+  border: 1px solid #e64c3c;
+  border-radius: 0 .08rem;
+  padding: 0;
+  font-size: .32rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: center;
+  color: #e74c3c;
+  display: none;
+  float: left;
+  clear: left;
+}
+
+
+
+/*sdfsdf*/
+
+.ec-voiceNew span a {
+  width: .64rem;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: center;
+  color: #e74c3c;
+  display: none;
+  float: right;
+  clear: none;
+}
+
+.ec-voiceNew span.ec-selected {
+  background: #e74c3c url(../images/icon_voiceWhite.png) no-repeat .2rem center !important;
+  background-size: .2rem !important;
+  color: #fff !important;
+}
+
+.ec-voiceNew span.ec-selected a {
+  color: #fff !important;
+}
+
+.ec-voiceNew span.ec-voiceTextBox {
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  padding: 0 .4rem 0 0;
+  margin: 0 0 .4rem 0;
+  float: left;
+  clear: left;
+}
+
+.ec-voiceNew span.ec-voiceTextBox textarea {
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  border-radius: 0 .08rem;
+  padding: .16rem;
+  font-size: .32rem;
+  line-height: .56rem;
+  text-align: justify;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-voiceNew span.ec-voiceTextBox b {
+  width: 100%;
+  background: #fef4f4;
+  border: 1px solid #e64c3c;
+  border-radius: 0 .08rem;
+  padding: 0;
+  font-size: .32rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: center;
+  color: #e74c3c;
+  display: none;
+  float: left;
+  clear: left;
+}
+
+/*保养记录底部按钮*/
+.ec-modularFool a.ec-maintainRecordLeft {
+  width: 50%;
+  float: left;
+  clear: none;
+}
+
+.ec-modularFool a.ec-maintainRecordRight {
+  width: 40%;
+  border-left: 1px solid #e8e8e8;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: center;
+  color: #377de8;
+  float: left;
+  clear: none;
+}
+
+
+/*查看厂商智能产品目录*/
+.ec-catalogBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-catalogBox li {
+  width: 1.8rem;
+  height: 2.4rem;
+  margin: .32rem 0 0 .4rem;
+  border: 1px solid #e8e8e8;
+  float: left;
+  clear: none;
+}
+
+.ec-catalogBox li span {
+  width: 100%;
+  height: 1.44rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-catalogBox li span img {
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 90%;
+}
+
+.ec-catalogBox li p {
+  width: 100%;
+  height: .96rem;
+  font-size: .32rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-catalogBox li.ec-newsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ec-catalogBox li.ec-newsBox span {
+  display: none;
+}
+
+.ec-catalogBox li.ec-newsBox p {
+  height: auto;
+  margin-top: .32rem;
+  padding-top: .64rem;
+  background: url(../images/icon_newsRed.png) no-repeat center top;
+  background-size: .4rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: center;
+  color: #666;
+}
+
+.ec-internationalTitle {
+  width: 100%;
+  margin-top: .32rem;
+  font-size: .4rem;
+  line-height: 1.12rem;
+  text-align: center;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+.ec-international {
+  margin-top: -.32rem;
+  padding-bottom: .32rem;
+}
+
+.ec-international li {
+  height: auto;
+}
+
+.ec-international li span {
+  display: none;
+}
+
+.ec-international li p {
+  height: auto;
+  line-height: 1.8rem;
+}
+
+/*车型详情*/
+.ec-carDetails {
+  width: 92%;
+  height: auto;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding-left: .4rem;
+  overflow: hidden;
+  /*overflow-y: auto;*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: .4rem;
+  right: 0;
+  z-index: 100;
+}
+
+.ec-carDetails ul {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  float: left;
+  clear: left;
+}
+
+.ec-carDetails li {
+  width: 100%;
+  padding: .2rem .4rem .2rem 0;
+  border-bottom: 1px solid #dce6ef;
+  box-sizing: border-box;
+  float: left;
+  clear: left;
+}
+
+.ec-carDetails li span {
+  width: 30%;
+  padding-right: .32rem;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: left;
+  color: #999;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  float: left;
+  clear: none;
+}
+
+.ec-carDetails li p {
+  width: 70%;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: left;
+  color: #333;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  float: left;
+  clear: none;
+}
+
+/*权限提醒弹层*/
+.ec-jurisdictionPop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 300;
+}
+
+.ec-jurisdictionPopBox {
+  width: 8rem;
+  height: 6rem;
+  background: #fff;
+  border-radius: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.ec-jurisdictionPopBox>dl {
+  width: 90%;
+  height: auto;
+  float: left;
+  clear: left;
+}
+
+.ec-jurisdictionPopBox>dl dt {
+  width: 100%;
+  height: auto;
+  padding-top: .32rem;
+  font-size: .36rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-jurisdictionPopBox>dl dd {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-jurisdictionPopBox>dl dd.ec-button {
+  padding-top: .4rem;
+}
+
+.ec-jurisdictionPopBox>dl dd.ec-button a {
+  width: 60%;
+  margin-left: 20%;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.ec-jurisdictionPopBox>dl dd.ec-link {
+  padding-top: .4rem;
+}
+
+.ec-jurisdictionPopBox>dl dd.ec-link a {
+  width: auto;
+  margin: 0 auto;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #377DE8;
+  display: block;
+  float: none;
+  clear: none;
+}
+
+.ec-jurisdictionPopBox>a {
+  width: 1.04rem;
+  height: 1.04rem;
+  font-size: .64rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+/*保养记录页*/
+.ec-maintainRecordPage {
+  width: 100%;
+  height: auto;
+  padding-top: 1.96rem;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainRecordPage .ec-scavengingResultTopBox {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+}
+
+/*配件更换周期*/
+.ec-replaceCycleBox {
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: .4rem;
+  background: #fafafa;
+  border-radius: 0 0 .32rem .32rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: none;
+  float: left;
+  clear: left;
+}
+
+.ec-replaceCycleBox .ec-modularTitle {
+  width: 100%;
+  height: auto;
+  background: none;
+  padding: 0;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #bcbcbc;
+}
+
+.ec-replaceCycleBox .ec-maintainSchedule {
+  margin-top: -.32rem;
+}
+
+.ec-replaceCycleBox .ec-maintainSchedule li {
+  width: 2.8rem;
+  margin-bottom: 0;
+  background: #fff;
+  padding: .12rem 0;
+}
+
+.ec-replaceCycleBox .ec-maintainSchedule li>span {
+  line-height: .48rem;
+}
+
+.ec-replaceCycleBox .ec-modularFool {
+  border: 0;
+}
+
+/*新增保养记录 图片上传*/
+.ec-maintainRecordPic li.ec-picNew {
+  padding: .2rem 0;
+}
+
+.ec-maintainRecordPic li.ec-picNew>span {
+  width: 100%;
+  height: .8rem;
+  background: url(../images/icon_newsRed.png) no-repeat center center;
+  background-size: .64rem;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ec-maintainRecordPic li.ec-picNew>p {
+  width: 100%;
+  height: auto;
+  background: none;
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #282828;
+  position: static;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainRecordNew li>a {
+  display: block;
+}
+
+
+/*新增保养记录 点击留言*/
+.ec-voiceNew {
+  width: 100%;
+  float: right;
+  clear: none;
+}
+
+.ec-voiceNew span {
+  width: 1.99rem;
+  margin-right: .32rem;
+  margin-bottom: .32rem;
+  background: #fff url(../images/icon_soundRecording.png) no-repeat .2rem center;
+  background-size: .24rem;
+  padding-left: .52rem;
+  border: 1px solid #d8d8d8;
+  border-radius: .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  overflow: hidden;
+  float: left;
+  clear: none;
+}
+
+.ec-voiceNew span.ec-voiceOne {
+  background: #fff url(../images/icon_voice.png) no-repeat .2rem center;
+  background-size: .2rem;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+
+.ec-voiceNew span.ec-voiceOne a {
+  width: .64rem;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: center;
+  color: #e74c3c;
+  display: block;
+  float: right;
+  clear: none;
+}
+
+/*!*往期保养记录*!*/
+.ec-historicalBox {
+  width: 100%;
+  margin-top: -.4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-historicalTitle {
+  width: 100%;
+  padding: 0 .4rem;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.ec-historicalTitle span {
+  width: 100%;
+  height: .6rem;
+  border-bottom: 1px solid #d8d8d8;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.ec-historicalTitle p {
+  width: 20%;
+  height: auto;
+  margin: -.18rem 40% .24rem;
+  background: #f3f3f3;
+  font-size: .36rem;
+  line-height: .36rem;
+  text-align: center;
+  color: #d8d8d8;
+  float: left;
+  clear: left;
+}
+
+.ec-historicalBox .ec-modularTitle>p {
+  color: #999;
+}
+
+/*!*往期保养记录*!*/
+.ec-maintainRecordPage .ec-modularBox {
+  width: 92%;
+  margin-left: 4%;
+}
+
+.ec-maintainRecordPage .ec-modularTitle>a {
+  margin-left: .32rem;
+}
+
+.ec-picNewBox {
+  display: none;
+}
+
+.ec-historicalRecords .ec-voiceNew {
+  display: none;
+}
+
+/*!*往期保养记录 编辑*!*/
+.ec-maintainRecordEdit .ec-maintainRecordPic ul.ec-picNewBox {
+  display: block;
+}
+
+.ec-maintainRecordEdit .ec-maintainRecordPic li>a {
+  display: block;
+}
+
+.ec-historicalRecords .ec-maintainRecordEdit .ec-voiceMain {
+  width: 100%;
+  float: left;
+  clear: none;
+}
+
+.ec-historicalRecords .ec-maintainRecordEdit .ec-voiceNew {
+  width: 2.31rem;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ec-historicalRecords .ec-maintainRecordEdit .ec-voiceMain span a {
+  display: block;
+}
+
+/*保养记录 扫码收款入口*/
+.ec-receivablesButton {
+  width: 1.28rem;
+  height: 1.28rem;
+  border-radius: .64rem;
+  background: #fff;
+  box-shadow: 0 0 .16rem #e74c3c;
+  overflow: hidden;
+  position: fixed;
+  /*bottom: 6rem;*/
+  right: .2rem;
+  z-index: 20;
+}
+
+.ec-receivablesButton a {
+  width: 1.28rem;
+  height: 1.28rem;
+  background: url(../images/icon_receivablesButton.png) no-repeat center center;
+  background-size: 75%;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainTotalPricePop {
+  background-color: rgba(0, 0, 0, 0.78);
+}
+
+/*保养记录 保养总价弹层*/
+.ec-maintainTotalPricePopBox {
+  width: 8rem;
+  height: 6rem;
+  background: #fff;
+  border-radius: .32rem;
+  margin-top: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainTotalPricePopBox dl {
+  width: 90%;
+  height: auto;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainTotalPricePopBox>dl dt {
+  width: 100%;
+  height: auto;
+  padding-top: .32rem;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainTotalPricePopBox>dl dt p {
+  width: 100%;
+  height: auto;
+  padding-top: .32rem;
+  margin-bottom: .2rem;
+  font-size: .44rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainTotalPricePopBox>dl dt p.ec-receivableGguideBox {
+  width: 100%;
+  height: 3.6rem;
+  margin: 0;
+  padding: 0;
+  background: url(../images/pic_guideReceivables.png) no-repeat center top;
+  background-size: 100%;
+  position: absolute;
+  top: -3.6rem;
+  left: 0;
+  z-index: 4;
+}
+
+.ec-maintainTotalPricePopBox>dl dd {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainTotalPricePopBox>dl dd.ec-button {
+  padding-top: .4rem;
+}
+
+.ec-maintainTotalPricePopBox>dl dd.ec-button a {
+  width: 60%;
+  margin-left: 20%;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainTotalPricePopBox>dl dd.ec-link a {
+  width: auto;
+  margin: 0 auto;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #377DE8;
+  display: block;
+  float: none;
+  clear: none;
+}
+
+.ec-maintainTotalPricePopBox>a {
+  width: 1.04rem;
+  height: 1.04rem;
+  font-size: .64rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+
+/*支付弹层*/
+.ec-paymentPopBox {
+  width: 9.2rem;
+  height: 10.4rem;
+  background: #fff;
+  border-radius: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.ec-paymentPopBox>a {
+  width: 1.04rem;
+  height: 1.04rem;
+  font-size: .64rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.ec-paymentPopBox dl {
+  width: 6rem;
+  float: left;
+  clear: left;
+}
+
+.ec-paymentPopBox dt {
+  width: 100%;
+  font-size: .6rem;
+  line-height: 1.28rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.ec-paymentPopBox dd {
+  width: 100%;
+  font-size: .48rem;
+  line-height: 1.28rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.ec-paymentPopBox dd.ec-paymentCode {
+  height: 6rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ec-paymentPopBox dd.ec-paymentCode img {
+  width: 100%;
+  height: auto;
+}
+
+.ec-paymentPopBox dd.ec-paymentCode .ec-codeInvalid {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: .4rem;
+  line-height: .78rem;
+  text-align: center;
+  color: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+/*支付宝授权弹层*/
+.ec-authorizationPopBox {
+  width: 9.2rem;
+  height: 6rem;
+  background: #fff;
+  border-radius: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.ec-authorizationPopBox>a {
+  width: 1.04rem;
+  height: 1.04rem;
+  font-size: .64rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.ec-authorizationMain {
+  width: 7.76rem;
+  float: left;
+  clear: left;
+}
+
+.ec-authorizationMain>p {
+  width: 100%;
+  font-size: .4rem;
+  line-height: 1.28rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.ec-agreementBox>span {
+  width: auto;
+  background: url(../images/check_frame.png) no-repeat left center;
+  background-size: .4rem;
+  padding-left: .6rem;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+.ec-agreementBox>span.ec-selected {
+  background: url(../images/check_select.png) no-repeat left center;
+  background-size: .4rem;
+}
+
+.ec-agreementBox>a {
+  width: auto;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #377de8;
+  float: left;
+  clear: none;
+}
+
+.ec-authorizationMainBox {
+  width: 100%;
+  height: auto;
+  padding: .2rem .32rem;
+  background: rgba(216, 216, 216, 0.24);
+  float: left;
+  clear: left;
+}
+
+.ec-authorizationMainBox li {
+  width: 100%;
+  height: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.ec-authorizationButton {
+  width: 100%;
+  padding-top: .2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-authorizationButton a {
+  width: 40%;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.ec-authorizationButton a.ec-disable {
+  background: #e8e8e8;
+}
+
+
+/*查看价格*/
+.ec-seePricePopBox {
+  width: 9.2rem;
+  height: auto;
+  min-height: 6rem;
+  max-height: 13rem;
+  background: #fff;
+  border-radius: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.ec-seePricePopBox>a {
+  width: 1.04rem;
+  height: 1.04rem;
+  font-size: .64rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.ec-seePriceMain {
+  width: 100%;
+  padding: 0 .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-seePriceMain>p {
+  width: 100%;
+  font-size: .48rem;
+  line-height: 1.2rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+/*查看价格 配件参数*/
+.ec-choiceParameter {
+  width: 100%;
+  height: auto;
+  padding: 0 0 .2rem .4rem;
+  background: #f6f6f6;
+  border-radius: .2rem;
+  float: left;
+  clear: left;
+}
+
+.ec-choiceParameter>p {
+  width: 100%;
+  height: auto;
+  margin: .2rem 0 0;
+  padding-right: .4rem;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+.ec-parameterOneBox {
+  width: 100%;
+  padding: 0 0 0 1.92rem;
+  float: left;
+  clear: left;
+}
+
+.ec-parameterOneBox p {
+  width: 1.92rem;
+  margin-left: -1.92rem;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: none;
+}
+
+.ec-parameterOneBox span {
+  width: auto;
+  min-width: 40%;
+  margin-right: .36rem;
+  background: url(../images/choice_default.png) no-repeat left center;
+  background-size: .4rem;
+  padding-left: .6rem;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #282828;
+  display: inline-block;
+  float: left;
+  clear: none;
+}
+
+.ec-parameterOneBox span.ec-selected {
+  background: url(../images/choice_current.png) no-repeat left center;
+  background-size: .4rem;
+}
+
+.ec-parameterOneBox span b {
+  width: auto;
+  font-size: .32rem;
+  font-weight: normal;
+  line-height: .8rem;
+  text-align: left;
+  color: #282828;
+  display: inline-block;
+  float: left;
+  clear: none;
+}
+
+.ec-parameterOneBox span a {
+  width: .4rem;
+  height: .4rem;
+  margin-left: .2rem;
+  margin-top: .2rem;
+  background: url(../images/icon_picBlue.png) no-repeat center center;
+  background-size: 100%;
+  display: inline-block;
+  float: left;
+  clear: none;
+}
+
+/*查看价格参数 查看价格*/
+.ec-priceExhibition {
+  width: 100%;
+  height: auto;
+  padding: .2rem .4rem;
+  margin-top: .32rem;
+  background: #f6f6f6;
+  border-radius: .2rem;
+  float: left;
+  clear: left;
+}
+
+.ec-priceExhibition dt {
+  width: 100%;
+  height: auto;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+.ec-priceExhibition dd {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-priceExhibition dd p {
+  width: auto;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: none;
+}
+
+.ec-priceExhibition dd span {
+  width: auto;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #e74c3c;
+  float: left;
+  clear: none;
+}
+
+/*查看价格参数 按钮*/
+.ec-seePriceButton {
+  width: 100%;
+  padding: .32rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-seePriceButton a {
+  width: 40%;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+/*收款引导弹层*/
+.ec-guideBox {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.78);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 18;
+}
+
+.ec-guideMainBox {
+  width: 8.32rem;
+  height: auto;
+  padding-top: 5.04rem;
+  background: url(../images/pic_guideReceivables.png) no-repeat center top;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: .72rem;
+  bottom: 2.56rem;
+  z-index: 3;
+}
+
+.ec-guideMainBox a {
+  width: 2.4rem;
+  height: 1.2rem;
+  background: url(../images/pic_guideButton.png) no-repeat center center;
+  background-size: 100%;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+/*收款成功弹层*/
+.ec-receivablesSuccessMain {
+  width: 100%;
+  height: auto;
+  min-height: 5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-receivablesSuccessMain dt {
+  width: 100%;
+  height: auto;
+  margin-top: .64rem;
+  background: url(../images/icon_success2.png) no-repeat center top;
+  background-size: 1.68rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-receivablesSuccessMain dt p {
+  width: auto;
+  font-size: .4rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+
+.ec-receivablesSuccessMain dt span {
+  width: auto;
+  font-size: .48rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #e74c3c;
+  float: left;
+  clear: none;
+}
+
+.ec-receivablesSuccessMain dd {
+  width: 100%;
+  height: auto;
+  padding-top: .24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-receivablesSuccessMain dd a {
+  width: 4.24rem;
+  height: auto;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+/*升级提醒弹层*/
+.ec-upgradeBox {
+  width: 84%;
+  height: 10.4rem;
+  background: #fff;
+  border-radius: .4rem;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.ec-upgradeBox>a {
+  width: 1.04rem;
+  height: 1.04rem;
+  font-size: .72rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.ec-upgradeMain,
+.ec-upgradeMain li {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-upgradeMain li.ec-upgradeBanner img {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-upgradeMain li.ec-upgradeText {
+  padding: .64rem .72rem;
+  font-size: .44rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #282828;
+}
+
+.ec-upgradeMain li.ec-upgradeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ec-upgradeMain li.ec-upgradeButton a {
+  width: 4.32rem;
+  height: auto;
+  border: 1px solid #f62928;
+  border-radius: .62rem;
+  font-size: .48rem;
+  line-height: 1.2rem;
+  text-align: center;
+  color: #f62a2a;
+  float: left;
+  clear: none;
+}
+
+/*1122调整*/
+.ec-jurisdictionPopBoxTextNo {
+  height: 3.2rem;
+}
+
+.ec-jurisdictionPopBoxTextNo>dl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ec-jurisdictionPopBoxTextNo>dl dt {
+  display: none;
+}
+
+.ec-jurisdictionPopBoxTextNo>dl dd {
+  width: auto;
+  clear: none;
+}
+
+.ec-jurisdictionPopBoxTextNo>dl dd.ec-button {
+  padding-top: 0;
+  padding-right: .64rem;
+}
+
+.ec-jurisdictionPopBoxTextNo>dl dd.ec-button a {
+  width: 3.6rem;
+  margin: 0;
+}
+
+.ec-jurisdictionPopBoxTextNo>dl dd.ec-button a b {
+  margin-left: .2rem;
+  font-weight: normal;
+  font-size: .32rem;
+}
+
+.ec-jurisdictionPopBox>dl dd.ec-link {
+  padding-top: 0;
+}
+
+.ec-activityTagBox {
+  width: 100%;
+  padding: .16rem 0;
+  background-size: .24rem;
+  float: left;
+  clear: left;
+}
+
+.ec-expandable {
+  background: url(../images/arrow_openRed.png) no-repeat right center;
+  background-size: .24rem;
+}
+
+.ec-activityTagBox span {
+  width: auto;
+  height: .44rem;
+  margin: .04rem .08rem .04rem 0;
+  padding: 0 .08rem;
+  border-radius: .08rem;
+  background: #f39c12;
+  font-size: .32rem;
+  line-height: .44rem;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  clear: none;
+}
+
+.ec-invitingButton {
+  width: 100%;
+  border-top: 1px solid #e8e8e8;
+  padding: .2rem 0;
+  float: left;
+  clear: left;
+}
+
+.ec-invitingButton a {
+  width: 100%;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #2277e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-invitingButton a b {
+  font-weight: normal;
+  padding-left: .72rem;
+  background: url(../images/icon_invitation2.png) no-repeat left center;
+  background-size: .4rem;
+}
+
+
+/*1203调整*/
+/*已开启积分兑换功能*/
+.ec-integralOpenBox {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: left;
+}
+
+.ec-integralOpenBox dt {
+  width: 100%;
+  height: auto;
+  margin-top: .32rem;
+  background: url(../images/icon_success.png) no-repeat center top;
+  background-size: 1.68rem;
+  padding-top: 2rem;
+  font-size: .48rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #0ecfa9;
+  float: left;
+  clear: left;
+}
+
+.ec-integralOpenBox dd {
+  width: 100%;
+  height: auto;
+  padding-top: .24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-integralOpenBox dd p {
+  width: auto;
+  font-size: .36rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+
+.ec-integralOpenBox dd span {
+  width: auto;
+  font-size: .36rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #e74c3c;
+  float: left;
+  clear: none;
+}
+
+/*收款成功页添加送积分功能*/
+.ec-sendPointsPopBox {
+  height: auto;
+}
+
+.ec-sendPointsBox {
+  width: 8.4rem;
+  height: auto;
+  background: #fafafa;
+  border-radius: .2rem;
+  padding: 0 .4rem;
+  margin-bottom: .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-sendPointsBox li {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-sendPointsBox li>p {
+  width: 100%;
+  padding-top: .12rem;
+  font-size: .32rem;
+  line-height: .96rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+.ec-sendPointsBox li.ec-sendPointsNumber>span {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-sendPointsBox li.ec-sendPointsNumber>span>b {
+  width: auto;
+  margin: 0 .08rem;
+  font-size: .4rem;
+  font-weight: normal;
+  line-height: .8rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: none;
+}
+
+.ec-sendPointsBox li.ec-sendPointsNumber>span>b.ec-integralNumber {
+  width: 1.92rem;
+  background: #fff;
+  border-radius: .08rem;
+  border: 1px solid #e8e8e8;
+  font-size: .48rem;
+  height: .78rem;
+  line-height: .78rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+
+.ec-sendPointsBox li.ec-sendPointsMultiple>span {
+  width: 7.92rem;
+  margin-left: -.32rem;
+  float: left;
+  clear: left;
+}
+
+.ec-sendPointsBox li.ec-sendPointsMultiple>span>b {
+  width: 1.264rem;
+  height: .8rem;
+  margin: 0 0 .32rem .32rem;
+  background: #fff;
+  border-radius: .08rem;
+  border: 1px solid #e8e8e8;
+  font-size: .36rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: center;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+
+.ec-sendPointsBox li.ec-sendPointsMultiple>span>b.ec-selected {
+  background: #FFF9F8;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+.ec-sendPointsBox li.ec-sendPointsMultiple>span>b.ec-enable {
+  background: #f1f1f1;
+  color: #ccc;
+}
+
+.ec-sendPointsBox li.ec-sendPointsButton {
+  width: 100%;
+  padding-bottom: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-sendPointsBox li.ec-sendPointsButton>a {
+  width: 3.6rem;
+  height: .96rem;
+  border-radius: .48rem;
+  font-size: .48rem;
+  line-height: .96rem;
+}
+
+
+/*保养记录页面的调整 原有样式的调整*/
+.ec-modularTitle>span.ec-moneyText {
+  display: none;
+}
+
+/*支付弹层增加收款详情*/
+.ec-paymentPopBox dd.ec-paymentMoney p {
+  width: 100%;
+  font-size: .4rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+.ec-paymentPopBox dd.ec-paymentMoney p b {
+  font-size: .44rem;
+  font-weight: normal;
+  color: #e74c3c;
+}
+
+.ec-paymentPopBox dd.ec-paymentMoney span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  float: left;
+  clear: left;
+}
+
+
+/*收款成功页调整*/
+.ec-receivablesSuccessMain dd.ec-totalPriceExplain {
+  padding: 0 0 .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #e74c3c;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput {
+  width: auto;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 0.12rem;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput b {
+  width: 20%;
+  margin-right: 4%;
+  background: url(../images/arrow_down_gray.png) no-repeat 80% center;
+  background-size: .2rem;
+  padding-left: .16rem;
+  font-size: .32rem;
+  line-height: .88rem;
+  text-align: left;
+  color: #666;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput input {
+  width: 60%;
+  height: .64rem;
+  border: 0;
+  font-size: .36rem;
+  line-height: .64rem;
+  /*margin-top: .12rem;*/
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput input::-webkit-input-placeholder {
+  font-size: .32rem;
+  color: #999;
+}
+
+/*收款成功页调整*/
+.ec-receivablesSuccessMain dd.ec-totalPriceExplain {
+  padding: 0 0 .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #e74c3c;
+}
+
+/*1210调整*/
+.ec-maintainRecordPage .ec-carInfoBox dd {
+  width: 7.6rem;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateBox {
+  margin-bottom: -.2rem;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateBox b {
+  font-size: .36rem;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateBox b.em-licensePlateNo {
+  font-size: .32rem;
+  color: #ccc;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput {
+  width: auto;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 0.12rem;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput b {
+  width: 20%;
+  margin-right: 4%;
+  background: url(../images/arrow_down_gray.png) no-repeat 80% center;
+  background-size: .2rem;
+  padding-left: .16rem;
+  font-size: .32rem;
+  line-height: .88rem;
+  text-align: left;
+  color: #666;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput input {
+  width: 60%;
+  height: .64rem;
+  border: 0;
+  font-size: .36rem;
+  line-height: .64rem;
+  /*margin-top: .12rem;*/
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput input::-webkit-input-placeholder {
+  font-size: .32rem;
+}
+
+.ec-carInfoBox dd>span.em-licensePlateInput a {
+  width: 16%;
+  font-size: .36rem;
+  line-height: .88rem;
+  text-align: center;
+  color: #fff;
+  background: #d53533;
+  float: right;
+  clear: none;
+}
+
+.em-maintainRecordButton {
+  width: 100%;
+  padding: .32rem 0;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.em-maintainRecordButton>a {
+  width: 40%;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  float: left;
+  clear: left;
+}
+
+.ec-maintainTotalPricePopBox>dl dt p.em-collectionNo {
+  margin-bottom: .4rem;
+  text-align: left;
+}
+
+.ec-maintainTotalPricePopBox>dl dt p.em-collectionNo a {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #377DE8;
+  float: right;
+  clear: none;
+}
+
+.ec-integralOpenBox dd.em-successfullySaveText {
+  color: #e74c3c;
+}
+
+.ec-integralOpenBox dd.em-successfullySaveButton {
+  width: 100%;
+  padding-top: .48rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ec-integralOpenBox dd.em-successfullySaveButton a {
+  width: auto;
+  padding: .2rem .48rem;
+  border: 1px solid #e74c3c;
+  border-radius: .54rem;
+  font-size: .4rem;
+  line-height: .56rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.em-maintainRecordButton .disable {
+  background-color: #e8e8e8;
+  color: #bcbcbc;
+}
+
+/*上传收款码*/
+.en-uploadPaymentCodePop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 300;
+}
+
+.en-uploadPaymentCodeBox {
+  width: 9.2rem;
+  height: auto;
+  min-height: 6rem;
+  max-height: 13rem;
+  background: #fff;
+  border-radius: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCodeBox>a {
+  width: 1.04rem;
+  height: 1.04rem;
+  font-size: .64rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.en-uploadPaymentCodeMain {
+  width: 100%;
+  padding: 0 .4rem;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCodeMain>p {
+  width: 100%;
+  font-size: .48rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCodeMain>span {
+  width: 100%;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCode {
+  width: 100%;
+  height: auto;
+  margin: .2rem 0 0;
+  padding: .2rem .4rem 0;
+  background: #f6f6f6;
+  border-radius: .2rem;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCode li {
+  width: 100%;
+  margin-bottom: .4rem;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCode li p {
+  width: 100%;
+  margin-bottom: .12rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCode li span {
+  width: 3.4rem;
+  height: 3.4rem;
+  margin: 0 .2rem;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+
+.en-uploadPaymentCode li span b {
+  width: 100%;
+  background: url(../images/icon_newsRed.png) no-repeat center .2rem;
+  background-size: .64rem;
+  padding-top: 1rem;
+  font-size: .36rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCode li span img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.en-uploadPaymentCode li span a {
+  width: .52rem;
+  height: .52rem;
+  background: url(../images/icon_empty.png) no-repeat center center;
+  background-size: .48rem;
+  position: absolute;
+  top: -.2rem;
+  right: -.2rem;
+  z-index: 2;
+}
+
+
+.en-uploadPaymentCodeButton {
+  width: 100%;
+  padding: .32rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.en-uploadPaymentCodeButton a {
+  width: 40%;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.ec-receivablesSuccessMain dt.eo-waitBox {
+  background-image: url(../images/icon_wait.png);
+}
+
+.ec-receivablesSuccessMain dd.eo-totalBox {
+  padding: 0;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #999;
+}
+
+
+/*1217 当前里程*/
+.eo-currentMileage {
+  display: block;
+  width: 100%;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #999;
+  padding-bottom: .32rem;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: .32rem;
+  /*border-bottom: 1px solid #e8e8e8;*/
+  /*margin-bottom: .32rem;*/
+}
+/*.ec-maintainRecordEdit .eo-currentMileage {*/
+ /**/
+/*}*/
+.eo-currentMileage span {
+  width: auto;
+  font-size: .36rem;
+  color: #282828;
+
+}
+.eo-currentMileage a {
+  width: auto;
+  margin-right: .4rem;
+  font-size: .32rem;
+  color: #377de8;
+  float: right;
+  clear: none;
+
+}
+.eo-currentMileage>div{
+  width: auto;
+  float: right;
+  clear: none;
+}
+
+/*1217 保养里程调整*/
+.eo-currentMileagePopBox {
+  width: 8rem;
+  height: auto;
+  background: #fff;
+  padding: .64rem 0;
+  border-radius: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  float: left;
+  clear: left;
+}
+.eo-currentMileagePopBox>a {
+  width: 1.04rem;
+  height: 1.04rem;
+  font-size: .64rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+.eo-currentMileagePopBox>dl dt {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.eo-currentMileagePopBox>dl dt>p {
+  width: auto;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+.eo-currentMileagePopBox>dl dt>span {
+  width: 2.8rem;
+  height: .8rem;
+  margin: 0 .2rem;
+  border: 1px solid #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.eo-currentMileagePopBox>dl dt>span>input {
+  width: 96%;
+  height: .68rem;
+  font-size: .48rem;
+  line-height: .68rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+.eo-currentMileagePopBox>dl dt>span>span {
+  width: 96%;
+  height: .68rem;
+  font-size: .48rem;
+  line-height: .68rem;
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+.eo-currentMileagePopBox>dl dt>span>span>i {
+  font-size: .36rem;
+  color: #cfc7c7;
+}
+.eo-currentMileagePopBox>dl dt>span>input::-webkit-input-placeholder {
+  font-size: .36rem;
+}
+
+.eo-calculatorBox {
+  width: 100%;
+  height: auto;
+  margin-top: .2rem;
+  /*background: url(../images/pic_calculator2.png) no-repeat center top;
+  background-size: 100%;*/
+  float: left;
+  clear: left;
+}
+.eo-inputButtonBox {
+  width: 6.6rem;
+  float: left;
+  clear: left;
+}
+.eo-inputButtonBox span {
+  width: 1.88rem;
+  height: auto;
+  margin: .16rem;
+  background: #e8e8e8;
+  border-radius: .16rem;
+  font-size: .48rem;
+  line-height: 1.2rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+.eo-inputButtonBox span.eo-deleteButton {
+  font-size: .4rem;
+}
+
+.eo-currentMileageBotton {
+  width: 100%;
+  padding-top: .2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.eo-currentMileageBotton>a {
+  width: 40%;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: left;
+}
+.ec-maintainRecord {
+  padding-top: .32rem;
+}
+
+/*1221 è°ƒæ•´*/
+.en-uploadPaymentCodeMain>span>a {
+  margin-left: .32rem;
+  color: #377DE8;
+}
+
+.eq-maintainProjectBox {
+  width: 100%;
+  margin-bottom: .32rem;
+  float: right;
+  clear: none;
+}
+.eq-maintainProjectBox>p {
+  width: 5.64rem;
+  margin-right: .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #999;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  overflow: hidden;
+  float: left;
+  clear: none;
+}
+.eq-maintainProjectBox>a {
+  width: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #377DE8;
+  float: left;
+  clear: none;
+}
+/*1229 调整*/
+.ec-receivablesSuccessMain dd .ec-sendPointsBox li.ec-sendPointsNumber>p>b {
+  font-weight: normal;
+  float: left;
+  clear: left;
+}
+.ec-receivablesSuccessMain dd .ec-sendPointsBox li.ec-sendPointsNumber>p>a {
+  width: auto;
+  /*background: url(../images/icon_transformation.png) no-repeat right center;
+    background-size: .28rem;*/
+  background-color: transparent;
+  border-radius: 0;
+  /*padding-right: .48rem;*/
+  font-size: .32rem;
+  line-height: .96rem;
+  text-align: left;
+  color: #377de8;
+  float: right;
+  clear: none;
+}
+
+.ec-receivablesSuccessMain dd .ec-sendPointsBox li.es-customKeyboard {
+  width: 100%;
+  padding: .2rem 0;
+  float: left;
+  clear: left;
+}
+.ec-receivablesSuccessMain dd .ec-sendPointsBox li.es-customKeyboard>span {
+  width: 2.213rem;
+  height: auto;
+  margin: .16rem;
+  background: #e8e8e8;
+  border-radius: .16rem;
+  font-size: .48rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+.ec-receivablesSuccessMain dd .ec-sendPointsBox li.es-customKeyboard>span.es-zeroButton {
+  width: 4.746rem;
+}
+/*自定义赠送调整*/
+.ec-sendPointsBox li.ec-sendPointsNumber>span>span.ec-customInput {
+  width: 1.92rem;
+  background: #fff;
+  border-radius: .08rem;
+  border: 1px solid #e8e8e8;
+  font-size: .48rem;
+  line-height: .78rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+.ec-sendPointsBox li.ec-sendPointsNumber>span>span.ec-customInput>b {
+  font-size: .4rem;
+  font-weight: normal;
+  color: #ccc;
+}
+/*修理厂端常规目录*/
+.es-followBrandBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.es-followBrandBox ul {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.es-followBrandBox ul li {
+  width: 25%;
+  border-right: 1px solid #f3f5f7;
+  border-bottom: 1px solid #f3f5f7;
+  float: left;
+  clear: none;
+}
+.es-followBrandBox ul li>span.es-brandCataloguePic {
+  width: 100%;
+  height: 1.28rem;
+  margin-top: .32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.es-followBrandBox ul li>span.es-brandCataloguePic img {
+  width: auto;
+  height: auto;
+  max-width: 1.76rem;
+  max-height: 1.28rem;
+}
+.es-followBrandBox ul li>p.es-brandCatalogueName {
+  width: 100%;
+  height: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #000;
+  float: left;
+  clear: left;
+}

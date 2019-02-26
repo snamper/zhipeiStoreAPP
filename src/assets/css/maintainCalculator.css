@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-item: center;
+}
+
+.ec-maskBox {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.78);
+  position: fixed;
+  left: 0;
+  /*top: 0;*/
+  bottom: 0;
+  z-index: 80;
+}
+
+
+.ec-calculator .ec-results span {
+  width: 100%;
+  height: 1.04rem;
+  padding: .2rem 0;
+  border: 1px solid #e8e8e8;
+  border-radius: .08rem;
+  padding-right: 2.24rem;
+  float: left;
+  clear: left;
+}
+
+.ec-calculator .ec-results span b {
+  width: auto;
+  height: .64rem;
+  border: 0;
+  font-size: .36rem;
+  font-weight: normal;
+  line-height: .6rem;
+  text-align: left;
+  color: #282828;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ec-calculator .ec-results span b.ec-calculatedAmount {
+  width: auto;
+  max-width: 60%;
+  margin-left: .16rem;
+  overflow-x: hidden;
+}
+
+.ec-calculator .ec-results span b.ec-placeholder {
+  color: #999;
+}
+
+.ec-calculator .ec-results span b.ec-integralDeduction {
+  width: auto;
+  text-align: right;
+  padding-right: .16rem;
+  color: #e74c3c;
+  float: right;
+  clear: none;
+}
+
+.ec-calculator .ec-results a {
+  width: 2.24rem;
+  background: #e74c3c;
+  border-radius: 0 .08rem .08rem 0;
+  margin-top: -1.04rem;
+  font-size: .4rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+  float: right;
+  clear: none;
+}
+
+.ec-receivableGguideBox {
+  width: 100%;
+  height: 3.6rem;
+  margin: 0;
+  padding: 0;
+  background: url(../images/pic_guideReceivables2.png) no-repeat center top;
+  background-size: 100%;
+  position: absolute;
+  top: -3.6rem;
+  left: 0;
+  z-index: 4;
+}
+
+.ec-calculator {
+  width: 8rem;
+  height: 10.6rem;
+  margin: -3.5rem 0 0 -4rem;
+  background-color: #fff;
+  border-radius: .32rem;
+  padding: .4rem .4rem 0;
+  font-size: .32rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+}
+
+.ec-calculator>a {
+  width: .96rem;
+  height: .96rem;
+  text-decoration: none;
+  font-size: .56rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.textBox {
+  width: 100%;
+  margin-bottom: .24rem;
+  font-size: .48rem;
+  line-height: 1.08rem;
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+.textBox>a {
+  width: auto;
+  height: auto;
+  margin-left: .48rem;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #377DE8;
+}
+.input {
+  width: 72%;
+  height: .96rem;
+  border-radius: 0px;
+  border: 1px solid #d8d8d8;
+  background-color: #fff;
+  color: #282828;
+  padding: 0 .08rem 0 .08rem;
+  font-size: .4rem;
+  box-sizing: border-box;
+  float: left;
+  clear: none;
+}
+
+.input:focus,
+.input:active {
+  border-color: #03a9f4;
+  box-shadow: 0 0 4px #03A9F4;
+  outline: none 0;
+}
+
+.results a {
+  width: 28%;
+  background: #e74c3c;
+  font-size: .4rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  float: left;
+  clear: none;
+}
+
+.button {
+  margin: .12rem;
+  width: 1.56rem;
+  border: 1px solid #e8e8e8;
+  height: 1.04rem;
+  border-radius: .08rem;
+  font-size: .56rem;
+  color: #282828;
+  background-color: #e8e8e8;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonZero {
+  width: 3.36rem;
+}
+
+.buttonEliminate {
+  width: 2.46rem;
+}
+
+.mode {
+  width: 100%;
+  height: auto;
+  padding-top: .4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  float: left;
+  clear: left;
+}
+
+.equal-sign {
+  background-color: #e74c3c;
+  border: 1px solid #e74c3c;
+  color: #fff;
+  width: 3.36rem;
+}
+
+.toggle-button {
+  border: none;
+  background-color: #333333;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.35);
+}
+
+p {
+  margin-top: 0;
+}
+
+button::-moz-focus-inner {
+  border-color: transparent;
+}
+
+
+/*开启积分功能*/
+.ec-openIntegralBox {
+  width: 100%;
+  position: relative;
+  float: left;
+  clear: left;
+  margin-bottom: -.4rem;
+}
+
+.ec-openIntegralBox>span {
+  width: auto;
+  background: url(../images/switch_shut.png) no-repeat right center;
+  background-size: 1.6rem;
+  padding-right: 1.6rem;
+  font-size: .36rem;
+  line-height: 1.28rem;
+  text-align: left;
+  color: #666;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.ec-openIntegralBox>span.ec-selected {
+  background-image: url(../images/switch_open.png);
+}
+
+.ec-openIntegralPop {
+  width: 100%;
+  position: absolute;
+  top: 1.0rem;
+  left: 0;
+  z-index: 3;
+}
+
+.ec-openIntegralPop>span {
+  width: 0;
+  height: 0;
+  border-width: 0 .24rem .24rem;
+  border-style: solid;
+  border-color: transparent transparent #e8e8e8;
+  position: relative;
+  left: 12%;
+  display: block;
+}
+
+.ec-openIntegralPop>p {
+  width: 100%;
+  height: auto;
+  margin-top: -.05333rem;
+  background: #fff;
+  border: .04rem solid #e8e8e8;
+  border-radius: .2rem;
+  padding: .2rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: justify;
+  color: #666;
+  position: relative;
+  z-index: 2;
+  float: left;
+  clear: left;
+}
+
+.ec-openIntegralPop>p>b {
+  color: #e74c3c;
+}
+
+.ec-openIntegralPop>p>a {
+  color: #377de8;
+  font-size: .32rem;
+  display: inline-block;
+  float: right;
+  clear: none;
+}
+
+
+.ec-calculatorBox {
+  height: 6.08rem;
+  margin-bottom: .4rem;
+}
+
+/*使用积分相关样式*/
+.ec-usingIntegralBox {
+  width: 100%;
+  position: relative;
+  float: left;
+  clear: left;
+  margin-bottom: -.4rem;
+}
+
+.ec-usingIntegralBox>p {
+  width: auto;
+  font-size: .32rem;
+  line-height: 1.28rem;
+  text-align: left;
+  color: #666;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.ec-usingIntegralBox>p>b {
+  font-weight: normal;
+  color: #e74c3c;
+}
+
+.ec-usingIntegralBox>span {
+  width: auto;
+  background: url(../images/check_frame.png) no-repeat left .42rem;
+  background-size: .4rem;
+  padding-left: .6rem;
+  font-size: .32rem;
+  line-height: 1.28rem;
+  text-align: left;
+  color: #999;
+  float: right;
+  clear: none;
+}
+
+.ec-usingIntegralBox>span.ec-selected {
+  background-image: url(../images/check_select.png);
+}
+
+.ec-calculator>dl div.ec-usingIntegralBox>span.ec-prohibit {
+  background-image: url(../images/check_frameProhibit.png);
+  color: #ccc;
+  opacity: .48;
+}

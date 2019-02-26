@@ -1,0 +1,294 @@
+/*VIN码下单记录顶部搜索*/
+.aa-searchTop {
+	width: 100%;
+	height: 1.2rem;
+	padding: .28rem .32rem;
+	background: #fff;
+	border-bottom: 1px solid #dce6ef;
+	float: left;
+	clear: left;
+}
+.aa-searchTop span.aa-searchChoice {
+	width: 1.44rem;
+	height: .64rem;
+	border-right: 1px solid #dce6ef;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	background: url(../../images/icon_dropDown.png) no-repeat 1.12rem center;
+	background-size: .16rem;
+	display: inline-block;
+	float: left;
+	clear: none;
+}
+.aa-searchTop input {
+	width: 5.3rem;
+	height: .64rem;
+	margin-left: .16rem;
+	border: none;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.aa-searchTop a.aa-closeLink {
+	width: .48rem;
+	height: .48rem;
+	margin: .08rem 0;
+	border-radius: .32rem;
+	background: #e2e2e2;
+	font-size: .36rem;
+	line-height: .4rem;
+	text-align: center;
+	color: #fff;
+	display: inline-block;
+	float: right;
+	clear: none;
+}
+.aa-searchTop a.aa-searchButton {
+	width: .48rem;
+	height: .48rem;
+	margin: .08rem .32rem;
+	background: url(../../images/icon_search.png) no-repeat center center;
+	background-size: .48rem;
+	float: right;
+	clear: none;
+}
+.aa-searchTop a.aa-dateButton {
+	width: .48rem;
+	height: .48rem;
+	margin: .08rem 0 0 .32rem;
+	background: url(../../images/icon_date.png) no-repeat center center;
+	background-size: .48rem;
+	float: right;
+	clear: none;
+}
+.aa-searchTop span.aa-lineBox {
+	width: 1px;
+	height: .64rem;
+	background: #dce6ef;
+	float: right;
+	clear: none;
+}
+
+/*VIN码下单记录车型情况*/
+.aa-historyCar {
+	width: 100%;
+	margin-top: .32rem;
+	border-top: 1px solid #dce6ef;
+	border-bottom: 1px solid #dce6ef;
+	background: #fff;
+	padding: .32rem;
+	float: left;
+	clear: left;
+}
+.aa-historyCar li {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.aa-historyCar li.aa-historyCarName p {
+	width: 7.2rem;
+	height: auto;
+	font-size: .36rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.aa-historyCar li.aa-historyCarName input {
+	width: 1.84rem;
+	height: .72rem;
+	background: #fff;
+	border: 1px solid #d53533;
+	border-radius: .08rem;
+	font-size: .36rem;
+	line-height: .69rem;
+	text-align: center;
+	color: #d53533;
+	float: right;
+	clear: none;
+}
+.aa-historyCar li.aa-historyVin {
+	width: 100%;
+	height: auto;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: left;
+}
+.aa-historyCar li.aa-historyRemarks {
+	width: 100%;
+	height: .72rem;
+	padding-right: .78rem;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.aa-historyCar li.aa-historyRemarks span {
+	width: 100%;
+	height: .72rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #666;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	float: left;
+	clear: none;
+}
+.aa-historyCar li.aa-historyRemarks a {
+	width: auto;
+	height: .72rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #2c83e6;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 3;
+}
+
+/*调货点列表内容相关样式*/
+.aa-orderLineMain {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.aa-orderLineOne {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.aa-orderLineOne span.aa-orderTime {
+	width: 100%;
+	height: .84rem;
+	font-size: .32rem;
+	line-height: .84rem;
+	text-align: center;
+	color: #c2d1e0;
+	float: left;
+	clear: left;
+}
+.aa-orderLineOne ul {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	border-top: 1px solid #dce6ef;
+	border-bottom: 1px solid #dce6ef;
+	float: left;
+	clear: left;
+}
+.aa-orderLineOne li.aa-orderTop {
+	width: 100%;
+	height: .92rem;
+	padding: 0 .32rem;
+	float: left;
+	clear: left;
+}
+.aa-orderTop span.aa-orderShop {
+	width: auto;
+	height: .92rem;
+	padding-left: .68rem;
+	background: url(../../images/icon_shop.png) no-repeat center left;
+	background-size: .48rem;
+	font-size: .36rem;
+	line-height: .92rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.aa-orderTop span.aa-orderNumber {
+	width: auto;
+	height: .92rem;
+	background-size: .48rem;
+	font-size: .32rem;
+	line-height: .92rem;
+	text-align: left;
+	color: #999;
+	float: right;
+	clear: none;
+}
+.aa-orderLineOne li.aa-orderCommodity {
+	width: 100%;
+	height: auto;
+	background: #f6f9fb;
+	padding: .32rem 2.12rem .32rem .32rem;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.aa-orderCommodity p {
+	width: 100%;
+	height: auto;
+	font-size: .36rem;
+	line-height: .68rem;
+	text-align: left;
+	color: #787878;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	float: left;
+	clear: left;
+}
+.aa-orderCommodity span.aa-numberCommodity {
+	width: auto;
+	height: .68rem;
+	padding-right: .4rem;
+	background: url(../../images/arrow_link_gray.png) no-repeat center right;
+	background-size: .36rem;
+	font-size: .36rem;
+	line-height: .68rem;
+	text-align: left;
+	color: #787878;
+	position: absolute;
+	right: .32rem;
+	top: 50%;
+	margin-top: -.34rem;
+}
+.aa-orderLineOne li.aa-orderPrice {
+	width: 100%;
+	height: auto;
+	padding: .32rem;
+	font-size: .36rem;
+	line-height: .48rem;
+	text-align: right;
+	color: #666;
+	float: left;
+	clear: left;
+}
+/*无订单时的样式*/
+.errorPage {
+    width: 100%;
+    height: 100%;
+    /*background: #fff;*/
+    float: left;
+    clear: left;
+}
+.error_noOrder {
+    width: 81.6%;
+    height: auto;
+    margin: 4.8rem 9.2% 0;
+    background: url(../../images/pic_noOrder.png) no-repeat center top;
+    background-size: 48%;
+    padding: 3.6rem 0 0;
+    font-size: .48rem;
+    line-height: 1.28rem;
+    text-align: center;
+    color: #999;
+    float: left;
+    clear: left;
+}
+.error_noOrder span{
+	font-size: .32rem;
+	color: #d53533;
+}

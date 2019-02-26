@@ -1,0 +1,487 @@
+
+/*收款设置页面的样式*/
+.dy-receivablesSetupPage {
+  width: 100%;
+  padding-bottom: 1.6rem;
+  float: left;
+  clear: left;
+}
+
+/*审核失败*/
+.dy-errorBox {
+  width: 100%;
+  background: #fff;
+  padding: .2rem .32rem;
+  margin-bottom: .32rem;
+  border-bottom: 1px solid #e8e8e8;
+  float: left;
+  clear: left;
+}
+.dy-errorBox p {
+  width: 100%;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+.dy-errorBox span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+/*支付宝账号绑定*/
+.dy-alipayBox {
+  width: 100%;
+  background: #fff;
+  padding: .32rem;
+  margin-bottom: .32rem;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  float: left;
+  clear: left;
+}
+.dy-alipayBox span {
+  width: auto;
+  border-right: 1px solid #d8d8d8;
+  padding-right: .32rem;
+  margin-right: .32rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: none;
+}
+.dy-alipayBox input {
+  width: 5.8rem;
+  border: 0;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: none;
+}
+.dy-alipayBox a {
+  width: .48rem;
+  height: .48rem;
+  display: flex;
+  clear: none;
+}
+.dy-alipayBox a.dy-emptyButton {
+  background: url(../images/icon_emptyGray.png) no-repeat center center;
+  background-size: .44rem;
+  float: left;
+}
+.dy-alipayBox a.dy-doubtButton {
+  background: url(../images/icon_doubtBlue.png) no-repeat center center;
+  background-size: .44rem;
+  float: right;
+}
+
+
+/*上传完善资料信息*/
+.dy-perfectInfo {
+  width: 100%;
+  background: #fff;
+  margin-bottom: .32rem;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  float: left;
+  clear: left;
+}
+
+/*上传资料信息头部样式*/
+.dy-perfectInfoTop {
+  width: 100%;
+  padding: .2rem 0;
+  background: #f8f8f8;
+  border-bottom: 1px solid #d8d8d8;
+  float: left;
+  clear: left;
+}
+.dy-perfectInfoTop p {
+  width: 100%;
+  font-size: .4rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #333;
+  float: left;
+  clear: left;
+}
+.dy-perfectInfoTop span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .52rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+/*单个模块资料上传*/
+.dy-uploadPicBox {
+  width: 96.8%;
+  padding: .32rem 0 0;
+  border-bottom: 1px solid #e8e8e8;
+  float: right;
+  clear: right;
+}
+.dy-uploadPicName {
+  width: 100%;
+  padding-right: .32rem;
+  float: left;
+  clear: left;
+}
+.dy-uploadPicName p {
+  width: auto;
+  margin-right: .2rem;
+  font-size: .36rem;
+  line-height: .68rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: none;
+}
+.dy-uploadPicName span {
+  width: auto;
+  margin-top: .08rem;
+  font-size: .28rem;
+  line-height: .6rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: none;
+}
+.dy-uploadPicName a {
+  width: auto;
+  font-size: .32rem;
+  line-height: .68rem;
+  text-align: left;
+  color: #108ee9;
+  float: right;
+  clear: none;
+}
+
+.dy-uploadPicMain {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.dy-picBox {
+  width: 20%;
+  height: auto;
+  padding-top: .2rem;
+  margin-bottom: .32rem;
+  position: relative;
+  float: left;
+  clear: none;
+}
+.dy-picBox>a.dy-uploadPic {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid #e8e8e8;
+  background: url(../images/icon_camera.png) no-repeat center center;
+  background-size: .48rem;
+  display: block;
+  position: static;
+  float: left;
+  clear: left;
+}
+.dy-picBox>span {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.dy-picBox>span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dy-picBox>a {
+  width: .56rem;
+  height: .56rem;
+  background: url(../images/icon_emptyRed.png) no-repeat center center;
+  background-size: .44rem;
+  display: block;
+  position: absolute;
+  top: 0rem;
+  right: .12rem;
+  z-index: 3;
+}
+
+/*底部操作按钮*/
+.dy-receivablesSetupFool {
+  width: 100%;
+  height: 1.6rem;
+  background: #fff;
+  border-bottom: 1px solid #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.dy-receivablesSetupFool a {
+  width: 3.6rem;
+  height: .96rem;
+  border: 1px solid #e74c3c;
+  border-radius: .48rem;
+  font-size: .4rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #e74c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+/*状态跳转页样式*/
+.dy-stateBox {
+  width: 100%;
+  padding-top: .96rem;
+  float: left;
+  clear: left;
+}
+.dy-stateText {
+  width: 100%;
+  padding-top: 2.22rem;
+  font-size: .52rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #333;
+  float: left;
+  clear: left;
+}
+.dy-stateExplain {
+  width: 100%;
+  margin-top: .32rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #999;
+  float: left;
+  clear: left;
+}
+.dy-stateButton {
+  width: 100%;
+  padding: .32rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.dy-stateButton a {
+  width: auto;
+  padding: 0 .48rem;
+  background: #fff;
+  border: 1px solid #e74c3c;
+  border-radius: .48rem;
+  font-size: .4rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+.dy-stateLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.dy-stateLink a {
+  width: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #108ee9;
+  float: left;
+  clear: left;
+}
+
+/*审核中状态相关*/
+.dy-stateAudit .dy-stateText {
+  background: url(../images/icon_wait.png) no-repeat center top;
+  background-size: 1.72rem;
+}
+.dy-stateAudit .dy-stateExplain {
+  color: #F39C12;
+}
+
+/*已开通状态相关*/
+.dy-stateSuccess .dy-stateText {
+  background: url(../images/icon_success.png) no-repeat center top;
+  background-size: 1.72rem;
+}
+
+/*收款通知 成功收款*/
+.dy-stateAlready .dy-stateText {
+  background: url(../images/icon_notice.png) no-repeat center top;
+  background-size: 1.72rem;
+}
+
+/*收款通知 已成功收款详情*/
+.dy-alreadyMain {
+  width: 92%;
+  margin-left: 4%;
+  margin-top: .48rem;
+  padding: .2rem .32rem;
+  background: #fff;
+  float: left;
+  clear: left;
+}
+.dy-alreadyMain>div {
+  width: 100%;
+  height: auto;
+  padding-left: 1rem;
+  float: left;
+  clear: left;
+}
+.dy-alreadyMain>div span {
+  width: 1rem;
+  height: auto;
+  margin-left: -1rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: left;
+}
+.dy-alreadyMain>div p {
+  width: 100%;
+  height: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: none;
+}
+.dy-alreadyMain>div.dy-alreadyFool {
+  border-top: 1px solid #e8e8e8;
+  margin-top: .2rem;
+  padding: .2rem 0 0;
+}
+.dy-alreadyMain>div.dy-alreadyFool span {
+  width: auto;
+  margin: 0;
+  color: #ccc;
+}
+.dy-alreadyMain>div.dy-alreadyFool p {
+  width: auto;
+  margin: 0;
+  color: #999;
+  float: right;
+  clear: none;
+}
+.dy-alreadyMain>div.dy-alreadyFool p b {
+  color: #e74c3c;
+  font-size: .36rem;
+  font-weight: normal;
+}
+/*å®¡æ ¸æäº¤æˆåŠŸ*/
+.dy-applySuccessPop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 300;
+}
+.dy-applySuccessBox {
+  width: 80%;
+  height: 4.8rem;
+  background: #fff;
+  border-radius: .32rem;
+  float: left;
+  clear: left;
+}
+.dy-applySuccessBox span {
+  width: 100%;
+  margin-top: .96rem;
+  background: url(../images/icon_successPop.png) no-repeat center top;
+  background-size: .96rem;
+  padding-top: 1.08rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #1abc9c;
+  float: left;
+  clear: left;
+}
+.dy-applySuccessBox p {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

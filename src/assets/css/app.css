@@ -1,0 +1,444 @@
+@charset "utf-8";
+/*html5 reset*/
+ul, li, ol, p {
+    list-style: none
+}
+h4, h5, em {
+    font-style: normal;
+    font-weight: 400
+}
+h3 {
+    font-style: normal;
+    font-weight:normal;
+}
+a {
+    text-decoration: none;
+}
+
+
+*{box-sizing: border-box;margin: 0;padding: 0;border: 0;}
+/** È«¾Öreset **/
+body,header,footer,section,div,span,p,img,a,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,i,b,u,del,menu,nav,fieldset,legend,article,aside,details,figcaption,hgroup,pre,code,from,blockquote,th,td,tr,hr,table,img,figure,button,input,textarea {
+	padding:0;
+	margin:0;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+	-webkit-touch-callout:none;
+	-webkit-text-size-adjust:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+body{
+	background-color: #edf2f7;
+	padding: 0;
+	min-width: 300px;
+	/*max-width: 667px*/;
+	margin: 0 auto;
+	 font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+[v-cloak] {
+  display:none !important;
+}
+input,textarea{-webkit-user-select:auto !important;user-select:auto !important;/*-webkit-appearance:none;*/}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+	font-size: .32rem;
+    color: #ccc;
+}
+:focus{outline:none;}
+img{vertical-align:middle;border:0 none;}
+ul{list-style:none;}
+a{text-decoration:none;color:inherit;}
+section{display:block;margin:0 auto;}
+header,footer{margin:0 auto;width:100%;}
+em,i{font-style:normal;}
+html,body{width:100%;height:100%;}
+button,input{border:0 none;}
+u,del{text-decoration:none;}
+
+input[type="submit"],input[type="reset"],input[type="button"],input[type="password"],input[type="text"],button{-webkit-appearance:none;outline:none;}
+
+html,body{font-size:20px;}
+@media only screen and (min-width:640px){
+    html,body{font-size:40px;}
+}
+/*input {
+    font-size: 1.6rem;
+    height: 1.6rem;
+    padding: 1rem 0;
+}*/
+.toastBox {
+    width: 56%;
+    height: 1.28rem;
+    background-color: rgba(0,0,0,0.64);
+    font-size: .4rem;
+    line-height: 1.28rem;
+    text-align: center;
+    color: #fff;
+    border-radius: .64rem;
+    position: fixed;
+    bottom: 1.6rem;
+    left: 22%;
+    z-index: 40;
+}
+.maskBox {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=64);
+    -moz-opacity: 0.64;
+    -khtml-opacity: 0.64;
+    opacity: 0.64;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.pageMain {
+    width: 100%;
+    height: auto;
+    float: left;
+    clear: left;
+    padding-top:1.16rem;
+}
+.pageMargin {
+    padding-bottom: 1.28rem;
+
+}
+.aa-chooseBox>p {
+    width: 100%;
+    height: .88rem;
+    padding: 0 .32rem;
+    font-size: .36rem;
+    line-height: .88rem;
+    text-align: left;
+    color: #939ead;
+    float: left;
+    clear: left;
+}
+.foolButtonOne {
+    width: 100%;
+    height: 1.28rem;
+    background: #fff;
+    border-top: 1px solid #d7d9dc;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+}
+.foolButtonOne a {
+    width: 45%;
+    height: .88rem;
+    margin: .2rem 27.5% 0;
+    background: #fff;
+    border: 1px solid #d53533;
+    border-radius: .44rem;
+    font-size: .4rem;
+    line-height: .86rem;
+    text-align: center;
+    color: #d53533;
+    display: block;
+    float: left;
+    clear: none;
+}
+.shareApp a {
+    width: 45%;
+    height: .88rem;
+    margin: .2rem 27.5% 0;
+    background: #fff;
+    border: 1px solid #d53533;
+    border-radius: .44rem;
+    font-size: .4rem;
+    line-height: .86rem;
+    text-align: center;
+    color: #d53533;
+    display: block;
+    float: left;
+    clear: none;
+}
+.aa-carAdaptationBox {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    max-height: 13rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 56;
+}
+.aa-carPopHead {
+    width: 100%;
+    height: 1.04rem;
+    background: #edf2f7;
+    float: left;
+    clear: left;
+}
+.aa-carPopHead p {
+    width: auto;
+    height: 1.04rem;
+    margin-left: .32rem;
+    font-size: .4rem;
+    line-height: 1.04rem;
+    text-align: left;
+    color: #878f9e;
+    float: left;
+    clear: left;
+}
+.aa-carPopHead p b{
+	display: inline-block;
+	font-weight: normal;
+	padding-right: .2rem;
+    max-width: 5rem;
+    height: 1.04rem;
+    margin-left: .2rem;
+    font-size: .4rem;
+    line-height: 1.04rem;
+    text-align: left;
+    color: #878f9e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    clear: left;
+
+}
+.aa-carPopHead a {
+    width: auto;
+    height: 1.04rem;
+    margin-right: .32rem;
+    font-size: .56rem;
+    line-height: .96rem;
+    text-align: left;
+    color: #d53533;
+    float: right;
+    clear: none;
+}
+.aa-shopPop .aa-shopOwner {
+    width: 100%;
+    height: 8.64rem;
+    /*height: auto;*/
+    /*max-height: 8.64rem;*/
+    padding: .32rem;
+    font-size: .36rem;
+    line-height: .64rem;
+    text-align: justify;
+    color: #666;
+    float: left;
+    clear: left;
+}
+
+/*如何关联*/
+.aa-followCatalogPop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.64);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 31;
+}
+.aa-followCatalogPopMain {
+    width: 84%;
+    height: 6.52rem;
+    margin-top: -2.76rem;
+    position: fixed;
+    left: 8%;
+    top: 50%;
+    z-index: 33;
+}
+.aa-followCatalogPopMain ul {
+    width: 100%;
+    height: 5.52rem;
+    background: #fff;
+    border-radius: .2rem;
+    float: left;
+    clear: left;
+}
+.aa-followCatalogPopMain li {
+    width: 100%;
+    padding-top: .2rem;
+    font-size: .48rem;
+    line-height: .96rem;
+    text-align: center;
+    color: #333;
+    float: left;
+    clear: left;
+}
+.aa-followCatalogPopMain li {
+    width: 100%;
+    padding-top: .2rem;
+    font-size: .48rem;
+    line-height: .96rem;
+    text-align: center;
+    color: #333;
+    float: left;
+    clear: left;
+}
+.aa-followCatalogPopMain li p {
+    width: 100%;
+    padding: 0 .32rem;
+    font-size: .36rem;
+    line-height: .64rem;
+    text-align: justify;
+    color: #787878;
+    float: left;
+    clear: left;
+}
+.aa-followCatalogPopMain li p img {
+    width: .48rem;
+    height: .48rem;
+}
+.aa-followCatalogPopMain a.aa-followCatalogClose {
+    width: .64rem;
+    height: .64rem;
+    margin: 1.28rem 3.83rem 0;
+    background: url(../images/icon_closeButton.png) no-repeat center center;
+    background-size: .64rem;
+    float: left;
+    clear: left;
+}
+/*弹层部分查看详情的样式*/
+.aa-chooseBox ul.aa-shopChoose li.aa-shopChooseOwner {
+    width: 100%;
+    height: auto;
+    padding: .2rem .32rem;
+    background: #f6f6f6;
+    border-top: 1px solid #dce6ef;
+    position: relative;
+    float: left;
+    clear: left;
+}
+.aa-chooseBox ul.aa-shopChoose li.aa-shopChooseOwner span {
+    width: .36rem;
+    height: .16rem;
+    margin-left: -.18rem;
+    background: url(../images/arrow_up.png) no-repeat center top;
+    background-size: .36rem;
+    display: block;
+    position: absolute;
+    top: -.15rem;
+    left: 25%;
+    z-index: 3;
+}
+.aa-chooseBox ul.aa-shopChoose li.aa-shopChooseOwner p {
+    font-size: .32rem;
+    line-height: .52rem;
+    text-align: justify;
+    color: #666;
+}
+.aa-chooseBox ul.aa-shopChoose li.aa-shopChooseOwner p a{
+	float: right;
+    color: #2c83e6;
+}
+.aa-chooseBox ul.aa-shopChoose li.aa-shopChooseOwner span.aa-arrowRight {
+    left: 75%;
+}
+/*anmiuyangshia*/
+.ad-pageCenter {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    float: left;
+    clear: left;
+}
+
+/*一键询单红包活动相关弹层*/
+.bo-redPacketActivityPop {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 40;
+}
+
+.bo-redPacketActivityBox {
+	width: 80%;
+	height: 9.6rem;
+	background: #fff;
+	border-radius: .32rem;
+	margin-top: -4.8rem;
+	position: fixed;
+	top: 50%;
+	left: 10%;
+	z-index: 45;
+}
+.bo-redPacketActivityBox li {
+	width: 90%;
+	margin-left: 5%;
+	float: left;
+	clear: left;
+}
+.bo-redPacketActivityBox li.bo-redPacketTitle {
+	height: auto;
+	font-size: .56rem;
+	line-height: 2.88rem;
+	text-align: center;
+	color: #333;
+}
+.bo-redPacketActivityBox li.bo-redPacketText p {
+	width: 5%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	display: block;
+	float: left;
+	clear: none;
+}
+.bo-redPacketActivityBox li.bo-redPacketText span {
+	width: 94%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #666;
+	display: block;
+	float: right;
+	clear: none;
+}
+
+.bo-redPacketActivityBox a {
+	width: .68rem;
+	height: .68rem;
+	background: url(../images/icon_closeButton.png) no-repeat center center;
+	background-size: .64rem;
+	position: absolute;
+	bottom: -1.32rem;
+	left: 50%;
+	margin-left: -.34rem;
+	z-index: 45;
+
+}
+.mint-indicator .mint-indicator-wrapper {
+  z-index: 1000;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  /*导航操作栏上移*/
+  .bottom-menu-fixed {
+    bottom: 34px !important;
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  /*导航操作栏上移*/
+  .bottom-menu-fixed {
+     bottom: 34px !important;
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+
+/*导航操作栏上移*/
+  .bottom-menu-fixed {
+    bottom: 34px !important;
+  }
+}
+.modal-open {
+  position: fixed;
+  width: 100%;
+}

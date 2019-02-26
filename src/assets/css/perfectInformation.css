@@ -1,0 +1,123 @@
+.bo-shopMainSupplementPop {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.48);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+}
+
+.bo-shopMainSupplement {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    max-height: 13rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 56;
+}
+
+.bo-shopSupplementTop {
+    width: 100%;
+    height: 1.04rem;
+    background: #edf2f7;
+    float: left;
+    clear: left;
+}
+
+.bo-shopSupplementTop p {
+    width: auto;
+    height: 1.04rem;
+    margin-left: .32rem;
+    font-size: .4rem;
+    line-height: 1.04rem;
+    text-align: left;
+    color: #878f9e;
+    float: left;
+    clear: left;
+}
+
+.bo-shopSupplementCenter {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    float: left;
+    clear: left;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.bo-shopSupplementCenter li {
+    width: 100%;
+    padding: .32rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dce6ef;
+    float: left;
+    clear: left;
+}
+
+.bo-shopSupplementCenter li span {
+    width: 2rem;
+    height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #666;
+    float: left;
+    clear: none;
+}
+.bo-shopAddressInput {
+  width: 7.36rem;
+  height: 1.28rem;
+  resize: none;
+  border: 0;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: none;
+}
+.bo-shopSupplementCenter li.bo-shopAddress input {
+    width: 7.36rem;
+    height: auto;
+    min-height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #333;
+    float: right;
+    clear: none;
+}
+
+.bo-shopSupplementFool {
+    width: 100%;
+    height: 1.28rem;
+    float: left;
+    clear: left;
+}
+
+.bo-shopSupplementFool a {
+    width: 100%;
+    height: 1.28rem;
+    background: #d53533;
+    font-size: .48rem;
+    line-height: 1.28rem;
+    text-align: center;
+    color: #fff;
+    float: left;
+    clear: left;
+}
+
+
+
+
+.bo-shopSupplementFool a.bo-disable {
+    opacity: .52;
+}
+

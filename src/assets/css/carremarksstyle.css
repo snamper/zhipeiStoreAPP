@@ -1,0 +1,198 @@
+
+/*车辆备注*/
+.ek-carRemarksPage {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+/*车辆备注信息*/
+.ek-carRemarksBox {
+	width: 100%;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.ek-carRemarksBox ul {
+	width: 100%;
+	padding-left: .4rem;
+	float: left;
+	clear: left;
+}
+.ek-carRemarksBox li {
+	width: 100%;
+	border-bottom: 1px solid #d8d8d8;
+	padding: .32rem 0;
+	padding-right: .4rem;
+	float: left;
+	clear: left;
+}
+.ek-carRemarksBox li span {
+	width: 20%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: left;
+}
+.ek-carRemarksBox li input {
+	width: 80%;
+	height: .64rem;
+	border: 0;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #282828;
+	float: right;
+	clear: none;
+}
+.ek-carRemarksBox li textarea {
+	width: 80%;
+	height: 3.2rem;
+	border: 0;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #282828;
+	float: right;
+	clear: none;
+}
+
+.ek-carRemarksButton {
+	width: 100%;
+	padding: .4rem .4rem 0;
+	float: left;
+	clear: left;
+}
+.ek-carRemarksButton a {
+	width: 100%;
+	background: #e74c3c;
+	border-radius: .12rem;
+	font-size: .4rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff;
+	display: block;
+	float: left;
+	clear: left;
+}
+.ek-carRemarksButton a.ek-carRemarksLink {
+	width: 100%;
+	background: none;
+	margin-top: .4rem;
+	border-radius: .12rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #377de8;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+/*车型信息展示*/
+.ek-carBox {
+	width: 100%;
+	/*height: 1.72rem;*/
+	background: #ffffff;
+	border-top: 1px solid #dce6ef;
+	border-bottom: 1px solid #dce6ef;
+	margin-bottom: .4rem;
+	float: left;
+	clear: left;
+}
+.ek-carPic {
+	width: 1.08rem;
+	height: 1.08rem;
+	border: 1px solid #e8e8e8;
+	border-radius: .08rem;
+	margin: .32rem .16rem .32rem .32rem;
+	text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+	float: left;
+	clear: none;
+}
+.ek-carPic img {
+	width: auto;
+	height: auto;
+	max-width: .96rem;
+	max-height: .96rem;
+}
+.ek-carMain {
+	width: 8.12rem;
+	/*height: 1.08rem;*/
+	margin: .32rem 0;
+	float: left;
+	clear: none;
+}
+.ek-carMain p {
+	width: 100%;
+	/*height: .6rem;*/
+	font-size: .4rem;
+	line-height: .6rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.ek-carMain span {
+	width: 100%;
+	/*height: .48rem;*/
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,444 @@
+.bw-buttonBox {
+  position: relative;
+}
+
+.bw-buttonBox a {
+  width: 36%;
+  margin-left: -18%;
+  position: absolute;
+  background-size: 3.36rem;
+  top: .12rem;
+  left: 50%;
+  z-index: 2;
+}
+
+.bw-buttonBox a.cd-disable {
+  /*background-image: url(../images/button_offer_gray.png);*/
+}
+
+.bw-buttonBox a.bz-historical {
+  width: 17%;
+  position: static;
+  margin-top: 0;
+}
+
+.bw-buttonBox a.cc-seePrice {
+  width: 16%;
+  margin: 0;
+}
+
+.bw-buttonBox span {
+  float: right;
+  clear: right;
+}
+
+.cd-remindBox {
+  width: 100%;
+  height: auto;
+  background: #ffebeb;
+  border: 1px solid #e74c3c;
+  margin-top: .32rem;
+  font-size: .32rem;
+  text-align: center;
+  color: #e74c3c;
+  line-height: .76rem;
+  float: left;
+  clear: left;
+}
+
+.cc-seePriceFool {
+  display: block;
+}
+
+.cb-totalPrice {
+  width: auto;
+  height: auto;
+  margin-left: .32rem;
+  font-size: .4rem;
+  line-height: 1.2rem;
+  text-align: right;
+  color: #333;
+  float: left;
+  clear: left;
+}
+
+.cb-totalPrice span {
+  font-size: .32rem;
+  color: #999;
+  margin-left: .2rem;
+}
+
+.cc-seePriceFool a {
+  /*height: 1.28rem;*/
+  /*width: auto;*/
+  /*padding: 0 .48rem;*/
+  /*border-radius: 0;*/
+  /*line-height: 1.28rem;*/
+  /*float: right;*/
+  /*clear: none;*/
+}
+
+.cd-cannotSeePricetoast {
+  width: 6.4rem;
+  height: 1.2rem;
+  margin: -.52rem 0 0 -3.2rem;
+  background-color: rgba(0, 0, 0, 0.78);
+  border-radius: .32rem;
+  font-size: .36rem;
+  line-height: 1.2rem;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 60;
+}
+
+
+/*自运营活动相关*/
+.bw-storeChoiceLine dd a.cd-activityBox {
+  width: auto;
+  background-size: .32rem;
+  float: left;
+  clear: left;
+}
+
+.bw-storeChoiceLine dd a.cd-activityBox p {
+  width: auto;
+  max-width: 7.6rem;
+  padding-right: .48rem;
+  /*background: url(../images/arrow_gray_down.png) no-repeat center right;*/
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: left;
+  color: #f39c12;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  clear: left;
+}
+
+.bw-storeChoiceLine dd a.cd-activityBox p span {
+  width: auto;
+  height: .48rem;
+  margin: .06rem .12rem 0 0;
+  border: 0;
+  background: #f39c12;
+  padding: 0 .12rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #fff;
+  position: static;
+  float: left;
+  clear: none;
+}
+
+
+
+/*自运营活动弹层*/
+.cd-activityDetailsPop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.64);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+}
+
+.cd-activityDetailsBox {
+  width: 84%;
+  height: 6.52rem;
+  margin-top: -2.76rem;
+  position: fixed;
+  left: 8%;
+  top: 40%;
+  z-index: 33;
+}
+
+.cd-activityDetailsBox ul {
+  width: 100%;
+  height: 7.52rem;
+  background: #fff;
+  border-radius: .2rem;
+  float: left;
+  clear: left;
+}
+
+.cd-activityDetailsBox li {
+  width: 100%;
+  padding-top: .2rem;
+  font-size: .48rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #333;
+  float: left;
+  clear: left;
+  padding: .32rem .32rem 0;
+}
+
+.cd-activityDetailsBox li.cd-activityDetailsMain {
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #f39c12;
+  padding: .32rem .32rem 0;
+}
+
+.cd-activityDetailsBox li.cd-activityDetailsMain span {
+  width: auto;
+  height: .48rem;
+  background: #f39c12;
+  border-radius: .12rem;
+  margin-top: .08rem;
+  margin-right: .2rem;
+  padding: 0 .12rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: center;
+  color: #fff;
+  float: left;
+  clear: left;
+}
+
+.cd-activityDetailsBox li.cd-activityDetailsExplain {
+  padding: .32rem .32rem 0;
+}
+
+.cd-activityDetailsBox li.cd-activityDetailsExplain p {
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.cd-activityDetailsBox li.cd-activityDetailsExplain p.cd-activityDetailsTime {
+  margin-bottom: .32rem;
+}
+
+.cd-activityDetailsBox a.cd-activityDetailsClose {
+  width: .64rem;
+  height: .64rem;
+  margin: 1.28rem 3.83rem 0;
+  background: url(../images/icon_closeButton.png) no-repeat center center;
+  background-size: .64rem;
+  float: left;
+  clear: left;
+}
+
+
+/*品类禁用样式*/
+.bw-categoryChoice a.cd-disable {
+  background: #f6f6f6;
+  color: #ccc;
+  border: 1px solid #f2f2f2;
+}
+
+/*订单详情-2 部分样式调整*/
+.aa-carMain {
+  position: relative;
+  padding-right: .84rem;
+}
+
+.aa-carMain a {
+  width: auto;
+  height: .64rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #3086db;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -.32rem;
+  z-index: 3;
+}
+
+/*订单详情-2 自运营活动相关*/
+.cd-activity {
+  width: 100%;
+  height: auto;
+  padding: .2rem .32rem;
+  border-bottom: 1px solid #dce6ef;
+  float: left;
+  clear: left;
+}
+
+.cd-activity a.cd-activityBox {
+  width: auto;
+  background-size: .32rem;
+  float: left;
+  clear: left;
+}
+
+.cd-activity a.cd-activityBox p {
+  width: auto;
+  max-width: 7.6rem;
+  padding-right: .48rem;
+  /*background: url(../images/arrow_gray_down.png) no-repeat center right;*/
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: left;
+  color: #f39c12;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  clear: left;
+}
+
+.cd-activity a.cd-activityBox p span {
+  width: auto;
+  height: .48rem;
+  margin: .06rem .12rem 0 0;
+  border: 0;
+  border-radius: .12rem;
+  background: #f39c12;
+  padding: 0 .12rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #fff;
+  position: static;
+  float: left;
+  clear: none;
+}
+
+/*一键询单选店铺 主推店铺样式*/
+.bo-offerTable table td.chRecommendShopBox {
+  padding-left: 1.56rem;
+}
+
+.bo-offerTable table td.chRecommendShopBox span.ch-shopLogoBox {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: -1.4rem;
+  border: 1px solid #ccc;
+  border-radius: .12rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.bo-offerTable table td.chRecommendShopBox span.ch-shopLogoBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bo-offerTable table td.chRecommendShopBox span.ch-shopNameBox {
+  width: auto;
+  height: auto;
+  min-height: 1.2rem;
+  float: left;
+  clear: none;
+}
+
+.bo-offerTable table td.chRecommendShopBox span.ch-shopNameBox>p {
+  max-width: 4.16rem;
+  font-size: .4rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.cb-offerTable table td.chRecommendShopBox span.ch-shopNameBox a.cd-activityBox p {
+  max-width: 4.16rem;
+}
+
+.bo-offerTable table td.chRecommendShopBox span.ch-shopEngineOil>p {
+  max-width: 3.6rem;
+}
+
+.bo-offerTable table td.chRecommendShopBox span {}
+
+/*一键询单选店铺 主推店铺样式*/
+.cs-offerShopSearch {
+  width: 9.36rem;
+  padding: .2rem 0;
+  margin-bottom: .32rem;
+  border-bottom: 1px solid #d8d8d8;
+  float: left;
+  clear: left;
+}
+
+.cs-offerShopSearch input {
+  width: 90%;
+  border: 0;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: left;
+}
+
+.cs-offerShopSearch input::-webkit-input-placeholder {
+  font-size: .32rem;
+  color: #ccc;
+}
+
+.cs-offerShopSearch a {
+  width: auto;
+  border: 0;
+  margin-left: .4rem;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #337fd5;
+  display: none;
+  float: right;
+  clear: none;
+}
+
+.cs-offerShopSearch a.cs-offerShopSearchButton {
+  width: .8rem;
+  height: .8rem;
+  margin: 0;
+  background: url(../images/icon_search.png) no-repeat center center;
+  background-size: .48rem;
+  display: block;
+}
+
+.cs-offerShopSearchInput input {
+  width: 78%;
+}
+
+.cs-offerShopSearchInput a {
+  display: block;
+}
+
+.cs-offerShopSearchInput a.cs-offerShopSearchButton {
+  background: url(../images/icon_query.png) no-repeat center center;
+  background-size: .48rem;
+}
+
+.cd-activityTagBox {
+  width: 100%;
+  padding: .16rem 0;
+  background-size: .24rem;
+  float: left;
+  clear: left;
+}
+
+.cd-activityTagBox span {
+  width: auto;
+  height: .44rem;
+  margin-right: .08rem;
+  padding: 0 .08rem;
+  border-radius: .08rem;
+  background: #f39c12;
+  font-size: .32rem;
+  line-height: .44rem;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  clear: none;
+}

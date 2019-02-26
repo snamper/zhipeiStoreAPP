@@ -1,0 +1,350 @@
+/*我的积分页面*/
+.el-myPointsPage {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background: #f12f2f url(../images/banner.png) no-repeat center top;
+  background-size: 100%;
+  float: left;
+  clear: left;
+}
+
+/*积分展示*/
+.el-myPointsBox {
+  width: 92%;
+  margin: .4rem 4% 0;
+  background: #fff;
+  border-radius: .2rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+
+/*送出的积分公式*/
+.el-myPointsMain {
+  width: 100%;
+  border-bottom: 1px solid #d8d8d8;
+  padding: .72rem 0;
+  float: left;
+  clear: left;
+}
+
+.el-pointsBox {
+  width: 2.64rem;
+  float: left;
+  clear: none;
+}
+
+.el-pointsBox>p {
+  width: 100%;
+  font-size: .28rem;
+  line-height: .48rem;
+  text-align: center;
+  color: #333;
+  float: left;
+  clear: left;
+}
+
+.el-pointsBox>span {
+  width: 100%;
+  font-size: .48rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #333;
+  float: left;
+  clear: left;
+}
+
+.el-pointsBox>span>b {
+  font-size: .56rem;
+  font-weight: normal;
+}
+
+.el-pointsBox>a {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: center;
+  color: #377de8;
+  float: left;
+  clear: left;
+}
+
+.el-equalSignRed {
+  width: .84rem;
+  height: .84rem;
+  margin: -.42rem 0;
+  background: url(../images/pic_equalSignRed.png) no-repeat center center;
+  background-size: .8rem;
+  display: block;
+  position: relative;
+  left: .9rem;
+  top: 0;
+  z-index: 2;
+  float: left;
+  clear: left;
+}
+
+.el-pointsOffsetBox {
+  padding-bottom: .36rem;
+}
+
+.el-pointsOffset>p {
+  font-size: .32rem;
+  font-weight: bold;
+}
+
+.el-pointsOffset>span {
+  color: #e74c3c;
+}
+
+.el-pointsOffset>span>b {
+  font-size: .64rem;
+}
+
+.el-pointsOffset>span.el-equalSignRedText {
+  font-size: .32rem;
+  color: #e74c3c;
+}
+
+.el-myPointsMain>span {
+  width: .64rem;
+  height: 1.12rem;
+  background: url(../images/icon_minusSign.png) no-repeat center center;
+  background-size: 87.5%;
+  float: left;
+  clear: none;
+}
+
+.el-myPointsMain>span.el-equalSign {
+  background-image: url(../images/icon_equalSign.png);
+}
+
+.el-equalExplain {
+  width: 100%;
+  background: #fff8eb;
+  font-size: .36rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #f39c12;
+  float: left;
+  clear: left;
+}
+
+.el-sloganBox {
+  width: 90.4%;
+  height: 1.2rem;
+  margin-top: .32rem;
+  background: url(../images/pic_slogan.png) no-repeat right bottom;
+  background-size: 100%;
+  display: block;
+  float: right;
+  clear: right;
+}
+
+/*积分列表*/
+.el-integralDetailsPage {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.el-integralDetailsBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.el-integralDetailsBox>p {
+  width: 100%;
+  height: .84rem;
+  font-size: .32rem;
+  line-height: .84rem;
+  text-align: center;
+  color: #bcbcbc;
+  float: left;
+  clear: left;
+}
+
+.el-integralDetailsMain {
+  width: 100%;
+  height: auto;
+  padding: .2rem 2.4rem .2rem .4rem;
+  background: #fff;
+  border-top: 1px solid #dce6ef;
+  border-bottom: 1px solid #dce6ef;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.el-integralDetailsMain>p {
+  width: 100%;
+  height: auto;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+
+.el-integralDetailsMain>p.el-vinBox {
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #999;
+}
+
+.el-integralDetailsMain>span {
+  width: auto;
+  height: auto;
+  margin-top: -.32rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #e74c3c;
+  position: absolute;
+  right: .4rem;
+  top: 50%;
+  z-index: 2;
+}
+
+.ec-noData {
+  width: 100%;
+  height: auto;
+  margin-top: 2.4rem;
+  padding-top: 3.6rem;
+  background: url(../images/pic_dataNo.png) no-repeat center top;
+  background-size: 4rem;
+  font-size: .36rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #bcbcbc;
+  float: left;
+  clear: left;
+}
+
+.eo-myPointsPic {
+  width: 92%;
+  margin: .4rem 4%;
+  background: #fff;
+  border-radius: .2rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+
+.eo-myPointsPic img {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+/*1229 兑换详情*/
+.es-exchangeIntegralPage {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.es-exchangeIntegralOneBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: .2rem;
+  padding: .2rem .8rem .2rem .4rem;
+  background: #fff url(../images/arrow_gray.png) no-repeat 9.44rem center;
+  background-size: .16rem;
+  /*border-top: 1px solid #dce6ef;
+  border-bottom: 1px solid #dce6ef;*/
+  position: relative;
+  float: left;
+  clear: left;
+}
+.es-exchangeIntegralOneBox>dl {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.es-exchangeIntegralOneBox>dl>dt {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.es-exchangeIntegralOneBox>dl>dt>p {
+  width: auto;
+  max-width: 6.4rem;
+  height: auto;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #282828;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+.es-exchangeIntegralOneBox>dl>dt>span {
+  width: auto;
+  height: auto;
+  font-size: .48rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #e74c3c;
+  float: right;
+  clear: none;
+}
+.es-exchangeIntegralOneBox>dl>dt>span>b {
+  font-size: .32rem;
+  font-weight: normal;
+  margin-left: .12rem;
+}
+.es-exchangeIntegralOneBox>dl>dd {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.es-exchangeIntegralOneBox>dl>dd>p {
+  width: auto;
+  height: auto;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #787878;
+  float: left;
+  clear: left;
+}
+.es-exchangeIntegralOneBox>dl>dd>span {
+  width: auto;
+  height: auto;
+  font-size: .36rem;
+  font-weight: normal;
+  line-height: .8rem;
+  text-align: left;
+  color: #ccc;
+  float: right;
+  clear: none;
+}
+
+/*1229 已抵扣积分部分的样式*/
+.es-exchangeIntegralOneBox>dl>dt>span.es-plusIntegral {
+  color: #1abc9c;
+}
+.es-deductionIntegralOneBox>dl>dd>p {
+  line-height: .64rem;
+  text-align: justify;
+}
+.es-deductionIntegralOneBox>dl>dd>span {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  float: left;
+  clear: left;
+}
+.es-vinSetMeal {
+  background-image: none;
+  /*padding-right: .4rem;*/
+}

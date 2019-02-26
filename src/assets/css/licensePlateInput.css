@@ -1,0 +1,89 @@
+
+/*键盘样式*/
+.pkey-keyboard {
+  width: 100%;
+  height: auto;
+  background: #d1d5da;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+}
+.pkey-header2 {
+  width: 100%;
+  padding: 0 .4rem;
+  background: #f4f4f6;
+  float: left;
+  clear: left;
+}
+.pkey-header2>label {
+  width: auto;
+  font-size: .32rem;
+  line-height: 1.28rem;
+  text-align: center;
+  color: #5898fe;
+  float: left;
+  clear: none;
+}
+.pkey-header2>label.pkey-okbtn {
+  float: right;
+  clear: none;
+}
+
+.pkey-keyscontain {
+  width: 100%;
+  padding: .1rem 0;
+  float: left;
+  clear: left;
+}
+.pkey-keyscontain li {
+  width: 100%;
+  padding: 0 .08rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.pkey-keyscontain li>label {
+  width: .8rem;
+  margin: .092rem;
+  border-radius: .12rem;
+  background: #fff;
+  font-size: .4rem;
+  line-height: 1.44rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: none;
+}
+.pkey-keyscontain li>span {
+  width: 1.292rem;
+  margin: .092rem;
+  border-radius: .12rem;
+  background: #b2b5ba;
+  font-size: .4rem;
+  line-height: 1.44rem;
+  text-align: center;
+  color: #fff;
+  float: left;
+  clear: none;
+}
+
+.showkey {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #fff;
+  border-radius: .2rem;
+  font-size: .48rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 8.32rem;
+  left: 50%;
+  z-index: 300;
+}

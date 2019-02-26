@@ -1,0 +1,176 @@
+
+/*自运营活动相关*/
+.bo-offerTable table td.bo-offerShop a.cd-activityBox {
+	width: auto;
+	background-size: .32rem;
+	float: left;
+	clear: left;
+}
+.bo-offerTable table td.bo-offerShop a.cd-activityBox p {
+	width: auto;
+	max-width: 5.4rem;
+	padding-right: .48rem;
+	/*background: url(../images/arrow_gray_down.png) no-repeat center right;*/
+	font-size: .32rem;
+	line-height: .6rem;
+	text-align: left;
+	color: #f39c12;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	float: left;
+	clear: left;
+}
+.bo-offerTable table td.bo-offerShop a.cd-activityBox p span {
+	width: auto;
+	height: .48rem;
+	margin: .06rem .12rem 0 0;
+	border: 0;
+	border-radius: .12rem;
+	background: #f39c12;
+	padding: 0 .12rem;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #fff;
+	position: static;
+	float: left;
+	clear: none;
+}
+
+
+/*自运营活动弹层*/
+.cd-activityDetailsPop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.64);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 31;
+}
+.cd-activityDetailsBox {
+	width: 84%;
+	height: 6.52rem;
+	margin-top: -2.76rem;
+	position: fixed;
+	left: 8%;
+	top: 50%;
+	z-index: 33;
+}
+.cd-activityDetailsBox ul {
+	width: 100%;
+	height: 7.52rem;
+	background: #fff;
+	border-radius: .2rem;
+	float: left;
+	clear: left;
+}
+.cd-activityDetailsBox li {
+	width: 100%;
+	padding-top: .2rem;
+	font-size: .48rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.cd-activityDetailsBox li.cd-activityDetailsMain {
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #f39c12e74c3c;
+	padding: .32rem .32rem 0;
+}
+.cd-activityDetailsBox li.cd-activityDetailsMain span {
+	width: auto;
+	height: .48rem;
+	background: #f39c12;
+	border-radius: .12rem;
+	margin-top: .08rem;
+	margin-right: .2rem;
+	padding: 0 .12rem;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.cd-activityDetailsBox li.cd-activityDetailsExplain {
+	padding: .32rem .32rem 0;
+}
+.cd-activityDetailsBox li.cd-activityDetailsExplain p {
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #666;
+	float: left;
+	clear: left;
+}
+.cd-activityDetailsBox li.cd-activityDetailsExplain p.cd-activityDetailsTime {
+	margin-bottom: .32rem;
+}
+
+.cd-activityDetailsBox a.cd-activityDetailsClose {
+	width: .64rem;
+	height: .64rem;
+	margin: 1.28rem 3.83rem 0;
+	background: url(../images/icon_closeButton.png) no-repeat center center;
+	background-size: .64rem;
+	float: left;
+	clear: left;
+}
+/*0709新增的样式*/
+.bw-buttonBox a {
+	width: 36%;
+	margin-left: -18%;
+	background-size: 3.36rem;
+}
+
+.cf-activityDetailsBox {
+	height: 7.52rem;
+	margin-top: -3.26rem;
+}
+.cf-activityDetailsBox ul {
+	height: 7.52rem;
+}
+
+.cd-activityDetailsBox li.cf-activityDetailsPicBox {
+	padding: .32rem .32rem 0;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: left;
+}
+.cf-activityDetailsPic {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.cf-activityDetailsPic dd {
+	width: 1.6rem;
+	height: 1.6rem;
+	margin-right: .32rem;
+	position: relative;
+	float: left;
+	clear: none;
+}
+.cf-activityDetailsPic dd span {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #e8e8e8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.cf-activityDetailsPic dd span img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

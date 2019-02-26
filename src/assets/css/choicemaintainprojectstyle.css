@@ -1,0 +1,234 @@
+
+/*选择保养项目*/
+.eq-choicemaintainprojectPop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.48);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 280;
+}
+
+.eq-choicemaintainproject {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 1.04rem 0 4.8rem;
+  overflow: hidden;
+  position: fixed;
+  top: .48rem;
+  left: 0;
+  z-index: 300;
+}
+
+.er-choicemaintainprojectName {
+  width: 100%;
+  background: #f8f8f8;
+  border-bottom: 1px solid #d8d8d8;
+  padding: .2rem .4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.er-choicemaintainprojectName>p {
+  width: auto;
+  font-size: .4rem;
+  font-weight: bold;
+  line-height: .64rem;
+  text-align: left;
+  color: #181818;
+  float: left;
+  clear: none;
+
+}
+.er-choicemaintainprojectName>a {
+	width: auto;
+	font-size: .56rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #e74c3c;
+	float: right;
+	clear: none;
+}
+
+.eq-choicemaintainprojectMain {
+  width: auto;
+  height: 100%;
+  padding: .4rem;
+  padding-right: 0;
+  font-size: .4rem;
+  /*font-weight: bold;*/
+  line-height: .64rem;
+  text-align: left;
+  color: #181818;
+  overflow-x: hidden;
+  overflow-y: auto;
+  float: left;
+  clear: none;
+}
+.er-maintenanceTypeBox {
+	width: 100%;
+	margin-bottom: .32rem;
+	float: left;
+	clear: left;
+}
+.er-maintenanceTypeBox>p {
+	width: 100%;
+	background: url(../images/arrow_gray_down.png) no-repeat 8.88rem center;
+	background-size: .36rem;
+	margin-bottom: .2rem;
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: left;
+	color: #acacac;
+	float: left;
+	clear: left;
+}
+.er-maintenanceMain {
+	width: 100%;
+	height: auto;
+	max-height: 2.7rem;
+	overflow: hidden;
+	float: left;
+	clear: left;
+}
+.er-maintenanceMain>ul {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.er-maintenanceMain>ul>li {
+	width: 2.85rem;
+	height: 1.12rem;
+	border: 1px solid #dce6ef;
+	border-radius: .08rem;
+	margin: 0 .32rem .32rem 0;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #666;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.er-maintenanceMain>ul>li.eq-selected {
+	border: 1px solid #e74c3c;
+	background: url(../images/icon_screenSelected.png) no-repeat bottom right;
+	background-size: .48rem;
+	color: #e74c3c;
+}
+.er-maintenanceTypeOpen>p {
+	background-image: url(../images/arrow_gray_up.png);
+}
+.meirongClassName .er-maintenanceMain{
+  max-height: 1.3rem;
+}
+.er-maintenanceTypeOpen .er-maintenanceMain {
+	max-height: none;
+}
+.er-maintenanceTypeUnfolded>p {
+	background: none;
+}
+.er-maintenanceTypeUnfolded .er-maintenanceMain {
+	max-height: none;
+}
+
+
+/*备注*/
+.eq-remarksBox {
+	width: 100%;
+	padding: 0 .4rem;
+	float: left;
+	clear: left;
+}
+.eq-remarksBox>p {
+	width: 100%;
+	margin-bottom: .2rem;
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: left;
+	color: #acacac;
+	float: left;
+	clear: left;
+}
+.er-remarksMain {
+	width: 100%;
+	border: 1px solid #dce6ef;
+	background: #fff;
+	padding: .2rem .4rem;
+	float: left;
+	clear: left;
+}
+.er-remarksMain>ul,.er-remarksMain>ul>li {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.er-remarksMain>ul>li>textarea {
+	width: 100%;
+	height: 1.28rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #282828;
+	resize: none;
+	float: left;
+	clear: left;
+}
+.er-remarksMain>ul>li>a {
+	width: .48rem;
+	height: .64rem;
+	background: url(../images/icon_soundRecordingGray.png) no-repeat center center;
+	background-size: auto .48rem;
+	float: right;
+	clear: none;
+}
+.er-remarksMain>ul>li>span {
+	width: auto;
+	height: .64rem;
+	margin-right: .36rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #bcbcbc;
+	float: right;
+	clear: none;
+}
+
+
+.eq-choicemaintainprojectButton {
+	width: 100%;
+	margin-top: .32rem;
+	float: left;
+	clear: left;
+}
+.eq-choicemaintainprojectButton>a {
+	width: 100%;
+	background: #e74c3c;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+
+
+.er-foolBox {
+	width: 100%;
+	background: #f8f8f8;
+	border-top: 1px solid #d8d8d8;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 4;
+}
+/*@media only screen and (device-width: 375px) and (device-height: 812px) and(-webkit-device-pixel-ratio: 3) {*/
+  /*.er-foolBox {*/
+    /*padding-bottom: 34px;*/
+  /*}*/
+/*}*/

@@ -1,0 +1,759 @@
+/*有头有底*/
+.pageMain {
+	width: 100%;
+	height: 100%;
+	padding: 1.16rem 0 1.28rem;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	clear: left;
+}
+
+/*底部按钮部分样式*/
+.foolButtonOne {
+	width: 100%;
+	height: 1.28rem;
+	background: #fff;
+	border-top: 1px solid #d7d9dc;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 30;
+}
+.foolButtonOne a {
+	width: 36%;
+	height: .88rem;
+	margin: .2rem 32% 0;
+	background: #fff;
+	border: 1px solid #d53533;
+	border-radius: .44rem;
+	font-size: .4rem;
+	line-height: .86rem;
+	text-align: center;
+	color: #d53533;
+	display: block;
+	float: left;
+	clear: none;
+}
+.foolButtonOne a.foolButton {
+	background: #d53533;
+	border: none;
+	color: #fff;
+}
+.foolButtonOne a.foolButtonDisable {
+	background: #f2f2f2;
+	border: none;
+	color: #bcbcbc;
+}
+.foolButtonOne a.doubtButton {
+	width: .64rem;
+	height: .64rem;
+	margin: 0;
+	background: url(../images/icon_doubt.png) no-repeat center center;
+	background-size: .64rem;
+	border: 0;
+	border-radius: 0;
+	display: block;
+	position: absolute;
+	right: .32rem;
+	top: .32rem;
+}
+
+/* 创建店铺选品类品牌的样式 */
+/* 左侧部分样式 */
+.navLeftBox {
+	width: 2.44rem;
+	background: #f3f7fa;
+	overflow: auto;
+	position: fixed;
+	left: 0;
+	top: 1.15rem;
+	bottom: 1.28rem;
+	z-index: 10;
+}
+
+.navLeftBox ul {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: auto;
+	float: left;
+	clear: left;
+}
+.navLeftBox li {
+	width: 100%;
+	height: auto;
+	padding: .2rem;
+	border-top: 1px solid #dce6ef;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #787878;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.navLeftBox li.selected {
+	background: #fff;
+	color: #333;
+	font-weight: bold;
+}
+.navLeftBox li span {
+	width: auto;
+	min-width: .36rem;
+	height: .36rem;
+	padding: 0 .04rem;
+	border-radius: .18rem;
+	background: #e74c3c;
+	font-size: .24rem;
+	line-height: .36rem;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	right: .08rem;
+	top: .08rem;
+	z-index: 4;
+}
+
+
+/* 右侧部分样式 */
+.mainRightBox {
+	width: 6.92rem;
+	background: #fff;
+	overflow: auto;
+	position: fixed;
+	top: 1.15rem;
+	bottom: 1.28rem;
+	right: .64rem;
+	z-index: 12;
+}
+
+.screenBox {
+	width: 6.28rem;
+	margin: 0 .32rem;
+	padding: .32rem 0 0;
+	border-bottom: 1px solid #e2eaf2;
+	overflow: hidden;
+	float: left;
+	clear: left;
+}
+.screenBox ul {
+	width: 6.6rem;
+	float: left;
+	clear: left;
+}
+.screenBox li {
+	width: auto;
+	height: .8rem;
+	padding: 0 .12rem;
+	border: 1px solid #e8e8e8;
+	margin: 0 .32rem .32rem 0;
+	font-size: .32rem;
+	line-height: .78rem;
+	text-align: center;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.screenBox li.selected {
+	border: 1px solid #d53533;
+	color: #d53533;
+	background: #fff url(../images/icon_screenSelected.png) no-repeat right bottom;
+	background-size: .36rem;
+}
+
+.brandBox {
+	width: 100%;
+	padding: 0 .32rem;
+	border-bottom: 1px solid #e2eaf2;
+	float: left;
+	clear: left;
+}
+.brandBox>p {
+	width: 100%;
+	height: .68rem;
+	font-size: .32rem;
+	line-height: .67rem;
+	text-align: left;
+	color: #acacac;
+	float: left;
+	clear: left;
+}
+.brandBox ul {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.brandBox li {
+	width: 100%;
+	height: auto;
+	border-top: 1px solid #f3f7fa;
+	padding: .32rem 0;
+	float: left;
+	clear: left;
+}
+.brandBox li span {
+	display: block;
+}
+.brandBox li span.brandPic {
+	width: 1.28rem;
+	height: 1.28rem;
+	text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	float: left;
+	clear: none;
+}
+.brandBox li span.brandPic img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.brandBox li span.brandFrame {
+	width: .48rem;
+	height: .48rem;
+	margin: .4rem 0 0;
+	border-radius: .08rem;
+	background: #f3f7fa url(../images/icon_right_white.png) no-repeat center center;
+	background-size: .48rem;
+	float: right;
+	clear: none;
+}
+.brandBox li span.selected {
+	background-color: #e74c3c;
+}
+.brandBox li p.brandName {
+	width: 3.52rem;
+	height: 1.28rem;
+	padding-left: .32rem;
+	font-size: .4rem;
+	font-weight: bold;
+	line-height: 1.28rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.brandBox li p.brandName b {
+	width: 100%;
+	height: auto;
+	font-size: .28rem;
+	font-weight: normal;
+	line-height: .64rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: left;
+	display: none;
+}
+.navLetter {
+	width: .64rem;
+	padding-top: .48rem;
+	background: #fafafa;
+	border-left: 1px solid #e2eaf2;
+	overflow: auto;
+	position: fixed;
+	top: 1.15rem;
+	bottom: 1.28rem;
+	right: 0rem;
+	z-index: 12;
+}
+.navLetter a {
+	width: 100%;
+	height: .52rem;
+	font-size: .32rem;
+	line-height: .52rem;
+	text-align: center;
+	color: #2c83e6;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+
+/*弹层演示和提示样式*/
+.bf-screenBox {
+	width: 100%;
+	height: 1.04rem;
+	box-sizing: border-box;
+	background: #fff6e8;
+	border-bottom: 1px solid #ffe0ae;
+	font-size: .44rem;
+	line-height: 1rem;
+	text-align: center;
+	color: #f27a11;
+	z-index: 16;
+	float: left;
+	clear: left;
+}
+.bf-pageMain .navLeftBox,.bf-pageMain .mainRightBox,.bf-pageMain .navLetter {
+	top: 2.19rem;
+}
+.bf-toastBox {
+	width: 4.64rem;
+	height: 1.04rem;
+	background: rgba(0,0,0,0.78);
+	border-radius: .24rem;
+	font-size: .32rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 40;
+	margin: -.52rem 0 0 -2.32rem;
+}
+/*修理厂完善信息*/
+.bf-perfectInfoBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.bf-perfectInfoBox li {
+	width: 100%;
+    padding: .32rem;
+    background: #fff;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dce6ef;
+    float: left;
+    clear: left;
+}
+.bf-perfectInfoBox li span {
+	width: 2rem;
+    height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #666;
+    float: left;
+    clear: none;
+}
+.bf-perfectInfoBox li input {
+	width: 7.36rem;
+    height: auto;
+    min-height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #333;
+    float: right;
+    clear: none;
+}
+.bf-perfectInfoBox li input::-webkit-input-placeholder {
+    color: #bcbcbc;
+}
+.bf-perfectInfoBox li textarea {
+	width: 7.36rem;
+	height: 1.28rem;
+	resize: none;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.bf-perfectInfoBox li.bf-perfectInfoTitle p {
+	width: 100%;
+    height: .64rem;
+    font-size: .44rem;
+    line-height: .64rem;
+    text-align: center;
+    color: #333333;
+    float: left;
+    clear: none;
+}
+.bf-perfectInfoBox li.bf-perfectInfoTitle span {
+	width: 100%;
+    height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: center;
+    color: #999;
+    float: left;
+    clear: none;
+}
+.bf-perfectInfoBox li.bf-perfectInfoMainTitle {
+    height: .88rem;
+    padding: .16rem .32rem 0;
+    background: none;
+    font-size: .32rem;
+    line-height: .72rem;
+    text-align: left;
+    color: #abb9c7;
+    box-sizing: border-box;
+}
+.bf-perfectInfoMain{
+	height: 12rem;
+	margin-bottom: 1.28rem;
+}
+
+.bf-perfectInfoMain .navLeftBox,.bf-perfectInfoMain .mainRightBox,.bf-perfectInfoMain .navLetter {
+	top: 0;
+    position: absolute;
+    height: 100%;
+}
+
+.bf-foolButtonOne {
+	width: 100%;
+	height: 1.28rem;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+}
+.bf-foolButtonOne a {
+	width: 100%;
+	height: 100%;
+	background: #d53533;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	display: block;
+	float: left;
+	clear: left;
+}
+/*品牌选择补充弹层的样式*/
+.brandPop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.64);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 32;
+}
+.brandPop ul {
+	width: 8rem;
+	height: 4.24rem;
+	background-color: #fff;
+	border-radius: .24rem;
+	position: fixed;
+	top: 50%;
+	left: 1rem;
+	margin-top: -2.12rem;
+	z-index: 32;
+}
+.brandPop li {
+	width: 100%;
+	height: 2.96rem;
+	padding-top: .92rem;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #333;
+	box-sizing: border-box;
+	float: left;
+	clear: left;
+}
+.brandPop li.brandButton {
+	width: 100%;
+	height: 1.28rem;
+	padding-top: 0;
+	border-top: 1px solid #dce6ef;
+	font-size: .36rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #333;
+	box-sizing: border-box;
+	float: left;
+	clear: left;
+}
+.brandPop li.brandButton a {
+	color: #2c83e6;
+}
+.brandPop ul>a {
+	width: .64rem;
+	height: .64rem;
+	font-size: .52rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #d53533;
+	position: absolute;
+	right: .2rem;
+	top: .2rem;
+	z-index: 34;
+}
+
+.ao-shopMainSupplementPop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+.ao-shopMainSupplement {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	max-height: 13rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 56;
+}
+.ao-shopSupplementTop {
+	width: 100%;
+	height: 1.04rem;
+	background: #edf2f7;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementTop p {
+	width: auto;
+	height: 1.04rem;
+	margin-left: .32rem;
+	font-size: .4rem;
+	line-height: 1.04rem;
+	text-align: left;
+	color: #878f9e;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementTop a {
+	width: auto;
+	height: 1.04rem;
+	margin-right: .32rem;
+	font-size: .56rem;
+	line-height: .96rem;
+	text-align: left;
+	color: #d53533;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementCenter li {
+	width: 100%;
+	padding: .32rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #dce6ef;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementCenter li span {
+	width: 1.36rem;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopPrompt {
+	height: .96rem;
+	background: #fff7ea;
+	border-top: 1px solid #f9d08e;
+	border-bottom: 1px solid #f9d08e;
+	font-size: .32rem;
+	line-height: .56rem;
+	color: #f39c12;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce textarea {
+	width: 8rem;
+	height: 1.92rem;
+	border: 0;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li textarea::-webkit-input-placeholder,.ao-shopSupplementCenter li input::-webkit-input-placeholder {
+	color: #ccc;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox {
+	width: 8.28rem;
+	height: 1.1rem;
+	margin-top: .12rem;
+	float: right;
+	clear: right;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox a,.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox b {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin-left: .28rem;
+	border: 1px solid #dce6ef;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox a {
+	background: url(../images/icon_new.png) no-repeat center center;
+	background-size: .48rem;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox p {
+	width: auto;
+	height: 1.1rem;
+	background: url(../images/arrow_shoppic.png) no-repeat center left;
+	background-size: .64rem;
+	margin-left: .16rem;
+	padding-left: .6rem;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #c8d6e3;
+	display: flex;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox b img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.ao-shopSupplementCenter li.ao-shopAddress input {
+	width: 8rem;
+	height: auto;
+	min-height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopContacts input {
+	width: 5.28rem;
+	height: auto;
+	min-height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopContacts a {
+	width: 2.4rem;
+	height: 1.44rem;
+	margin-left: .32rem;
+	border: 1px solid #dce6ef;
+	background: url(../images/pic_vistingCard.jpg) no-repeat center center;
+	background-size: 100%;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopContacts span.ao-shopContactsPic {
+	width: 2.4rem;
+	height: 1.44rem;
+	margin-left: .32rem;
+	border: 1px solid #dce6ef;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopContacts span.ao-shopContactsPic img {
+	width: auto;
+	height: auto;
+	max-width: 2.4rem;
+	max-height: 1.44rem;
+}
+.ao-shopSupplementFool {
+	width: 100%;
+	height: 1.28rem;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementFool a {
+	width: 100%;
+	height: 1.28rem;
+	background: #d53533;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	/* clear: left; */
+}
+.ao-shopSupplementFool a.ao-disable {
+	opacity: .52;
+}
+
+/*0415新增的部分样式*/
+.ao-shopSupplementCenter li.bf-shopAddress span {
+	width: 2rem;
+}
+.ao-shopSupplementCenter li.bf-shopAddress input {
+    width: 7.36rem;
+    height: auto;
+    min-height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #333;
+    float: right;
+    clear: none;
+}
+.ao-shopSupplementCenter li.bf-shopAddress textarea {
+	width: 7.36rem;
+	resize: none;
+}
+.ao-shopSupplementCenter li.bf-shopAddress textarea.bf-shopAddressInput {
+	height: 1.28rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li.bf-shopAddress span.ao-picBox {
+	width: 7.64rem;
+}
+
+/*选择品牌弹层的样式*/
+.bj-toastBoxOne {
+	width: 5.6rem;
+	height: 1.04rem;
+	margin: -.52rem 0 0 -2.8rem;
+	background: rgba(0,0,0,0.78);
+	border-radius: .32rem;
+	font-size: .4rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 40;
+}
+
+.bj-toastBoxOk {
+	width: 3.2rem;
+	height: 1.04rem;
+	margin: -.52rem 0 0 -1.6rem;
+	background: rgba(0,0,0,0.78);
+	border-radius: .32rem;
+	font-size: .4rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 40;
+}

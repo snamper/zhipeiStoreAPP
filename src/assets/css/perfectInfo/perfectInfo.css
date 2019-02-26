@@ -1,0 +1,697 @@
+.ao-shopMainSupplementPop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+.ao-shopMainSupplement {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	max-height: 13rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 56;
+}
+.ao-shopSupplementTop {
+	width: 100%;
+	height: 1.04rem;
+	background: #edf2f7;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementTop p {
+	width: auto;
+	height: 1.04rem;
+	margin-left: .32rem;
+	font-size: .4rem;
+	line-height: 1.04rem;
+	text-align: left;
+	color: #878f9e;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementTop a {
+	width: auto;
+	height: 1.04rem;
+	margin-right: .32rem;
+	font-size: .56rem;
+	line-height: .96rem;
+	text-align: left;
+	color: #d53533;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementCenter li {
+	width: 100%;
+	padding: .32rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #dce6ef;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementCenter li span {
+	width: 1.36rem;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopPrompt {
+	height: .96rem;
+	background: #fff7ea;
+	border-top: 1px solid #f9d08e;
+	border-bottom: 1px solid #f9d08e;
+	font-size: .32rem;
+	line-height: .56rem;
+	color: #f39c12;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce textarea {
+	width: 8rem;
+	height: 1.92rem;
+	border: 0;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li textarea::-webkit-input-placeholder,.ao-shopSupplementCenter li input::-webkit-input-placeholder {
+	color: #ccc;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox {
+	width: 8.28rem;
+	height: 1.1rem;
+	margin-top: .12rem;
+	float: right;
+	clear: right;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox a,.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox b {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin-left: .28rem;
+	border: 1px solid #dce6ef;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox a {
+	background: url(../../images/icon_new.png) no-repeat center center;
+	background-size: .48rem;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox p {
+	width: auto;
+	height: 1.1rem;
+	background: url(../../images/arrow_shoppic.png) no-repeat center left;
+	background-size: .64rem;
+	margin-left: .16rem;
+	padding-left: .6rem;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #c8d6e3;
+	display: flex;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopIntroduce span.ao-picBox b img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.ao-shopSupplementCenter li.ao-shopAddress input {
+	width: 8rem;
+	height: auto;
+	min-height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopContacts input {
+	width: 5.28rem;
+	height: auto;
+	min-height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopContacts a {
+	width: 2.4rem;
+	height: 1.44rem;
+	margin-left: .32rem;
+	border: 1px solid #dce6ef;
+	background: url(../../images/pic_vistingCard.jpg) no-repeat center center;
+	background-size: 100%;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopContacts span.ao-shopContactsPic {
+	width: 2.4rem;
+	height: 1.44rem;
+	margin-left: .32rem;
+	border: 1px solid #dce6ef;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	clear: none;
+}
+.ao-shopSupplementCenter li.ao-shopContacts span.ao-shopContactsPic img {
+	width: auto;
+	height: auto;
+	max-width: 2.4rem;
+	max-height: 1.44rem;
+}
+.ao-shopSupplementFool {
+	width: 100%;
+	height: 1.28rem;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementFool a {
+	width: 100%;
+	height: 1.28rem;
+	background: #d53533;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.ao-shopSupplementFool a.ao-disable {
+	opacity: .52;
+}
+
+/*0415新增的部分样式*/
+.ao-shopSupplementCenter li.bf-shopAddress span {
+	width: 2rem;
+}
+.ao-shopSupplementCenter li.bf-shopAddress input {
+    width: 7.36rem;
+    height: auto;
+    min-height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #333;
+    float: right;
+    clear: none;
+}
+.ao-shopSupplementCenter li.bf-shopAddress textarea {
+	width: 7.36rem;
+	resize: none;
+}
+.ao-shopSupplementCenter li.bf-shopAddress textarea.bf-shopAddressInput {
+	height: 1.28rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.ao-shopSupplementCenter li.bf-shopAddress span.ao-picBox {
+	width: 7.64rem;
+}
+.bf-screenBox {
+	width: 100%;
+	height: 1.04rem;
+	box-sizing: border-box;
+	background: #fff6e8;
+	border-bottom: 1px solid #ffe0ae;
+	font-size: .32rem;
+	line-height: 1rem;
+	text-align: center;
+	color: #f39c12;
+	z-index: 16;
+	float: left;
+	clear: left;
+}
+.bf-pageMain .navLeftBox,.bf-pageMain .mainRightBox,.bf-pageMain .navLetter {
+	top: 2.19rem;
+}
+.bf-toastBox {
+	width: 4.64rem;
+	height: 1.04rem;
+	background: rgba(0,0,0,0.78);
+	border-radius: .24rem;
+	font-size: .32rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 40;
+	margin: -.52rem 0 0 -2.32rem;
+}
+
+/*修理厂完善信息*/
+.bf-perfectInfoBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.bf-perfectInfoBox li {
+	width: 100%;
+    padding: .32rem;
+    background: #fff;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dce6ef;
+    float: left;
+    clear: left;
+}
+.bf-perfectInfoBox li span {
+	width: 2rem;
+    height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #666;
+    float: left;
+    clear: none;
+}
+.bf-perfectInfoBox li input {
+	width: 7.36rem;
+    height: auto;
+    min-height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #333;
+    float: right;
+    clear: none;
+}
+.bf-perfectInfoBox li input::-webkit-input-placeholder {
+    color: #bcbcbc;
+}
+.bf-perfectInfoBox li textarea {
+	width: 7.36rem;
+	height: 1.28rem;
+	resize: none;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.bf-perfectInfoBox li.bf-perfectInfoTitle p {
+	width: 100%;
+    height: .64rem;
+    font-size: .44rem;
+    line-height: .64rem;
+    text-align: center;
+    color: #333333;
+    float: left;
+    clear: none;
+}
+.bf-perfectInfoBox li.bf-perfectInfoTitle span {
+	width: 100%;
+    height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: center;
+    color: #999;
+    float: left;
+    clear: none;
+}
+.bf-perfectInfoBox li.bf-perfectInfoMainTitle {
+    height: .88rem;
+    padding: .16rem .32rem 0;
+    background: none;
+    font-size: .32rem;
+    line-height: .72rem;
+    text-align: left;
+    color: #abb9c7;
+    box-sizing: border-box;
+}
+
+.bf-perfectInfoMain .navLeftBox,.bf-perfectInfoMain .mainRightBox,.bf-perfectInfoMain .navLetter {
+	position: absolute;
+	top: 0;
+}
+
+.bf-foolButtonOne {
+	width: 100%;
+	height: 1.28rem;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+}
+.bf-foolButtonOne a {
+	width: 100%;
+	height: 100%;
+	background: #d53533;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+/* .bf-perfectInfoBox li span.bm-identity {
+	width: 2.8rem;
+} */
+
+
+.bf-perfectInfoBox li p {
+	width: auto;
+    height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #232323;
+    float: left;
+    clear: none;
+}
+
+
+.bf-perfectInfoBox li.bm-perfectInfoHint {
+	border: 0;
+	padding: 0 .32rem;
+	font-size: .32rem;
+	line-height: .76rem;
+	text-align: left;
+	color: #e74c3c;
+}
+.bf-perfectInfoBox li.bm-perfectInfoHint b {
+	font-weight: bold;
+	color: #d53533;
+}
+
+.bf-perfectInfoBox li.bm-perfectInfoButton {
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bf-perfectInfoBox li.bm-perfectInfoButton a {
+	width: 3.6rem;
+	height: 1.04rem;
+	border-radius: .52rem;
+	background: #d53533;
+	font-size: .48rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff;
+	display: block;
+}
+.bf-perfectInfoBox li.bm-perfectInfoButton a.bm-disable {
+	background: #e8e8e8;
+	color: #bcbcbc;
+}
+
+.bq-perfectInfoBox li span {
+	width: 2.4rem;
+    height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #666;
+    float: left;
+    clear: none;
+}
+.bq-perfectInfoBox li p {
+    width: auto;
+    height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #232323;
+    float: left;
+    clear: none;
+}
+.bq-perfectInfoBox li input {
+	width: 6.96rem;
+    height: auto;
+    min-height: .64rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: left;
+    color: #333;
+    float: right;
+    clear: none;
+}
+.bq-perfectInfoBox li textarea {
+	width: 6.96rem;
+	height: auto;
+	max-height: 1.28rem;
+	resize: none;
+	border: 0;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #666;
+	float: left;
+	clear: none;
+}
+
+
+/*身份修改的按钮*/
+.bq-perfectInfoBox li a.bq-applyButton {
+	width: auto;
+	height: .64rem;
+	border: 1px solid #d53533;
+	border-radius: .32rem;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: center;
+	color: #d53533;
+	padding: 0 .32rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	clear: none;
+}
+.bq-perfectInfoBox li span.bq-perfectInfoAudit {
+	width: auto;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: right;
+	color: #f39c12;
+	float: right;
+	clear: none;
+}
+.bq-perfectInfoBox li span.bq-perfectInfoFail {
+	width: auto;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: right;
+	color: #e74c3c;
+	float: right;
+	clear: none;
+}
+.bq-perfectInfoBox li span.bq-perfectInfoSuccess {
+	width: auto;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: right;
+	color: #1abc9c;
+	float: right;
+	clear: none;
+}
+
+/*身份信息修改弹层*/
+.bq-perfectInfoModifyPop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+.bq-perfectInfoModifyBox {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	max-height: 13rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 56;
+}
+.bq-perfectInfoModifyTitle {
+	width: 100%;
+	height: 1.04rem;
+	background: #edf2f7;
+	float: left;
+	clear: left;
+}
+.bq-perfectInfoModifyTitle p {
+	width: auto;
+	height: 1.04rem;
+	margin-left: .32rem;
+	font-size: .4rem;
+	line-height: 1.04rem;
+	text-align: left;
+	color: #878f9e;
+	float: left;
+	clear: left;
+}
+.bq-perfectInfoModifyTitle a {
+	width: auto;
+	height: 1.04rem;
+	margin-right: .32rem;
+	font-size: .56rem;
+	line-height: .96rem;
+	text-align: left;
+	color: #d53533;
+	float: right;
+	clear: none;
+}
+.bq-perfectInfoModifyMain {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.bq-perfectInfoModifyMain li {
+	width: 100%;
+	padding: .32rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #dce6ef;
+	float: left;
+	clear: left;
+}
+.bq-perfectInfoModifyMain li span {
+	width: 2rem;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.bq-perfectInfoModifyMain li textarea {
+	width: 7.36rem;
+    height: 1.92rem;
+    border: 0;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: justify;
+    color: #333;
+    float: left;
+    clear: none;
+}
+.bq-perfectInfoModifyMain li textarea::-webkit-input-placeholder {
+	color: #ccc;
+}
+.bq-perfectInfoModifyMain li.bq-perfectInfoModify {
+	padding-right: 0;
+}
+.bq-perfectInfoModifyMain li.bq-perfectInfoModify span {
+	height: auto;
+	line-height: .96rem;
+}
+.bq-perfectInfoModifyMain li.bq-perfectInfoModify a {
+	width: 2.32rem;
+	height: .96rem;
+	margin-right: .2rem;
+	border: 1px solid #d8d8d8;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: center;
+	color: #999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.bq-perfectInfoModifyMain li.bq-perfectInfoModify a.bq-selected {
+	border: 1px solid #d53533;
+	color: #d53533;
+	background: url(../../images/icon_screenSelected.png) no-repeat right bottom;
+	background-size: .4rem;
+}
+.bq-perfectInfoModifyMain li.bq-perfectInfoModify a.bq-disable {
+	border: 1px solid #e6e6e6;
+	color: #bebebe;
+	background: #f7f7f7;
+}
+.bq-perfectInfoModifyFool {
+	width: 100%;
+	height: 1.28rem;
+	float: left;
+	clear: left;
+}
+.bq-perfectInfoModifyFool a {
+	width: 100%;
+	height: 1.28rem;
+	background: #d53533;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.bq-perfectInfoModifyFool a.bq-disable {
+	opacity: .52;
+}
+
+/*提交成功审核中的toast提醒*/
+.bq-perfectInfoAuditToast {
+    width: 4.8rem;
+    height: 1.04rem;
+    margin: -.52rem 0 0 -2.4rem;
+    border-radius: .24rem;
+    background-color: rgba(0,0,0,0.78);
+    font-size: .4rem;
+    line-height: 1.04rem;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 52;
+}
+
+
+
+
+
+
+
+
+
+

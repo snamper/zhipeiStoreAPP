@@ -1,0 +1,180 @@
+
+
+
+
+
+
+/*产品选择弹层的样式*/
+.cc-productChoice {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 70;
+}
+.cc-productChoice .aa-carAdaptationBox {
+	z-index: 3;
+}
+.cc-productChoice .aa-carPopHead {
+	border-bottom: 1px solid #ccdae8;
+}
+
+.cc-productChoiceMain {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: left;
+}
+.cc-productChoiceLeft {
+	width: 20.8%;
+	height: auto;
+	max-height: 9.6rem;
+	overflow: auto;
+	background: #f3f7fa;
+	float: left;
+	clear: left;
+}
+.cc-productChoiceLeft a {
+	width: 100%;
+	height: auto;
+	min-height: 1.28rem;
+	padding-left: .2rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #afbeca;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.cc-productChoiceLeft a.cc-selected {
+	background: #fff;
+}
+.cc-productChoiceRight {
+	width: 79.2%;
+	height: auto;
+	max-height: 9.6rem;
+	overflow: auto;
+	padding: .08rem .32rem;
+	box-sizing: border-box;
+	float: left;
+	clear: none;
+}
+
+.cc-productChoiceRight li {
+	width: 100%;
+	height: auto;
+	padding: .1rem 0 .1rem .62rem;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.cc-productChoiceRight li.cw-productNo {
+  width: 100%;
+  height: 3.4rem;
+  background: url(../images/icon_noData.png) no-repeat center center;
+  background-size: 40%;
+  padding: 0;
+}
+.cc-productChoiceRight li span.cc-choice {
+	width: .42rem;
+	height: .72rem;
+	margin-left: -.62rem;
+	background: url(../images/icon_choiceGray.png) no-repeat center center;
+	background-size: .4rem;
+	display: inline-block;
+	float: left;
+	clear: left;
+}
+.cc-productChoiceRight li span.cc-selected {
+	background: url(../images/icon_choiceRed.png) no-repeat center center;
+	background-size: .4rem;
+}
+.cc-productChoiceRight li .cc-box {
+  width: 5rem;
+  display: block;
+  float: left;
+  clear: none;
+}
+.cc-productChoiceRight li p {
+	width: auto;
+	height: auto;
+	margin-right: .2rem;
+	max-width: 5rem;
+	min-height: .72rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #666;
+	word-wrap: break-word;
+	word-break: break-all;
+	float: left;
+	clear: none;
+}
+.cc-productChoiceRight li p.cc-productTab {
+	padding: .18rem 0 0;
+}
+.cc-productChoiceRight li p.cc-productTab b {
+	width: auto;
+	height: auto;
+	margin-right: .2rem;
+	margin-bottom: .18rem;
+	padding: 0 .12rem;
+	border-radius: .12rem;
+	font-size: .28rem;
+	font-weight: normal;
+	line-height: .41rem;
+	text-align: justify;
+	color: #fff;
+	word-wrap: break-word;
+	word-break: break-all;
+	float: left;
+	clear: none;
+}
+.cc-productChoiceRight li p.cc-productTab b.cc-series {
+	background: #3498db;
+}
+.cc-productChoiceRight li p.cc-productTab b.cc-imported {
+	background: #e74c3c;
+}
+.cc-productChoiceRight li span.cc-price {
+	width: auto;
+	height: auto;
+	font-size: .36rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #666;
+	position: absolute;
+	top: .1rem;
+	right: 0;
+	z-index: 3;
+}
+.cc-productChoiceRight li span.cc-price b {
+	font-size: .28rem;
+	font-weight: normal;
+}
+
+.cc-productChoiceFool {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.cc-productChoiceFool a {
+	width: 50%;
+	height: 1.28rem;
+	background: #e74c3c;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: none;
+}
+.cc-productChoiceFool a.cc-buttonRight {
+	background: #d53533;
+}
+

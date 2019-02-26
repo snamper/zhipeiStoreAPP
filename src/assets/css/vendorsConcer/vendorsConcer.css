@@ -1,0 +1,744 @@
+/*按钮颜色*/
+/*.mint-msgbox-btn{
+	color: #26a2ff;
+	font-size:0.2rem;
+	font-weight: bold;
+}
+.mint-msgbox{
+	border-radius: .1rem;
+	font-family: "微软雅黑";
+}*/
+
+[v-cloak] {
+  display: none
+}
+
+.vendorsConcer .noConcerFactory {
+  width: 100%;
+  padding-top: 50%;
+}
+
+.vendorsConcer .noConcerFactory .noConcerText {
+  margin-top: 1rem;
+  height: 0.693rem;
+  color: #b2bfd0;
+  text-align: center;
+  letter-spacing: .008rem;
+  padding: 0 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.vendorsConcer .noConcerFactory .noConcerText span {
+  line-height: .5rem;
+}
+
+.vendorsConcer .noConcerFactory .noConcerGoUrl {
+  height: 4.84rem;
+  padding: 0 0.4rem;
+  margin-top: 1rem;
+}
+
+.vendorsConcer .noConcerFactory .noConcerGoUrl fieldset {
+  height: 4.84rem;
+  border-top: 1px solid #9fadc2;
+  box-sizing: border-box;
+}
+
+.vendorsConcer .noConcerFactory .noConcerGoUrl fieldset legend {
+  color: #c63231;
+  text-align: center;
+  /* width: 5.28rem; */
+  height: 0.178rem;
+  background: #edf2f7;
+  line-height: 0.178rem;
+}
+
+.vendorsConcer .noConcerFactory .noConcerGoUrl fieldset .showProgess {
+  margin-top: 0.4rem;
+}
+
+.vendorsConcer .noConcerFactory .noConcerGoUrl fieldset .showProgess p:nth-child(3) b {
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../../images/icon_userlogin.png) no-repeat center;
+  background-size: 0.2rem;
+  margin: 0 .05rem;
+}
+
+.vendorsConcer .noConcerFactory .noConcerGoUrl fieldset .showProgess p {
+  padding: 0 .5rem;
+  line-height: 0.8rem;
+  color: #a4b2bf;
+}
+
+.vendorsConcer .noConcerFactory .noConcerImg {
+  height: 1.134rem;
+  display: flex;
+  justify-content: center;
+}
+
+.vendorsConcer .noConcerFactory .noConcerImg span {
+  width: 2.134rem;
+  height: 2.134rem;
+  background: pink;
+  background: url(../../images/vendorsConcer/storeLogo.png) no-repeat center;
+  background-size: 2.134rem;
+}
+
+/*关注的智能门店*/
+/*关注的智能门店的样式*/
+.aa-chooseBox {
+  padding-bottom: 1.28rem;
+}
+
+.aa-followShop,
+.aa-followCatalog {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #dce6ef;
+  margin-bottom: .32rem;
+  float: left;
+  clear: left;
+}
+
+.aa-followShop li,
+.aa-followCatalog li {
+  width: 100%;
+  padding: .2rem 1.28rem .2rem 1.64rem;
+  border-bottom: 1px solid #dce6ef;
+  position: relative;
+  float: left;
+  clear: left;
+}
+
+.aa-followShop li span.aa-shopPic,
+.aa-followCatalog li span.aa-shopPic {
+  width: 1rem;
+  height: 1rem;
+  margin-top: .1rem;
+  margin-left: -1.32rem;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  float: left;
+  clear: none;
+}
+
+.aa-followShop li span.af-shopPic {
+  width: 1rem;
+  height: 1rem;
+  margin-top: .1rem;
+  margin-left: -1.32rem;
+  border: 1px solid #e8e8e8;
+  border-radius: .16rem;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  float: left;
+  clear: none;
+}
+
+.aa-followShop li.af-shopNew {
+  height: auto;
+  padding: 0;
+}
+
+.aa-followShop li.af-shopNew a {
+  width: 100%;
+  height: auto;
+  padding: .32rem 0;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.aa-followShop li.af-shopNew a span {
+  width: 100%;
+  height: .68rem;
+  background: url(../../images/icon_plusRed.png) no-repeat center center;
+  background-size: .64rem;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.aa-followShop li.af-shopNew a p {
+  width: 100%;
+  height: .48rem;
+  margin-top: .2rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: center;
+  color: #d53533;
+  float: left;
+  clear: left;
+}
+
+.aa-followShop li span.af-shopPic img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.aa-followShop li span.aa-shopPic img,
+.aa-followCatalog li span.aa-shopPic img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.aa-followShop li p.aa-shopName,
+.aa-followCatalog li p.aa-shopName {
+  width: 100%;
+  height: auto;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: justify;
+  color: #333;
+  float: right;
+  clear: none;
+}
+
+.aa-followCatalog li p.aa-vendorsName {
+  height: 1.16rem;
+  line-height: 1.16rem;
+}
+
+.aa-followShop li span.aa-shopMain,
+.aa-followCatalog li span.aa-shopMain {
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  font-size: .32rem;
+  line-height: .56rem;
+  text-align: justify;
+  color: #787878;
+  float: right;
+  clear: none;
+}
+
+.aa-followShop li span.aa-shopMain a,
+.aa-followCatalog li span.aa-shopMain a {
+  color: #2c83e6;
+}
+
+.aa-followShop li span.aa-inactiveBox,
+.aa-followCatalog li span.aa-inactiveBox {
+  width: auto;
+  padding-top: .48rem;
+  margin-top: -.48rem;
+  background: url(../../images/icon_inactive.png) no-repeat center top;
+  background-size: .48rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #e3e8ee;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: .32rem;
+}
+
+.aa-followShop li span.aa-commonBox,
+.aa-followCatalog li span.aa-commonBox {
+  background: url(../../images/icon_common.png) no-repeat center top;
+  background-size: .48rem;
+  color: #f5ae0a;
+}
+
+/*无关联门店的样式*/
+
+.aa-followShopNodata {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.aa-followShopNodata ul {
+  width: 8.8rem;
+  height: 8rem;
+  margin-left: 6%;
+  float: left;
+  clear: left;
+}
+
+.aa-followShopNodataPic {
+  width: 100%;
+  padding-top: 2.48rem;
+  margin: 2.5rem 0 .64rem;
+  background: url(../../images/icon_noShop.png) no-repeat center top;
+  background-size: 2.72rem;
+  font-size: .44rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #9baaba;
+  float: left;
+  clear: left;
+}
+
+.aa-followShopNodataTitle {
+  width: 100%;
+  font-size: .44rem;
+  line-height: .96rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: left;
+}
+
+.aa-followShopNodataText {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.aa-followShopNodataText span {
+  width: 4%;
+  font-size: .36rem;
+  line-height: .68rem;
+  text-align: justify;
+  color: #787878;
+  float: left;
+  clear: none;
+}
+
+.aa-followShopNodataText p {
+  width: 94%;
+  font-size: .36rem;
+  line-height: .68rem;
+  text-align: justify;
+  color: #787878;
+  float: right;
+  clear: none;
+}
+
+.aa-followShopNodataText {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.aa-followShopNodataText span {
+  width: 4%;
+  font-size: .36rem;
+  line-height: .68rem;
+  text-align: justify;
+  color: #787878;
+  float: left;
+  clear: none;
+}
+
+.aa-followShopNodataText p {
+  width: 94%;
+  font-size: .36rem;
+  line-height: .68rem;
+  text-align: justify;
+  color: #787878;
+  float: right;
+  clear: none;
+}
+
+
+/*新增红包样式*/
+.an-redPacketIconBox {
+  width: 100%;
+  height: auto;
+  min-height: 1.12rem;
+  position: relative;
+  float: left;
+  clear: none;
+}
+
+.an-redPacketIconBox span.an-redPacketIcon {
+  width: auto;
+  height: .48rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -.24rem;
+}
+
+.an-redPacketIconBox span.an-redPacketIcon b {
+  width: .4rem;
+  height: .48rem;
+  background: url(../../images/icon_redPacketRed.png) no-repeat center center;
+  background-size: .4rem;
+  margin-left: .32rem;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.an-redPacketIconBox span.an-redPacketIcon span.an-redPacketNumber {
+  width: .36rem;
+  height: .36rem;
+  background: #d53533;
+  border-radius: .24rem;
+  font-size: .16rem;
+  line-height: .36rem;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #fff;
+  display: block;
+  position: absolute;
+  top: -.16rem;
+  right: -.16rem;
+  z-index: 3;
+}
+
+.ca-chooseBox {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #dce6ef;
+  float: left;
+  clear: left;
+}
+
+
+
+/*暂无关注的智能产品目录*/
+.aa-chooseBox>p {
+  color: #748292;
+}
+
+.ca-pageMain {
+  padding-top: 1.16rem;
+}
+
+.ca-followCatalogNodate {
+  width: 90%;
+  height: auto;
+  margin: 1.6rem 0 0;
+  margin-left: 5%;
+  padding: .72rem .4rem .4rem;
+  border: 1px solid #ccdae8;
+  border-radius: .2rem;
+  position: relative;
+  z-index: 1;
+  float: left;
+  clear: left;
+}
+
+.ca-followCatalogNodate li {
+  width: 100%;
+  height: auto;
+  float: left;
+  clear: left;
+}
+
+.ca-followCatalogNodate li.ca-followCatalogNodataTitle {
+  width: auto;
+  height: .48rem;
+  background: #edf2f7;
+  padding: 0 .12rem;
+  font-size: .4rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #d53533;
+  position: absolute;
+  top: -.24rem;
+  left: .28rem;
+  z-index: 3;
+}
+
+.ca-followCatalogNodate li.ca-followCatalogNodataText p {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+/*搜索查询区域的样式*/
+.ca-followCatalogNodate li.ca-followCatalogNodataText p.ca-followInput {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  float: left;
+  clear: left;
+}
+
+.ca-followCatalogNodate li.ca-followCatalogNodataText p.ca-followInput input {
+  width: 80%;
+  height: 1.04rem;
+  margin-left: .2rem;
+  padding-left: .56rem;
+  background: #fff url(../../images/icon_seachGrayFollow.png) no-repeat left center;
+  background-size: .36rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: left;
+}
+
+.ca-followCatalogNodate li.ca-followCatalogNodataText p.ca-followInput a {
+  width: 1.04rem;
+  height: 1.04rem;
+  background: url(../../images/icon_query.png) no-repeat center center;
+  background-size: .48rem;
+  display: none;
+  float: right;
+  clear: none;
+}
+
+.ca-followCatalogNodate li.ca-followCatalogNodataText p.ca-followInput a.ca-followInputButton {
+  width: auto;
+  height: .64rem;
+  margin-top: .2rem;
+  padding: 0 .32rem;
+  border-left: 1px solid #ccc;
+  background: none;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #d53533;
+  display: block;
+}
+
+.ca-followCatalogNodate li.ca-followCatalogNodataText p.ca-followInputFocus input {
+  background-image: none;
+  padding: 0;
+}
+
+.ca-followCatalogNodate li.ca-followCatalogNodataText p.ca-followInputFocus a {
+  display: block;
+}
+
+/*查询结果*/
+.ca-followSearchResult {
+  width: 100%;
+  padding: .32rem 0 0;
+  float: left;
+  clear: left;
+}
+
+.ca-followSearchResult span.ca-followSearchPic {
+  width: 1rem;
+  height: 1rem;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: .5rem;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  float: left;
+  clear: none;
+}
+
+.ca-followSearchResult span.ca-followSearchPic img {
+  width: auto;
+  height: auto;
+  max-width: .96rem;
+  max-height: .96rem;
+}
+
+.ca-followSearchResult span.ca-followSearchName {
+  width: auto;
+  height: 1rem;
+  margin-left: .2rem;
+  font-size: .36rem;
+  line-height: 1rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: none;
+}
+
+.ca-followSearchResult a {
+  width: auto;
+  height: .72rem;
+  margin-top: .14rem;
+  padding: 0 .24rem;
+  background: #fff;
+  border: 1px solid #d53533;
+  border-radius: .36rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #d53533;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  float: right;
+  clear: none;
+}
+
+.ca-followSearchResult span.ca-followAlready {
+  width: auto;
+  height: 1rem;
+  margin-left: .2rem;
+  font-size: .32rem;
+  line-height: 1rem;
+  text-align: left;
+  color: #1abc9c;
+  float: right;
+  clear: none;
+}
+
+/*报错相关的样式*/
+.ca-followSearchError {
+  width: 100%;
+  padding-top: .32rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+/*有关注的目录的时候*/
+.aa-chooseBox ul {
+  margin: 0;
+}
+
+.ca-followSearchBox ul {
+  padding: 0 .32rem;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInput {
+  width: 100%;
+  height: auto;
+  padding: .12rem 0;
+  float: left;
+  clear: left;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInput input {
+  width: 80%;
+  height: 1.04rem;
+  padding-left: .56rem;
+  background: #fff url(../../images/icon_seachGrayFollow.png) no-repeat left center;
+  background-size: .36rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: left;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInput a {
+  width: 1.04rem;
+  height: 1.04rem;
+  margin-right: -.28rem;
+  background: url(../../images/icon_query.png) no-repeat center center;
+  background-size: .48rem;
+  display: none;
+  float: right;
+  clear: none;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInput a.ca-followInputButton {
+  width: auto;
+  height: .64rem;
+  margin-top: .2rem;
+  padding: 0 .32rem;
+  border-left: 1px solid #ccc;
+  background: none;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #d53533;
+  display: block;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInputFocus input {
+  background-image: none;
+  padding: 0;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInputFocus a {
+  display: block;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText div {
+  padding: .32rem 0;
+  border-top: 1px solid #dce6ef;
+}
+
+/*toast*/
+.ca-toastBox {
+  width: 3.2rem;
+  height: 1.28rem;
+  margin: -.64rem 0 0 -1.6rem;
+  background-color: rgba(0, 0, 0, 0.78);
+  border-radius: .32rem;
+  font-size: .36rem;
+  line-height: .56rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+}
+
+.ca-choose {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: none;
+  float: left;
+  clear: left;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInput input {
+  width: 70%;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInput a.fc-followCancelButton {
+  width: auto;
+  height: .64rem;
+  margin-top: .2rem;
+  padding: 0 .32rem;
+  border-left: 1px solid #ccc;
+  background: none;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #2c83e6;
+  display: block;
+}
+
+.ca-followSearchBox li.ca-followCatalogNodataText p.ca-followInput a.ca-followInputButton {
+  border: 1px solid #d53533;
+  background: #d53533;
+  color: #fff;
+  border-radius: .08rem;
+  margin-right: .32rem;
+}

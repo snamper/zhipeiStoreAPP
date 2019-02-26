@@ -1,0 +1,835 @@
+
+/*收款设置页面的样式*/
+.dy-receivablesSetupPage {
+	width: 100%;
+	padding-bottom: 1.6rem;
+	float: left;
+	clear: left;
+}
+
+/*审核失败*/
+.dy-errorBox {
+	width: 100%;
+	background: #fff;
+	padding: .2rem .32rem;
+	margin-bottom: .32rem;
+	border-bottom: 1px solid #e8e8e8;
+	float: left;
+	clear: left;
+}
+.dy-errorBox p {
+	width: 100%;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #e74c3c;
+	float: left;
+	clear: left;
+}
+.dy-errorBox span {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #e74c3c;
+	float: left;
+	clear: left;
+}
+
+/*支付宝账号绑定*/
+.dy-alipayBox {
+	width: 100%;
+	background: #fff;
+	padding: .32rem;
+	margin-bottom: .32rem;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	float: left;
+	clear: left;
+}
+.dy-alipayBox span {
+	width: auto;
+	border-right: 1px solid #d8d8d8;
+	padding-right: .32rem;
+	margin-right: .32rem;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.dy-alipayBox input {
+	width: 5.8rem;
+	border: 0;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.dy-alipayBox a {
+	width: .48rem;
+	height: .48rem;
+	display: flex;
+	clear: none;
+}
+.dy-alipayBox a.dy-emptyButton {
+	background: url(../images/icon_emptyGray.png) no-repeat center center;
+	background-size: .44rem;
+	float: left;
+}
+.dy-alipayBox a.dy-doubtButton {
+	background: url(../images/icon_doubtBlue.png) no-repeat center center;
+	background-size: .44rem;
+	float: right;
+}
+
+
+/*上传完善资料信息*/
+.dy-perfectInfo {
+	width: 100%;
+	background: #fff;
+	margin-bottom: .32rem;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	float: left;
+	clear: left;
+}
+
+/*上传资料信息头部样式*/
+.dy-perfectInfoTop {
+	width: 100%;
+	padding: .2rem 0;
+	background: #f8f8f8;
+	border-bottom: 1px solid #d8d8d8;
+	float: left;
+	clear: left;
+}
+.dy-perfectInfoTop p {
+	width: 100%;
+	font-size: .4rem;
+	line-height: .72rem;
+	text-align: center;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.dy-perfectInfoTop span {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .52rem;
+	text-align: center;
+	color: #e74c3c;
+	float: left;
+	clear: left;
+}
+
+/*单个模块资料上传*/
+.dy-uploadPicBox {
+	width: 96.8%;
+	padding: .32rem 0 0;
+	border-bottom: 1px solid #e8e8e8;
+	float: right;
+	clear: right;
+}
+.dy-uploadPicName {
+	width: 100%;
+	padding-right: .32rem;
+	float: left;
+	clear: left;
+}
+.dy-uploadPicName p {
+	width: auto;
+	margin-right: .2rem;
+	font-size: .36rem;
+	line-height: .68rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.dy-uploadPicName span {
+	width: auto;
+	margin-top: .08rem;
+	font-size: .28rem;
+	line-height: .6rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.dy-uploadPicName a {
+	width: auto;
+	font-size: .32rem;
+	line-height: .68rem;
+	text-align: left;
+	color: #108ee9;
+	float: right;
+	clear: none;
+}
+
+.dy-uploadPicMain {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.dy-picBox {
+	width: 20%;
+	height: auto;
+	padding-top: .2rem;
+	margin-bottom: .32rem;
+	position: relative;
+	float: left;
+	clear: none;
+}
+.dy-picBox>a.dy-uploadPic {
+	width: 1.6rem;
+	height: 1.6rem;
+	border: 1px solid #e8e8e8;
+	background: url(../images/icon_camera.png) no-repeat center center;
+	background-size: .48rem;
+	display: block;
+	position: static;
+	float: left;
+	clear: left;
+}
+.dy-picBox>span {
+	width: 1.6rem;
+	height: 1.6rem;
+	border: 1px solid #e8e8e8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.dy-picBox>span img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.dy-picBox>a {
+	width: .56rem;
+	height: .56rem;
+	background: url(../images/icon_emptyRed.png) no-repeat center center;
+	background-size: .44rem;
+	display: block;
+	position: absolute;
+	top: 0rem;
+	right: .12rem;
+	z-index: 3;
+}
+
+/*底部操作按钮*/
+.dy-receivablesSetupFool {
+	width: 100%;
+	height: 1.6rem;
+	background: #fff;
+	border-bottom: 1px solid #d8d8d8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+.dy-receivablesSetupFool a {
+	width: 3.6rem;
+	height: .96rem;
+	border: 1px solid #e74c3c;
+	border-radius: .48rem;
+	font-size: .4rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #e74c3c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+
+/*状态跳转页样式*/
+.dy-stateBox {
+	width: 100%;
+	padding-top: .96rem;
+	float: left;
+	clear: left;
+}
+.dy-stateText {
+	width: 100%;
+	padding-top: 2.22rem;
+	font-size: .52rem;
+	line-height: .72rem;
+	text-align: center;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.dy-stateExplain {
+	width: 100%;
+	margin-top: .32rem;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #999;
+	float: left;
+	clear: left;
+}
+.dy-stateButton {
+	width: 100%;
+	padding: .32rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.dy-stateButton a {
+	width: auto;
+	padding: 0 .48rem;
+	background: #fff;
+	border: 1px solid #e74c3c;
+	border-radius: .48rem;
+	font-size: .4rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #e74c3c;
+	float: left;
+	clear: left;
+}
+.dy-stateLink {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.dy-stateLink a {
+	width: auto;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #108ee9;
+	float: left;
+	clear: left;
+}
+
+/*审核中状态相关*/
+.dy-stateAudit .dy-stateText {
+	background: url(../images/icon_wait.png) no-repeat center top;
+	background-size: 1.72rem;
+}
+.dy-stateAudit .dy-stateExplain {
+	color: #F39C12;
+}
+
+/*已开通状态相关*/
+.dy-stateSuccess .dy-stateText {
+	background: url(../images/icon_success.png) no-repeat center top;
+	background-size: 1.72rem;
+}
+
+/*收款通知 成功收款*/
+.dy-stateAlready .dy-stateText {
+	background: url(../images/icon_notice.png) no-repeat center top;
+	background-size: 1.72rem;
+}
+
+/*收款通知 已成功收款详情*/
+.dy-alreadyMain {
+	width: 92%;
+	margin-left: 4%;
+	margin-top: .48rem;
+	padding: .2rem .32rem;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.dy-alreadyMain>div {
+	width: 100%;
+	height: auto;
+	padding-left: 1rem;
+	float: left;
+	clear: left;
+}
+.dy-alreadyMain>div span {
+	width: 1rem;
+	height: auto;
+	margin-left: -1rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: left;
+}
+.dy-alreadyMain>div p {
+	width: 100%;
+	height: auto;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.dy-alreadyMain>div.dy-alreadyFool {
+	border-top: 1px solid #e8e8e8;
+	margin-top: .2rem;
+	padding: .2rem 0 0;
+}
+.dy-alreadyMain>div.dy-alreadyFool span {
+	width: auto;
+	margin: 0;
+	color: #ccc;
+}
+.dy-alreadyMain>div.dy-alreadyFool p {
+	width: auto;
+	margin: 0;
+	color: #999;
+	float: right;
+	clear: none;
+}
+.dy-alreadyMain>div.dy-alreadyFool p b {
+	color: #e74c3c;
+	font-size: .36rem;
+	font-weight: normal;
+}
+
+/*修理厂车主收款入口*/
+.dy-receivablesEntrance {
+	width: 1.44rem;
+	height: 1.44rem;
+	background: #fff;
+	border-radius: .72rem;
+	box-shadow: 0 0 .16rem #e74c3c;
+	overflow: hidden;
+	position: fixed;
+	right: .4rem;
+	bottom: 1.92rem;
+	z-index: 300;
+}
+.dy-receivablesEntrance a {
+	width: 1.44rem;
+	height: 1.44rem;
+	background: url(../images/icon_receivables.png) no-repeat center center;
+	background-size: auto .84rem;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+/*车主收款页面*/
+.dy-receivablesPage {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+/*VIN码展示*/
+.dy-receivablesVIN {
+	width: 100%;
+	background: #fff;
+	padding: .32rem;
+	margin-bottom: .32rem;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	float: left;
+	clear: left;
+}
+.dy-receivablesVIN dt {
+	width: 1.08rem;
+	height: 1.08rem;
+	margin-right: .32rem;
+	border: 1px solid #e8e8e8;
+	border-radius: .16rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.dy-receivablesVIN dt img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.dy-receivablesVIN dd {
+	width: 7.96rem;
+	float: left;
+	clear: none;
+}
+.dy-receivablesVIN dd p {
+	width: 100%;
+	font-size: .36rem;
+	line-height: .54rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.dy-receivablesVIN dd span {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .54rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+
+/*车型保养总价*/
+.dy-receivablesTotalPrice {
+	width: 100%;
+	background: #fff;
+	padding: .32rem;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	float: left;
+	clear: left;
+}
+.dy-receivablesTotalPrice p {
+	width: 3.52rem;
+	font-size: .36rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #666;
+	float: left;
+	clear: left;
+}
+.dy-receivablesTotalPrice span {
+	width: 4.36rem;
+	height: .8rem;
+	border: 1px solid #d8d8d8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.dy-receivablesTotalPrice input {
+	width: 96%;
+	height: .64rem;
+	border: 0;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: none;
+}
+.dy-receivablesTotalPrice a {
+	width: 1.48rem;
+	height: .8rem;
+	background: #e74c3c;
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: none;
+}
+
+/*选择优惠方式*/
+.dy-receivablesDiscount {
+	width: 100%;
+	background: #fff;
+	padding: .32rem;
+	margin-top: .32rem;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	float: left;
+	clear: left;
+}
+.dy-receivablesDiscount>p {
+	width: 100%;
+	margin-bottom: .28rem;
+	font-size: .4rem;
+	line-height: .72rem;
+	text-align: center;
+	color: #e74c3c;
+	float: left;
+	clear: left;
+}
+
+.dy-receivablesDiscountOne {
+	width: 3.8rem;
+	height: auto;
+	margin: 0 .44rem;
+	padding: .08rem;
+	background: #F3F3F3;
+	float: left;
+	clear: none;
+}
+.dy-receivablesDiscountOne dt {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.dy-receivablesDiscountOne dt p {
+	width: 100%;
+	font-size: .4rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.dy-receivablesDiscountOne dt span {
+	width: 100%;
+	font-size: .28rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #bcbcbc;
+	float: left;
+	clear: left;
+}
+.dy-receivablesDiscountOne dd {
+	width: 100%;
+	margin-top: .08rem;
+	padding: .32rem 0;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.dy-receivablesDiscountOne dd p {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #999;
+	float: left;
+	clear: left;
+}
+.dy-receivablesDiscountOne dd span {
+	width: 100%;
+	font-size: .28rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #bcbcbc;
+	float: left;
+	clear: left;
+}
+.dy-receivablesDiscountOne dd a {
+	width: 58%;
+	margin-left: 21%;
+	margin-top: .32rem;
+	border: 1px solid #e74c3c;
+	border-radius: .32rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #e74c3c;
+	float: left;
+	clear: left;
+}
+.dy-receivablesDiscount .dy-selected {
+	background: #e74c3c;
+	box-shadow: 0 0 .16rem #f6beb9;
+}
+.dy-receivablesDiscount .dy-selected dt p {
+	color: #fff;
+}
+.dy-receivablesDiscount .dy-selected dt span {
+	color: #FFD7D2;
+}
+.dy-receivablesDiscount .dy-selected dd a {
+	background: #e74c3c;
+	color: #fff;
+}
+
+/*底部确定按钮*/
+.dy-receivablesDiscountButton {
+	width: 100%;
+	height: 1.28rem;
+	background: #fff;
+	border-top: 1px solid #d8d8d8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+.dy-receivablesDiscountButton a {
+	width: 3.6rem;
+	height: .96rem;
+	background: #fff;
+	border: 1px solid #e74c3c;
+	border-radius: .48rem;
+	font-size: .44rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #e74c3c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+
+/*遮罩层样式*/
+.dy-receivablesDiscountMask {
+	width: 100%;
+	background: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 3.52rem;
+	bottom: 0;
+	left: 0;
+	z-index: 20;
+}
+
+/*收款通知已发送*/
+.dy-sendSuccess .dy-stateText {
+	background: url(../images/icon_success.png) no-repeat center top;
+	background-size: 1.72rem;
+}
+.dy-sendSuccess .dy-stateExplain {
+	color: #e74c3c;
+}
+
+/*养车付列表页面*/
+.dy-receivablesListPage {
+	width: 100%;
+	margin-top: .32rem;
+	padding-left: .32rem;
+	background: #fff;
+	border-top: 1px solid #d8d8d8;
+	float: left;
+	clear: left;
+}
+.dy-receivablesListPage li {
+	width: 100%;
+	background: url(../images/arrow_link_gray.png) no-repeat 8.96rem center;
+	background-size: .4rem;
+	font-size: .44rem;
+	line-height: 1.28rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.dy-receivablesListPage li.dy-receivablesListFirst {
+	border-bottom: 1px solid #e8e8e8;
+}
+
+/*收款列表页*/
+.dy-receivablesListPageMain {
+	width: 100%;
+	height: auto;
+	padding: 1.16rem 0 .4rem;
+	float: left;
+	clear: left;
+}
+/*收款列表顶部切换*/
+.dy-receivablesListTab {
+	width: 100%;
+	height: 1.16rem;
+	background: #fff;
+	border-bottom: 1px solid #d8d8d8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+}
+.dy-receivablesListTab a {
+	width: 1.28rem;
+	height: 1.16rem;
+	margin: 0 .48rem;
+	font-size: .36rem;
+	line-height: 1.12rem;
+	text-align: center;
+	color: #333;
+	display: block;
+	float: left;
+	clear: left;
+}
+.dy-receivablesListTab a.dy-selected {
+	border-bottom: .04rem solid #e74c3c;
+	color: #e74c3c;
+}
+/*单个收款信息*/
+.dy-receivablesListOne {
+	width: 100%;
+	margin-top: .32rem;
+	float: left;
+	clear: left;
+}
+.dy-receivablesListOne>p {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #bcbcbc;
+	float: left;
+	clear: left;
+}
+.dy-receivablesListOne .dy-alreadyMain {
+	margin-top: 0;
+}
+.dy-alreadyMain>div p b {
+	font-size: .28rem;
+	font-weight: normal;
+	color: #bcbcbc;
+	display: inline-block;
+}
+
+/*暂无订单的效果*/
+.dy-receivablesDataNo {
+  width: 100%;
+  height: auto;
+  padding-top: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+.dy-receivablesDataNo span {
+  width: auto;
+  min-width: 4rem;
+  height: auto;
+  background: url(../images/pic_dataNo.png) no-repeat center top;
+  background-size: 4rem;
+  padding-top: 3.6rem;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #bcbcbc;
+  float: left;
+  clear: left;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

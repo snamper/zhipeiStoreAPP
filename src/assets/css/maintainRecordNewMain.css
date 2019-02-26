@@ -1,0 +1,234 @@
+/*1225 保养记录调整*/
+.er-maintainRecordNewMain {
+  width: 100%;
+  margin-top: -.32rem;
+  float: left;
+  clear: left;
+}
+.er-maintainRecordNewMain>ul {
+  width: 100%;
+  padding-right: .4rem;
+  float: left;
+  clear: left;
+}
+.er-maintainRecordNewMain>ul>li {
+  width: 100%;
+  padding: .24rem .36rem .24rem 0;
+  border-bottom: 1px solid #e8e8e8;
+  background: url(../images/arrow_gray.png) no-repeat right .48rem;
+  background-size: auto .32rem;
+  float: left;
+  clear: left;
+}
+.er-maintainRecordNewMain>ul>li>p {
+  width: auto;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: left;
+}
+.er-maintainRecordNewMain>ul>li>span {
+  width: auto;
+  max-width: 6.08rem;
+  padding: .08rem 0;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #bcbcbc;
+  float: right;
+  clear: none;
+}
+.er-maintainRecordNewMain>ul>li>span.er-displayText {
+  color: #181818;
+}
+.er-maintainRecordNewMain>ul>li>span.er-displayText>b {
+  font-weight: normal;
+  font-size: .4rem;
+  margin-right: .2rem;
+}
+.er-maintainRecordNewMain>ul>li>span.er-displayText>b.er-supplementExplain {
+  width: 6.08rem;
+  background: #fffbf3;
+  padding: .08rem .2rem;
+  margin: .2rem 0 0;
+  font-size: .32rem;
+  color: #e67e22;
+  float: left;
+  clear: left;
+}
+.er-maintainRecordNewMain>ul>li>a {
+  width: auto;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #377de8;
+  float: right;
+  clear: none;
+}
+.er-maintainRecordNewMain>ul>li.er-scenePicBox {
+  background: none;
+  padding-right: 0;
+}
+.er-picListBox {
+  width: 8rem;
+  float: left;
+  clear: left;
+}
+.er-picListBox>dl {
+  width: 8.8rem;
+  margin-left: -.4rem;
+  float: left;
+  clear: left;
+}
+.er-picListBox>dl>dd {
+  width: 1.8rem;
+  height: auto;
+  border: 1px solid #e8e8e8;
+  margin: .16rem 0 .16rem .4rem;
+  position: relative;
+  float: left;
+  clear: none;
+}
+.er-picListBox>dl>dd>span {
+  width: 100%;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+.er-picListBox>dl>dd>span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.er-picListBox>dl>dd>p {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0,0,0,0.68);
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.er-picListBox>dl>dd>a {
+  width: .48rem;
+  height: .48rem;
+  background: url(../images/icon_empty.png) no-repeat center center;
+  background-size: 100%;
+  position: absolute;
+  top: -.2rem;
+  right: -.2rem;
+  z-index: 3;
+}
+.er-picListBox>dl>dd.er-newPic {
+  padding: .2rem 0;
+}
+.er-picListBox>dl>dd.er-newPic>span {
+  width: 100%;
+  height: .8rem;
+  background: url(../images/icon_newsRed.png) no-repeat center center;
+  background-size: .64rem;
+  display: block;
+  float: left;
+  clear: none;
+}
+.er-picListBox>dl>dd.er-newPic>p {
+  width: 100%;
+  height: auto;
+  background: none;
+  font-size: .32rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #282828;
+  position: static;
+  float: left;
+  clear: left;
+}
+.er-maintainRecordNewMain>ul>li.er-buttonBox {
+  background: none;
+  padding: .24rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.er-maintainRecordNewMain>ul>li.er-buttonBox>a {
+  width: 40%;
+  background: #e74c3c;
+  border-radius: .4rem;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  float: left;
+  clear: left;
+}
+.er-maintainRecordNewMain>ul>li.er-buttonBox>a.er-prohibit {
+  background: #f3f3f3;
+  color: #ccc;
+}
+.er-maintainRecordSee>ul>li {
+  padding: .24rem 0;
+  background: none;
+}
+
+.er-maintainRecordSee>ul>li>span.er-displayText {
+  max-width: 6.4rem;
+}
+.er-maintainRecordSee>ul>li.er-scenePicBox {
+  border-bottom: 0;
+}
+.er-maintainRecordNewMain>ul>li.er-amouent{
+  background: none;
+}
+.er-maintainRecordSee>ul>li.er-noneData {
+  display: none;
+}
+.er-maintainRecordSee .er-picListBox>dl>dd>a {
+  display: none;
+}
+.er-maintainRecordSee>ul>li.er-buttonBox {
+  display: none;
+}
+
+.er-maintainRecordButton {
+  width: auto;
+  height: .64rem;
+  margin-top: .24rem;
+  margin-left: .32rem;
+  float: right;
+  clear: none;
+}
+.er-maintainRecordButton a {
+  width: auto;
+  margin-left: .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #377de8;
+  float: left;
+  clear: none;
+}
+.er-maintainRecordNewMain>ul>li>span.er-displayTextRed {
+  width: auto;
+  max-width: 6.72rem;
+  padding: .08rem 0;
+  font-size: .28rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #e74c3c;
+  float: right;
+  clear: none;
+}
+.er-maintainRecordNewMain>ul>li>span.er-displayTextRed>b {
+  font-weight: normal;
+  margin: 0 .12rem 0 0;
+  font-size: .36rem;
+}

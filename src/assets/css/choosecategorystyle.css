@@ -1,0 +1,263 @@
+
+/*选择品类的样式*/
+.bo-chooseCategory {
+	width: 100%;
+	height: 100%;
+	background: #fff url(../images/text_parts.png) no-repeat center 1.92rem;
+	background-size: 6.16rem;
+	padding-top: 3.16rem;
+	float: left;
+	clear: left;
+}
+.bo-chooseCategory a {
+	width: 2.1rem;
+	height: 1.08rem;
+	margin-left: .32rem;
+	margin-bottom: .32rem;
+	border: 1px solid #e8e8e8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .32rem;
+	text-align: center;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.bo-chooseCategory a.bo-selected {
+ 	background: url(../images/icon_screenSelected.png) no-repeat right bottom;
+ 	background-size: .48rem;
+ 	border: 1px solid #d53533;
+ 	color: #d53533;
+ }
+
+.bo-chooseCategoryFool {
+	width: 100%;
+	height: 1.28rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 4;
+}
+.bo-chooseCategoryFool a {
+	width: 100%;
+	height: 1.28rem;
+	background: #d53533;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+
+
+/*完善信息相关的弹层样式*/
+.bo-shopMainSupplementPop {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+.bo-shopMainSupplement {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	max-height: 13rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 56;
+}
+.bo-shopSupplementTop {
+	width: 100%;
+	height: 1.04rem;
+	background: #edf2f7;
+	float: left;
+	clear: left;
+}
+.bo-shopSupplementTop p {
+	width: auto;
+	height: 1.04rem;
+	margin-left: .32rem;
+	font-size: .4rem;
+	line-height: 1.04rem;
+	text-align: left;
+	color: #878f9e;
+	float: left;
+	clear: left;
+}
+.bo-shopSupplementTop a {
+	width: auto;
+	height: 1.04rem;
+	margin-right: .32rem;
+	font-size: .56rem;
+	line-height: .96rem;
+	text-align: left;
+	color: #d53533;
+	float: right;
+	clear: none;
+}
+.bo-shopSupplementCenter {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.bo-shopSupplementCenter li {
+	width: 100%;
+	padding: .32rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #dce6ef;
+	float: left;
+	clear: left;
+}
+.bo-shopSupplementCenter li span {
+	width: 2rem;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.bo-shopSupplementCenter li.bo-shopPrompt {
+	height: .96rem;
+	background: #fff7ea;
+	border-top: 1px solid #f9d08e;
+	border-bottom: 1px solid #f9d08e;
+	font-size: .32rem;
+	line-height: .56rem;
+	color: #f39c12;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bo-shopSupplementCenter li.bo-shopAddress input {
+	width: 7.36rem;
+	height: auto;
+	min-height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #333;
+	float: right;
+	clear: none;
+}
+.bo-shopSupplementCenter li.bo-shopAddress textarea.bo-shopAddressInput {
+	width: 7.36rem;
+	height: 1.28rem;
+	resize: none;
+	border: 0;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.bo-shopSupplementCenter li.bo-shopAddress input::-webkit-input-placeholder,.bo-shopSupplementCenter li.bo-shopAddress textarea.bo-shopAddressInput::-webkit-input-placeholder {
+	color: #ccc;
+}
+.bo-shopSupplementFool {
+	width: 100%;
+	height: 1.28rem;
+	float: left;
+	clear: left;
+}
+.bo-shopSupplementFool a {
+	width: 100%;
+	height: 1.28rem;
+	background: #d53533;
+	font-size: .48rem;
+	line-height: 1.28rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.bo-shopSupplementFool a.bo-disable {
+	opacity: .52;
+}
+/*选品类页面上的调整*/
+
+/*已选品类-当前禁止选择*/
+.bo-chooseCategory a.bu-disable {
+	border: 1px solid #f2f2f2;
+	background: #f5f5f5;
+	color: #ccc;
+}
+
+/*增加语音留言相关的修改*/
+.bo-chooseCategoryFool {
+	height: auto;
+}
+
+.bo-chooseCategoryFool .bu-leaveWord {
+	width: 100%;
+	height: auto;
+	border-top: 1px solid #dce6ef;
+	padding: .32rem;
+	float: left;
+	clear: left;
+}
+.bo-chooseCategoryFool .bu-leaveWord>p {
+	width: auto;
+	height: .72rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.bo-chooseCategoryFool .bu-leaveWord>a {
+	width: 2.12rem;
+	height: .72rem;
+	padding-left: .52rem;
+	background: #fff url(../images/icon_microphone.png) no-repeat .16rem center;
+	background-size: .32rem;
+	border: 1px solid #d8d8d8;
+	border-radius: .32rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.bo-chooseCategoryFool .bu-leaveWord>span {
+	width: 2.12rem;
+	height: .72rem;
+	padding-left: .52rem;
+	background: #d53533 url(../images/icon_voice.png) no-repeat .16rem center;
+	background-size: .32rem;
+	border: 1px solid #d8d8d8;
+	border-radius: .36rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #fff;
+	float: left;
+	clear: none;
+}
+
+.bo-chooseCategoryFool .bu-leaveWord>span>a {
+	width: .72rem;
+	height: .72rem;
+	background: none;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #fff;
+	float: right;
+	clear: none;
+}

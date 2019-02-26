@@ -1,0 +1,539 @@
+
+/*经销商升级相关样式*/
+
+/*经销商升级相关公用样式*/
+.cr-distributorGrade {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: #fa3300;
+	padding-bottom: 1.6rem;
+	float: left;
+	clear: left;
+}
+
+/*活动页banner的样式*/
+.cr-distributorGradeBanner,.cr-distributorGradeBanner img {
+	width:100%;
+	float: left;
+	clear: left;
+}
+
+.cr-mainBox,.cr-mainBox>img {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+/*活动页主体部分的样式*/
+.cr-mainBox>div {
+	width: 100%;
+	padding: 0 .6rem;
+	background: url(../images/step/html_BG.png) no-repeat center top;
+	background-size: 100%;
+	float: left;
+	clear: left;
+}
+.cr-mainBox>div ul,.cr-mainBox>div div.cr-mainBG {
+	width: 100%;
+	height: auto;
+	padding: 0 1.16rem .32rem;
+	min-height: 6.24rem;
+	background: url(../images/step/background.png) repeat-y center top;
+	background-size: 100%;
+	float: left;
+	clear: left;
+}
+.cr-stepOneMain ul li {
+	width: 100%;
+	height: auto;
+	padding: .16rem 0 0;
+	float: left;
+	clear: left;
+}
+.cr-stepOneMain ul li p {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.cr-stepOneMain ul li span {
+	width: 100%;
+	min-height: .96rem;
+	padding: .2rem .28rem;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.cr-stepOneMain ul li span input {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .56rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.cr-stepOneMain ul li span textarea {
+	width: 100%;
+	height: 1.12rem;
+	font-size: .32rem;
+	line-height: .56rem;
+	text-align: left;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.cr-stepOneMain ul li a {
+	width: 100%;
+	height: .96rem;
+	margin-top: .2rem;
+	background: #ffe100;
+	font-size: .36rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #fa3300;
+	float: left;
+	clear: left;
+}
+.cr-mainBox span.cr-mainBottom {
+	width: 100%;
+	height: .68rem;
+	background: url(../images/step/bottom.png) no-repeat center top;
+	background-size: 88%;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+/*帮助中心部分的样式*/
+.cr-foolHelp {
+	width: 100%;
+	padding: 0 .6rem;
+	background: #fa3300;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+.cr-foolHelpLeft {
+	width: 75%;
+	padding: .2rem 0;
+	background: url(../images/step/arrow_help.png) no-repeat right 36%;
+	background-size: .88rem;
+	float: left;
+	clear: none;
+}
+.cr-foolHelpLeft p {
+	font-size: .32rem;
+	line-height: .6rem;
+	text-align: left;
+	color: #ffe100;
+	float: left;
+	clear: left;
+}
+.cr-foolHelpLeft span {
+	font-size: .32rem;
+	line-height: .6rem;
+	text-align: left;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.cr-foolHelpLeft span b {
+	font-weight: normal;
+	color: #ffe100;
+}
+.cr-foolHelpLeft span a {
+  text-decoration: none;
+  color: #2ffdff;
+}
+.cr-foolHelpRigth {
+	width: auto;
+	padding: .2rem 0;
+	float: right;
+	clear: none;
+}
+.cr-foolHelpRigth a {
+	background: url(../images/step/icon_help.png) no-repeat center left;
+	background-size: .4rem;
+	padding-left: .6rem;
+	font-size: .36rem;
+	line-height: 1.2rem;
+	text-align: left;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+
+
+/*经销商升级第二步*/
+.cr-stepTwoMain {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+.cr-stepTwoMain p {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: left;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.cr-stepTwoMain p.cr-shopName {
+	font-size: .4rem;
+	text-align: center;
+}
+.cr-stepTwoMain span {
+  width: 100%;
+  margin-top: .2rem;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #ffe100;
+  float: left;
+  clear: left;
+}
+
+.cr-stepTable {
+	width: 100%;
+	padding-top: .2rem;
+	float: left;
+	clear: left;
+}
+.cr-stepTable table {
+	width: 100%;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.cr-stepTable table td {
+	width: 50%;
+	border-top: 1px solid #d8d8d8;
+	border-right: 1px solid #d8d8d8;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #333;
+}
+.cr-stepTable table thead td {
+	border-top: 0;
+	background: #f3f3f3;
+	line-height: .76rem;
+	color: #787878;
+}
+
+.cr-stepButton {
+	padding-top: .32rem;
+	float: left;
+	clear: left;
+}
+.cr-stepButton a {
+	width: 2rem;
+	height: .72rem;
+	margin: 0 .62rem;
+	background: #ffe100;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: center;
+	color: #fa3300;
+	float: left;
+	clear: none;
+}
+.cr-stepTwoMain .cr-stepButtonOne {
+	width: 100%;
+}
+.cr-stepTwoMain .cr-stepButtonOne p {
+	text-align: center;
+}
+.cr-stepTwoMain .cr-stepButtonOne a {
+	margin-left: 2.24rem;
+}
+
+/*邀请客户数据轴的展示*/
+.cr-mainBox>div.cr_progressBar {
+	height: 2.72rem;
+	padding: 0;
+	background: url(../images/step/progressBar_BG.png) no-repeat center center;
+	background-size: 100%;
+}
+.cr-progressBarBox {
+	width: 100%;
+	padding-top: 1.16rem;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.cr-progressBarMain {
+	width: auto;
+	height: .24rem;
+	margin-left: .92rem;
+	border-radius: .12rem;
+	overflow: hidden;
+	float: left;
+	clear: left;
+}
+.cr-progressBarMain span {
+	width: .68rem;
+	height: .24rem;
+	background: #eb0000;
+	border-left: 1px solid #ee2424;
+	border-right: 1px solid #da0000;
+	display: block;
+	float: left;
+	clear: none;
+}
+.cr-progressBarMain span.cr-selected {
+	background: #ff0;
+}
+.cr-progressBarNumber {
+	width: auto;
+	height: .64rem;
+	margin-left: .58rem;
+	border-radius: .12rem;
+	overflow: hidden;
+	float: left;
+	clear: left;
+}
+.cr-progressBarNumber span {
+	width: .68rem;
+	height: .64rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #fff;
+	display: block;
+	float: left;
+	clear: none;
+}
+
+/*邀约进度条 邀约人数显示*/
+.cr-invitationsNumber {
+	width: auto;
+	position: absolute;
+	top: .12rem;
+	left: .92rem;
+	z-index: 4;
+}
+.cr-invitationsNumber span {
+	width: 100%;
+	height: .12rem;
+	background: url(../images/step/arrow_yellow.png) no-repeat center center;
+	background-size: auto .12rem;
+	position: relative;
+	margin-top: -1px;
+	float: left;
+	clear: left;
+}
+.cr-invitationsNumber p {
+	width: 100%;
+	border-radius: .12rem;
+	background: #ff0;
+	font-size: .24rem;
+	line-height: .4rem;
+	text-align: center;
+	color: #fa3300;
+	float: left;
+	clear: left;
+}
+.cr-invitationsNumber p b {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .48rem;
+	float: left;
+	clear: left;
+}
+
+/*邀约进度条 底部指引*/
+.cr-target {
+	width: auto;
+	position: absolute;
+	top: 1.92rem;
+	z-index: 4;
+}
+.cr-target span {
+	width: 60%;
+	height: .12rem;
+	background: url(../images/step/arrow_red.png) no-repeat center right;
+	background-size: auto .12rem;
+	position: relative;
+	margin-top: -1px;
+	float: left;
+	clear: left;
+}
+.cr-target p {
+	width: 100%;
+	padding: 0 .2rem;
+	border-radius: .12rem;
+	background: #eb0000;
+	font-size: .28rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+
+.cr-targetRight {
+	left: auto;
+	right: .36rem;
+}
+.cr-targetRight span {
+	width: .64rem;
+	background: url(../images/step/arrow_red.png) no-repeat center left;
+	background-size: auto .12rem;
+	float: right;
+}
+.cr-targetRight p {
+	float: right;
+	clear: right;
+}
+
+/*邀请客户的操作部分*/
+.cr-mainBox>div.cr-stepThreeMain {
+	background: url(../images/step/inviting_BG.png) no-repeat center top;
+	background-size: 100%;
+}
+.cr-mainBox>div.cr-stepThreeMain div.cr-mainBG {
+	min-height: .32rem;
+}
+
+.cr-invitationBox {
+	width: auto;
+	background: url(../images/step/icon_invitingCustomers.png) no-repeat left top;
+	background-size: 2.28rem;
+	margin: .48rem 0 .16rem;
+	padding-left: 2rem;
+	float: left;
+	clear: left;
+}
+.cr-invitationBox p,.cr-checkingInfoBox p,.cr-shelfGoodsBox p {
+	width: 100%;
+	margin-bottom: .16rem;
+	font-size: .48rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #ff0;
+	float: left;
+	clear: left;
+}
+.cr-invitationBox span,.cr-checkingInfoBox span,.cr-shelfGoodsBox span {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #f2c7c7;
+	float: left;
+	clear: left;
+}
+.cr-invitationBox a,.cr-checkingInfoBox a,.cr-shelfGoodsBox a {
+	width: 2.24rem;
+	margin-top: .16rem;
+	background: #ff0;
+	font-size: .32rem;
+	line-height: .88rem;
+	text-align: center;
+	color: #fa3300;
+	float: left;
+	clear: left;
+}
+.cr-shelfGoodsBox p a {
+  width: auto;
+  background: none;
+  margin: 0;
+  font-size: .36rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #2ffdff;
+  float: right;
+  clear: none;
+}
+
+/*活动规则相关*/
+.cr-mainBox>div.cr-ruleBox {
+	padding-top: .64rem;
+}
+.cr-mainBox>div.cr-ruleBox span {
+	width: 100%;
+	height: .52rem;
+	margin-bottom: .32rem;
+	background: url(../images/step/title_4.png) no-repeat center center;
+	background-size: auto .48rem;
+	display: block;
+	float: left;
+	clear: left;
+}
+.cr-mainBox>div.cr-ruleBox p {
+	width: 100%;
+	height: auto;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #fff;
+	display: block;
+	float: left;
+	clear: left;
+}
+.cr-mainBox>div.cr-ruleBox p b {
+	font-weight: normal;
+	color: #ff0;
+}
+
+/*活动列表页相关设计*/
+.cr-mainBox>div.cr-stepListMain {
+	background-image: url(../images/step/taskList_BG.png);
+}
+.cr-mainBox>div.cr-stepListMain div.cr-mainBG {
+	padding: 0;
+}
+.cr-mainBox>div.cr-stepListMain div.cr-mainBG div {
+	width: 74%;
+	margin: .48rem 0 .48rem 13%;
+	float: left;
+	clear: left;
+}
+
+.cr-shelfGoodsBox {
+	background: url(../images/step/icon_shelfGoods.png) no-repeat left top;
+	background-size: 2.28rem;
+	padding-left: 2rem;
+}
+.cr-checkingInfoBox {
+	background: url(../images/step/icon_checkingInfo.png) no-repeat left top;
+	background-size: 2.28rem;
+	padding-left: 2rem;
+}
+
+.cr-mainBox>div.cr-stepListMain div.cr-mainBG div span.cr-right {
+	width: auto;
+	margin-top: .16rem;
+    font-size: .36rem;
+    line-height: .88rem;
+    text-align: left;
+    color: #fff;
+	float: right;
+	clear: none;
+}
+.cr-mainBox>div.cr-stepListMain div.cr-mainBG div a.cr_completed {
+	background: #970000;
+	color: #fa3300;
+}
+.cr-mainBox>div.cr-stepListMain div.cr-mainBG img {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+
+
+
+
+
+

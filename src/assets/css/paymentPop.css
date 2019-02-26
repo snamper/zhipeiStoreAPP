@@ -1,0 +1,365 @@
+/*收银台相关*/
+.dm-paymentPop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.48);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+.dm-paymentBox {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.dm-paymentTitle {
+  width: 100%;
+  height: 1.04rem;
+  background: #edf2f7;
+  float: left;
+  clear: left;
+}
+.dm-paymentTitle p {
+  width: auto;
+  height: 1.04rem;
+  margin-left: .32rem;
+  font-size: .4rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #878f9e;
+  float: left;
+  clear: left;
+}
+.dm-paymentTitle a {
+  width: auto;
+  height: 1.04rem;
+  margin-right: .32rem;
+  font-size: .56rem;
+  line-height: .96rem;
+  text-align: left;
+  color: #d53533;
+  float: right;
+  clear: none;
+}
+.dm-paymentMain {
+  width: 100%;
+  height: 8.8rem;
+  min-height: 8.8rem;
+  padding-left: .32rem;
+  float: left;
+  clear: left;
+  overflow: auto;
+}
+.dm-paymentMode {
+  width: 100%;
+  padding: .2rem 0;
+  background: url(../images/choice_default.png) no-repeat 8.96rem center;
+  background-size: .4rem;
+  border-bottom: 1px solid #d8d8d8;
+  float: left;
+  clear: left;
+}
+.dm-paymentMode:active {
+  background: url(../images/choice_current.png) no-repeat 8.96rem center;
+  background-size: .4rem;
+}
+/*.dm-paymentMode.dm-selected {*/
+/*background: url(../assets/images/choice_current.png) no-repeat 8.96rem center;*/
+/*background-size: .4rem;*/
+/*}*/
+.dm-paymentMain>.dm-paymentModeNoLink {
+  background: none;
+}
+.dm-paymentMode>span {
+  width: auto;
+  height: 1.04rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+.dm-paymentMode>span img {
+  width: auto;
+  max-width: .56rem;
+}
+.dm-paymentModeMain {
+  width: auto;
+  height: 1.04rem;
+  margin-left: .32rem;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #787878;
+  display: flex;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+.dm-paymentModeMain dt {
+  width: 100%;
+  height: auto;
+  font-size: .36rem;
+  line-height: .52rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: left;
+}
+.dm-paymentModeMain dd {
+  width: 100%;
+  height: auto;
+  font-size: .32rem;
+  line-height: .52rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: left;
+}
+.dm-byStagesBox {
+  width: 100%;
+  padding-left: .88rem;
+  padding-right: .32rem;
+  float: left;
+  clear: left;
+}
+.dm-byStagesBox li {
+  width: 100%;
+  background: url(../images/choice_default.png) no-repeat 8.08rem center;
+  background-size: .4rem;
+  border-top: 1px solid #d8d8d8;
+  padding: .24rem 0;
+  float: left;
+  clear: left;
+}
+.dm-byStagesBox li:active {
+  background: url(../images/choice_current.png) no-repeat right center;
+  background-size: .4rem;
+}
+/*.dm-byStagesBox li.dm-selected {*/
+/*background: url(../assets/images/choice_current.png) no-repeat right center;*/
+/*background-size: .4rem;*/
+/*}*/
+.dm-byStagesBox li p {
+  width: 18%;
+  font-size: .36rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: none;
+}
+.dm-byStagesBox li span {
+  width: 82%;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: none;
+}
+.dm-byStagesBox li span b {
+  font-weight: normal;
+  color: #e74c3c;
+}
+.dm-paymentNo {
+  width: 100%;
+  padding: 0 .32rem;
+  float: left;
+  clear: left;
+}
+.dm-paymentNo a {
+  width: 100%;
+  height: 1.04rem;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #3086db;
+  float: right;
+  clear: none;
+}
+/*.dm-paymentNo a.left {*/
+/*background: #3086db;*/
+/*color: #fff;*/
+/*border-radius: .2rem;*/
+
+/*}*/
+/*.dm-paymentFool {
+    width: 100%;
+    padding: .2rem 0;
+    border-top: 1px solid #d8d8d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    clear: left;
+}
+.dm-paymentFool a {
+    width: 36%;
+    background: #d53533;
+    border-radius: .48rem;
+    font-size: .4rem;
+    line-height: .96rem;
+    text-align: center;
+    color: #fff;
+    float: left;
+    clear: left;
+}
+*/
+
+/*经销商端支付方式设置*/
+.dm-paymentSetup {
+  width: 100%;
+  padding: .16rem 0;
+  border-bottom: 1px solid #d3dce6;
+  float: left;
+  clear: left;
+}
+.dm-paymentSetup dd {
+  width: 100%;
+  padding: .16rem 0;
+  float: left;
+  clear: left;
+}
+.dm-paymentSetup dd p {
+  width: 20%;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: none;
+}
+.dm-paymentSetup dd span {
+  width: 20%;
+  border: 1px solid #d8d8d8;
+  margin-right: .32rem;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: center;
+  color: #999;
+  float: left;
+  clear: none;
+}
+.dm-paymentSetup dd span.dm-selected {
+  background: url(../images/icon_screenSelected.png) no-repeat right bottom;
+  background-size: .48rem;
+  border-color: #d53533;
+  color: #d53533;
+}
+.dm-paymentSetup dd span.dm-paymentSetupInput {
+  width: 36%;
+  margin: 0;
+  padding: .08rem .12rem;
+  box-sizing: border-box;
+}
+.dm-paymentSetup dd span.dm-paymentSetupInput input {
+  width: 100%;
+  height: .56rem;
+  border: 0;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: left;
+}
+.dm-paymentSetup dd span.dm-paymentState {
+  width: auto;
+  border: none;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: none;
+}
+.bs-singleofferFool span a.dm-offerNoButton {
+  background: #f3f3f3;
+  color: #acacac;
+}
+
+.bs-singleofferTitle a {
+  width: .4rem;
+  height: .78rem;
+  background: url(../images/icon_dustbin.png) no-repeat center center;
+  background-size: .36rem;
+  display: block;
+}
+
+/*补充付款状态*/
+.dm-paymentState {
+  width: 100%;
+  border-bottom: 1px solid #d3dce6;
+  float: left;
+  clear: left;
+}
+.dm-paymentState li {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.dm-paymentState li p {
+  width: 24%;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: left;
+}
+.dm-paymentState li span {
+  width: 66%;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: none;
+}
+/*付款总金额部分*/
+.el-paymentTotalBox {
+  width: 100%;
+  padding-right: .32rem;
+  padding-top: .32rem;
+  float: left;
+  clear: left;
+}
+.el-paymentTotalBox p {
+  width: 100%;
+  background: #fffcf7;
+  padding-top: .32rem;
+  border: 1px solid #ffe3c2;
+  border-bottom: 0;
+  border-radius: .32rem .32rem 0 0;
+  font-size: .36rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+.el-paymentTotalBox span {
+  width: 100%;
+  background: #fffcf7;
+  border: 1px solid #ffe3c2;
+  border-top: 0;
+  border-radius: 0 0 .32rem .32rem;
+  padding-bottom: .32rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+.el-paymentTotalBox span b {
+  font-size: .56rem;
+  font-weight: normal;
+}

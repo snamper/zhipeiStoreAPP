@@ -1,0 +1,292 @@
+
+/*待收款订单页面样式*/
+.ec-receivablesOrderPage {
+	width: 100%;
+	padding: 0 .4rem 1.84rem;
+	float: left;
+	clear: left;
+}
+/*单个订单*/
+.ec-receivablesOrderOne {
+	width: 100%;
+    background: #fff;
+    margin-top: .4rem;
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.1);
+    border-radius: .2rem;
+    overflow: hidden;
+    float: left;
+    clear: left;
+}
+.ec-receivablesOrderOne>p {
+	width: 100%;
+	background: #f6f6f6 url(../images/icon_choice.png) no-repeat .4rem center;
+    background-size: .48rem;
+    padding-left: 1.08rem;
+    font-size: .4rem;
+    line-height: 1.12rem;
+    text-align: left;
+    color: #282828;
+    float: left;
+    clear: left;
+}
+.ec-receivablesOrderOne>p.ec-selected {
+	background: #f6f6f6 url(../images/icon_select.png) no-repeat .4rem center;
+    background-size: .48rem;
+}
+.ec-orderMain {
+	width: 100%;
+	padding: 0 .4rem;
+	float: left;
+	clear: left;
+}
+.ec-orderMain dl {
+	width: 100%;
+	border-bottom: 1px solid #e8e8e8;
+	padding-bottom: .2rem;
+	float: left;
+	clear: left;
+}
+.ec-orderMain dt,.ec-orderMain dd {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.ec-orderMain dt>p {
+	width: 100%;
+	padding: .2rem 0 0;
+	font-size: .36rem;
+	line-height: .56rem;
+	text-align: justify;
+	color: #282828;
+	float: left;
+	clear: left;
+}
+.ec-orderMain dt>span {
+	width: 100%;
+	font-size: .32rem;
+	line-height: .6rem;
+	text-align: justify;
+	color: #666;
+	float: left;
+	clear: left;
+}
+.ec-orderMain dd>p {
+	width: auto;
+	font-size: .32rem;
+	line-height: .6rem;
+	text-align: justify;
+	color: #f39c12;
+	float: left;
+	clear: none;
+}
+.ec-orderMain dd>span {
+	width: auto;
+	font-size: .32rem;
+	line-height: .6rem;
+	text-align: justify;
+	color: #bcbcbc;
+	float: right;
+	clear: none;
+}
+.ec-orderMainTable {
+	width: 100%;
+	padding: 0 .4rem;
+	float: left;
+	clear: left;
+}
+.ec-orderTableTop {
+	width: 100%;
+	padding: .2rem 0;
+	float: left;
+	clear: left;
+}
+.ec-orderTableTop>p {
+	width: auto;
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: justify;
+	color: #282828;
+	float: left;
+	clear: none;
+}
+.ec-orderTableTop>a {
+	width: auto;
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: justify;
+	color: #377de8;
+	float: right;
+	clear: none;
+}
+
+.ec-orderTable {
+	width: 100%;
+	border-top: 1px solid #e8e8e8;
+	border-left: 1px solid #e8e8e8;
+	margin: 0 0 .4rem;
+	float: left;
+	clear: left;
+}
+.ec-orderTable table {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.ec-orderTable table td {
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+}
+.ec-orderTable table td.ec-tdName {
+	width: 52.4%
+}
+.ec-orderTable table td.ec-tdNumber {
+	width: 23.8%
+}
+.ec-orderTable table td.ec-tdPrice {
+	width: 23.8%
+}
+.ec-orderTable table thead tr {
+	background: #fafafa;
+}
+.ec-orderTable table thead td {
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #999;
+}
+.ec-orderTable table tbody td {
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: center;
+	color: #666;
+}
+.ec-orderTable table tbody td.ec-tdName {
+	text-align: left;
+	padding: 0 .2rem;
+}
+
+/*底部按钮*/
+.ec-buttonFool {
+	width: 100%;
+	height: 1.44rem;
+	background: #fff;
+	border-top: 1px solid #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+.ec-buttonFool a {
+	width: 92%;
+	height: 1.04rem;
+	background: #e74c3c;
+	border-radius: .16rem;
+	font-size: .48rem;
+	line-height: 1.04rem;
+	text-align: center;
+	color: #fff;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+/*日结/月结标题*/
+.ec-settlementTitle {
+	width: 100%;
+	margin-bottom: -.2rem;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.ec-settlementTitle span {
+	width: 100%;
+	height: .68rem;
+	border-bottom: 1px solid #d8d8d8;
+	display: block;
+	float: left;
+	clear: left;
+}
+.ec-settlementTitle p {
+	width: 30%;
+	margin-left: 35%;
+	margin-top: -.32rem;
+	background: #f2f2f2;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #bcbcbc;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+.ec-daySettlement .ec-receivablesOrderOne>p {
+	background: #f6f6f6;
+	padding-left: .4rem;
+}
+
+/*日结 付款收货按钮*/
+.ec-orderButtonBox {
+	width: 100%;
+	padding: 0 .4rem .4rem;
+	float: left;
+	clear: left;
+}
+.ec-orderButtonBox a.ec-orderButton {
+	width: 100%;
+	background: #e74c3c;
+	border-radius: .12rem;
+	font-size: .4rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+
+
+.ec-noData{
+	width: 100%;
+    height: auto;
+	margin-top: 2.4rem;
+	padding-top: 3.6rem;
+	background: url(../images/pic_dataNo.png) no-repeat center top;
+	background-size: 4rem;
+    font-size: .36rem;
+    line-height: .96rem;
+    text-align: center;
+    color: #bcbcbc;
+    float: left;
+    clear: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

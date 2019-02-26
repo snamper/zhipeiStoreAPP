@@ -1,0 +1,51 @@
+
+.ef-agreementPage {
+	width: 100%;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.ef-agreementMain {
+	width: 92%;
+	margin-left: .4rem;
+	float: left;
+	clear: left;
+}
+.ef-agreementMain dt {
+	width: 100%;
+	padding: .32rem 0;
+	font-size: .56rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #000;
+	float: left;
+	clear: left;
+}
+.ef-agreementMain dd {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.ef-agreementMain dd p {
+	width: 100%;
+	margin-top: .32rem;
+	font-size: .36rem;
+	font-weight: bold;
+	line-height: .8rem;
+	text-align: left;
+	color: #000;
+	float: left;
+	clear: left;
+}
+.ef-agreementMain dd span {
+	width: 100%;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.ef-agreementMain dd span b {
+	color: #000;
+}

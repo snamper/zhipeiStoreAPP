@@ -1,0 +1,39 @@
+.ec-advertisingBox {
+  width: 100%;
+  margin-bottom: .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-advertisingBox img {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-advertisingBox02 {
+  width: 100%;
+  margin-top: .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-advertisingBox02 img {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ec-advertisingBox03 {
+  width: 100%;
+  margin-top: .4rem;
+  margin-bottom: .4rem;
+  float: left;
+  clear: left;
+}
+
+.ec-advertisingBox03 img {
+  width: 100%;
+  float: left;
+  clear: left;
+}

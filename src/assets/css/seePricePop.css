@@ -1,0 +1,343 @@
+
+
+/*一键下单 20180626调整*/
+.bw-buttonBox a.cc-seePrice {
+	float: left;
+	clear: left;
+}
+
+/*查看价格的弹层*/
+.cc-seePricePop {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	position: fixed;
+	top: 3.12rem;
+	bottom: 0;
+	left: 0;
+	z-index: 60;
+}
+.cc-seePriceTop {
+	width: 100%;
+	height: 1.04rem;
+	background: #fff;
+	border-bottom: 1px solid #e8e8e8;
+	/*padding: 0 .32rem;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 61;
+}
+.cc-seePriceTop span {
+	width: auto;
+	height: 1.04rem;
+	font-size: .32rem;
+	line-height: 1.04rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.cc-seePriceTop a {
+	width: auto;
+	height: 1.04rem;
+	font-size: .56rem;
+	line-height: 1.04rem;
+	text-align: left;
+	color: #e74c3c;
+	float: right;
+	clear: none;
+}
+
+.cc-seePriceMain {
+	width: 100%;
+	height: 82%;
+	overflow: auto;
+	padding: 1.04rem .32rem 1.28rem;
+	float: left;
+	clear: left;
+}
+.cc-seePriceOne {
+	width: 100%;
+	border-bottom: 1px solid #d8d8d8;
+	float: left;
+	clear: left;
+}
+.cc-seePriceOne li {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: left;
+}
+.cc-seePriceOne li.cc-seePriceCategory {
+	padding: .28rem 0;
+}
+.cc-seePriceOne li.cc-seePriceCategory span {
+	width: .48rem;
+	height: .48rem;
+	border: 1px solid #ccc;
+	border-radius: .12rem;
+	display: inline-block;
+	float: left;
+	clear: none;
+}
+.cc-seePriceOne li.cc-seePriceCategory span.cc-selected {
+	background: url(../images/icon_choice.png) no-repeat center center;
+	background-size: .4rem;
+}
+.cc-seePriceOne li.cc-seePriceCategory p {
+	width: auto;
+	height: .48rem;
+	padding-left: .2rem;
+	font-size: .36rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #282828;
+	float: left;
+	clear: none;
+}
+.cc-seePriceOne li.cc-seePriceCategory a {
+	width: auto;
+	height: .48rem;
+	background: url(../images/icon_replaceBrandBlue.png) no-repeat center left;
+	background-size: .36rem;
+	padding-left: .56rem;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #2d83e6;
+	float: right;
+	clear: none;
+}
+.cc-seePriceOne li.cc-seePriceProduct {
+	/*padding: .28rem .32rem;*/
+	/*background: #f5f5f5;*/
+	position: relative;
+}
+.cc-seePriceOne li.cc-seePriceProduct p {
+	width: auto;
+	height: auto;
+	margin-right: .2rem;
+	max-width: 7rem;
+	min-height: .72rem;
+	font-size: .32rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #666;
+	word-wrap: break-word;
+	word-break: break-all;
+	float: left;
+	clear: none;
+}
+.cc-seePriceOne li.cc-seePriceProduct p.cc-seePriceTab {
+	padding: .18rem 0 0;
+}
+.cc-seePriceOne li.cc-seePriceProduct p.cc-seePriceTab b {
+	width: auto;
+	height: auto;
+	margin-right: .2rem;
+	margin-bottom: .18rem;
+	padding: 0 .12rem;
+	border-radius: .12rem;
+	font-size: .28rem;
+	font-weight: normal;
+	line-height: .48rem;
+	text-align: justify;
+	color: #fff;
+	word-wrap: break-word;
+	word-break: break-all;
+	float: left;
+	clear: none;
+}
+.cc-seePriceOne li.cc-seePriceProduct p.cc-seePriceTab b.cc-series {
+	background: #3498db;
+}
+.cc-seePriceOne li.cc-seePriceProduct p.cc-seePriceTab b.cc-Imported {
+	background: #e74c3c;
+}
+.cc-seePriceOne li.cc-seePriceProduct span {
+	width: auto;
+	height: auto;
+	font-size: .36rem;
+	line-height: .72rem;
+	text-align: left;
+	color: #666;
+	position: absolute;
+	top: .28rem;
+	right: .32rem;
+	z-index: 3;
+}
+.cc-seePriceOne li.cc-seePriceProduct span b {
+	font-size: .28rem;
+	font-weight: normal;
+}
+.cc-seePriceOne li.cc-seePriceProduct p.cc-notAvailable {
+	color: #e74c3c;
+}
+
+.cc-seePriceFool {
+	width: 100%;
+	height: 1.28rem;
+	background: #fff;
+	border-top: 1px solid #e8e8e8;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 61;
+}
+.cc-seePriceFool a {
+	width: 4.32rem;
+	height: .96rem;
+	background: #d53533;
+	border-radius: .48rem;
+	font-size: .48rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+.cc-seePriceFool a.cc-disable {
+  border: 1px solid #d8d8d8;
+  color: #fff !important;
+	background: #d8d8d8 !important;
+
+}
+.cc-seePriceFool a.marginLeft {
+  margin-left: 3.1rem !important;
+}
+/*åº•éƒ¨æŒ‰é’®çš„è°ƒæ•´*/
+.cc-seePriceFool {
+  height: auto;
+}
+
+/*0907 查看价格 样式调整*/
+.cc-seePriceOne li.cc-seePriceCategory span {
+  display: none;
+}
+.cc-seePriceOne li.cc-seePriceCategory p {
+  padding: 0;
+}
+.cc-seePriceOne li.cc-seePriceCategory span.dl-price4S {
+  width: auto;
+  border: 0;
+  border-radius: 0;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: left;
+  color: #999;
+  display: inline-block;
+  float: right;
+  clear: none;
+}
+.cd-remindBox {
+  width: 10rem;
+  height: auto;
+  background: #ffebeb;
+  border: 0;
+  border-top: 1px solid #e74c3c;
+  border-bottom: 1px solid #e74c3c;
+  margin-top: 0;
+  margin-bottom: .32rem;
+  font-size: .32rem;
+  text-align: center;
+  color: #e74c3c;
+  line-height: .76rem;
+  float: left;
+  clear: left;
+}
+.cv-totalPrice {
+  padding: 0;
+}
+.cv-totalPrice li.cv-left,.cv-totalPrice li.cv-right {
+  line-height: .96rem;
+}
+.cc-seePriceFool a {
+  width: 30%;
+  height: .8rem;
+  line-height: .74rem;
+}
+.cc-seePriceFool a.cv-routine {
+  margin-left: 1.68rem;
+}
+.cc-seePriceMain {
+  padding: 1.04rem 0 2.2rem;
+  background: #f2f2f2;
+}
+.cc-seePriceOne {
+  background: #fff;
+  margin-top: -1px;
+  border: 0;
+  border-top: 1px solid #d8d8d8;
+}
+.cc-seePriceOne li.cc-seePriceCategory {
+  background: #f9f9f9;
+  padding: .28rem .32rem;
+  border-top: 1px solid #e8e8e8;
+}
+.cc-seePriceOne li.cc-seePriceProduct {
+  width: 9.68rem;
+  background: #fff url(../images/choice_default.png) no-repeat left .4rem;
+  background-size: .4rem;
+  border-bottom: 1px solid #e8e8e8;
+  padding: .28rem .24rem .28rem .65rem;
+  float: right;
+  clear: right;
+}
+.cc-seePriceOne li.dl-selected {
+  background: #fff url(../images/choice_current.png) no-repeat left .4rem;
+  background-size: .4rem;
+}
+.cc-seePriceOne li.cc-seePriceProduct p {
+  width: auto;
+  height: auto;
+  padding: 0;
+  max-width: 5.2rem;
+  min-height: .72rem;
+  margin-right: .2rem;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #666;
+  word-wrap: break-word;
+  word-break: break-all;
+  float: left;
+  clear: none;
+}
+.cc-seePriceOne li.cc-seePriceProduct a.dl-parameterLink {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #2d83e6;
+  word-wrap: break-word;
+  word-break: break-all;
+  float: left;
+  clear: none;
+}
+.cc-seePriceOne li.dl-seePriceProductNo,.cc-seePriceOne li.dl-seePriceCurrency {
+  padding: .28rem .24rem .28rem 0;
+  background: #fff;
+}
+.cc-seePriceOne li.dl-seePriceProductNo a.ce-number {
+  position: static;
+  float: right;
+  clear: none;
+}
+
+#sweper .mint-swipe .mint-swipe-indicators .mint-swipe-indicator{
+  opacity: 0.5;
+  border: 1px solid #fff;
+  background: rgba(0,0,0,0.36);
+}
+#sweper .mint-swipe .mint-swipe-indicators .is-active {
+  background-color: #d53533;
+}
+
+
+

@@ -1,0 +1,254 @@
+/*问题反馈页面*/
+.ej-problemFeedbackPage {
+  width: 100%;
+  padding: 0 .32rem;
+  float: left;
+  clear: left;
+}
+
+/*选择问题类型*/
+.ej-questionTypeBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ej-questionTypeBox dt {
+  width: 100%;
+  padding-top: .16rem;
+  font-size: .4rem;
+  line-height: 1rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+.ej-questionTypeBox dd {
+  float: left;
+  clear: left;
+}
+
+.ej-questionTypeBox dd.ej-questionTypeMain {
+  width: 9.44rem;
+  margin-bottom: .32rem;
+  margin-left: -.08rem;
+}
+
+.ej-questionTypeBox dd.ej-questionTypeMain a {
+  width: 2.28rem;
+  height: .8rem;
+  margin-left: .08rem;
+  background: #fff;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+
+.ej-questionTypeBox dd.ej-questionTypeMain a b {
+  width: auto;
+  font-size: .32rem;
+  font-weight: normal;
+  line-height: .64rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: none;
+}
+
+.ej-questionTypeBox dd.ej-questionTypeMain a.ej-selected {
+  border: 1px solid #e74c3c;
+}
+
+.ej-questionTypeBox dd.ej-questionTypeMain a.ej-selected b {
+  background: url(../images/icon_hook.png) no-repeat left center;
+  background-size: .32rem;
+  padding-left: .4rem;
+  color: #e74c3c;
+}
+
+.ej-questionTypeBox dd.ej-questionTypeText {
+  width: 100%;
+  margin-top: -.32rem;
+}
+
+.ej-questionTypeBox dd.ej-questionTypeText p {
+  width: 100%;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: left;
+}
+
+/*问题反馈操作部分*/
+.ej-questionDescribeBox {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  float: left;
+  clear: left;
+}
+
+.ej-questionDescribe {
+  width: 100%;
+  padding: .16rem .32rem;
+  border-bottom: 1px solid #d8d8d8;
+  float: left;
+  clear: left;
+}
+
+.ej-questionDescribe textarea {
+  width: 100%;
+  height: 2.56rem;
+  border: 0;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #282828;
+  resize: none;
+  float: left;
+  clear: left;
+}
+
+.ej-questionDescribePic {
+  width: 100%;
+  padding: .32rem 0 0 .32rem;
+  float: left;
+  clear: left;
+}
+
+.ej-questionDescribePic>a.ej-newPicButton {
+  width: 1.584rem;
+  height: 1.584rem;
+  margin-right: .2rem;
+  border: 1px solid #e8e8e8;
+  background: url(../images/icon_camera.png) no-repeat center center;
+  background-size: .64rem;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ej-questionDescribePic span.ej-picBox {
+  width: 1.584rem;
+  height: 1.584rem;
+  margin-right: .2rem;
+  border: 1px solid #e8e8e8;
+  position: relative;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.ej-questionDescribePic span.ej-picBox>b {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.ej-questionDescribePic span.ej-picBox>b img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ej-questionDescribePic span.ej-picBox>a {
+  width: .48rem;
+  height: .48rem;
+  background: url(../images/icon_empty.png) no-repeat center center;
+  background-size: 100%;
+  position: absolute;
+  top: -.08rem;
+  right: -.08rem;
+  z-index: 3;
+}
+
+.ej-questionDescribeVoice {
+  width: 100%;
+  padding: .32rem 0 0 .32rem;
+  float: left;
+  clear: left;
+}
+
+.ej-questionDescribeVoice span {
+  width: 2.18rem;
+  margin-right: .32rem;
+  margin-bottom: .32rem;
+  background: #fff url(../images/icon_soundRecording.png) no-repeat .2rem center;
+  background-size: .24rem;
+  padding-left: .52rem;
+  border: 1px solid #d8d8d8;
+  border-radius: .32rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  overflow: hidden;
+  float: left;
+  clear: none;
+}
+
+.ej-questionDescribeVoice span.ej-voiceOne {
+  background: #fff url(../images/icon_voice.png) no-repeat .2rem center;
+  background-size: .2rem;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+
+.ej-questionDescribeVoice span.ej-voiceOne a {
+  width: .64rem;
+  font-size: .36rem;
+  line-height: .56rem;
+  text-align: center;
+  color: #e74c3c;
+  display: block;
+  float: right;
+  clear: none;
+}
+
+/*问题反馈操作按钮*/
+.ej-problemFeedbackFool {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.ej-problemFeedbackFool>span {
+  width: 100%;
+  background: url(../images/check_frame.png) no-repeat left .28rem;
+  background-size: .4rem;
+  padding-left: .6rem;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: left;
+}
+
+.ej-problemFeedbackFool>span.ej-selected {
+  background: url(../images/check_select.png) no-repeat left center;
+  background-size: .4rem;
+}
+
+.ej-problemFeedbackFool>a {
+  width: 100%;
+  background: #e74c3c;
+  border-radius: .08rem;
+  font-size: .48rem;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  float: left;
+  clear: left;
+}

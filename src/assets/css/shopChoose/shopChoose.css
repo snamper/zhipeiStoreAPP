@@ -1,0 +1,990 @@
+.aa-carBox {
+    width: 100%;
+    /* height: 1.72rem; */
+    background: #ffffff;
+    border-top: 1px solid #dce6ef;
+    border-bottom: 1px solid #dce6ef;
+    border-radius: 0 0 .24rem .24rem;
+    margin-top: .32rem;
+    float: left;
+    clear: left;
+}
+.aa-carPic {
+    width: 1.08rem;
+    height: 1.08rem;
+    border: 1px solid #e8e8e8;
+    border-radius: .54rem;
+    margin: .32rem .16rem .32rem .32rem;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    float: left;
+    clear: none;
+}
+.aa-carPic img {
+    width: auto;
+    height: auto;
+    max-width: 1.08rem;
+    max-height: 1.08rem;
+}
+.aa-carMain {
+    width: 8.12rem;
+    /* height: 1.08rem; */
+    margin: .32rem 0;
+    float: left;
+    clear: none;
+    position: relative;
+}
+.aa-carMain p {
+  width: 100%;
+  /* height: .6rem; */
+  font-size: .4rem;
+  line-height: .6rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+
+}
+.aa-carMain span {
+    width: 100%;
+    /* height: .48rem; */
+    font-size: .32rem;
+    line-height: .48rem;
+    text-align: left;
+    color: #999;
+    float: left;
+    clear: left;
+}
+.aa-carMain span.ab-ShowView{
+	width: auto;
+	position: absolute;
+    top: .4rem;
+    left: 84%;
+    color: #3498db;
+}
+.aa-chooseBox {
+    width: 100%;
+    float: left;
+    clear: left;
+}
+.aa-chooseBox>p {
+    width: 100%;
+    height: .88rem;
+    padding: 0 .32rem;
+    font-size: .36rem;
+    line-height: .88rem;
+    text-align: left;
+    color: #939ead;
+    float: left;
+    clear: left;
+}
+.aa-chooseBox>p a {
+    width: auto;
+    height: .88rem;
+    padding: 0;
+    font-size: .32rem;
+    line-height: .88rem;
+    text-align: left;
+    color: #2c83e6;
+    float: right;
+    clear: none;
+}
+.aa-chooseBox ul {
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #dce6ef;
+    float: left;
+    clear: left;
+}
+.aa-chooseBox ul.aa-shopChoose li {
+    width: 100%;
+    padding: .2rem 1.28rem .2rem .32rem;
+    /* background: #fff; */
+    border-right: 1px solid #dce6ef;
+    border-bottom: 1px solid #dce6ef;
+    /* border-bottom: 1px solid #000; */
+    float: left;
+    clear: none;
+}
+.aa-chooseBox ul.aa-shopLink li
+{
+	background: url(../../images/arrow_link_gray.png) no-repeat 9.2rem center;
+	background-size: .48rem;
+}
+.aa-shopChoose li span.aa-shopPic {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #e8e8e8;
+    border-radius: .5rem;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    float: left;
+    clear: none;
+}
+.aa-shopChoose li span.aa-shopPic {
+  border-radius: .16rem;
+}
+.aa-shopChoose li span.aa-shopPic img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.aa-chooseBox ul.aa-shopChoose li.af-shopNew {
+  background-image: none;
+  height: auto;
+  padding: 0;
+}
+
+.aa-shopChoose li p.aa-shopName {
+    width: 3.2rem;
+    height: auto;
+    font-size: .36rem;
+    line-height: .56rem;
+    text-align: justify;
+    color: #333;
+    float: left;
+    clear: none;
+    margin-left: .32rem;
+}
+.aa-chooseBox ul.aa-shopChoose li.af-shopNew a {
+  width: 100%;
+  height: auto;
+  padding: .32rem 0;
+  display: block;
+  float: left;
+  clear: left;
+}
+.aa-chooseBox ul.aa-shopChoose li.af-shopNew a span {
+  width: 100%;
+  height: .68rem;
+  background: url(../../images/icon_plusRed.png) no-repeat center center;
+  background-size: .64rem;
+  display: block;
+  float: left;
+  clear: left;
+}
+.aa-chooseBox ul.aa-shopChoose li.af-shopNew a p {
+  width: 100%;
+  height: .48rem;
+  margin-top: .2rem;
+  font-size: .32rem;
+  line-height: .48rem;
+  text-align: center;
+  color: #d53533;
+  float: left;
+  clear: left;
+}
+.aa-shopChoose li span.aa-shopMain {
+    width: 3.2rem;
+    height: auto;
+    font-size: .32rem;
+    line-height: .56rem;
+    text-align: justify;
+    color: #787878;
+    float: left;
+    clear: left;
+    margin-left: .32rem;
+}
+.aa-shopChoose li span.aa-shopMain a {
+    color: #2c83e6;
+}
+.aa-shopChoose li div.aa-shopInfo{
+	width: 7.32rem;
+	float:right;
+	clear:none;
+}
+.aa-shopChoose li div.aa-shopInfo p.aa-shopName {
+    width: 100%;
+    margin-left: 0;
+}
+.aa-shopChoose li div.aa-shopInfo span.aa-shopMain {
+    width: 100%;
+    margin-left: 0;
+    word-wrap: break-word;
+}
+.aa-chooseBox ul.aa-brandChoose li {
+    width: 25%;
+    height: 3rem;
+    padding: .32rem;
+    /*background: #fff;*/
+    border-right: 1px solid #dce6ef;
+    border-bottom: 1px solid #dce6ef;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    clear: none;
+}
+.aa-chooseBox ul.aa-brandChoose li img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.maskBox {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=64);
+    -moz-opacity: 0.64;
+    -khtml-opacity: 0.64;
+    opacity: 0.64;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.aa-carAdaptation .maskBox {
+    z-index: 52;
+}
+.aa-carAdaptationBox {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	max-height: 13rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 56;
+}
+.aa-carPopHead {
+    width: 100%;
+    height: 1.04rem;
+    background: #edf2f7;
+    float: left;
+    clear: left;
+}
+.aa-carPopHead p {
+    width: auto;
+    height: 1.04rem;
+    margin-left: .32rem;
+    font-size: .4rem;
+    line-height: 1.04rem;
+    text-align: left;
+    color: #878f9e;
+    float: left;
+    clear: left;
+}
+.aa-carPopHead a {
+    width: auto;
+    height: 1.04rem;
+    margin-right: .32rem;
+    font-size: .56rem;
+    line-height: .96rem;
+    text-align: left;
+    color: #d53533;
+    float: right;
+    clear: none;
+}
+.aa-shopPop .aa-chooseBox {
+    max-height: 8.64rem;
+    overflow: auto;
+}
+.aa-shopPop .aa-shopOwner {
+    width: 100%;
+    height: 8.64rem;
+    /*height: auto;*/
+    /*max-height: 8.64rem;*/
+    padding: .32rem;
+    font-size: .36rem;
+    line-height: .64rem;
+    text-align: justify;
+    color: #666;
+    float: left;
+    clear: left;
+}
+/*无数据是的样式展示*/
+.selectShop .isNodata{
+	height: 2.52rem;
+	padding-top:50%;
+}
+.selectShop .isNodata div{
+	width: 3.0rem;
+	height: 3.0rem;
+	background: url(../../images/selectShop/noData.png) no-repeat center;
+	background-size:3.0rem ;
+	margin: 0 auto;
+}
+.selectShop .isNodata p.tits{
+	height: 0.6rem;
+	line-height: .6rem;
+	color: #90a5c2;
+	text-align: center;
+}
+.selectShop .isNodata p:last-child{
+	height: 0.4rem;
+	color: #999;
+	text-align: center;
+}
+/*未关联厂商目录*/
+.selectShop .noConcerFactory{
+	width: 100%;
+	padding-top: 50%;
+}
+.selectShop .noConcerFactory .noConcerText{
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	height: 0.693rem;
+	color: #b2bfd0;
+	text-align: center;
+	letter-spacing: .008rem;
+	padding: 0 0.4rem;
+}
+.selectShop .noConcerFactory .noConcerText span{
+	line-height: .5rem;
+}
+.selectShop .noConcerFactory .noConcerGoUrl{
+	height: 4.84rem;
+	padding: 0 0.4rem;
+	margin-top:0.373rem ;
+}
+
+.selectShop .noConcerFactory .noConcerGoUrl fieldset{
+	height:4.84rem ;
+	border-top: 1px solid #9fadc2;
+	box-sizing: border-box;
+}
+.selectShop .noConcerFactory .noConcerGoUrl fieldset legend{
+	color:#c63231 ;
+	text-align: center;
+	width: 5.08rem;
+	height: 0.178rem;
+	background: #edf2f7;
+	line-height: 0.178rem;
+}
+.selectShop .noConcerFactory .noConcerGoUrl fieldset .showProgess{
+	margin-top: 0.4rem;
+}
+
+.selectShop .noConcerFactory .noConcerGoUrl fieldset .showProgess p:nth-child(3) b{
+	display: inline-block;
+	width: 0.2rem;
+	height: 0.2rem;
+	background: url(../../images/icon_userlogin.png) no-repeat center;
+	background-size:0.2rem ;
+	margin: 0 .05rem;
+}
+.selectShop .noConcerFactory .noConcerGoUrl fieldset .showProgess p{
+	padding: 0 .5rem;
+	line-height: 0.8rem;
+	color: #a4b2bf;
+}
+.selectShop .noConcerFactory .noConcerImg{
+	height: 1.134rem;
+	display: flex;
+	justify-content: center;
+}
+.selectShop .noConcerFactory .noConcerImg span{
+	width: 2.134rem;
+	height: 2.134rem;
+	background: pink;
+	background: url(../../images/vendorsConcer/storeLogo.png) no-repeat center;
+	background-size:2.134rem ;
+}
+
+
+/*VIN码查询结果页面样式*/
+
+/*VIN码查询框样式*/
+.aa-chooseBox ul.aa-shopChoose li {
+    width: 100%;
+    padding-right: .8rem;
+    background:url(../../images/arrow_gray.png) no-repeat 9.52rem center;
+    background-size: .16rem;
+    height: auto;
+    border-right: 0;
+}
+.aa-shopChoose li p.aa-shopName,.aa-shopChoose li span.aa-shopMain {
+    width: 7.56rem;
+}
+
+.aa-carMain {
+	height: auto;
+    padding-right: .64rem;
+    /*background: url(../../images/arrow_gray_down.png) no-repeat right center;
+    background-size: .32rem;*/
+}
+
+.aa-carDetails {
+	width: 100%;
+	background-color: rgba(0,0,0,0.64);
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: fixed;
+	top: 2.92rem;
+	bottom: 0;
+	z-index: 4;
+	display: none;
+}
+
+.aa-carDetails ul {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+.aa-carDetails li {
+	width: 100%;
+	padding: .2rem .32rem;
+	border-bottom: 1px solid #dce6ef;
+	box-sizing: border-box;
+	float: left;
+	clear: left;
+}
+.aa-carDetails li span {
+	width: 30%;
+	padding-right: .32rem;
+	font-size: .36rem;
+	line-height: .56rem;
+	text-align: left;
+	color: #999;
+	word-wrap: break-word;
+	box-sizing: border-box;
+	float: left;
+	clear: none;
+}
+.aa-carDetails li p {
+	width: 70%;
+	font-size: .36rem;
+	line-height: .56rem;
+	text-align: left;
+	color: #333;
+	word-wrap: break-word;
+	box-sizing: border-box;
+	float: left;
+	clear: none;
+}
+.aa-carDetails li.aa-carDetailsPic {
+	padding: 0;
+	max-height:3.6rem;
+	text-align: center;
+	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.aa-carDetails li.aa-carDetailsPic img{
+	width: 100%;
+}
+
+
+.aa-carDetailsBox .aa-carDetails {
+	display: block;
+}
+.aa-carDetailsBox .aa-carMain {
+    /*background: url(../../images/arrow_gray_up.png) no-repeat right center;*/
+    /*background-size: .32rem;*/
+}
+
+
+
+/*新增红包样式*/
+.an-redPacketIconBox {
+    width: 100%;
+    height: auto;
+    min-height: 1.12rem;
+    position: relative;
+    float: left;
+    clear: none;
+}
+.an-redPacketIconBox span.an-redPacketIcon {
+    width: auto;
+    height: .48rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -.24rem;
+}
+.an-redPacketIconBox span.an-redPacketIcon b {
+    width: .4rem;
+    height: .48rem;
+    background: url(../../images/icon_redPacketRed.png) no-repeat center center;
+    background-size: .4rem;
+    margin-left: .32rem;
+    display: block;
+    float: left;
+    clear: none;
+}
+.an-redPacketIconBox span.an-redPacketIcon span.an-redPacketNumber {
+    width: .36rem;
+    height: .36rem;
+    background: #d53533;
+    border-radius: .24rem;
+    font-size: .16rem;
+    line-height: .36rem;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+    display: block;
+    position: absolute;
+    top: -.16rem;
+    right: -.16rem;
+    z-index: 3;
+}
+
+/*无关联门店的样式*/
+.aa-followShopNodata {
+    width: 100%;
+    float: left;
+    clear: left;
+}
+.aa-followShopNodata ul {
+    width: 8.8rem;
+    height: 8rem;
+    margin-left: 6%;
+    float: left;
+    clear: left;
+}
+.aa-followShopNodataPic {
+    width: 100%;
+    padding-top: 2.48rem;
+    margin: 2.5rem 0 .64rem;
+    background: url(../../images/icon_noShop.png) no-repeat center top;
+    background-size: 2.72rem;
+    font-size: .44rem;
+    line-height: 1.04rem;
+    text-align: center;
+    color: #9baaba;
+    float: left;
+    clear: left;
+}
+/*关联更多智能产品目录样式*/
+.aa-chooseBox ul.aa-brandChoose li.bj-chooseNew {
+    width: 100%;
+    height: 3rem;
+    padding: 0;
+}
+.aa-chooseBox ul.aa-brandChoose li.bj-chooseNew a {
+    width: 100%;
+    height: auto;
+    padding-top: 0rem;
+    display: block;
+    float: left;
+    clear: left;
+}
+.aa-chooseBox ul.aa-brandChoose li.bj-chooseNew a span {
+    width: 100%;
+    height: .68rem;
+    background: url(../../images/icon_plusGray.png) no-repeat center center;
+    background-size: .64rem;
+    display: block;
+    float: left;
+    clear: left;
+}
+.aa-chooseBox ul.aa-brandChoose li.bj-chooseNew a p {
+    width: 100%;
+    height: .48rem;
+    margin-top: .2rem;
+    font-size: .32rem;
+    line-height: .48rem;
+    text-align: center;
+    color: #666;
+    float: left;
+    clear: left;
+}
+
+
+/*一键询单相关调整*/
+
+/*一键询单按钮*/
+.bo-carBox {
+	position: relative;
+}
+.bo-carBox .aa-carResult {
+	background: none;
+}
+.bo-carBox>a {
+	width: auto;
+	height: .64rem;
+	margin-top: -.32rem;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #2c83e6;
+	position: absolute;
+	top: 50%;
+	right: .32rem;
+}
+
+.bo-onekeyInquiries {
+	width: 100%;
+    padding: 1.28rem 3.0rem;
+    /* padding: 1.28rem 3.56rem; */
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.bo-onekeyInquiries a {
+	width: 100%;
+    /* padding-top: 2.8rem; */
+    padding-top: 2.28rem;
+	background: url(../../images/button_inquiries.png) no-repeat center top;
+	background-size: 2.8rem;
+	font-size: .48rem;
+	line-height: .64rem;
+	text-align: center;
+    color: #f5372d;
+    /* display: block;
+    margin: 0 auto;
+    float: none;
+    clear: none; */
+    float: left;
+	clear: left;
+}
+.bo-onekeyInquiries p {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.bo-onekeyInquiries p b {
+	width: auto;
+	background: url(../../images/icon_redPacketRed.png) no-repeat center right;
+	background-size: auto .34rem;
+	padding-right: .48rem;
+	font-size: .34rem;
+	font-weight: normal;
+	line-height: .64rem;
+	text-align: left;
+	color: #1abc9c;
+	display: block;
+}.bo-onekeyInquiries p {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.bo-onekeyInquiries p b {
+	width: auto;
+	background: url(../../images/icon_redPacketRed.png) no-repeat center right;
+	background-size: auto .34rem;
+	padding-right: .48rem;
+	font-size: .34rem;
+	font-weight: normal;
+	line-height: .64rem;
+	text-align: left;
+	color: #1abc9c;
+	display: block;
+}
+
+.bo-onekeyInquiries .bo-onekeyInquiriesRemind {
+	width: 4.4rem;
+	height: 3.2rem;
+	background: url(../../images/box_reminding.png) no-repeat center center;
+	background-size: 4.2rem;
+	position: absolute;
+	top: -1.5rem;
+    left: 50%;
+    margin-left: -4.4rem;
+}
+.bo-onekeyInquiries .bo-onekeyInquiriesRemind a {
+	width: .72rem;
+	height: .72rem;
+	padding: 0;
+	margin-right: .48rem;
+	background: url(../../images/button_closePopRemind.png) no-repeat center center;
+	background-size: .68rem;
+	float: right;
+	clear: none;
+}
+.bo-onekeyInquiries .bo-onekeyInquiriesRemind p {
+    /* width: 84%; */
+    width: 74%;
+	padding: 0 ;
+    /* margin: .12rem .28rem 0; */
+    margin: .12rem 0 0 14%;
+	background: none;
+	font-size: .36rem;
+    /* line-height: .64rem; */
+    line-height: .52rem;
+	text-align: justify;
+	color: #282828;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+.aa-chooseBox ul.aa-brandChoose li.bj-chooseNew a.bo-chooseNewRed span {
+	background: url(../../images/icon_plusRed.png) no-repeat center center;
+    background-size: .64rem;
+}
+
+/*一键询单红包活动相关弹层*/
+.bo-redPacketActivityPop {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 40;
+}
+
+.bo-redPacketActivityBox {
+	width: 80%;
+	height: 9.6rem;
+	background: #fff;
+	border-radius: .32rem;
+	margin-top: -4.8rem;
+	position: fixed;
+	top: 50%;
+	left: 10%;
+	z-index: 45;
+}
+.bo-redPacketActivityBox li {
+	width: 90%;
+	margin-left: 5%;
+	float: left;
+	clear: left;
+}
+.bo-redPacketActivityBox li.bo-redPacketTitle {
+	height: auto;
+	font-size: .56rem;
+	line-height: 2.88rem;
+	text-align: center;
+	color: #333;
+}
+.bo-redPacketActivityBox li.bo-redPacketText p {
+	width: 5%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	display: block;
+	float: left;
+	clear: none;
+}
+.bo-redPacketActivityBox li.bo-redPacketText span {
+	width: 94%;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: justify;
+	color: #666;
+	display: block;
+	float: right;
+	clear: none;
+}
+
+.bo-redPacketActivityBox a {
+	width: .68rem;
+	height: .68rem;
+	background: url(../../images/icon_closeButton.png) no-repeat center center;
+	background-size: .64rem;
+	position: absolute;
+	bottom: -1.32rem;
+	left: 50%;
+	margin-left: -.34rem;
+	z-index: 45;
+
+}
+
+
+/*0523调整的部分样式*/
+.bu-redEnvelopes {
+	width: 100%;
+	height: .72rem;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.bu-redEnvelopes span {
+	position: absolute;
+}
+.bu-redEnvelopes span.bu-jiao {
+	width: .24rem;
+	height: .12rem;
+	background: url(../../images/arrow_redEnvelopesUp.png) no-repeat bottom center;
+	background-size: .21rem;
+	top: 0;
+	left: 50%;
+	margin-left: -.12rem;
+	z-index: 4;
+}
+.bu-redEnvelopes span.bu-redEnvelopesText {
+	width: 4.24rem;
+	height: .72rem;
+	margin-top: -.013rem;
+	padding-left: .2rem;
+	background: #fff;
+	border: 1px solid #4b0009;
+	border-radius: .12rem;
+	font-size: .32rem;
+	text-align: left;
+	color: #4b0009;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	top: .12rem;
+	left: 0;
+	z-index: 3;
+}
+.bu-redEnvelopes span.bu-redEnvelopesPic {
+	width: .72rem;
+	height: .88rem;
+	background: url(../../images/pic_redEnvelopes.png) no-repeat center center;
+	background-size: 100%;
+	right: -.56rem;
+	top: .03rem;
+	z-index: 6;
+}
+
+
+.noConcerFactory{
+	width: 100%;
+	padding-top: 50%;
+}
+.noConcerFactory .noConcerText{
+	margin-top: 1rem;
+	height: 0.693rem;
+	color: #b2bfd0;
+	text-align: center;
+	letter-spacing: .008rem;
+	padding: 0 0.4rem;
+	margin-bottom: 1rem;
+}
+.noConcerFactory .noConcerText span{
+	line-height: .5rem;
+}
+.noConcerFactory .noConcerGoUrl{
+	height: 4.84rem;
+	padding: 0 0.4rem;
+	margin-top:1rem ;
+}
+.noConcerFactory .noConcerGoUrl fieldset{
+	height:4.84rem ;
+	border-top: 1px solid #9fadc2;
+	box-sizing: border-box;
+}
+.noConcerFactory .noConcerGoUrl fieldset legend{
+	color:#c63231 ;
+	text-align: center;
+	/* width: 5.28rem; */
+	height: 0.178rem;
+	background: #edf2f7;
+	line-height: 0.178rem;
+}
+.noConcerFactory .noConcerGoUrl fieldset .showProgess{
+	margin-top: 0.4rem;
+}
+
+.noConcerFactory .noConcerGoUrl fieldset .showProgess p:nth-child(3) b{
+	display: inline-block;
+	width: 0.2rem;
+	height: 0.2rem;
+	background: url(../../images/icon_userlogin.png) no-repeat center;
+	background-size:0.2rem ;
+	margin: 0 .05rem;
+}
+.noConcerFactory .noConcerGoUrl fieldset .showProgess p{
+	padding: 0 .5rem;
+	line-height: 0.8rem;
+	color: #a4b2bf;
+}
+.noConcerFactory .noConcerImg{
+	height: 1.134rem;
+	display: flex;
+	justify-content: center;
+}
+.noConcerFactory .noConcerImg span{
+	width: 2.134rem;
+	height: 2.134rem;
+	background: pink;
+	background: url(../../images/vendorsConcer/storeLogo.png) no-repeat center;
+	background-size:2.134rem ;
+}
+/*0829 国际品牌相关的调整*/
+.dg-international {
+  width: 100%;
+  margin-top: .32rem;
+  background: #fff;
+  border-top: 1px solid #d4e0eb;
+  float: left;
+  clear: left;
+}
+.dg-international p {
+  width: 100%;
+  font-size: .44rem;
+  /*font-weight: bold;*/
+  line-height: 1.04rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+  float: left;
+  clear: left;
+}
+.dg-international p a {
+  width: auto;
+  font-size: .32rem;
+  font-weight: bold;
+  line-height: 1.04rem;
+  text-align: center;
+  color: #2c83e6;
+  position: absolute;
+  right: .32rem;
+  top: 0;
+  z-index: 1
+}
+.dg-international span {
+  width: 100%;
+  padding-left: .4rem;
+  float: left;
+  clear: left;
+}
+.dg-international span a {
+  width: 2rem;
+  height: 2rem;
+  margin-right: .4rem;
+  margin-bottom: .4rem;
+  background: #fff;
+  box-shadow: 0 0 .16rem #d4e0eb;
+  font-size: .36rem;
+  font-weight: bold;
+  line-height: .64rem;
+  text-align: center;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: none;
+}
+/*0903调整*/
+.dc-replaceGuestOrder a.di-moreCatalog {
+  width: auto;
+  height: auto;
+  background: none;
+  padding: 0;
+  font-size: .32rem;
+  color: #2c83e6;
+  position: absolute;
+  right: .32rem;
+  top: .2rem;
+  z-index: 3;
+}
+
+
+
+

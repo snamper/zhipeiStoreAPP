@@ -1,0 +1,258 @@
+
+/*帮我付款 好友付款页*/
+.eu-friendPaymentPage {
+	width: 100%;
+	padding: .4rem;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentBox {
+	width: 100%;
+	background: #fff;
+	border-radius: .16rem;
+	box-shadow: 0 0 .16rem #DDE7F0;
+	overflow: hidden;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentHead {
+	width: 100%;
+	height: 4.24rem;
+	padding-top: .72rem;
+	background: url(../images/pic_decorateback.png) no-repeat center top;
+	background-size: 100%;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentHead>p {
+	width: 100%;
+	font-size: .56rem;
+	line-height: .84rem;
+	text-align: center;
+	color: #e74c3c;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentHead>span {
+	width: 100%;
+	font-size: .4rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #281D1C;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentMain {
+	width: 100%;
+	height: auto;
+	padding: 1.92rem 0 2.64rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentMain>dl {
+	width: auto;
+	height: auto;
+	float: left;
+	clear: none;
+}
+.eu-frendPaymentMain>dl>dt {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: none;
+}
+.eu-frendPaymentMain>dl>dt>p {
+	width: 100%;
+	height: auto;
+	font-size: .4rem;
+	line-height: 1.2rem;
+	text-align: center;
+	color: #ED1A52;
+	float: left;
+	clear: none;
+}
+.eu-frendPaymentMain>dl>dt>p>b {
+	font-weight: normal;
+	font-size: .8rem;
+}
+.eu-frendPaymentMain>dl>dt>span {
+	width: 100%;
+	height: auto;
+	font-size: .32rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #333;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentMain>dl>dd {
+	width: auto;
+	height: auto;
+	padding-top: 1.16rem;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentMain>dl>dd>a {
+	width: 4.32rem;
+	height: .96rem;
+	border: 1px solid #ED1A52;
+	border-radius: .48rem;
+	font-size: .4rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #ED1A52;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.eu-frendPaymentMain>dl>dd>a.eu-prohibit {
+	border: 0;
+	background: #F6F6F6;
+	color: #bcbcbc;
+}
+
+
+/*支付成功页*/
+.eu-paymentSuccessPage {
+	width: 100%;
+	padding-top: 2.24rem;
+	float: left;
+	clear: left;
+}
+.eu-paymentSuccessBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.eu-paymentSuccessBox>p {
+	width: 100%;
+	background: url(../images/icon_success.png) no-repeat center top;
+	background-size: 1.72rem;
+	padding-top: 1.92rem;
+	font-size: .64rem;
+	line-height: .96rem;
+	text-align: center;
+	color: #0ECFA9;
+	float: left;
+	clear: left;
+}
+.eu-paymentSuccessBox>span {
+	width: 100%;
+	font-size: .36rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #282828;
+	float: left;
+	clear: left;
+}
+.eu-paymentSuccessBox>span>b {
+	font-weight: normal;
+	color: #ED1A52;
+}
+.eu-paymentSuccessBox>span.eu-seeCatalog {
+	padding-top: .64rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.eu-paymentSuccessBox>span.eu-seeCatalog>a {
+	width: 3.2rem;
+	height: .96rem;
+	background: #fff;
+	border: 1px solid #ED1A52;
+	border-radius: .48rem;
+	font-size: .4rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #ED1A52;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+
+/*æ”¯ä»˜æˆåŠŸé¡µ*/
+.eu-paymentSuccessPage {
+  width: 100%;
+  padding-top: 2.24rem;
+  float: left;
+  clear: left;
+}
+.eu-paymentSuccessBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.eu-paymentSuccessBox>p {
+  width: 100%;
+  background: url(../images/icon_success.png) no-repeat center top;
+  background-size: 1.72rem;
+  padding-top: 1.92rem;
+  font-size: .64rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #0ECFA9;
+  float: left;
+  clear: left;
+}
+.eu-paymentSuccessBox>span {
+  width: 100%;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #282828;
+  float: left;
+  clear: left;
+}
+.eu-paymentSuccessBox>span>b {
+  font-weight: normal;
+  color: #ED1A52;
+}
+.eu-paymentSuccessBox>span.eu-seeCatalog {
+  padding-top: .64rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eu-paymentSuccessBox>span.eu-seeCatalog>a {
+  width: 3.2rem;
+  height: .96rem;
+  background: #fff;
+  border: 1px solid #ED1A52;
+  border-radius: .48rem;
+  font-size: .4rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #ED1A52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,333 @@
+
+/*收款单列表页*/
+.eg-receiptListPage {
+	width: 100%;
+	padding: 0 .4rem .4rem;
+	float: left;
+	clear: left;
+}
+
+/*单个月份的收款单*/
+.eg-receiptMainMonth {
+	width: 100%;
+	margin-top: .4rem;
+	background: #fff;
+	border-radius: .32rem;
+	overflow: hidden;
+	box-shadow: 0 0 .16rem #e8e8e8;
+	float: left;
+	clear: left;
+}
+.eg-receiptMonthTitle {
+	width: 100%;
+	padding: .08rem .4rem 0;
+	float: left;
+	clear: left;
+}
+.eg-receiptMonthTitle>p {
+	width: auto;
+	font-size: .4rem;
+	line-height: 1.12rem;
+	text-align: left;
+	color: #999;
+	float: left;
+	clear: left;
+}
+.eg-receiptMonthTitle>span {
+	width: auto;
+	font-size: .4rem;
+	line-height: 1.12rem;
+	text-align: left;
+	color: #999;
+	float: right;
+	clear: none;
+}
+.eg-receiptMonthTitle>span>b {
+	font-weight: normal;
+	color: #e74c3c;
+}
+.eg-receiptListBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.eg-receiptListBox li {
+	width: 100%;
+	margin-top: .08rem;
+	padding: .4rem 0 .4rem .4rem;
+	background: #f8f8f8 url(../images/arrow_right.png) no-repeat 8.64rem center;
+	background-size: auto .32rem;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.eg-receiptListBox li p {
+	width: 64%;
+	font-size: .44rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #282828;
+	float: left;
+	clear: left;
+}
+.eg-receiptListBox li span.eg-price {
+	width: auto;
+	margin-top: -.32rem;
+	font-size: .44rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #e74c3c;
+	position: absolute;
+	right: .8rem;
+	top: 50%;
+	z-index: 2;
+}
+.eg-receiptListBox li span.eg-labelBox {
+	width: .96rem;
+	height: .96rem;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+.eg-receiptListBox li span.eg-alreadyClear {
+	background: url(../images/label_alreadyClear.png) no-repeat center center;
+	background-size: 100%;
+}
+.eg-receiptListBox li span.eg-uncleared {
+	background: url(../images/label_uncleared.png) no-repeat center center;
+	background-size: 100%;
+}
+
+/*收款单详情页面*/
+.eg-receiptDetailsPage {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-bottom: 1.32rem;
+	background: #fff;
+	float: left;
+	clear: left;
+}
+/*店铺名称及月份*/
+.eg-receiptDetailsShop {
+	width: 100%;
+	padding: .32rem 0;
+	background: url(../images/pic_statementAccountTitle.png) no-repeat center center;
+	background-size: auto 100%;
+	float: left;
+	clear: left;
+}
+.eg-receiptDetailsShop p {
+	width: 100%;
+	font-size: .48rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #282828;
+	float: left;
+	clear: left;
+}
+.eg-receiptDetailsShop span {
+	width: 100%;
+	font-size: .4rem;
+	line-height: .64rem;
+	text-align: center;
+	color: #e74c3c;
+	float: left;
+	clear: left;
+}
+
+.eg-receiptDetailsMain {
+	width: 100%;
+	margin-top: -.08rem;
+	float: left;
+	clear: left;
+}
+.eg-receiptDetailsOne {
+	width: 100%;
+	margin-top: .08rem;
+	background: #f8f8f8;
+	padding: 0 .4rem;
+	float: left;
+	clear: left;
+}
+.eg-receiptDetailsOne>dl>dt {
+	width: 100%;
+	padding: .2rem 0;
+	padding-right: .48rem;
+	border-bottom: 1px solid #e8e8e8;
+	background: url(../images/arrow_right.png) no-repeat right center;
+	background-size: auto .32rem;
+	font-size: .36rem;
+	line-height: .68rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: left;
+}
+.eg-receiptDetailsOne>dl>dd {
+	width: 100%;
+	padding: .32rem 0;
+	float: left;
+	clear: left;
+}
+.eg-dataNameBox,.eg-dataMainBox {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.eg-dataNameBox>span {
+	width: auto;
+	font-size: .32rem;
+	line-height: .48rem;
+	text-align: center;
+	color: #999;
+	float: left;
+	clear: none;
+}
+.eg-dataMainBox>span {
+	width: auto;
+	font-size: .48rem;
+	line-height: .72rem;
+	text-align: center;
+	color: #282828;
+	float: left;
+	clear: none;
+}
+.eg-dataMainRed>span {
+	color: #e74c3c;
+}
+.eg-dataNameBox>span.eg-number,.eg-dataMainBox>span.eg-number {
+	width: 25%;
+}
+.eg-dataNameBox>span.eg-unitPrice,.eg-dataMainBox>span.eg-unitPrice {
+	width: 45%;
+}
+.eg-dataNameBox>span.eg-totalPrice,.eg-dataMainBox>span.eg-totalPrice {
+	width: 30%;
+}
+
+/*底部操作*/
+.eg-receiptDetailsFool {
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid #d8d8d8;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 4;
+}
+.eg-receiptDetailsFool>a {
+	width: 41.6%;
+	height: 1.32rem;
+	background: #e74c3c;
+	font-size: .36rem;
+	line-height: 1.32rem;
+	text-align: center;
+	color: #fff;
+	float: right;
+	clear: none;
+}
+.eg-receiptDetailsFool .eg-left {
+	width: 58.4%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: none;
+}
+.eg-receiptDetailsFool .eg-left dl {
+	width: 100%;
+	padding-left: .4rem;
+	padding-top: .1rem;
+	float: left;
+	clear: none;
+}
+.eg-receiptDetailsFool .eg-left dl dt,.eg-receiptDetailsFool .eg-left dl dd {
+	width: 100%;
+	float: left;
+	clear: none;
+}
+.eg-receiptDetailsFool .eg-left dl dt p {
+	width: auto;
+	font-size: .32rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #666;
+	float: left;
+	clear: none;
+}
+.eg-receiptDetailsFool .eg-left dl dt span {
+	width: auto;
+	font-size: .44rem;
+	line-height: .64rem;
+	text-align: left;
+	color: #e74c3c;
+	float: left;
+	clear: none;
+}
+.eg-receiptDetailsFool .eg-left dl dd a {
+	font-size: .28rem;
+	line-height: .48rem;
+	text-align: left;
+	color: #377de8;
+	float: left;
+	clear: left;
+}
+
+.ec-noData{
+  width: 100%;
+  height: auto;
+  margin-top: 2.4rem;
+  padding-top: 3.6rem;
+  background: url(../images/pic_dataNo.png) no-repeat center top;
+  background-size: 4rem;
+  font-size: .36rem;
+  line-height: .96rem;
+  text-align: center;
+  color: #bcbcbc;
+  float: left;
+  clear: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

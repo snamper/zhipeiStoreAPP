@@ -1,0 +1,679 @@
+.cv-totalPrice li.cv-left a {
+  width: auto;
+  height: auto;
+  margin: 0;
+  background: none;
+  padding: 0;
+  border: 0;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #2d83e6;
+  display: inline-block;
+  float: none;
+  clear: none;
+}
+
+.cc-seePriceOne li.cc-seePriceProduct p {
+  max-width: 6rem;
+}
+
+.cc-seePriceOne li.cc-seePriceProduct span.ce-number {
+  right: 2.4rem;
+  font-size: .32rem;
+  color: #acacac;
+}
+
+/*0709新增的样式*/
+/*.bw-buttonBox a {*/
+/*width: 36%;*/
+/*margin-left: -18%;*/
+/*background-size: 3.36rem;*/
+/*}*/
+
+.cf-activityDetailsBox {
+  height: 7.52rem;
+  margin-top: -3.26rem;
+}
+
+.cf-activityDetailsBox ul {
+  height: 7.52rem;
+}
+
+.cd-activityDetailsBox li.cf-activityDetailsPicBox {
+  padding: .32rem .32rem 0;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.cf-activityDetailsPic {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.cf-activityDetailsPic dd {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: .32rem;
+  position: relative;
+  float: left;
+  clear: none;
+}
+
+.cf-activityDetailsPic dd span {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.cf-activityDetailsPic dd span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*0709用量编辑的样式调整*/
+.cc-seePriceOne li.cc-seePriceProduct a.ce-number {
+  width: auto;
+  height: auto;
+  font-size: .36rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #2d83e6;
+  position: absolute;
+  top: .28rem;
+  right: 3rem;
+  z-index: 3;
+}
+
+.cc-seePriceOne li.cc-seePriceProduct a.cf-numberNotAvailable {
+  right: .32rem;
+}
+
+/*0709用量编辑弹层的样式*/
+.cf-numberEditPop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.64);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 120;
+}
+
+.cf-numberEditPop ul {
+  width: 8rem;
+  height: 4.8rem;
+  background: #fff;
+  border-radius: .32rem;
+  margin: -2.4rem 0 0;
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  z-index: 32;
+}
+
+.cf-numberEditPop li {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+.cf-numberEditPop li.cf-numberEdit {
+  width: 100%;
+  height: 3.52rem;
+  padding: .48rem 1.62rem .72rem;
+  float: left;
+  clear: left;
+}
+
+.cf-numberEditPop li span {
+  width: auto;
+  height: 1.16rem;
+  border: 1px solid #d8d8d8;
+  font-size: .36rem;
+  line-height: .78rem;
+  text-align: center;
+  color: #333;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.cf-numberEditPop li p {
+  width: 100%;
+  height: 1.16rem;
+  font-size: .4rem;
+  line-height: 1.16rem;
+  text-align: center;
+  color: #333;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.cf-numberEditPop li span a {
+  width: 1.1rem;
+  height: 1.16rem;
+  font-size: .48rem;
+  line-height: 1.08rem;
+  text-align: center;
+  color: #888;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.cf-numberEditPop li span b {
+  width: 2.4rem;
+  height: 1.16rem;
+  border-right: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  font-size: .6rem;
+  font-weight: normal;
+  line-height: 1.16rem;
+  text-align: center;
+  color: #333;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.cf-numberEditPop li.cf-numberEditButton {
+  height: 1.28rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #ccc;
+}
+
+.cf-numberEditPop li.cf-numberEditButton a {
+  width: 50%;
+  height: auto;
+  font-size: .4rem;
+  line-height: 1.28rem;
+  text-align: center;
+  color: #2c83e6;
+  display: inline-block;
+  float: left;
+  clear: none;
+}
+
+.cf-numberEditPop li.cf-numberEditButton a.cf-buttonLeft {
+  border-right: 1px solid #ccc;
+}
+
+/*0710 回收站相关调整*/
+
+/*关注的目录增加回收站入口 方案一*/
+.ad-titleBar a.ad-right span.cg-recycleBin {
+  /*background: url(../images/icon_recycleBinWhite.png) no-repeat center center;*/
+  background-size: .48rem;
+}
+
+/*关注的目录增加回收站入口 方案二*/
+.cg-recycleBinBox {
+  width: 100%;
+  height: auto;
+  min-height: 1.28rem;
+  background: #fff url(../images/arrow_gray.png) no-repeat 9.52rem center;
+  background-size: .16rem;
+  padding-left: .32rem;
+  border-bottom: 1px solid #dce6ef;
+  float: left;
+  clear: left;
+}
+
+.cg-recycleBinBox span {
+  width: .88rem;
+  height: .88rem;
+  margin-top: .2rem;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.cg-recycleBinBox span.cg-recycleBinIcon {
+  border-radius: .44rem;
+  background: #f0f0f0 url(../images/icon_recycleBinGray.png) no-repeat center center;
+  background-size: .48rem;
+  margin-right: .32rem;
+}
+
+.cg-recycleBinBox p {
+  width: auto;
+  height: 1.28rem;
+  font-size: .4rem;
+  line-height: 1.28rem;
+  text-align: left;
+  color: #666;
+  display: block;
+  float: left;
+  clear: none;
+}
+
+.cg-recycleBinBox span.cg-number {
+  width: auto;
+  min-width: .48rem;
+  height: .48rem;
+  margin-top: .4rem;
+  margin-left: .2rem;
+  padding: 0 .04rem;
+  border-radius: .32rem;
+  background: #e74c3c;
+  font-size: .32rem;
+  line-height: .46rem;
+  text-align: center;
+  color: #fff;
+  float: left;
+  clear: none;
+}
+
+/*最近删除页恢复按钮*/
+.aa-followCatalog li a.cg-recoveryButton {
+  width: auto;
+  padding-top: .48rem;
+  margin-top: -.48rem;
+  background: url(../images/icon_recoveryBlue.png) no-repeat center top;
+  background-size: .48rem;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #2c83e6;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: .32rem;
+}
+
+/*一键询单增加主推店铺样式*/
+.bw-storeChoiceLine dd {
+  height: auto;
+  /*min-height: 1.68rem;*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.bw-storeChoiceLine dd.chRecommendShopBox span.ch-shopLogoBox {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0;
+  margin-right: .2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  float: left;
+  clear: left;
+}
+
+.bw-storeChoiceLine dd.chRecommendShopBox span.ch-shopLogoBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bw-storeChoiceLine dd span.ch-shopNameBox {
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  border: 0;
+  position: static;
+  float: left;
+  clear: none;
+}
+
+.bw-storeChoiceLine dd.chRecommendShopBox span.ch-shopNameBox>p {
+  font-size: .4rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.bw-storeChoiceLine dd.chRecommendShopBox span.ch-shopNameBox a.cd-activityBox p {
+  max-width: 6.2rem;
+  margin-top: .2rem;
+}
+
+.bw-storeChoice>span.chStoreChoiceTitle {
+  background: #fff url(../images/text-storeChoiceOnly.png) no-repeat center center;
+  background-size: 4.36rem;
+}
+
+.bw-storeChoiceLine dd span {
+  width: .6rem;
+  height: .6rem;
+  margin-top: -.3rem;
+  border: 1px solid #ccc;
+  border-radius: .12rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+}
+
+/*活动头部*/
+.cj-activityRemind {
+  width: 100%;
+  height: 1.04rem;
+  float: left;
+  clear: left;
+}
+
+.cj-activityRemind a {
+  width: 100%;
+  height: 1.04rem;
+  background: url(../images/pic_02.png) no-repeat center center;
+  background-size: 100%;
+  float: left;
+  clear: left;
+}
+
+.bw-buttonBox a.cj-seePriceBox {
+  width: 100%;
+  height: 1.28rem;
+  margin: 0;
+  background: url(../images/pic_01.png) no-repeat center center;
+  background-size: 100%;
+  margin-top: -.24rem;
+  position: static;
+  float: left;
+  clear: left;
+}
+
+.bw-buttonBox a.cj-exchangeEngineOil {
+  background: url(../images/pic_03.png) no-repeat center center;
+  background-size: 100%;
+}
+
+
+/*8月15号样式*/
+.cv-alias {
+  width: 100%;
+  height: .72rem;
+  overflow: hidden;
+  float: left;
+  clear: left;
+}
+
+.cv-alias dt,
+.cv-alias dd {
+  width: auto;
+  font-size: .32rem;
+  line-height: .72rem;
+  text-align: left;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.cv-alias dt {
+  background: url(../images/arrow_gray_down.png) no-repeat center right;
+  background-size: .28rem;
+  padding-right: .56rem;
+}
+
+.cv-takeUp {
+  height: auto;
+}
+
+.cv-takeUp dt {
+  background: url(../images/arrow_gray_up.png) no-repeat center right;
+  background-size: .28rem;
+}
+
+/*å¼¹å±‚ä¸»ä½“çš„è°ƒæ•´*/
+.cc-seePriceMain {
+  padding: 1.04rem .32rem 2.4rem;
+}
+
+.cv-universalPartsNew {
+  width: 100%;
+  height: auto;
+  padding: .36rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  clear: left;
+}
+
+.cv-universalPartsNew a {
+  width: auto;
+  height: auto;
+  background: url(../images/icon_news2.png) no-repeat center left;
+  background-size: .44rem;
+  padding-left: .64rem;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #2d83e6;
+  float: left;
+  clear: left;
+}
+
+/*é€šç”¨ä»¶å•†å“çš„å±•ç¤º*/
+.cc-seePriceOne li.cv-seePriceProduct p {
+  width: 90%;
+  max-width: none;
+}
+
+.cc-seePriceOne li.cv-seePriceProduct span {
+  line-height: .8rem;
+  position: static;
+  float: left;
+  clear: left;
+}
+
+.cv-number {
+  width: auto;
+  float: right;
+  clear: none;
+}
+
+.cv-number a {
+  width: .8rem;
+  height: .8rem;
+  border: 1px solid #d8d8d8;
+  border-radius: .4rem;
+  background: #fff;
+  font-size: .48rem;
+  line-height: .76rem;
+  text-align: center;
+  color: #e74c3c;
+  float: left;
+  clear: none;
+}
+
+.cv-number a.cv-left {
+  color: #999;
+}
+
+.cv-number b {
+  width: 1.08rem;
+  height: .8rem;
+  font-size: .36rem;
+  font-weight: normal;
+  line-height: .8rem;
+  text-align: center;
+  color: #333;
+  float: left;
+  clear: none;
+}
+
+/*åº•éƒ¨æŒ‰é’®çš„è°ƒæ•´*/
+.cc-seePriceFool {
+  height: auto;
+}
+
+.cc-seePriceFool a {
+  width: 100%;
+}
+
+/*åº•éƒ¨æ€»ä»·éƒ¨åˆ†çš„æ ·å¼è°ƒæ•´*/
+.cv-totalPrice {
+  width: 100%;
+  height: auto;
+  background: #fff8ee;
+  border-top: 1px solid #ffdba1;
+  float: left;
+  clear: left;
+}
+
+.cv-totalPrice li.cv-left {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  margin-left: .32rem;
+  text-align: left;
+  color: #f39c12;
+  float: left;
+  clear: none;
+}
+
+.cv-totalPrice li.cv-left a {
+  width: auto;
+  height: auto;
+  margin-left: .2rem;
+  background: none;
+  padding: 0;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #2d83e6;
+}
+
+.cv-totalPrice li.cv-right {
+  width: auto;
+  height: auto;
+  margin-right: .32rem;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #f39c12;
+  float: right;
+  clear: none;
+}
+
+.cv-totalPrice li.cv-right span {
+  width: auto;
+  height: auto;
+  font-size: .32rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #333;
+  float: left;
+  clear: none;
+}
+
+.cv-totalPrice li.cv-right span b {
+  font-size: .36rem;
+  font-weight: normal;
+  color: #e74c3c;
+}
+
+.cv-totalPrice li.cv-right p {
+  width: auto;
+  height: auto;
+  font-size: .28rem;
+  line-height: 1.04rem;
+  text-align: left;
+  color: #999;
+  float: left;
+  clear: none;
+}
+
+.cv-totalPrice li.cv-right p b {
+  margin-right: .12rem;
+  font-size: .4rem;
+  font-weight: normal;
+  color: #333;
+}
+
+.cv-totalPrice li.cv-left b {
+  width: auto;
+  height: .48rem;
+  margin-top: .26rem;
+  border-radius: .12rem;
+  padding: 0 .12rem;
+  font-size: .28rem;
+  background: #e74c3c;
+  line-height: .48rem;
+  margin-right: .2rem;
+  text-align: left;
+  color: #fff;
+  float: left;
+  clear: none;
+}
+
+/*0820 申请修理厂客户会员价弹层样式*/
+.cf-numberEditPop li.cy-memberApply p {
+  height: auto;
+  font-size: .48rem;
+  color: #f39c12;
+  margin-top: .8rem;
+}
+
+.cf-numberEditPop li.cy-memberApply span {
+  width: 100%;
+  height: auto;
+  border: 0;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+.cf-numberEditPop li.cy-submissionSuccess p {
+  height: auto;
+  background: url(../images/icon_success.png) no-repeat center top;
+  background-size: 1.28rem;
+  padding-top: 1.4rem;
+  font-size: .48rem;
+  color: #1abc9c;
+  margin-top: .8rem;
+}
+
+.cf-numberEditPop li.cy-submissionSuccess span {
+  width: 100%;
+  height: auto;
+  border: 0;
+  font-size: .32rem;
+  line-height: .64rem;
+  text-align: center;
+  color: #666;
+  float: left;
+  clear: left;
+}
+
+/*0821价格等级设置调整*/
+.cz-priceSetupRemind {
+  width: 10rem;
+  background: #fff8ee;
+  border: 0;
+  border-bottom: 1px solid #ffdba1;
+  font-size: .32rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #f39c12;
+  position: relative;
+  top: 0;
+  left: -.32rem;
+  float: left;
+  clear: left;
+}

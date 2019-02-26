@@ -1,0 +1,185 @@
+
+/*诊断弹层相关*/
+.eq-diagnosisPop {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.48);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 200;
+}
+.eq-diagnosisPopBox {
+	width: 100%;
+	height: 100%;
+	padding: 1.2rem .4rem .4rem;
+	background: #fff;
+	overflow: hidden;
+	float: left;
+	clear: left;
+}
+.eq-diagnosisPopBox>a {
+	width: .8rem;
+	height: .8rem;
+	background: rgba(0,0,0,0.48);
+	border-radius: .4rem;
+	font-size: .64rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	right: .2rem;
+	top: .2rem;
+	z-index: 4;
+}
+.eq-diagnosisHead {
+	width: 100%;
+	margin-top: -.8rem;
+	background: url(../images/pic_line.png) repeat-x center center;
+	background-size: auto .24rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.eq-diagnosisHead li {
+	width: auto;
+	background: #fff;
+	float: left;
+	clear: none;
+}
+.eq-diagnosisHead li span {
+	width: .24rem;
+	height: .8rem;
+	background: url(../images/pic_circle.png) no-repeat center center;
+	background-size: 100%;
+	display: block;
+	float: left;
+	clear: none;
+}
+.eq-diagnosisHead li p {
+	width: auto;
+	padding: 0 .4rem;
+	font-size: .48rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #e74c3c;
+	float: left;
+	clear: none;
+}
+
+.eq-diagnosisMain {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	float: left;
+	clear: left;
+}
+.eq-diagnosisMain div {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.eq-diagnosisMain li {
+	width: 100%;
+	height: auto;
+	margin-top: .4rem;
+	float: left;
+	clear: left;
+}
+.eq-diagnosisMain li p {
+  width: 100%;
+  font-size: .36rem;
+  line-height: .64rem;
+  text-align: justify;
+  color: #333;
+  float: left;
+  clear: left;
+}
+.eq-diagnosisMain li p strong {
+  font-size: .4rem;
+  font-weight: normal;
+  line-height: .72rem;
+  text-align: left;
+  color: #e74c3c;
+}
+.eq-diagnosisMain li p img {
+  width: auto;
+  height: auto !important;
+  max-width: 100%;
+  margin-top: .2rem;
+  float: left;
+  clear: left;
+}
+/*.eq-diagnosisMain li p.eq-diagnosisTitle {*/
+	/*font-size: .4rem;*/
+	/*line-height: .72rem;*/
+	/*text-align: left;*/
+	/*color: #e74c3c;*/
+/*}*/
+/*.eq-diagnosisMain li p.eq-diagnosisText {*/
+	/*font-size: .36rem;*/
+	/*line-height: .64rem;*/
+	/*text-align: justify;*/
+	/*color: #333;*/
+/*}*/
+/*.eq-diagnosisMain li p.eq-diagnosisPic {*/
+	/*width: 100%;*/
+	/*padding-top: .2rem;*/
+	/*display: flex;*/
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	/*float: left;*/
+	/*clear: left;*/
+/*}*/
+/*.eq-diagnosisMain li p.eq-diagnosisPic img {*/
+	/*width: auto;*/
+	/*max-width: 100%;*/
+	/*float: left;*/
+	/*clear: left;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
