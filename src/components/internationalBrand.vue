@@ -1,103 +1,99 @@
 <template>
-  <div class="ec-modularBox">
+  <div class="ec-modularBox fd-mofularBox">
     <!--v-if="userBrands.length>0"-->
-   
+
     <div class="ec-modularTitle">
       <p>智能产品目录</p>
+      <span class="fe-renewBox" v-if="ExpireText">
+					<b>{{ExpireText}}</b>
+					<a @click="goPay">续费</a>
+				</span>
       <div class="ec-modularTitleRight">
-        <a v-show="userBrands.length>9" v-on:click="showMoreVendor()">更多</a>
         <a @click="goJumpPage(userType,2)">管理</a>
       </div>
     </div>
-    <div style="height: 100%;width: 100%"  v-show="!iswait">
+     <div class="fd-addtoGuideBox" v-show="initAddBrandGuidance()">
+            <div class="fd-addtoGuideMack"></div>
+            <div class="fd-addtoGuide">
+              <dl>
+                <dt>
+                  <p>国际品牌和更多配件目录</p>
+                  <span>在这里添加关注</span>
+                </dt>
+                <dd>
+                  <a @click="nowmath">知道了</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+    <div style="height: 100%;width: 100%" v-show="!iswait">
       <div class="es-brandCatalogue" v-show="!needShowAdvert">
         <div class="es-followBrandBox">
-          <!-- <ul> -->
-            <!-- <li v-for="(item,index) in userBrands" @click="goCjmlPage(item.brandUrl,item.dataType,item.brandName,item)" v-show="index<7">
-              <span class="es-brandCataloguePic" v-show="item.isFamousBrand==0">
-                <img :src="item.brandLogo">
+          <ul>
+            <li v-for="(item,index) in userBrands" @click="selected(item)" v-show="(is_brand_folded && index<brand_max) || !is_brand_folded" :class="{'fc-brandBig':item.isFamousBrand==1}">
+              <span class="es-brandCataloguePic">
+                <img v-show="item.brandLogo" :src="item.brandLogo" alt="">
+                <img v-show="item.brandLogo==''" src="../assets/images/vendorsConcer/storeLogo.png" alt="">
               </span>
               <p class="es-brandCatalogueName">{{item.viewBrandName}}</p>
+              <span class="fd-labelBox" :style="{'display':item.isZhiPeiVipPay==0?'none':'block'}">VIP</span>
             </li>
-            <li class="et-moreBox" v-on:click="showMoreVendor()" v-show="userBrands.length>7" v-if="userType!=1">
-              <p>更多智能<br>产品目录</p>
-            </li>
-            <li class="et-moreBox" v-on:click="shareVenApp()" v-else>
-              <p class="et-newBox">更多智能<br>产品目录</p>
-            </li> -->
-          <!-- </ul> -->
-          <ul>
-            <!-- <li v-for="(item,index) in userBrands" @click="goCjmlPage(item.brandUrl,item.dataType,item.brandName,item)" v-show="index<6"> -->
-              <li v-for="(item,index) in userBrands" @click="selected(item)" v-show="index<=9">
-                <span class="es-brandCataloguePic">
-								  <b class="fc-brandBig" v-if="item.isFamousBrand==1">{{item.viewBrandName.substring(0,1)}}</b>
-                  <img  v-show="item.brandLogo" :src="item.brandLogo" alt="" v-else>
-                  <img v-show="item.brandLogo==''" src="../assets/images/vendorsConcer/storeLogo.png" alt="">
-						    </span>
-                <p class="es-brandCatalogueName">{{item.viewBrandName}}</p>
-            </li>
-            <!-- <li>
-                <span class="es-brandCataloguePic">
-								  <b class="fc-brandBig">博</b>
-							  </span>
-                <p class="es-brandCatalogueName">博世</p>
-            </li> -->
 
-            <li v-if="userType !=3">
-                <span class="es-brandCataloguePic" @click="brandChoice(1)">
-								<b class="fc-newsBig"></b>
-							  </span>
-                <p class="es-brandCatalogueName" >添加品牌</p>
+
+            <li v-if="userType !=3" @click="brandChoice(1)">
+              <span class="es-brandCataloguePic">
+                <b class="fc-newsBig"></b>
+              </span>
+              <p class="es-brandCatalogueName">添加品牌</p>
+              <!-- <span class="fd-gestureBox" v-if="addBrandGuidance && userType !=2"></span> -->
             </li>
-            <li>
-                <span class="es-brandCataloguePic" @click="brandChoice(2)">
-								<b class="fc-newsBig"></b>
-							</span>
+            <li @click="brandChoice(2)">
+              <span class="es-brandCataloguePic">
+                <b class="fc-newsBig"></b>
+              </span>
               <p class="es-brandCatalogueName">国际品牌</p>
+              <!-- <span class="fd-gestureBox" v-if="addBrandGuidance && userType !=2"></span> -->
+            </li>
+          </ul>
+         
+
+        </div>
+
+      </div>
+      <div class="fd-moreButton" v-show="userBrands.length>brand_max" @click="switchMoreVendor">
+        <a><b :class="{'fd-retractButton':!is_brand_folded}">{{is_brand_folded?'更多品牌':'收起'}}</b></a>
+      </div>
+
+      <div class="fc-nearbyBrandBox" v-if="!needShowAdvert" v-show="sideSales.length>0">
+        <div class="fc-nearbyBrandTitle">
+          <dl>
+            <dt>附近在售品牌</dt>
+            <dd>
+              <a class="fc-changeLink" @click="changeorder">换一批</a>
+              <a @click="brandChoice(1)">看全部</a>
+            </dd>
+          </dl>
+        </div>
+        <div class="es-followBrandBox">
+          <ul>
+            <li v-for="(item,index) in sideSales" :key="index">
+              <span class="es-brandCataloguePic">
+                <b class="fc-brandBig" v-if="item.isFamousBrand==1">{{item.viewBrandName.substring(0,1)}}</b>
+                <img :src="item.brandLogo" alt="" v-else>
+              </span>
+              <p class="es-brandCatalogueName">{{item.viewBrandName}}</p>
+              <span class="fc-buttonAdd">
+                <a @click="addOrder(item)" :class="{'selected':item.dataType==2}">{{item.dataType==1?"添加":"已添加"}}</a>
+              </span>
+              <span class="fc-newsLabel">News</span>
             </li>
           </ul>
         </div>
-        <!-- <div class="es-internationalBrandBox" v-show="famousBrands.length>0">
-          <ul>
-            <li :class="{'es-purchaseBox':item.isPay}" v-for="(item,index) in famousBrands" :key="index" @click="selected(item)">
-              <span class="es-labelBox">已购</span>
-              <div class="es-internationalBrandMain" :class="{'es-renewBox':item.isRenew}">
-                <p class="es-internationalBrandName">{{item.brandName}}</p>
-                <a class="es-renewButton" @click.stop="goPay()">续费</a>
-              </div>
-            </li>
-          </ul>
-        </div> -->
       </div>
-      <div class="fc-nearbyBrandBox" v-if="!needShowAdvert" v-show="sideSales.length>0">
-				<div class="fc-nearbyBrandTitle">
-					<dl>
-						<dt>附近在售品牌</dt>
-						<dd>
-							<a class="fc-changeLink" @click="changeorder">换一批</a>
-							<a @click="brandChoice(1)">看全部</a>
-						</dd>
-					</dl>
-				</div>
-				<div class="es-followBrandBox">
-            <ul>
-              <li v-for="(item,index) in sideSales" :key="index">
-                 <span class="es-brandCataloguePic">
-								  <b class="fc-brandBig" v-if="item.isFamousBrand==1">{{item.viewBrandName.substring(0,1)}}</b>
-                  <img :src="item.brandLogo" alt="" v-else>
-							  </span>
-                <p class="es-brandCatalogueName">{{item.viewBrandName}}</p>
-                <span class="fc-buttonAdd">
-                  <a @click="addOrder(item)" :class="{'selected':item.dataType==2}">{{item.dataType==1?"添加":"已添加"}}</a>
-                </span>
-							  <span class="fc-newsLabel">News</span>
-              </li>  
-					</ul>
-				</div>
-			</div>
-     
+
       <div class="et-adPosition" v-show="needShowAdvert">
-        <mt-swipe :auto="oneAdvertShowTime" :speed="100" :show-indicators="false" style="height: 100%;" ref="mtSwipe" v-on:change="changeSwiper" @touchmove="ontouchmove">
+        <mt-swipe :auto="oneAdvertShowTime" :speed="100" :show-indicators="false" style="height: 100%;" ref="mtSwipe" v-on:change="changeSwiper"
+          @touchmove="ontouchmove">
           <mt-swipe-item v-for="(item,index) in advertList" :key="index">
             <span>
               <img :src="item.imgUrl" style="width: 100%;height: auto" @click.stop="tojumpUrl(item)">
@@ -112,40 +108,40 @@
           <!--<span>会员免广告 (S)</span>-->
         </div>
       </div>
-      
+
     </div>
     <div style="height: 100%;width: 100%" v-show="iswait">
       <!-- 人数过多时加载效果 -->
       <div class="fa-lineUpTips">
-				<dl v-if="!waitmask">
-					<dt>{{waitText}}</dt>
-					<dd>
-						<span><a @click.stop="goPay">成为VIP会员</a></span>
-					</dd>
-					<dd>
-						<p><a @click.stop="goPay">走VIP会员专属快速通道</a></p>
-					</dd>
-				</dl>
-        <dl class="fa-lineUpFail" v-else>
-					<dt>等待时间过长，请返回重试</dt>
+        <dl v-if="!waitmask">
+          <dt>{{waitText}}</dt>
           <dd>
-						<p><a @click.stop="goPay">走VIP会员专属快速通道</a></p>
-					</dd>
-				</dl>
-			</div>
+            <span><a @click.stop="goPay">成为VIP会员</a></span>
+          </dd>
+          <dd>
+            <p><a @click.stop="goPay">走VIP会员通道，无需等待 >></a></p>
+          </dd>
+        </dl>
+        <dl class="fa-lineUpFail" v-else>
+          <dt>等待时间过长，请返回重试</dt>
+          <dd>
+            <p><a @click.stop="goPay">走VIP会员通道，无需等待 >></a></p>
+          </dd>
+        </dl>
+      </div>
     </div>
-     <div class="fc-advertisementBox" v-if="GetManyAdvertBySpace.length>0">
-				<div class="fc-advertisementTitle">
-					<p>新品招商</p>
-				</div>
-				<div class="fc-advertisementMain">
-          <ul>
-            <li v-for="(item,index) in GetManyAdvertBySpace" :key="index" @click="landingPage(item)">
-							<img :src="item.advertFile">
-            </li>
-					</ul>
-				</div>
-			</div>
+    <div class="fc-advertisementBox" v-if="GetManyAdvertBySpace.length>0">
+      <div class="fc-advertisementTitle">
+        <p>新品招商</p>
+      </div>
+      <div class="fc-advertisementMain">
+        <ul>
+          <li v-for="(item,index) in GetManyAdvertBySpace" :key="index" @click="landingPage(item)">
+            <img :src="item.advertFile">
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -173,46 +169,90 @@
     watch: {
 
     },
-    mounted(){
+    mounted() {
+      this.resetBrandMax();
       this.GetManyAdvertBySpacemeth();
+      if (this.behaviorRecorder.getBehavior(this.behaviorRecorder.behaviorIndex.addBrandGuidance) == 0) {
+        this.addBrandGuidance = true;
+      } else {
+        this.addBrandGuidance = false;
+      }
     },
     data() {
       return {
         famousBrands: [], //国际品牌列表
         userBrands: [], //用户关注的品牌列表
         advertList: [], //广告列表
-        sideSales:[], //附近在售
+        sideSales: [], //附近在售
         needShowAdvert: false, //是否需要展示广告
         // canFreeLoadFamousBrand: true, //能否免费查看国际品牌
         isShowAdvertLeftTime: false, //是否展示广告剩余时间
         advertLeftTime: 0, //广告剩余时间
         oneAdvertShowTime: 5000, //广告每帧展示时间
         timer: null,
-        waitText:'查询人数过多，请耐心等待…', //等待文字
-        iswait:false, //是否需要等待
-        lateTime:0, //排队等待的时间
-        isViewBrand:true, //排队等待后 true 为成 false 为加载失败
-        waitmask:false, //显示后面的等待弹层
-        GetManyAdvertBySpace:[],
-        sideSalesone:[],
-        index:0
+        waitText: '查询人数过多，请耐心等待…', //等待文字
+        iswait: false, //是否需要等待
+        lateTime: 0, //排队等待的时间
+        isViewBrand: true, //排队等待后 true 为成 false 为加载失败
+        waitmask: false, //显示后面的等待弹层
+        GetManyAdvertBySpace: [],
+        sideSalesone: [],
+        index: 0,
+        vinQueryPower: false, //是否是vip
+        brand_max: 10, //品牌可容纳最大值
+        addBrandGuidance: false,
+        is_brand_folded: true, //品牌是否已折叠,
+        ExpireText:'' //显示vip查询剩余天数，默认不显示
       }
     },
     methods: {
-      landingPage(data){
-        window.location.href=data.landingPage;
+      //初始化显示引导弹层
+      // addBrandGuidance && userType !=2
+      initAddBrandGuidance(){
+      
+        if(this.addBrandGuidance==true && (this.userType==1 || this.userType==3)){
+          return true;
+        }else {
+          return false;
+        }
+      },
+      //重新设置品牌可容纳最大值
+      resetBrandMax() {
+        switch (this.userType) {
+          case 1:
+          case 2:
+          default:
+            this.brand_max = 10;
+            break;
+          case 3:
+            this.brand_max = 11;
+            break;
+        }
+      },
+
+      //重新激活用户类型
+      reactiveUserType(userrule) {
+        this.userType = userrule;
+        this.resetBrandMax();
+      },
+      nowmath() {
+        this.addBrandGuidance = false;
+        this.behaviorRecorder.setBehavior(this.behaviorRecorder.behaviorIndex.addBrandGuidance, 1);
+      },
+      landingPage(data) {
+        window.location.href = data.landingPage;
       },
       //获取广告
-      GetManyAdvertBySpacemeth(){
-        var _this=this;
+      GetManyAdvertBySpacemeth() {
+        var _this = this;
         _this.ajax({
           method: "POST",
           url: resourceUrl + "/Ad/GetBusinessAdvert",
           dataType: "JSON",
-          success:function(str){
-            if(str.Header.ErrorCode == 0){
-              _this.GetManyAdvertBySpace=str.Body;
-            }else {
+          success: function (str) {
+            if (str.Header.ErrorCode == 0) {
+              _this.GetManyAdvertBySpace = str.Body;
+            } else {
               Toast(str.Header.Message)
             }
           }
@@ -243,8 +283,8 @@
       },
       shareVenApp() {
         var _this = this;
-        _this.GetUser(function(isPerfectInfo){
-          if(isPerfectInfo==1){
+        _this.GetUser(function (isPerfectInfo) {
+          if (isPerfectInfo == 1) {
             var url = window.location.protocol + "//" + window.location.host + "/selectBrand.html?v=" + _this.vinCode +
               '&selectBrand=1&cf=1&type=1&backurl=' +
               encodeURIComponent(window.location.href);
@@ -259,61 +299,60 @@
             } else {
               window.location.href = url;
             }
-          }else {
-           _this.$parent.$refs.perfectInformation.show();
+          } else {
+            _this.$parent.$refs.perfectInformation.show();
           }
-          
+
         })
-       
+
       },
-      changeorder(){
+      changeorder() {
         this.index++
-        if(this.index>2){
-          this.index=0
+        if (this.index > 2) {
+          this.index = 0
         }
-        this.sideSales=this.sideSalesone[this.index];
+        this.sideSales = this.sideSalesone[this.index];
       },
-      GetUser(callBack){
+      GetUser(callBack) {
         var _this = this;
         _this.ajax({
           method: "POST",
           url: resourceUrl + "/UserCenter/GetUser",
           dataType: "JSON",
-          success:function(str){
-            if(str.Header.ErrorCode == 0){
+          success: function (str) {
+            if (str.Header.ErrorCode == 0) {
               callBack(str.Body.isPerfectInfo);
             }
           }
         })
       },
-      addOrder(data){
-        if(data.dataType==1){
-          var arr=[]
-         arr[0]=data.brandId
+      addOrder(data) {
+        if (data.dataType == 1) {
+          var arr = []
+          arr[0] = data.brandId
           var _this = this;
           _this.ajax({
             method: "POST",
             url: resourceUrl + "/Common/FollowOneBrand",
-            data:{
-              brandId:arr
+            data: {
+              brandId: arr
             },
             dataType: "JSON",
-            success:function(str){
-              if(str.Header.ErrorCode == 0){
+            success: function (str) {
+              if (str.Header.ErrorCode == 0) {
                 Toast('添加成功');
                 _this.userBrands.unshift(data);
-                data.dataType=2
+                data.dataType = 2
                 // _this.$parent.GetCjmlVinQueryPowerDetail();
               }
             }
           })
         }
-        
+
       },
       //点击展示更多厂商目录
-      showMoreVendor() {
-        var _this = this;
-        _this.$emit('showMoreVendor', _this.userBrands)
+      switchMoreVendor() {
+        this.is_brand_folded = !this.is_brand_folded;
       },
       //前往超级目录
       goCjmlPage(brandUrl, type, brandName, datas) {
@@ -321,45 +360,47 @@
       },
       setValue(data) {
         var _this = this;
-        this.sideSales = data.sideSales||[];
-        _this.sideSalesone=[]
- 
-        if(this.sideSales.length>0){
-         var arr1=[];
-         var arr2=[];
-         var arr3=[];
-         for(var i=0;i<this.sideSales.length;i++){
-           if(i>=0 && i<=3){
-             arr1.push(this.sideSales[i])
-           }else if(i>3 && i<=7){
-            arr2.push(this.sideSales[i])
-           }else {
-             arr3.push(this.sideSales[i])
-           }
-         }
+        this.sideSales = data.sideSales || [];
+        _this.sideSalesone = []
 
-         if(arr1.length>0){
-           _this.sideSalesone.push(arr1)
-         }
-         if(arr2.length>0){
-           _this.sideSalesone.push(arr2)
-         }
-         if(arr3.length>0){
-           _this.sideSalesone.push(arr3)
-         }
+        if (this.sideSales.length > 0) {
+          var arr1 = [];
+          var arr2 = [];
+          var arr3 = [];
+          for (var i = 0; i < this.sideSales.length; i++) {
+            if (i >= 0 && i <= 3) {
+              arr1.push(this.sideSales[i])
+            } else if (i > 3 && i <= 7) {
+              arr2.push(this.sideSales[i])
+            } else {
+              arr3.push(this.sideSales[i])
+            }
+          }
+
+          if (arr1.length > 0) {
+            _this.sideSalesone.push(arr1)
+          }
+          if (arr2.length > 0) {
+            _this.sideSalesone.push(arr2)
+          }
+          if (arr3.length > 0) {
+            _this.sideSalesone.push(arr3)
+          }
         }
 
-        if(_this.sideSalesone.length>0){
-          this.sideSales=_this.sideSalesone[this.index]
-        }else {
-          this.sideSales=[]
+        if (_this.sideSalesone.length > 0) {
+          this.sideSales = _this.sideSalesone[this.index]
+        } else {
+          this.sideSales = []
         }
 
-        this.userBrands = data.userBrands||[];
-        this.famousBrands = data.famousBrands||[];
+        this.userBrands = data.userBrands || [];
+        this.famousBrands = data.famousBrands || [];
         this.advertList = data.vinQueryAdvert.advertList;
         this.lateTime = data.lateTime;
         this.isViewBrand = data.isViewBrand;
+        this.vinQueryPower = data.vinQueryPower;
+        this.ExpireText = data.ExpireText;
 
         //设置第一个广告时长为swipe间隔时间
         if (this.advertList.length > 0) {
@@ -376,7 +417,7 @@
             result += oneAdvert.showTime;
           });
           //总时间要加上swipe间隔动画时间 
-          result = parseInt((result + parseInt((_this.advertList.length - 1) * ANIMATION_SPEED))/1000);
+          result = parseInt((result + parseInt((_this.advertList.length - 1) * ANIMATION_SPEED)) / 1000);
           return result;
         }();
 
@@ -387,7 +428,6 @@
           _this.timer = setInterval(function () {
             if (_this.advertLeftTime > 1) {
               _this.advertLeftTime--;
-              console.log( _this.advertLeftTime)
               if (_this.advertLeftTime < 11) {
                 _this.isShowAdvertLeftTime = true;
               }
@@ -395,18 +435,18 @@
               _this.needShowAdvert = false;
               clearInterval(_this.timer);
               _this.isShowAdvertLeftTime = false;
-              if(_this.lateTime>0){
-                _this.iswait=true;
+              if (_this.lateTime > 0) {
+                _this.iswait = true;
                 setTimeout(() => {
-                  if(_this.isViewBrand){
-                    _this.iswait=false;
-                  }else {
-                    _this.waitmask=true;
+                  if (_this.isViewBrand) {
+                    _this.iswait = false;
+                  } else {
+                    _this.waitmask = true;
                     // _this.waitText = '目前查询人数过多，请重新扫码'
                   }
                 }, _this.lateTime);
               }
-              
+
             }
           }, 1000)
         }
@@ -432,7 +472,7 @@
         }
         switch (flag) {
           case 2:
-            url += "/vendorsConcer.html?edit=1&type=" + type + "&cf=1&v=" + _this.vinCode+"&m="+Math.random();
+            url += "/vendorsConcer.html?edit=1&type=" + type + "&cf=1&v=" + _this.vinCode + "&m=" + Math.random();
             break; //智能产品目录页——编辑状态
           default:
             break;
@@ -461,14 +501,17 @@
           }
         });
       },
-      ontouchmove(){
-        debugger;
+      ontouchmove() {
+
       },
       IsSeeFamousBrandPower(data) {
         var _this = this;
-        var url = window.location.protocol + "//" + window.location.hostname + "/cjml/h5/#!/vin?cf=1&v=" + _this.vinCode + "&appType=" +
-          data.dataType + "&td=" + data.brandUrl + "&bn=" + encodeURIComponent(data.brandName);
-        if (data.isZhiPeiVipPay == 0) {
+        var url = window.location.protocol + "//" + window.location.hostname + "/cjml/h5/#!/vin?cf=1&v=" + _this.vinCode + "&appType=2&td=" + data.brandUrl +
+          "&bn=" + encodeURIComponent(data.brandName);
+        if (data.isZhiPeiVipPay == 1 && _this.vinQueryPower == false) {
+          _this.goPay()
+
+        } else {
           _this.count(data.brandId)
           _this.GotoCjmlVinPage(); //记录跳转超级目录
           setTimeout(function () {
@@ -478,8 +521,6 @@
               }, function (response) {});
             });
           }, 50);
-        } else {
-          _this.goPay()
         }
       },
 
@@ -489,44 +530,55 @@
         // var baseUrl = window.location.protocol + "//" + window.location.host + "/internantionPayment.html?cf=1&backurl=" +encodeURIComponent(window.location.href);
         var baseUrl = window.location.protocol + "//" + window.location.host + "/internantionPayment.html?cf=1";
         window.location.href = baseUrl;
-        _this.needShowAdvert =!this.needShowAdvert
-         _this.needShowAdvert =!this.needShowAdvert
-         _this.iswait=false;
-         _this.waitmask = false;
+        _this.needShowAdvert = !this.needShowAdvert
+        _this.needShowAdvert = !this.needShowAdvert
+        _this.iswait = false;
+        _this.waitmask = false;
         _this.isShowAdvertLeftTime = false;
         clearInterval(this.timer)
       },
-      brandChoice(type){
+      brandChoice(type) {
         var _this = this;
-        // var baseUrl = window.location.protocol + "//" + window.location.host + "/internantionPayment.html?cf=1&backurl=" +encodeURIComponent(window.location.href);
-        if(type==1){
-          if(this.userType==2){
-            var baseUrl = window.location.protocol + "//" + window.location.host + "/vendorsConcer.html?cf=1";
-          }else {
+
+        if (type == 1) {
+          //添加品牌
+          if (this.userType == 2) {
+            //修理厂则前往关注品牌页
+            this.setupWebViewJavascriptBridge(function (bridge) {
+              bridge.callHandler('native_JumpUrl', {
+                url: window.location.protocol + "//" + window.location.host + "/vendorsConcer.html?cf=1"
+              }, function (response) {})
+            })
+          } else {
+            //经销商/厂商则前往品牌筛选页
             var baseUrl = window.location.protocol + "//" + window.location.host + "/brandChoice.html";
+            window.location.href = baseUrl;
           }
-          
-        }else {
+        }else if(type==3){
+          var baseUrl = window.location.protocol + "//" + window.location.host + "/brandChoice.html#/info?mode=5";
+          window.location.href = baseUrl;
+        } else {
+          //国际品牌
           var baseUrl = window.location.protocol + "//" + window.location.host + "/brandChoice.html#/info?mode=2";
+          window.location.href = baseUrl;
         }
-        window.location.href = baseUrl;
-        _this.needShowAdvert =!this.needShowAdvert
-         _this.needShowAdvert =!this.needShowAdvert
-         _this.iswait=false;
-         _this.waitmask = false;
+        _this.needShowAdvert = !this.needShowAdvert
+        _this.needShowAdvert = !this.needShowAdvert
+        _this.iswait = false;
+        _this.waitmask = false;
         _this.isShowAdvertLeftTime = false;
         clearInterval(this.timer)
       },
-      count(data) {
+      count(brandId) {
         var _this = this;
         _this.ajax({
           method: "POST",
-          url: resourceUrl + "/Common/SeeVinDetailLog",
+          url: resourceUrl + "/Common/SeeCatalogLog",
           dataType: "JSON",
           data: {
             vinCode: _this.vinCode,
             sourceType: 1,
-            bid: data
+            bid: brandId
           },
           success: function () {
 
@@ -571,8 +623,10 @@
     left: 0;
     z-index: 3;
   }
-  .es-followBrandBox ul li>span.fc-buttonAdd>a.selected{
+
+  .es-followBrandBox ul li>span.fc-buttonAdd>a.selected {
     background: #eee;
     color: #999;
   }
+
 </style>

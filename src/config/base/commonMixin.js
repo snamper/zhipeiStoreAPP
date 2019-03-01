@@ -553,6 +553,7 @@ var commonMixin = {
         favoriteGuided: 0, //是否已引导车主收藏(1是0否)
         payGuided: 1, //是否已引导保养记录付款(1是0否)
         scoreOpenGuideCount: 2, //引导开启积分次数
+        addBrandGuidance:3 //添加品牌引导层
       }
 
       var cookieName = "CJML.APP.Intellip.Client.BehaviorRecorder";

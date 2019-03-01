@@ -1,79 +1,68 @@
 <template>
   <div class="vendorsConcer" ref="mainBox">
-    <!-- <headers title="关注的智能产品目录" v-if="jumpType!=0"></headers> -->
-    <!-- <div class="pageMain pageMargin" :style="jumpType!=0?'':'padding:0;padding-bottom:1.28rem;'"> -->
     <div class="pageMain pageMargin" style="padding:0;padding-bottom:1.28rem;">
-      <!-- 最近删除 -->
-      <div class="cg-recycleBinBox" v-show="delCount>0" @click="toRecycleBin">
-        <span class="cg-recycleBinIcon"></span>
-        <p>最近删除</p>
-        <span class="cg-number">{{delCount}}</span>
+
+      <!--搜索 只有修理厂才有-->
+      <div class="fd-followSearchBox" style="position: fixed; top: 0; left: 0; z-index: 10;" v-if="userRule==2">
+        <div class="fc-brandChoiceSeach">
+          <div class="fc-brandChoiceSeachLeft" :class="{'fd-brandChoiceSeachLeftTrigger': page_mode==1}">
+            <span></span>
+            <input type="" name="" placeholder="请输入厂商品牌名称" v-model="searchKey" @input="on_searchKey_input" @click="on_searchKey_click">
+            <a class="fc-emptyButton" v-show="searchKey.length>0" @click="on_clearSearchKey_click"></a>
+          </div>
+          <div class="fc-brandChoiceSeachRight" v-show="page_mode==1">
+            <a @click="on_cancelSearchMode_click">取消</a>
+          </div>
+        </div>
       </div>
 
-      <!-- 搜索 -->
-      <div :class="'aa-chooseBox ca-choose ca-followSearchBox'"
-        v-if="userRule==2 && isEdit==false">
-        <p>搜索查找厂商智能目录</p>
-        <ul :class="'ca-chooseBox'">
-          <li class="ca-followCatalogNodataText">
-            <!-- 点击时的输入框样式  当所有的厂商目录都关注完成之后，“搜索查找厂商智能目录”模块去掉-->
-            <p class="ca-followInput">
-              <input type="" name="" v-model="CatalogName" placeholder="请输入厂商品牌名称">
-              <a class="fc-followCancelButton" @click="cancelSearch">取消</a>
-              <a class="ca-followInputButton" @click="searchCatalog">搜索</a>
-            </p>
-            <!-- 有结果的时候 -->
-            <div class="ca-followSearchResult" v-for="(oneBrand,index) in getCatalogBrands" @click="oneBrand.isSelect==1?goStoreList(oneBrand.domain,oneBrand):''">
-              <span class="ca-followSearchPic">
-                <img v-if="oneBrand.brandLogo" :src="oneBrand.brandLogo">
-                <img v-else src="../../assets/images/vendorsConcer/storeLogo.png" alt="">
-                </span>
-              <span class="ca-followSearchName">{{oneBrand.brandName}}</span>
-              <span class="ca-followSearchName">{{oneBrand.brandModelName}}</span>
-              <a v-if="oneBrand.isSelect==0" @click="followOneBrand(oneBrand)">关注</a>
-              <span v-if="oneBrand.isSelect==1" class="ca-followAlready">已关注</span>
-            </div>
-            <!-- 报错 -->
-            <div class="ca-followSearchError" v-if="getCatalogBrands.length==0 && isSearchResult">该品牌尚未收录，敬请期待</div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- 常用目录  -->
-      <div class="aa-chooseBox ca-choose">
-        <p v-show="brandIdInfoUse!='' || brandIdInfoNoUse!=''">常用目录
-          <a v-on:click="isEdit=true;" v-if="!isEdit&&jumpType==0">编辑</a>
-          <a v-on:click="isEdit=false;" v-if="isEdit&&jumpType==0">完成</a>
-        </p>
-        <ul class="aa-followCatalog  " :class="isEdit?'by-followShop':''" v-if="brandIdInfoUse!=''">
-          <li v-for="(item,index) in brandIdInfoUse" v-on:click="goStoreList(item.brandUrl,item)">
-            <span v-if="isEdit" class="by-choiceBox" v-bind:class="buildElementClass(item)" v-on:click="checkSelect($event,item)"></span>
+      <div class="aa-chooseBox ca-choose" style="margin-top: 1.12rem" v-if="searchResult.length>0">
+        <ul class="aa-followCatalog">
+          <li v-for="(oneBrand,index) in searchResult">
+            <span class="by-choiceBox"></span>
             <span class="aa-shopPic">
-              <img v-if="item.brandLogo" :src="item.brandLogo">
+              <img v-if="oneBrand.brandLogo" :src="oneBrand.brandLogo">
               <img v-else src="../../assets/images/vendorsConcer/storeLogo.png" alt="">
             </span>
+            <span class="fd-labelBox" v-show="oneBrand.isZhiPeiVipPay==1">VIP</span>
             <p class="aa-shopName ce-shopName">
-              <span>{{item.brandName}}<b>{{item.brandModelName}}</b></span>
+              <span>{{oneBrand.brandName}}<b>{{oneBrand.brandModelName}}</b></span>
             </p>
-            <!--<p class="aa-shopName aa-vendorsName"><span></span></p>-->
-            <span class="aa-inactiveBox aa-commonBox" v-on:click="setOftenUse($event,item.brandId,item.dataType)">常用</span>
-          </li>
-        </ul>
-        <ul class="aa-followCatalog  " :class="isEdit?'by-followShop':''" v-if="brandIdInfoNoUse!=''">
-          <li v-for="(item,index) in brandIdInfoNoUse" v-on:click="goStoreList(item.brandUrl,item)">
-            <span v-if="isEdit" class="by-choiceBox" v-bind:class="buildElementClass(item)" @click="checkSelect($event,item)"></span>
-            <span class="aa-shopPic"><img :src="item.brandLogo"></span>
-            <p class="aa-shopName ce-shopName">
-              <span>{{item.brandName}}<b>{{item.brandModelName}}</b></span>
-            </p>
-            <!--<p class="aa-shopName aa-vendorsName">{{item.brandName}}</p>-->
-
-            <span class="aa-inactiveBox" v-on:click="setOftenUse($event,item.brandId,item.dataType)">常用</span>
+            <span class="fd-focusedButton" v-if="oneBrand.isSelect==1"><b>已添加</b></span>
+            <span class="fd-unfocusButton" v-if="oneBrand.isSelect==0" @click="on_followBrand_click(oneBrand)"><b>添加</b></span>
           </li>
         </ul>
       </div>
-      <!--无品牌时的展示 新版-->
-      <div class="ca-followCatalogNodate" v-if="brandIdInfoUse=='' && brandIdInfoNoUse==''">
+
+      <!--搜索无结果-->
+      <div class="ca-followSearchError" style="margin-top: 1.12rem" v-if="searchResult.length==0 && is_search_done">该品牌尚未收录，敬请期待</div>
+
+
+      <!--常用目录 -->
+      <div class="aa-chooseBox ca-choose" :style="{'margin-top': userRule==2?'1.12rem':'0'}" v-show="page_mode==0">
+        <p v-show="brandList.length>0">常用目录
+          <a v-on:click="is_edit_mode=true;" v-if="!is_edit_mode">编辑</a>
+          <a v-on:click="is_edit_mode=false;" v-if="is_edit_mode">完成</a>
+        </p>
+
+        <ul class="aa-followCatalog" :class="is_edit_mode?'by-followShop':''" v-if="brandList.length>0">
+          <li v-for="(oneBrand,index) in brandList" @click="on_gotoCjml_click(oneBrand.brandUrl,oneBrand)">
+            <span v-if="is_edit_mode" class="by-choiceBox" :class="oneBrand.selected?'bw-selected':''" @click="on_checkSelect_click($event,oneBrand)"></span>
+            <span class="aa-shopPic">
+              <img v-if="oneBrand.brandLogo" :src="oneBrand.brandLogo">
+              <img v-else src="../../assets/images/vendorsConcer/storeLogo.png" alt="">
+            </span>
+            <span class="fd-labelBox" v-show="oneBrand.isZhiPeiVipPay==1">VIP</span>
+            <p class="aa-shopName ce-shopName">
+              <span>{{oneBrand.brandName}}<b>{{oneBrand.brandModelName}}</b></span>
+            </p>
+            <span class="fd-topButton" v-show="index>0" v-on:click="setBrandTop($event,oneBrand.brandId)"><b>置顶</b></span>
+          </li>
+        </ul>
+      </div>
+
+      <!--无品牌时的展示-->
+      <div class="ca-followCatalogNodate" v-if="init_complete && brandList.length==0" v-show="page_mode==0">
         <ul>
           <li class="ca-followCatalogNodataTitle">公众号添加厂商智能目录</li>
           <li class="ca-followCatalogNodataText">
@@ -87,43 +76,16 @@
 
     </div>
 
-    <div class="foolButtonOne" v-show="(brandIdInfoUse!='' || brandIdInfoNoUse!='') && userRule==1">
-      <a v-on:click="shareVenApp(getBrandsCountData.todayFollowcount)" class="leftButton">查询更多智能产品目录</a>
+    <!-- 查询更多 只有经销商才有 -->
+    <div class="foolButtonOne" v-show="userRule==1">
+      <a v-on:click="on_findmore_click" class="leftButton">查询更多智能产品目录</a>
     </div>
 
-    <div class="foolButtonOne" v-show="isEdit&&(brandIdInfoUse!='' || brandIdInfoNoUse!='')">
-      <a v-on:click="isDeleteConcer()" class="leftButton">取消关注</a>
+    <!-- 编辑模式时的底部按钮 -->
+    <div class="foolButtonOne" v-show="is_edit_mode && brandList.length>0">
+      <a v-on:click="on_deleteConcer_click" class="leftButton">取消关注</a>
     </div>
 
-    <!-- toast提醒 关联数量达最大上限 -->
-    <div class="bj-toastBoxNumber" v-if="tostToplimit">您今天关联的次数已经达到上限<br>请明天再来吧！</div>
-
-    <!-- toast提醒 -->
-    <div class="ca-toastBox" v-if="isToastShow">关注成功</div>
-
-    <div class="by-confirmPop" v-show="isDeleteShow">
-      <div class="by-confirmPopBox">
-        <p>确认取消关注当前智能产品目录？</p>
-        <span>
-          <a v-on:click="isDeleteShow=false;" class="by-leftButton">取消</a>
-          <a v-on:click="deleteConcer()">确认</a>
-        </span>
-      </div>
-    </div>
-    <!--如何关联更多智能产品目录-->
-    <HowConcer v-if="concerVendorFlag" v-on:toParentHowConcer="getToParentHowConcer" howFlag="0"></HowConcer>
-    <!-- 分享APP提醒弹层 -->
-    <shareVenPop v-if="isShareVen" v-on:shareVenHide="shareVenHide" :shareInfo="shareData"></shareVenPop>
-    <!--pop坦层-->
-    <div class="ct-pop" v-show="stopNo">
-      <!-- 关注的智能目录中点击国际目录 -->
-      <div class="ct-popBox">
-        <span class="ct-picOne"></span>
-        <a @click="stopNo =false"></a>
-      </div>
-    </div>
-    <!--排队坦层-->
-    <customlayer ref="customlayer" v-on:Submit="Submit" v-on:tostep="tostep" v-on:hide="hide"></customlayer>
   </div>
 </template>
 
@@ -134,65 +96,39 @@
   import {
     Toast
   } from 'mint-ui';
-
   import {
     commonMixin
   } from '../../config/base/commonMixin.js';
-  import howConcer from '../../components/howConcer.vue';
-  import shareVenPop from '../../components/shareVenPop.vue';
-  import customlayer from "../../components/customlayer"
 
   var resourceUrl = process.env.apiDomain;
   export default {
     name: 'vendorsConcer',
     mixins: [commonMixin],
-    components: {
-      HowConcer: howConcer,
-      shareVenPop: shareVenPop,
-      customlayer: customlayer
-    },
+    components: {},
     data() {
       return {
-        brandIdInfoUse: ['1'],
-        brandIdInfoNoUse: ['2'],
-        urls: window.location.href,
-        concerVendorFlag: false,
-        isShareVen: false,
-        getBrandsCountData: [], //关联产品目录信息、次数
-        tostToplimit: false,
-        shareData: [],
-        userRule: 0,
-        isEdit: this.getQueryString('edit') ? true : false,
-        selectBrands: [],
-        selectBrandCout: 0,
-        isDeleteShow: false,
-        jumpType: this.getQueryString('type') ? this.getQueryString('type') : 0,
-
-        //搜索添加关注
-        CatalogName: "",
-        getCatalogBrands: [],
-        isSearchResult: false,
-        delCount: 0,
-        stopNo: false,
-        timeOut: null
+        init_complete: false, //初始化完成
+        page_mode: 0, //0:展示模式  1:搜索模式
+        brandList: [], //品牌集合
+        userRule: 0, //用户角色 1:经销商 2:修理厂 3:厂商
+        is_edit_mode: false, //是否在编辑模式
+        searchKey: "", //搜索关键字
+        searchResult: [], //搜索结果
+        is_search_done: false, //是否搜索结束
       }
     },
     created() {
       var _this = this;
-      _this.isInit();
       _this.setTitle('关注的智能产品目录');
       localStorage.setItem("vendorsHtml", window.location.href);
     },
     mounted() {
       var _this = this;
-      this.nativeLsitenBack();
+      this.nativeLsitenBack('native_CloseWebview');
       this.LoadComplete(function () {
-
         _this.setTitle('关注的智能产品目录');
-        _this.getDatas();
-        _this.getdeletedbrandsbyuid();
-        _this.getBrandsCount();
         _this.getUserInfo();
+        _this.getBrandsByUid();
       })
     },
     methods: {
@@ -211,21 +147,9 @@
           }
         });
       },
-      //获取当前登录用户    今日关联(产品目录)次数
-      getBrandsCount() {
-        var _this = this;
-        _this.ajax({
-          method: "POST",
-          url: resourceUrl + "/Common/GetBrandsCount",
-          dataType: "JSON",
-          success: function (data) {
-            if (data.Body !== null) {
-              _this.getBrandsCountData = data.Body;
-            }
-          }
-        });
-      },
-      getDatas() {
+
+      //取得用户关注品牌
+      getBrandsByUid() {
         var _this = this;
         _this.ajax({
           method: "POST",
@@ -235,91 +159,52 @@
             "dataType": 0, //全部关联品牌 0  常用品牌 2
           },
           success: function (data) {
+            _this.brandList = [];
             if (data.Body.length > 0) {
               data.Body.forEach(function (oItem, index) {
                 oItem.selected = false;
               });
             }
-            _this.getIsUseData(data.Body);
-          }
-        }, true);
-      },
-      //处理常用和不常用的数据
-      getIsUseData(data) {
-        var _this = this;
-        _this.brandIdInfoUse = [];
-        _this.brandIdInfoNoUse = [];
-        $.each(data, function (index, item) {
-          if (item.dataType == 2) {
-            _this.brandIdInfoUse.push(item);
-          } else {
-            _this.brandIdInfoNoUse.push(item);
-          }
-        });
-      },
-      //点击设置常用或不常用
-      setOftenUse(event, brandId, dataType) {
-        //阻止事件冒泡
-        event.stopPropagation();
-        var _this = this;
-        if (dataType == 1) {
-          _this.isConcer(brandId, dataType);
-        } else {
-          MessageBox.confirm('', {
-            message: '取消常用标记后，将不便查找该厂商目录<br/>确定取消常用标记吗？',
-            confirmButtonText: '是',
-            cancelButtonText: '否'
-          }).then(action => {
-            if (action == 'confirm') {
-              _this.isConcer(brandId, dataType);
-            }
-          }).catch(err => {
-            if (err == 'cancel') {}
-          });
-        }
-      },
-      isConcer(brandId, dataType) {
-        var _this = this;
-        _this.ajax({
-          method: "POST",
-          url: resourceUrl + "/UserCenter/RelationBrand",
-          dataType: "JSON",
-          data: {
-            "brandIds": brandId,
-          },
-          success: function (data) {
-            if (dataType == 1) {
-              var instance = Toast('关联成功');
-              setTimeout(() => {
-                instance.close();
-              }, 500);
-            };
-            _this.getDatas();
+            _this.init_complete = true;
+            _this.brandList = data.Body;
           }
         });
       },
 
-      //点击弹出如何关联的文案
-      showHowConcer() {
+      //设置置顶
+      setBrandTop(event, brandId) {
+        //阻止事件冒泡
+        event.stopPropagation();
         var _this = this;
-        _this.concerVendorFlag = true;
+        _this.ajax({
+          method: "POST",
+          url: resourceUrl + "/UserCenter/SortUserBrand",
+          dataType: "JSON",
+          data: {
+            brandId: brandId,
+          },
+          beforeSend: function () {},
+          complete: function () {},
+          success: function (data) {
+            _this.getBrandsByUid();
+          }
+        });
       },
-      //
-      getToParentHowConcer(data) {
-        var _this = this;
-        _this.concerVendorFlag = data;
-      },
-      //点击跳转到厂商H5
-      goStoreList(brandUrl, datas) {
+
+      //跳转到超级目录
+      on_gotoCjml_click(brandUrl, datas) {
         var _this = this;
         _this.checkIsVIP(function (isVip) {
           if (isVip) {
             //是VIP会员, 则跳转超级目录结果页
-            _this.count(datas.brandId)
-            var url = "//" + brandUrl + "/h5/#!/?appType=2&cf=1";
-            setTimeout(function () {
-              window.location.href = url;
-            }, 50);
+            _this.seeCatalogLog(datas.brandId)
+            
+            // _this.count(datas.brandId)
+            _this.setupWebViewJavascriptBridge(function (bridge) {
+              bridge.callHandler('native_JumpUrl', {
+                url: window.location.protocol + '//' + brandUrl + "/h5/#!/?appType=2&cf=1"
+              }, function (response) {});
+            });
           } else {
             //不是VIP会员, 则跳转付费页
             var jumpUrl = "//" + brandUrl + "/h5/#!/?appType=2&cf=1"
@@ -329,6 +214,7 @@
           }
         })
       },
+    
       //验证是否VIP
       checkIsVIP(callBack) {
         var _this = this;
@@ -336,6 +222,8 @@
           method: "POST",
           url: resourceUrl + "/UserCenter/IsVIP",
           dataType: "JSON",
+          beforeSend: function () {},
+          complete: function () {},
           success: function (str) {
             if (str.Header.ErrorCode == 0) {
               callBack(str.Body)
@@ -345,8 +233,8 @@
           }
         })
       },
-      //计数接口
-      count(data) {
+      //查看目录 统计日志
+      seeCatalogLog(data) {
         var _this = this;
         _this.ajax({
           method: "POST",
@@ -356,140 +244,119 @@
             sourceType: 2,
             bid: data
           },
-          success: function () {
-
-          }
+          beforeSend: function () {},
+          complete: function () {},
+          success: function () {}
         })
       },
-      shareVenApp(count) {
-        var _this = this;
-        window.location.href =  window.location.protocol + "//" + window.location.host + "/brandChoice.html";
+
+      on_searchKey_click() {
+        this.page_mode = 1;
+        this.is_edit_mode = false;
       },
-      // 获取分享传递的数据
-      shareVenHide(data) {
-        var _this = this;
-        _this.isShareVen = data;
-        _this.isShareVen = false;
+
+      on_findmore_click() {
+        window.location.href = window.location.protocol + "//" + window.location.host + "/brandChoice.html";
       },
+
+      on_clearSearchKey_click() {
+        this.searchKey = "";
+        this.searchBrand();
+      },
+
+      on_cancelSearchMode_click() {
+        this.page_mode = 0;
+        this.searchKey = "";
+        this.searchBrand();
+      },
+
       //选择要删除的目录
-      checkSelect(event, item) {
+      on_checkSelect_click(event, item) {
         //阻止事件冒泡
         event.stopPropagation();
-        var _this = this;
         item.selected = !item.selected;
-        if (item.selected) {
-          _this.selectBrands.push(item.brandId);
-        } else {
-          var index = _this.selectBrands.indexOf(item.brandId)
-          _this.selectBrands.splice(index, 1);
-        }
-        _this.selectBrandCout = _this.selectBrands.length;
       },
-      buildElementClass(item) {
-        if (item.selected) return "bw-selected";
-        return "";
-      },
-      isDeleteConcer() {
-        var _this = this;
-        if (_this.selectBrandCout > 0) {
-          _this.isDeleteShow = true;
 
+      getSelectedBrands() {
+        var result = [];
+        this.brandList.forEach(oneBrand => {
+          if (oneBrand.selected) result.push(oneBrand.brandId);
+        });
+        return result;
+      },
+
+      on_deleteConcer_click() {
+        var _this = this;
+        var selectedBrands = this.getSelectedBrands();
+        if (selectedBrands.length > 0) {
+          MessageBox.confirm('', {
+            title: '',
+            message: '确认取消关注当前智能产品目录？',
+            confirmButtonText: '确认',
+            cancelButtonText: '取消'
+          }).then(action => {
+            _this.deleteConcer(selectedBrands);
+          });
         } else {
           Toast("请选择要取消关注的品牌目录");
         }
       },
+
       //确认取消关注的目录
-      deleteConcer() {
+      deleteConcer(brands) {
         var _this = this;
-        _this.isDeleteShow = false;
         _this.ajax({
           method: "POST",
           url: resourceUrl + "/UserCenter/DeleteUserBrand",
           dataType: "JSON",
           data: {
-            "brandId": _this.selectBrands,
+            "brandId": brands,
           },
-          success: function (data) {
-            if (data.Body == 1) {
-
-              var url = window.location.protocol + "//" + window.location.host;
-              switch (_this.jumpType) {
-                case 0:
-                  _this.getDatas(); //刷新列表
-                  _this.getdeletedbrandsbyuid();
-
-                  _this.isEdit = false;
-                  _this.selectBrands = [];
-                  _this.selectBrandCout = 0;
-                  break;
-                case '1':
-                  //跳回修理厂询价下单页offerInquiryNew.vue，并刷新常用智能目录列表
-                  url += "/vinSearchResult.html?v=" + _this.getQueryString('v') + '&manageBack=1&cf=1';
-                  _this.setupWebViewJavascriptBridge(function (bridge) {
-                    bridge.callHandler('native_JumpUrl', {
-                      url: url
-                    }, function (response) {});
-                  });
-                  break;
-                case '2':
-                  //跳回厂商或经销商Vin码结果页，并刷新常用智能目录列表
-                  url += "/selectShop.html?v=" + _this.getQueryString('v') + '&cf=1&manageBack=1&r=' + Math.random();
-                  _this.setupWebViewJavascriptBridge(function (bridge) {
-                    bridge.callHandler('native_JumpUrl', {
-                      url: url
-                    }, function (response) {});
-                  });
-                  break;
-                case '3':
-                  url += "/selectShop.html?v=" + _this.getQueryString('v') + '&cf=1&manageBack=1&r=' + Math.random() + '#/manufacturerPage';
-                  _this.setupWebViewJavascriptBridge(function (bridge) {
-                    bridge.callHandler('native_JumpUrl', {
-                      url: url
-                    }, function (response) {});
-                  });
-                default:
-                  break;
-              }
-            } else {
-              Toast(data.Header.Message);
+          success: function (res) {
+            if (res.Header.ErrorCode != 0) {
+              Toast(res.Header.Message);
+              return;
             }
+
+            _this.is_edit_mode = false;
+            _this.getBrandsByUid();
           }
         });
       },
-      //取消搜索
-      cancelSearch() {
-        var _this = this;
-        _this.isSearchResult = false;
-        _this.getCatalogBrands = [];
+
+      on_searchKey_input() {
+        this.searchBrand();
       },
 
-      //搜索
-      searchCatalog() {
+      //搜索品牌
+      searchBrand() {
         var _this = this;
-        _this.CatalogName = _this.CatalogName.replace(/[ ]/g, "");
-        if (_this.CatalogName.length > 0) {
-          _this.ajax({
-            method: "POST",
-            url: resourceUrl + "/Common/GetCJMLBrandByName",
-            dataType: "JSON",
-            data: {
-              "brandName": _this.CatalogName,
-            },
-            success: function (res) {
-              if (res.Header.ErrorCode != 0) {
-                Toast(res.Header.Message);
-                return;
-              }
-              _this.isSearchResult = true;
-              _this.getCatalogBrands = res.Body.brands || [];
-            }
-          });
-        } else {
-          Toast("请输入厂商品牌关键字");
+        this.searchKey = this.searchKey.replace(/[ ]/g, "");
+        if (this.searchKey.length == 0) {
+          _this.is_search_done = false;
+          _this.searchResult = [];
+          return;
         }
+        //执行搜索
+        _this.ajax({
+          method: "POST",
+          url: resourceUrl + "/Common/GetCJMLBrandByName",
+          dataType: "JSON",
+          data: {
+            "brandName": _this.searchKey,
+          },
+          success: function (res) {
+            if (res.Header.ErrorCode != 0) {
+              Toast(res.Header.Message);
+              return;
+            }
+            _this.is_search_done = true;
+            _this.searchResult = res.Body.brands || [];
+          }
+        });
       },
 
-      followOneBrand(oneBrand) {
+      on_followBrand_click(oneBrand) {
         var _this = this;
         _this.ajax({
           method: "POST",
@@ -500,82 +367,13 @@
           },
           success: function (data) {
             if (data.Body) {
-              //刷新列表
-              _this.getDatas();
+              _this.getBrandsByUid();
               oneBrand.isSelect = 1;
-              Toast("关注成功");
+              Toast("添加成功");
             }
           }
         });
       },
-      //获取回收站品牌列表
-      getdeletedbrandsbyuid() {
-        var _this = this;
-        _this.ajax({
-          method: "POST",
-          url: resourceUrl + "/UserCenter/GetDeletedBrandsByUid",
-          dataType: "JSON",
-          success: function (data) {
-            _this.delCount = data.Body.length;
-
-          }
-        });
-
-      },
-      //跳到最近删除页面
-      toRecycleBin() {
-        var _this = this;
-
-        // 目前是测试
-
-        // var hostUrl = window.location.protocol + '//' + window.location.hostname +':'+ window.location.port+'/recycleBin.html'
-
-
-        var url = window.location.protocol + "//" + window.location.host + "/recycleBin.html?backurl=native_CloseWebview&cf=1";
-        window.location.href = url;
-        // _this.setupWebViewJavascriptBridge(function(bridge) {
-        //     bridge.callHandler('native_JumpUrl', {url:url}, function(response) {
-        //     });
-        // });
-
-      },
-      Submit(brandUrl, type, brandName, brandId) {
-
-        var _this = this;
-        _this.ajax({
-          method: "POST",
-          url: resourceUrl + '/DistributorTask/UsePrivilege',
-          dataType: "JSON",
-          success: function () {}
-        })
-
-        clearTimeout(_this.timeOut);
-        _this.$refs.customlayer.hide();
-        //计数
-        _this.count(brandId)
-        var url = "//" + brandUrl + "/h5/#!/?appType=2&cf=1";
-        setTimeout(function () {
-          window.location.href = url;
-        }, 50);
-
-      },
-      tostep() {
-        var _this = this;
-        clearTimeout(_this.timeOut);
-        _this.$refs.customlayer.hide();
-        var baseUrl = window.location.protocol + '//' + window.location.host + "/step.html?backurl=native_CloseWebview";
-        this.setupWebViewJavascriptBridge(function (bridge) {
-          bridge.callHandler('native_JumpUrl', {
-            url: baseUrl
-          }, function (response) {})
-        })
-
-      },
-      hide() {
-        var _this = this;
-        clearTimeout(_this.timeOut);
-      }
-
     }
   }
 
@@ -683,6 +481,204 @@
     color: #fff;
     float: left;
     clear: none;
+  }
+
+  .aa-followCatalog li {
+    padding-right: 1.76rem;
+  }
+
+  .aa-followCatalog li span.fd-topButton {
+    width: 1.44rem;
+    height: .72rem;
+    border: 1px solid #d53533;
+    border-radius: .16rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: center;
+    color: #e74c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: .32rem;
+    top: .34rem;
+  }
+
+  .aa-followCatalog li span.fd-topButton>b {
+    padding-left: .4rem;
+    background: #fff url(../../assets/images/icon_top.png) no-repeat left center;
+    background-size: .28rem;
+    font-weight: normal;
+  }
+
+  .aa-followCatalog li span.fd-focusedButton {
+    width: 1.44rem;
+    height: .72rem;
+    border: 1px solid #e8e8e8;
+    background: #e8e8e8;
+    border-radius: .16rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: center;
+    color: #acacac;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    right: .32rem;
+    top: .34rem;
+  }
+
+  .aa-followCatalog li span.fd-focusedButton>b {
+    font-weight: normal;
+  }
+
+  .aa-followCatalog li span.fd-unfocusButton {
+    width: 1.44rem;
+    height: .72rem;
+    border: 1px solid #d53533;
+    border-radius: .16rem;
+    font-size: .32rem;
+    line-height: .64rem;
+    text-align: center;
+    color: #e74c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: .32rem;
+    top: .34rem;
+  }
+
+  .aa-followCatalog li span.fd-unfocusButton>b {
+    font-weight: normal;
+  }
+
+  .aa-followCatalog li span.fd-labelBox {
+    width: auto;
+    height: .44rem;
+    padding: 0 .08rem;
+    background: url(../../assets/images/label_purchase.png) no-repeat top center;
+    background-size: 100% .44rem;
+    font-size: .28rem;
+    line-height: .36rem;
+    text-align: center;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: .16rem;
+    z-index: 3;
+  }
+
+  .aa-chooseBox .by-followShop li span.fd-labelBox {
+    left: .96rem;
+  }
+
+  /*20190227关注的品牌搜索框*/
+  .fd-followSearchBox {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    float: left;
+    clear: left;
+  }
+
+  .fc-brandChoiceSeach {
+    width: 100%;
+    background: #d53533;
+    padding: 0 .4rem .32rem;
+    float: left;
+    clear: left;
+  }
+
+  .fc-brandChoiceSeachLeft {
+    width: 100%;
+    height: .8rem;
+    padding: .12rem 0;
+    background: #fff;
+    border-radius: .4rem;
+    overflow: hidden;
+    float: left;
+    clear: left;
+  }
+
+  .fc-brandChoiceSeachLeft>span {
+    width: .8rem;
+    height: .56rem;
+    background: url(../../assets/images/icon_seachGrayFollow.png) no-repeat center center;
+    background-size: .36rem;
+    border-radius: .4rem;
+    float: left;
+    clear: none;
+  }
+
+  .fc-brandChoiceSeachLeft>input {
+    width: 5.16rem;
+    height: .56rem;
+    border: 0;
+    font-size: .4rem;
+    line-height: .56rem;
+    text-align: left;
+    color: #282828;
+    float: left;
+    clear: none;
+  }
+
+  .fc-brandChoiceSeachLeft>input::-webkit-input-placeholder {
+    font-size: .36rem;
+    color: #ccc;
+  }
+
+  .fc-brandChoiceSeachLeft>a {
+    width: auto;
+    height: .56rem;
+    float: right;
+    clear: none;
+  }
+
+  .fc-brandChoiceSeachLeft>a.fc-emptyButton {
+    width: .8rem;
+    background: url(../../assets/images/icon_emptyGray.png) no-repeat center center;
+    background-size: .48rem;
+  }
+
+  .fc-brandChoiceSeachLeft>a.fc-searchButton {
+    width: auto;
+    padding: 0 .16rem;
+    margin-right: .2rem;
+    font-size: .36rem;
+    line-height: .56rem;
+    text-align: center;
+    color: #e74c3c;
+  }
+
+  .fc-brandChoiceSeachRight {
+    width: .8rem;
+    height: .8rem;
+    float: right;
+    clear: none;
+  }
+
+  .fc-brandChoiceSeachRight>a {
+    width: .8rem;
+    height: .8rem;
+    font-size: .36rem;
+    line-height: .8rem;
+    text-align: center;
+    color: #fff;
+    float: left;
+    clear: none;
+  }
+
+  .fd-brandChoiceSeachLeftTrigger {
+    width: 8rem;
   }
 
 </style>

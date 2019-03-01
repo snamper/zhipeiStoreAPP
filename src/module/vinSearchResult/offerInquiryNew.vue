@@ -466,7 +466,8 @@
         isFirstMainRecord: false, //是否第一次着陆过保养记录页
         listData: [],
         vinQueryPower: true, //用户有无查看目录权限
-        newBrandText:'' //智能新收录文案
+        newBrandText:'', //智能新收录文案
+        SeeVinDetailLogIndex:0  //第一次展开车型详情
       };
     },
     created() {
@@ -779,7 +780,7 @@
         })
       },
       tonextPage(){
-        this.$refs.internationalBrand.brandChoice(1);
+        this.$refs.internationalBrand.brandChoice(3);
       },
       //分享回调函数
       onShareFriendsNo3_callbackshore() {
@@ -1674,8 +1675,7 @@
       goCjmlPage(brandUrl, type, brandName, datas) {
         var _this = this;
         _this.SeeVinDetailLog(datas.brandId); //系统计数
-        var url = window.location.protocol + "//" + window.location.hostname + "/cjml/h5/#!/vin?cf=1&v=" + _this.vinCode + "&appType=" + type +
-          "&td=" + brandUrl + "&bn=" + encodeURIComponent(brandName);
+        var url = window.location.protocol + "//" + window.location.hostname + "/cjml/h5/#!/vin?cf=1&v=" + _this.vinCode + "&appType=2&td=" + brandUrl + "&bn=" + encodeURIComponent(brandName);
 
         _this.GotoCjmlVinPage(); //记录跳转超级目录
 
@@ -1786,15 +1786,35 @@
             _this.isShowView = false;
             _this.$refs.carStateInfo.hide();
             _this.ModalHelper.beforeClose();
+
+             _this.SeeVinDetailLogIndex++
           } else {
             _this.isShowView = true;
             _this.$refs.carStateInfo.show();
             _this.ModalHelper.afterOpen();
-            _this.ViewVinDetail();
+            // _this.ViewVinDetail();
+            if(_this.SeeVinDetailLogIndex<1){
+              _this.SeeVinDetailLogCount();
+            }
+
           }
           $(event.currentTarget).toggleClass("bw-carInfoBox");
         }
 
+      },
+      SeeVinDetailLogCount(){
+        var _this = this;
+        _this.ajax({
+          method: "POST",
+          url: resourceUrl + "/Common/SeeVinDetailLog",
+          dataType: "JSON",
+          data: {
+            vinCode: _this.vinCode,
+          },
+          success: function () {
+
+          }
+        })
       },
       //点击展示更多厂商目录
       showMoreVendor(data) {

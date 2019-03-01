@@ -311,7 +311,7 @@
 
             selected(brandUrl, type, brandName) {
 				var _this = this;
-				var url = window.location.protocol + '//' + window.location.hostname + '/cjml/h5/#!/vin?cf=1&v=' + this.vin + '&appType=' + type + '&td=' + brandUrl + '&bn=' + encodeURIComponent(brandName);
+				var url = window.location.protocol + '//' + window.location.hostname + '/cjml/h5/#!/vin?cf=1&v=' + this.vin + '&appType=2&td=' + brandUrl + '&bn=' + encodeURIComponent(brandName);
                 setTimeout(function() {
 					_this.setupWebViewJavascriptBridge(function(bridge) {
 						bridge.callHandler('native_JumpUrl', {

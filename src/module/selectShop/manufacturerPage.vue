@@ -1,7 +1,8 @@
 <template>
   <div class="vinResultPage" v-show="initFlag">
     <!--车型品牌信息-->
-    <div class="aa-carBox " v-on:click="seeCarParams()" style="margin-top:0;">
+    <div class="aa-carBox " v-on:click="seeCarParams()" style="margin-top:0;position: fixed;
+    z-index: 8;">
       <div class="aa-carPic">
         <img :src="autoBrandLogo">
       </div>
@@ -14,105 +15,45 @@
       </div>
       <carStateInfo ref="carStateInfo" style="top:1.78rem"></carStateInfo>
     </div>
+    <div style="padding-top:1.9rem"> 
 
-    <!-- 扫码结果通栏广告-->
-    <bannerAdvert ref="bannerAdvert"></bannerAdvert>
+        <!-- 扫码结果通栏广告-->
+      <bannerAdvert ref="bannerAdvert"></bannerAdvert>
 
-    <!--查看智能厂商目录-->
-   <!-- <div class="ec-modularBox">
-      <div class="ec-modularTitle">
-        <p>智能产品目录</p>
-        <div class="ec-modularTitleRight">
-          &lt;!&ndash;<a v-on:click="shareVenApp(getBrandsCountData.todayFollowcount)">添加目录</a>&ndash;&gt;
-          <a @click="goJumpPage('vendorsConcer',2)">管理</a>
-        </div>
-      </div>-->
-      <!--<p>智能产品目录
-        <a @click="goJumpPage('vendorsConcer',2)">管理</a>
-        &lt;!&ndash; <a v-on:click="showMoreVendor()" v-show="getshopbyuidData!=''&&allBrandLogos!=''&&allBrandLogos.length>8">更多</a> &ndash;&gt;
-      </p>-->
-    <!--  <ul class="aa-brandChoose cc-brandChoose">
-        <li v-for="(item,index) in allBrandLogos" @click="selected(item.brandUrl,item.dataType,item.brandName,item)" v-show="index<7">
-          <div class="cd-brandBox cd-bigBrandBox">
-            <span v-show="item.isFamousBrand==0">
-              <img :src="item.brandLogo">
-            </span>
-            <p>{{item.viewBrandName}}</p>
-          </div>
+      <div class="fc-newIncludedBrands" style="margin-bottom:0;margin: 0rem .4rem 0 .4rem;
+      width: 92%;" v-show="newBrandText">
+        <span>{{newBrandText}}</span>
+        <a @click="tonextPage">查看详情</a>
+      </div>
+      <internationalBrand ref="internationalBrand" v-bind:userType="userRule" v-bind:vinCode="vin" v-on:showMoreVendor="showMoreVendor" v-on:goCjmlPage="selected"></internationalBrand>
 
-        </li>
-        <li v-on:click="showMoreVendor()" v-show="allBrandLogos!=''&&allBrandLogos.length>7">
-          <img src="../../assets/images/icon_more.png">
-        </li>
-      </ul>-->
-      <div class="fc-newIncludedBrands" style="margin-bottom:0" v-show="newBrandText">
-          <span>{{newBrandText}}</span>
-          <a @click="tonextPage">查看详情</a>
-        </div>
-      <internationalBrand
-        ref="internationalBrand"
-        v-bind:userType="userRule"
-        v-bind:vinCode="vin"
-        v-on:showMoreVendor="showMoreVendor"
-        v-on:goCjmlPage="selected"
-      ></internationalBrand>
-    <!--</div>-->
-    <!--无品牌时的展示-->
-    <!--<div class="noConcerFactory" v-show="userRule!=2&&noDatashow==false && getshopbyuidData==''&&allBrandLogos==''" >-->
-    <!--<div class="noConcerImg">-->
-    <!--<span></span>-->
-    <!--</div>-->
-    <!--<div class="noConcerText">-->
-    <!--<span>您未关联任何一个品牌厂商智能目录-->
-    <!--<br />无法适配扫码结果</span>-->
-    <!--</div>-->
-    <!--<div class="noConcerGoUrl">-->
-    <!--<fieldset>-->
-    <!--<legend>如何关联品牌厂商智能目录？</legend>-->
-    <!--<div class="showProgess">-->
-    <!--<p>第一步：进入品牌厂商微信公众号</p>-->
-    <!--<p>第二步：点击底部菜单"产品目录/产品查询"进入智能目录页面 </p>-->
-    <!--<p>第三步：点击右上角-->
-    <!--<b></b>图标，用手机号进行注册</p>-->
-    <!--<p>第四步：返回扫码APP"智配Store"进行操作</p>-->
-    <!--</div>-->
-    <!--</fieldset>-->
-    <!--</div>-->
+      <!--</div>-->
+      <!--更多门店的展示-->
+      <MoreShop v-if="moreShopFlag" v-on:toParentHideFlag="getToParentHideFlag" v-bind:getshopbyuidData="getshopbyuidData"></MoreShop>
+      <!--更多厂商目录的展示-->
+      <MoreVendor v-if="moreVendorFlag" v-on:toParentVenFlag="getToParentVenFlag" v-bind:allBrandLogos="allBrandLogos"></MoreVendor>
+      <!--点击查看详情-->
+      <SeeDetails v-if="showDetails" v-on:hideDetails="getHideDetails" v-bind:parentData="parentData"></SeeDetails>
+      <!--查看图片的组件-->
+      <photowipe v-bind:list="maxslideImg" ref="photowipe" v-bind:options="options"></photowipe>
+      <!-- 分享APP -->
+      <shareFriends v-if="sharePop" v-on:shareFriendsHide="shareFriendsHide" v-bind:shareFlag="1" v-bind:shareData="userId"></shareFriends>
 
-    <!--</div>-->
-    <!--无数据时的展示-->
-    <!--<div class="isNodata" v-show="userRule!=2&&noDatashow&&getshopbyuidData==''&&allBrandLogos==''">-->
-    <!--<div></div>-->
-    <!--<p class="tits">暂未解析出车型数据</p>-->
-    <!--<p>识别结果可能有误，请仔细核对识别结果与图片数据是否一致</p>-->
-    <!--</div>-->
-
-    <!--国际品牌-->
-    <!--<div class="dg-international" style="padding-bottom: 1.2rem">-->
-      <!--<span>-->
-      <!--<a v-for="(item,index) in listguoji" :key="item.brandId" @click="selected(item.brandUrl,item.dataType,item.brandName,item)">{{item.brandName}}</a>-->
-      <!--</span>-->
-
-    <!--</div>-->
-    <!--更多门店的展示-->
-    <MoreShop v-if="moreShopFlag" v-on:toParentHideFlag="getToParentHideFlag" v-bind:getshopbyuidData="getshopbyuidData"></MoreShop>
-    <!--更多厂商目录的展示-->
-    <MoreVendor v-if="moreVendorFlag" v-on:toParentVenFlag="getToParentVenFlag" v-bind:allBrandLogos="allBrandLogos"></MoreVendor>
-    <!--点击查看详情-->
-    <SeeDetails v-if="showDetails" v-on:hideDetails="getHideDetails" v-bind:parentData="parentData"></SeeDetails>
-    <!--查看图片的组件-->
-    <photowipe v-bind:list="maxslideImg" ref="photowipe" v-bind:options="options"></photowipe>
-    <!-- 分享APP -->
-    <shareFriends v-if="sharePop" v-on:shareFriendsHide="shareFriendsHide" v-bind:shareFlag="1" v-bind:shareData="userId"></shareFriends>
-
-    <!-- 分享APP提醒弹层 -->
-    <shareVenPop v-if="isShareVen" v-on:shareVenHide="shareVenHide" :shareInfo="shareData"></shareVenPop>
+      <!-- 分享APP提醒弹层 -->
+      <shareVenPop v-if="isShareVen" v-on:shareVenHide="shareVenHide" :shareInfo="shareData"></shareVenPop>
 
 
-    <!--扫码结果浮层广告-->
-    <floatingAdvert ref="floatingAdvert"></floatingAdvert>
-    <!--排队坦层-->
-    <customlayer ref="customlayer" v-on:Submit="Submit" v-on:tostep="tostep" v-on:hide="hide"></customlayer>
+      <!--扫码结果浮层广告-->
+      <floatingAdvert ref="floatingAdvert"></floatingAdvert>
+      <!--排队坦层-->
+      <customlayer ref="customlayer" v-on:Submit="Submit" v-on:tostep="tostep" v-on:hide="hide"></customlayer>
+    </div>
+    
+
+
+
+
+    
 
   </div>
 
@@ -158,7 +99,7 @@
     },
     data() {
       return {
-        vinQueryPower:true,
+        vinQueryPower: true,
         initFlag: false,
         allBrandLogos: [],
         vinJYData: [],
@@ -202,7 +143,7 @@
         // 下面两个是看图需要的参数
         maxslideImg: [],
         isShowView: true,
-        ModalHelper:null,
+        ModalHelper: null,
         options: {
           getThumbBoundsFn(index) {
             var thumbnail = document.querySelectorAll('.action_carimg')[0];
@@ -223,13 +164,14 @@
         applyShow: false,
         remainDays: 0,
         notice: false,
-        carDetailPower:true, //判断用户有无查看详情权限的
-        newBrandText:'' //智能新收录文案
+        carDetailPower: true, //判断用户有无查看详情权限的
+        newBrandText: '', //智能新收录文案
+        SeeVinDetailLogIndex:0 //第一次展开车型详情
       }
     },
     methods: {
-      tonextPage(){
-        this.$refs.internationalBrand.brandChoice(1);
+      tonextPage() {
+        this.$refs.internationalBrand.brandChoice(3);
       },
       //获取国际品牌
       GetCjmlVinQueryPowerDetail() {
@@ -242,7 +184,7 @@
           dataType: "JSON",
           success: function (data) {
             if (data.Header.ErrorCode == 0) {
-               _this.newBrandText = data.Body.newBrandText
+              _this.newBrandText = data.Body.newBrandText
               // data.Body.vinQueryPower=true;
               _this.vinQueryPower = data.Body.vinQueryPower
               // _this.vinQueryPower = true;
@@ -266,8 +208,10 @@
               _this.userId = data.Body.appUserId;
               _this.userRule = data.Body.userRule;
               _this.mobile = data.Body.mobile;
-              if (data.Body.realName != '' && data.Body.companyName != '' && data.Body.companyAddress != '') {
 
+              _this.$refs.internationalBrand.reactiveUserType(_this.userRule); //重新激活用户类型
+
+              if (data.Body.realName != '' && data.Body.companyName != '' && data.Body.companyAddress != '') {
                 _this.isPerfectInfo = true;
               }
             }
@@ -377,7 +321,7 @@
         if (window.location.href.indexOf('/selectShop') != -1) {
           goUrl = window.location.href.split('/selectShop')[0];
         };
-        var url = goUrl + '/cjml/h5/#!/vin?cf=1&v=' + _this.vin + '&appType=' + type + '&td=' + brandUrl + '&bn=' + encodeURIComponent(
+        var url = goUrl + '/cjml/h5/#!/vin?cf=1&v=' + _this.vin + '&appType=2&td=' + brandUrl + '&bn=' + encodeURIComponent(
           brandName);
         _this.GotoCjmlVinPage(); //记录跳转超级目录
         setTimeout(function () {
@@ -472,7 +416,7 @@
         if (window.location.href.indexOf('/selectShop') != -1) {
           goUrl = window.location.href.split('/selectShop')[0];
         };
-        var url = goUrl + '/cjml/h5/#!/vin?cf=1&v=' + _this.vin + '&appType=' + type + '&td=' + brandUrl + '&bn=' + encodeURIComponent(brandName);
+        var url = goUrl + '/cjml/h5/#!/vin?cf=1&v=' + _this.vin + '&appType=2&td=' + brandUrl + '&bn=' + encodeURIComponent(brandName);
 
         setTimeout(function () {
           _this.setupWebViewJavascriptBridge(function (bridge) {
@@ -519,26 +463,26 @@
         var _this = this;
         clearTimeout(_this.timeOut);
       },
-     /* getDatas(postUrl, postData) {
-        var _this = this;
-        _this.ajax({
-          method: "POST",
-          url: postUrl,
-          dataType: "JSON",
-          data: postData,
-          async: false,
-          success: function (data) {
-            if (data.Body == "" && _this.brandIdData != null) {
+      /* getDatas(postUrl, postData) {
+         var _this = this;
+         _this.ajax({
+           method: "POST",
+           url: postUrl,
+           dataType: "JSON",
+           data: postData,
+           async: false,
+           success: function (data) {
+             if (data.Body == "" && _this.brandIdData != null) {
 
-              _this.showBrandId = true;
-            } else {
+               _this.showBrandId = true;
+             } else {
 
-              _this.allBrandLogos = data.Body;
-              _this.$refs.internationalBrand.setBrandLogovalue(_this.allBrandLogos);
-            }
-          }
-        });
-      },*/
+               _this.allBrandLogos = data.Body;
+               _this.$refs.internationalBrand.setBrandLogovalue(_this.allBrandLogos);
+             }
+           }
+         });
+       },*/
       getVinData(postUrl, postData) {
         var _this = this;
         _this.ajax({
@@ -636,32 +580,50 @@
         event.stopPropagation();
         var _this = this;
         _this.$refs.carStateInfo.setValue(_this.vinJYData);
-        if(_this.carDetailPower){
-          if(_this.isShowView==true){
-            _this.isShowView=false;
+        if (_this.carDetailPower) {
+          if (_this.isShowView == true) {
+            _this.isShowView = false;
             _this.$refs.carStateInfo.show();
+            if(_this.SeeVinDetailLogIndex<1){
+              _this.SeeVinDetailLogCount();
+            }
             // _this.ModalHelper.afterOpen();
-          }else {
-            _this.isShowView=true
+          } else {
+            _this.isShowView = true
             _this.$refs.carStateInfo.hide();
+             _this.SeeVinDetailLogIndex++
             // _this.ModalHelper.beforeClose();
           }
         } else {
           var baseUrl = window.location.protocol + "//" + window.location.host + "/internantionPayment.html?cf=1";
-          window.location.href=baseUrl;
+          window.location.href = baseUrl;
           clearInterval(_this.$refs.internationalBrand.timer)
         }
       },
-      IsShowVinCarDetail(){
-        var _this= this;
+      SeeVinDetailLogCount(){
+        var _this = this;
+        _this.ajax({
+          method: "POST",
+          url: resourceUrl + "/Common/SeeVinDetailLog",
+          dataType: "JSON",
+          data: {
+            vinCode: _this.vinCode,
+          },
+          success: function () {
+
+          }
+        })
+      },
+      IsShowVinCarDetail() {
+        var _this = this;
         _this.ajax({
           method: "POST",
           url: resourceUrl + "/Auto/IsShowVinCarDetail",
           dataType: "JSON",
-          success:function(str){
-            if(str.Header.ErrorCode==0){
+          success: function (str) {
+            if (str.Header.ErrorCode == 0) {
               _this.carDetailPower = str.Body;
-            }else {
+            } else {
               Toast(str.Header.Message)
             }
           }
@@ -746,30 +708,30 @@
         });
 
       },
-     /* goJumpPage(type, flag) {
-        var _this = this;
-        var url = window.location.protocol + "//" + window.location.host;
-        switch (flag) {
-          case 2:
-            url += "/vendorsConcer.html?edit=1&type=3&cf=1&v=" + _this.vinCode;
-            break; //智能产品目录页——编辑状态
-          case 3:
-            url += "/shopConcer.html?edit=1&type=2&v=" + _this.vinCode + '&backurl=native_CloseWebview';
-            break; //智能门店页——编辑状态
-          case 4:
-            //历史订单
-            url += "/orderHistory.html?type=2&vin=" + _this.vinCode + '&r=' + Math.random() + '&backurl=native_CloseWebview';
-            break;
-          default:
-            break;
-        }
-        _this.setupWebViewJavascriptBridge(function (bridge) {
-          bridge.callHandler('native_JumpUrl', {
-            url: url
-          }, function (response) {});
-        });
-        // window.location.href=url;
-      },*/
+      /* goJumpPage(type, flag) {
+         var _this = this;
+         var url = window.location.protocol + "//" + window.location.host;
+         switch (flag) {
+           case 2:
+             url += "/vendorsConcer.html?edit=1&type=3&cf=1&v=" + _this.vinCode;
+             break; //智能产品目录页——编辑状态
+           case 3:
+             url += "/shopConcer.html?edit=1&type=2&v=" + _this.vinCode + '&backurl=native_CloseWebview';
+             break; //智能门店页——编辑状态
+           case 4:
+             //历史订单
+             url += "/orderHistory.html?type=2&vin=" + _this.vinCode + '&r=' + Math.random() + '&backurl=native_CloseWebview';
+             break;
+           default:
+             break;
+         }
+         _this.setupWebViewJavascriptBridge(function (bridge) {
+           bridge.callHandler('native_JumpUrl', {
+             url: url
+           }, function (response) {});
+         });
+         // window.location.href=url;
+       },*/
 
       GetSelfShopinfo() {
         var _this = this;
@@ -823,9 +785,9 @@
       _this.getVinData(resourceUrl + "/auto/getautoinfobyvin", {
         "vinCode": _this.vin
       });
-     /* _this.getDatas(resourceUrl + "/usercenter/getbrandsbyuid", {
-        "dataType": 2, //全部关联品牌 0  常用品牌 2
-      });*/
+      /* _this.getDatas(resourceUrl + "/usercenter/getbrandsbyuid", {
+         "dataType": 2, //全部关联品牌 0  常用品牌 2
+       });*/
       setTimeout(function () {
         _this.initFlag = true;
       }, 500)
@@ -835,7 +797,7 @@
       _this.GetSelfShopinfo();
       //获取国际品牌
       // _this.getfamousbrands();
-      _this.LoadComplete(function(){
+      _this.LoadComplete(function () {
         _this.GetCjmlVinQueryPowerDetail();
         _this.IsShowVinCarDetail()
       })
@@ -948,9 +910,11 @@
     float: left;
     clear: left;
   }
+
   .bw-carInfoBox {
     overflow: hidden !important;
   }
+
   /* ios系统禁止长按菜单 start*/
   body {
     -webkit-touch-callout: none;
@@ -966,5 +930,7 @@
     user-select: none;
     /*用户是否能够选中文本*/
   }
+
   /* ios系统禁止长按菜单 end*/
+
 </style>

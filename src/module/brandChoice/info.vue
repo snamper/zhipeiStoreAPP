@@ -14,7 +14,7 @@
     <!-- 选择品牌-主体内容 -->
     <div class="fc-brandChoiceMain">
       <!-- 无结果 -->
-      <searchBrandList ref="searchBrandList" @refreshlist="refreshlist" />
+      <searchBrandList ref="searchBrandList" @refreshlist="refreshlist" @loadMore="searchBrandList_loadMore"/>
       <div class="fc-brandNoDataBox" v-if="searchList.length==0">
         <dl>
           <dt>
@@ -104,7 +104,8 @@
           desc: "和超级目录合作，为经销商提供整套的配件目录数据系统。",
           href: 'https://www.51cjml.com/brandinvite.html'
         },
-        inputshow: false
+        inputshow: false,
+        pageIndex:1 //第一页
       }
     },
     computed: {
@@ -136,28 +137,103 @@
       brandFeedbackDialog_commit() {
         this.brandFeedbackDialog_launched = false;
       },
+      searchBrandList_loadMore(listOneBusy){
+        this.$refs.searchBrandList.listOneBusy = true;
+        // listOneBusy=true;
+        this.pageIndex++
+        if(this.pageIndex >1){
+          this.searchData.pageIndex = this.pageIndex;
+          var _this = this;
+          this.SearchCJMLBrand(function(data){
+            _this.$refs.searchBrandList.listOneBusy = data;
+            // listOneBusy=data;
+          });
+        }
+        
+      },
       on_brandFeedbackDialog_confirm(data) {
         this.searchData = data;
-        this.searchDat(this.inputvalue);
+        // this.searchDat(this.inputvalue);
+        this.searchData.keyWord = this.inputvalue;
         this.inputshow = false;
-        var top = $('#focusBrandFilterid .fc-brandChoiceModeChild').height();
+        this.pageIndex =1
+        this.searchList=[];
+        this.searchData.pageIndex = this.pageIndex;
+        var _this = this;
+        this.SearchCJMLBrand(function(data){
+           _this.$refs.searchBrandList.listOneBusy = data;
+        });
 
       },
       searchDat(value) {
 
         this.inputvalue = value || "";
-        this.inputshow = true;
+        if(value){
+          this.inputshow = true;
+        }else{
+          this.inputshow = false;
+        }
+        // this.inputshow = true;
+        this.searchList=[]
+        this.searchData.keyWord = this.inputvalue;
+        this.pageIndex =1
+        this.searchData.pageIndex = this.pageIndex;
         var _this = this;
-        this.searchData.keyWord = value;
-        _this.ajax({
+        this.SearchCJMLBrand(function(data){
+           _this.$refs.searchBrandList.listOneBusy = data;
+        });
+
+      },
+      SearchCJMLBrand(callback){
+         var _this = this;
+         _this.ajax({
           method: "POST",
           url: resourceUrl + "/Common/SearchCJMLBrand",
           dataType: "JSON",
           data: _this.searchData,
           success: function (str) {
             if (str.Header.ErrorCode == 0) {
-              _this.searchList = str.Body.searchList;
-              _this.$refs.searchBrandList.setValue(_this.searchList);
+              _this.searchList = _this.searchList.concat(str.Body.searchList);
+              // _this.searchList = str.Body.searchList;
+
+              if(_this.searchList.length>0){
+                var arr= [];
+                for(var i=0;i<_this.searchList.length;i++){
+                  arr.push(_this.searchList[i].alphabet);
+                }
+                arr = _this.uniq(arr);
+                
+                var searchList =[]
+                for(var i=0;i<arr.length;i++){
+                  var obj={
+                    searchList:[]
+                  };
+                  for(var j=0;j<_this.searchList.length;j++){
+                    if(arr[i] ==_this.searchList[j].alphabet ){
+                      
+                      obj.alphabet = arr[i];
+                      obj.searchList.push(_this.searchList[j])
+                    }
+                  }
+                  searchList.push(obj);
+                }
+                 _this.$refs.searchBrandList.setValue(searchList);
+              }else {
+                 _this.$refs.searchBrandList.setValue([]);
+              }
+             
+
+
+              if(str.Body.searchList.length>0){
+                 if(callback){
+                  callback(false);
+                }
+              }else {
+
+                if(callback){
+                  callback(true);
+                }
+              }
             }
             setTimeout(() => {
               _this.content_padding_top = $(".fc-brandChoiceTop").height() + "px";
@@ -165,7 +241,16 @@
 
           }
         })
-
+      },
+      //数组去重
+      uniq(arr){
+        for (var i = 0;i < arr.length; i++) {
+          if(arr.indexOf(arr[i]) != i){
+            arr.splice(i,1);
+            i--;
+          }
+    }
+        return arr;
       },
       refreshlist() {
         this.searchDat(this.inputvalue);
@@ -183,26 +268,7 @@
         this.shareFriends_displaying = false;
       },
       nextpage() {
-				var flug=false;
-          if(this.searchList.length>0){
-            for(var i=0;i<this.searchList.length;i++){
-                if(this.searchList[i].brandList.length>0){
-                    for(var j=0;j<this.searchList[i].brandList.length;j++){
-                        if(this.searchList[i].brandList[j].isUserBrand){
-                            flug=true;
-                            
-                            break;
-                        }
-                    }   
-                }
-            }
-					}
-					if(flug){
 						this.$router.go(-1)
-					}else {
-						Toast('至少添加一个品牌');
-					}
-        
       }
     },
 

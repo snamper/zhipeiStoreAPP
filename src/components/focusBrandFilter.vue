@@ -1,70 +1,64 @@
 <template>
   <div>
     <!-- 选择品牌-方式 -->
-    <div class="fc-brandChoiceMode">
-      <div class="fc-brandChoiceModeTitle" v-if="title.length>0">
-        <span>{{title}}</span>
-      </div>
-    </div>
     <div class="fc-brandChoiceModeChild">
-      <!-- 品类筛选 -->
-      <div :class="{'fc-selected':tab_category.selected}" v-show="tab_category.isShow">
-        <p class="fc-screenModeChild" @click="on_tabCategory_click">
-          <b>{{tab_category.text}}</b>
-        </p>
-        <div class="fc-screenChildBox" v-show="valid_categoryGroups_show">
-          <div class="fc-screenChildName">
-            <p>品类</p>
-          </div>
-          <div class="fc-screenChildMain">
-            <div class="fc-screenChildMainBox">
-              <dl>
-                <dd>
-                  <a v-for="(oneGroup,index) in valid_categoryGroups" href="javascript:;" :class="{'fc-selected':oneGroup.selected}" @click="pickCategoryGroup(oneGroup)">{{oneGroup.categoryGroupName}}</a>
-                </dd>
-              </dl>
-            </div>
-          </div>
+      <!-- 筛选方式 -->
+      <div class="fc-screenConditionBox">
+        <!-- 品类 -->
+        <div :class="{'fc-selected':tab_category.selected, 'fc-openBox':show_valid_categorys_or_groups==1 && valid_categoryGroups.length>1}" :style="{'width':style_tab_width}"
+          v-show="tab_category.isShow" @click="on_tabCategory_click">
+          <p class="fc-screenModeChild">
+            <b>{{tab_category.text}}</b>
+          </p>
         </div>
-      </div>
-      <!-- 国际品牌筛选 -->
-      <div :class="{'fc-selected':tab_famous.selected}" v-show="tab_famous.isShow">
-        <p @click="on_tabFamous_click">
-          <b>{{tab_famous.text}}</b>
-        </p>
-      </div>
-      <!-- 周边在售筛选 -->
-      <div :class="{'fc-selected':tab_around.selected}" v-show="tab_around.isShow">
-        <p @click="on_tabAround_click">
-          <b>{{tab_around.text}}</b>
-        </p>
-      </div>
-      <!-- 首字母筛选 -->
-      <div :class="{'fc-selected':tab_alphabet.selected}" v-show="tab_alphabet.isShow">
-        <p class="fc-screenModeChild" @click="on_tabAlphabet_click">
-          <b>{{tab_alphabet.text}}</b>
-        </p>
-        <div class="fc-screenChildBox fc-letterScreenChildBox" v-show="valid_alphabet_show">
-          <div class="fc-screenChildName">
-            <p>首字母</p>
-          </div>
-          <div class="fc-screenChildMain" :style="{'left':style_alphabet_left}">
-            <div class=" fc-screenChildMainBox fc-letterBox">
-              <a v-for="(oneAlphabet,index) in valid_alphabet" href="javascript:;" :class="{'fc-selected':oneAlphabet==tab_alphabet.alphabet}" @click="pickAlphabet(oneAlphabet)">{{oneAlphabet
-                == '' ? '全部': oneAlphabet}}</a>
-            </div>
-          </div>
+        <!-- 国际品牌 -->
+        <div :class="{'fc-selected':tab_famous.selected}" :style="{'width':style_tab_width}" v-show="tab_famous.isShow" @click="on_tabFamous_click">
+          <p>
+            <b>{{tab_famous.text}}</b>
+          </p>
         </div>
-      </div>
-      <!-- 已添加筛选 -->
-      <div :class="{'fc-selected':tab_focused.selected}" v-show="tab_focused.isShow">
-        <p @click="on_tabFocused_click">
-          <b>{{tab_focused.text}}</b>
-        </p>
+        <!-- 周边在售 -->
+        <div :class="{'fc-selected':tab_around.selected}" :style="{'width':style_tab_width}" v-show="tab_around.isShow" @click="on_tabAround_click">
+          <p>
+            <b>{{tab_around.text}}</b>
+          </p>
+        </div>
+        <!-- 首字母 -->
+        <div :class="{'fc-selected':tab_alphabet.selected, 'fc-openBox':show_valid_alphabet}" :style="{'width':style_tab_width}" v-show="tab_alphabet.isShow"
+          @click="on_tabAlphabet_click">
+          <p class="fc-screenModeChild">
+            <b>{{tab_alphabet.text}}</b>
+          </p>
+        </div>
+        <!-- 新增品牌 -->
+        <div :class="{'fc-selected':tab_newbrand.selected}" :style="{'width':style_tab_width}" v-show="tab_newbrand.isShow" @click="on_tabNewBrand_click">
+          <p>
+            <b>{{tab_newbrand.text}}</b>
+          </p>
+        </div>
       </div>
 
-      <!-- 子品类筛选 -->
-      <div class="fc-categorySubBox" v-show="valid_categorys_show">
+      <!-- 品类组可选内容 -->
+      <div class="fc-screenChildMain" v-show="show_valid_categorys_or_groups==1 && valid_categoryGroups.length>1">
+        <div class="fc-screenChildMainBox">
+          <dl>
+            <dd>
+              <a v-for="(oneGroup,index) in valid_categoryGroups" href="javascript:;" :class="{'fc-selected':oneGroup.selected}" @click="pickCategoryGroup(oneGroup)">{{oneGroup.categoryGroupName}}</a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <!-- 首字母可选内容 -->
+      <div class="fc-screenChildMain" v-show="show_valid_alphabet">
+        <div class="fc-screenChildMainBox fc-letterBox">
+          <a v-for="(oneAlphabet,index) in valid_alphabet" href="javascript:;" :class="{'fc-selected':oneAlphabet==tab_alphabet.alphabet}" @click="pickAlphabet(oneAlphabet)">{{oneAlphabet
+            == '' ? '全部': oneAlphabet}}</a>
+        </div>
+      </div>
+
+      <!-- 品类可选内容 -->
+      <div class="fc-categorySubBox" v-show="show_valid_categorys_or_groups==2 && valid_categorys.length>2">
         <ul>
           <li v-for="(oneCategory,index) in valid_categorys" :class="{'fc-selected':oneCategory.categoryId==tab_category.categoryId}" @click="pickCategory(oneCategory)">{{oneCategory.categoryName}}</li>
         </ul>
@@ -91,13 +85,13 @@
     props: [],
     data() {
       return {
-        mode: 0, //0: 无固化 1:固化品类 2:固化国际品牌 3:固化周边 4:固化首字母 5:固化已添加
+        mode: 0, //0: 无固化 1:固化品类 2:固化国际品牌 3:固化周边 4:固化首字母 5:固化新增品牌
 
         C_MODE_CATEGORY: 1,
         C_MODE_FAMOUS: 2,
         C_MODE_AROUND: 3,
         C_MODE_ALPHABET: 4,
-        C_MODE_FOCUSED: 5,
+        C_MODE_NEWBRAND: 5,
 
         tab_category: { //TAB_品类
           text: "品类",
@@ -122,27 +116,25 @@
           alphabet: '',
           isShow: true,
         },
-        tab_focused: { //TAB_已添加
-          text: "已添加",
+        tab_newbrand: { //TAB_新增品牌
+          text: "新增品牌",
           selected: false,
           isShow: true,
         },
 
-        title: '', //标题
-
         base_category_group: [],
 
-        valid_categoryGroups_show: false,
-        valid_categorys_show: false,
+        show_valid_categorys_or_groups: 0, //0:品类/品类组都不展示 1:展示品类组 2:展示品类
+        show_valid_alphabet: false,
+
         valid_categoryGroups: [], //可选品类组
         valid_categorys: [], //可选品类
 
-        valid_alphabet_show: false,
         valid_alphabet: ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
           'Y', 'Z'
         ], //可选首字母
 
-        style_alphabet_left: "-6.04rem",
+        style_tab_width: "1.6rem",
 
       };
     },
@@ -158,50 +150,50 @@
     methods: {
       active(input) {
         var _this = this;
-        this.mode = input.mode || 0;
+        this.mode = Number(input.mode || 0);
+        if (this.mode > 0) this.style_tab_width = "2.1rem";
+
         this.initBaseCategroyGroup().then(function () {
-          switch (Number(_this.mode)) {
+          switch (_this.mode) {
             case _this.C_MODE_CATEGORY:
               var findResult = _this.base_category_group.find(function (o) {
                 return o.categoryGroupId == input.mode_categoryGroup || 0
               });
               var text = findResult ? findResult.categoryGroupName : "未知";
-              _this.title = text;
+              _this.setTitle(text);
 
               _this.tab_category.selected = true;
               _this.tab_category.isShow = false;
               _this.tab_category.categoryGroupId = input.mode_categoryGroup || 0;
               _this.tab_category.text = text;
               _this.launchValidCategorys(_this.tab_category.categoryGroupId);
-              _this.style_alphabet_left = "-4.06rem";
               break;
 
             case _this.C_MODE_FAMOUS:
-              _this.title = "国际品牌";
+              _this.setTitle("国际品牌");
               _this.tab_famous.selected = true;
               _this.tab_famous.isShow = false;
-              _this.style_alphabet_left = "-4.06rem";
               break;
 
             case _this.C_MODE_AROUND:
-              _this.title = "周边在售";
+              _this.setTitle("周边在售");
               _this.tab_around.selected = true;
               _this.tab_around.isShow = false;
-              _this.style_alphabet_left = "-4.06rem";
               break;
 
             case _this.C_MODE_ALPHABET:
+              _this.setTitle("首字母 " + input.mode_alphabet || '');
               _this.title = "首字母 " + input.mode_alphabet || '';
               _this.tab_alphabet.selected = true;
               _this.tab_alphabet.isShow = false;
-              _this.tab_alphabet.text = "　" + (input.mode_alphabet || '') + "　";
+              _this.tab_alphabet.text = input.mode_alphabet || '';
               _this.tab_alphabet.alphabet = input.mode_alphabet || '';
               break;
 
-            case _this.C_MODE_FOCUSED:
-              _this.title = "已添加";
-              _this.tab_focused.selected = true;
-              _this.tab_focused.isShow = false;
+            case _this.C_MODE_NEWBRAND:
+              _this.setTitle("新增品牌");
+              _this.tab_newbrand.selected = true;
+              _this.tab_newbrand.isShow = false;
               break;
 
             default:
@@ -252,38 +244,52 @@
         if (this.tab_famous.selected) result.filterType.push(this.C_MODE_FAMOUS);
         if (this.tab_around.selected) result.filterType.push(this.C_MODE_AROUND);
         if (this.tab_alphabet.selected) result.filterType.push(this.C_MODE_ALPHABET);
-        if (this.tab_focused.selected) result.filterType.push(this.C_MODE_FOCUSED);
+        if (this.tab_newbrand.selected) result.filterType.push(this.C_MODE_NEWBRAND);
         result.categoryGroupId = this.tab_category.categoryGroupId;
         result.categoryId = this.tab_category.categoryId;
         result.alphabet = this.tab_alphabet.alphabet;
         return result;
       },
 
+      //重置二级可选区域
+      resetSubFilter() {
+        this.show_valid_alphabet = false;
+        this.show_valid_categorys_or_groups = 2;
+      },
       on_tabCategory_click() {
         if (this.mode == this.C_MODE_CATEGORY) return;
-        this.valid_alphabet_show = false;
+        if (this.show_valid_categorys_or_groups == 1) {
+          this.show_valid_categorys_or_groups = 2;
+          return;
+        }
+        this.resetSubFilter();
         this.launchValidCategoryGroups();
       },
       on_tabFamous_click() {
         if (this.mode == this.C_MODE_FAMOUS) return;
+        this.resetSubFilter();
         this.tab_famous.selected = !this.tab_famous.selected;
-        this.valid_alphabet_show = false;
         this.$emit("confirm", this.buildResult());
       },
       on_tabAround_click() {
         if (this.mode == this.C_MODE_AROUND) return;
+        this.resetSubFilter();
         this.tab_around.selected = !this.tab_around.selected;
-        this.valid_alphabet_show = false;
         this.$emit("confirm", this.buildResult());
       },
       on_tabAlphabet_click() {
         if (this.mode == this.C_MODE_ALPHABET) return;
-        this.valid_alphabet_show = true;
+        if (this.show_valid_alphabet) {
+          this.show_valid_alphabet = false;
+          return;
+        }
+        this.resetSubFilter();
+        this.show_valid_alphabet = true;
       },
-      on_tabFocused_click() {
-        if (this.mode == this.C_MODE_FOCUSED) return;
-        this.tab_focused.selected = !this.tab_focused.selected;
-        this.valid_alphabet_show = false;
+      on_tabNewBrand_click() {
+        if (this.mode == this.C_MODE_NEWBRAND) return;
+        this.resetSubFilter();
+        this.tab_newbrand.selected = !this.tab_newbrand.selected;
         this.$emit("confirm", this.buildResult());
       },
 
@@ -302,8 +308,7 @@
           })
         });
         this.valid_categoryGroups = viewModel;
-        this.valid_categoryGroups_show = true;
-        this.valid_categorys_show = false;
+        this.show_valid_categorys_or_groups = 1;
       },
 
       launchValidCategorys(categoryGroupId) {
@@ -315,6 +320,8 @@
           data: {
             categoryGroupId: categoryGroupId,
           },
+          beforeSend: function () {},
+          complete: function () {},
           success: function (res) {
             if (res.Header.ErrorCode != 0) {
               Toast(res.Header.Message)
@@ -325,23 +332,15 @@
               categoryName: "全部",
               selected: _this.tab_category.categoryId == 0
             }];
-            if (res.Body.length > 1) {
-              res.Body.forEach(o => {
-                viewModel.push({
-                  categoryId: o.categoryId,
-                  categoryName: o.categoryName,
-                  selected: _this.tab_category.categoryId == o.categoryId
-                })
-              });
-              _this.valid_categorys = viewModel;
-              _this.valid_categoryGroups_show = false;
-              _this.valid_categorys_show = true;
-            } else {
-              //只有1个品类, 则不用展示了
-              _this.valid_categorys = viewModel;
-              _this.valid_categoryGroups_show = false;
-              _this.valid_categorys_show = false;
-            }
+            res.Body.forEach(o => {
+              viewModel.push({
+                categoryId: o.categoryId,
+                categoryName: o.categoryName,
+                selected: _this.tab_category.categoryId == o.categoryId
+              })
+            });
+            _this.valid_categorys = viewModel;
+            _this.show_valid_categorys_or_groups = 2;
           }
         });
       },
@@ -356,7 +355,8 @@
         this.tab_category.categoryGroupId = oneCategoryGroup.categoryGroupId;
         this.tab_category.categoryId = 0;
         this.$emit("confirm", this.buildResult());
-        this.valid_categoryGroups_show = false;
+        this.show_valid_categorys_or_groups = 2;
+        this.valid_categorys = [];
         if (oneCategoryGroup.categoryGroupId > 0) {
           this.launchValidCategorys(oneCategoryGroup.categoryGroupId);
         }
@@ -377,11 +377,11 @@
           this.tab_alphabet.selected = false;
           this.tab_alphabet.alphabet = '';
         } else {
-          this.tab_alphabet.text = "　" + alphabet + "　";
+          this.tab_alphabet.text = alphabet;
           this.tab_alphabet.selected = true;
           this.tab_alphabet.alphabet = alphabet;
         }
-        this.valid_alphabet_show = false;
+        this.show_valid_alphabet = false;
         this.$emit("confirm", this.buildResult());
       },
     },
@@ -391,7 +391,7 @@
 
 
 <style scoped>
-  选择品牌的方式部分的样式 .fc-brandChoiceMode {
+  .fc-brandChoiceMode {
     width: 100%;
     float: left;
     clear: left;
@@ -400,7 +400,7 @@
   .fc-brandChoiceModeTitle {
     width: 92%;
     margin: 0 4%;
-    border-bottom: 1px solid #ececec;
+    /* border-bottom: 1px solid #ececec; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -420,19 +420,31 @@
 
   .fc-brandChoiceModeChild {
     width: 100%;
-    padding: .32rem 0 .32rem .4rem;
+    padding: .32rem 0 0 .4rem;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
     float: left;
     clear: left;
     background: #fff;
   }
 
-  .fc-brandChoiceModeChild>div {
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox {
+    width: 100%;
+    position: relative;
+    z-index: 6;
+    float: left;
+    clear: left;
+  }
+
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div {
     width: 1.6rem;
     height: .64rem;
     background: #f8f8f8;
     border: 1px solid #f8f8f8;
     border-radius: .08rem;
     margin-right: .28rem;
+    margin-bottom: .32rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -441,7 +453,7 @@
     clear: none;
   }
 
-  .fc-brandChoiceModeChild>div>p {
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div>p {
     width: auto;
     font-size: .32rem;
     line-height: .56rem;
@@ -451,7 +463,7 @@
     clear: none;
   }
 
-  .fc-brandChoiceModeChild>div>p>b {
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div>p>b {
     width: auto;
     max-width: 1.6rem;
     font-weight: normal;
@@ -462,80 +474,47 @@
     clear: left;
   }
 
-  .fc-brandChoiceModeChild>div>p.fc-screenModeChild {
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div>p.fc-screenModeChild {
     background: url(../assets/images/arrow_screen.png) no-repeat right center;
     background-size: auto .08rem;
     padding: 0 .28rem 0 0;
   }
 
-  .fc-brandChoiceModeChild>div.fc-selected {
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div.fc-selected {
     background: #FFFAFA url(../assets/images/close_rd.png) no-repeat right bottom;
     background-size: .32rem;
     border: 1px solid #F51F1F;
   }
 
-  .fc-brandChoiceModeChild>div.fc-selected>p.fc-screenModeChild {
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div.fc-selected>p.fc-screenModeChild {
     width: auto;
     padding-left: 0;
     background: url(../assets/images/arrow_screenRed.png) no-repeat right center;
+    background-size: auto .08rem;
   }
 
-  .fc-brandChoiceModeChild>div.fc-selected>p.fc-screenModeChild>b {
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div.fc-selected>p.fc-screenModeChild>b {
     max-width: 1rem;
   }
 
-  .fc-brandChoiceModeChild>div.fc-selected>p {
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div.fc-selected>p {
     color: #F51F1F;
   }
 
-  .fc-screenChildBox {
-    width: 100%;
-    position: absolute;
-    left: -1px;
-    top: -1px;
-    z-index: 3;
-  }
-
-  .fc-screenChildName {
-    width: 1.6rem;
-    height: .98rem;
+  .fc-brandChoiceModeChild>div.fc-screenConditionBox>div.fc-openBox {
+    height: .96rem;
     background: #fff;
-    border-top: 1px solid #d8d8d8;
-    border-left: 1px solid #d8d8d8;
-    border-right: 1px solid #d8d8d8;
+    padding-bottom: .32rem;
+    margin-bottom: 0;
+    border: 1px solid #999;
+    border-bottom: 1px solid #fff;
     border-radius: .08rem .08rem 0 0;
-    padding: .08rem 0 .4rem;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 24;
-  }
-
-  .fc-screenChildName>p {
-    width: auto;
-    background: url(../assets/images/arrow_screen.png) no-repeat right center;
-    background-size: auto .08rem;
-    padding: 0 .28rem 0 0;
-    font-size: .32rem;
-    line-height: .56rem;
-    text-align: center;
-    color: #343434;
     float: left;
     clear: none;
-  }
-
-  .fc-screenChildName>p>b {
-    width: auto;
-    max-width: 1rem;
-    font-weight: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    float: left;
-    clear: left;
   }
 
   .fc-screenChildMain {
@@ -544,8 +523,9 @@
     border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #d8d8d8;
     position: absolute;
-    left: -.4rem;
-    top: 0.96rem;
+    left: 0;
+    top: 1.24rem;
+    z-index: 2;
   }
 
   .fc-screenChildMainBox {
@@ -671,8 +651,10 @@
     width: 95.8333%;
     height: auto;
     background: #fff;
-    margin-top: .32rem;
-    border-top: 1px solid #eee;
+    border: 0;
+    border-top: 1px solid #e8e8e8;
+    border-radius: 0;
+    margin-bottom: 0.28rem;
     display: block;
     float: left;
     clear: left;

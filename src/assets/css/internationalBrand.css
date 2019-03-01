@@ -178,6 +178,8 @@
 /*修理厂端常规目录*/
 .es-followBrandBox {
   width: 100%;
+	border-bottom: 1px solid #f3f5f7;
+	position: relative;
   float: left;
   clear: left;
 }
@@ -187,6 +189,7 @@
   clear: left;
 }
 .es-followBrandBox ul li {
+	height: 2.6rem;
   width: 25%;
   border-right: 1px solid #f3f5f7;
   border-bottom: 1px solid #f3f5f7;
@@ -220,16 +223,23 @@
   clear: left;
 }
 .ec-modularBox {
-  width: 100%;
+	width: 100%;
+	height: auto;
+	
+
   background: #fff;
   margin-bottom: .4rem;
-  box-shadow: 0 0 .2rem rgba(0,0,0,0.1);
+	box-shadow: 0 0 .2rem rgba(0,0,0,0.1);
+	position: relative;
+
   border-radius: .2rem;
   overflow: hidden;
   float: left;
   clear: left;
 }
-
+.fd-mofularBox {
+	min-height: 9rem;
+}
 /*轮播眼样式*/
 .mint-swipe {
   height: 200px;
@@ -419,7 +429,7 @@
 
 /*0220新增样式*/
 .es-followBrandBox ul li {
-	padding: .36rem 0;
+	padding: .36rem 0 0;
 	position: relative;
 }
 .es-followBrandBox ul li>span.es-brandCataloguePic {
@@ -498,6 +508,11 @@
 	background-size: auto .32rem;
 	margin-right: .4rem;
 }
+
+.fc-nearbyBrandBox .es-followBrandBox ul li {
+	height: 3.6rem;
+}
+
 .es-followBrandBox ul li>span.fc-buttonAdd {
 	width: 100%;
 	padding-top: .24rem;
@@ -537,6 +552,7 @@
 
 /*0221新品招商*/
 .fc-advertisementBox {
+	margin-top: -1px;
 	width: 100%;
 	float: left;
 	clear: left;
@@ -622,5 +638,234 @@
 	text-align: left;
 	color: #0B85F5;
 	float: left;
+	clear: none;
+}
+
+/*目录品牌展示样式*/
+/*目录品牌展示样式*/
+.fc-modularBrandListBox {
+	width: 100%;
+	height: auto;
+	min-height: 7.8rem;
+	position: relative;
+	float: left;
+	clear: left;
+}
+.fc-adPosition {
+	width: 100%;
+	height: 9.88rem;
+    overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+.fc-adPosition>span {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.fc-adPosition>span>img {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+.fc-closeAdBox {
+	width: auto;
+	padding: .24rem 0;
+	background: rgba(0,0,0,0.78);
+	border-radius: .12rem;
+	position: absolute;
+	right: .2rem;
+	top: .2rem;
+}
+.fc-closeAdBox>span {
+	width: auto;
+	padding: 0 .24rem;
+	border-right: 1px solid #fff;
+	font-size: .32rem;
+	line-height: .4rem;
+	text-align: center;
+	color: #f1c40f;
+	float: left;
+	clear: left;
+}
+.fc-closeAdBox>a {
+	width: auto;
+	height: .4rem;
+	padding: 0 .48rem 0 .2rem;
+	margin-right: .2rem;
+	background: url(../images/icon_closeWhite.png) no-repeat right center;
+	background-size: .32rem;
+	font-size: .32rem;
+	line-height: .4rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: none;
+}
+
+
+/*扫码结果-展开收起更多品牌*/
+.fd-moreButton {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	float: left;
+	clear: left;
+}
+.fd-moreButton>a {
+	width: 100%;
+	height: .96rem;
+	background: #f8f8f8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.fd-moreButton>a>b {
+	width: auto;
+	background: url(../images/icon_openBrand.png) no-repeat left center;
+	background-size: .32rem;
+	padding-left: .52rem;
+	font-size: .36rem;
+	font-weight: normal;
+	line-height: .64rem;
+	text-align: left;
+	color: #0B85F5;
+	float: left;
+	clear: none;
+}
+.fd-moreButton>a>b.fd-retractButton {
+	background: url(../images/icon_retractBrand.png)no-repeat left center;
+	background-size: .32rem;
+}
+
+/*0226修改样式如下*/
+.es-followBrandBox ul li.fc-brandBig {
+	/* height: auto; */
+	position: relative;
+}
+.es-followBrandBox ul li.fc-brandBig>span.es-brandCataloguePic {
+	display: none;
+}
+.es-followBrandBox ul li.fc-brandBig>p.es-brandCatalogueName {
+	height: 1.84rem;
+	margin-top: 0;
+	font-size: .44rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.es-followBrandBox ul li>span.fd-labelBox {
+    width: auto;
+    height: .44rem;
+    padding: 0 .08rem;
+    background: url(../images/label_purchase.png) no-repeat top center;
+    background-size: 100% .44rem;
+    font-size: .28rem;
+    line-height: .36rem;
+    text-align: center;
+    color: #fff;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: .16rem;
+    z-index: 3;
+}
+
+
+/*添加品牌和国际品牌的引导*/
+.fd-addtoGuideMack {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.68);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 8;
+}
+.fd-addtoGuide {
+	width: 100%;
+	
+	position: absolute;
+	left: 0;
+	top: 1.12rem;
+	z-index: 8;
+}
+.fd-addtoGuide>dl {
+	width: 100%;
+	height: auto;
+	background: url(../images/pic_addtoGuide.png) no-repeat left top;
+	background-size: auto 4.56rem;
+	padding-top: 4.68rem;
+	float: left;
+	clear: left;
+}
+.fd-addtoGuide>dl>dt {
+	width: 100%;
+	float: left;
+	clear: left;
+}
+.fd-addtoGuide>dl>dt>p {
+	width: 100%;
+	font-size: .6rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	clear: left;
+}
+.fd-addtoGuide>dl>dt>span {
+	width: 100%;
+	font-size: .48rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #ff0;
+	float: left;
+	clear: left;
+}
+.fd-addtoGuide>dl>dd {
+	width: 100%;
+	padding-top: .48rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	clear: left;
+}
+.fd-addtoGuide>dl>dd>a {
+	width: 2.56rem;
+	border-radius: .4rem;
+	background: #fff;
+	font-size: .36rem;
+	line-height: .8rem;
+	text-align: center;
+	color: #525252;
+	float: left;
+	clear: none;
+}
+
+/* vip续费提醒 */
+.ec-modularTitle>span.fe-renewBox {
+	margin-left: .32rem;
+	font-size: .36rem;
+	float: left;
+	clear: none;
+}
+.ec-modularTitle>span.fe-renewBox>b {
+	font-weight: normal;
+}
+.ec-modularTitle>span.fe-renewBox>a {
+	width: auto;
+	height: .64rem;
+	margin: .24rem 0 0 .32rem;
+	padding: 0 .2rem;
+	background: #e74c3c;
+	border-radius: .08rem;
+	line-height: .64rem;
+	color: #fff;
+	float: right;
 	clear: none;
 }

@@ -3,7 +3,8 @@
 
     <!-- 选择品牌-顶部固定 -->
     <div class="fc-brandChoiceTop">
-      <searchInput ref="searchInput" v-on:searchDat="searchDat" />
+      <searchInput ref="searchInput" v-on:searchDat="searchDat" v-on:focus="searchInput_focus" />
+      <!-- <focusBrandFilter v-show="!focusBrandFilter_show" id="focusBrandFilter" ref='focusBrandFilter' @confirm="on_brandFeedbackDialog_confirm"></focusBrandFilter> -->
     </div>
 
     <!-- position: fixed;
@@ -28,7 +29,7 @@
             <li><span class="fc-internationalIcon" @click="tochild(2)">国际品牌</span></li>
             <li><span class="fc-nearbyIcon" @click="tochild(3)">周边在售</span></li>
             <li><span class="fc-letterIcon" @click="initalphabetPicker">首字母查找</span></li>
-            <li><span class="fc-addedIcon" @click="tochild(5)">已添加</span></li>
+            <li><span class="fc-newIcon" @click="tochild(5)">新增品牌</span></li>
           </ul>
         </div>
         <div class="fc-categoryListTitle">按品类查找</div>
@@ -48,13 +49,13 @@
           </ul>
         </div>
       </div>
-      <focusBrandFilter id="focusBrandFilter" ref='focusBrandFilter' @confirm="on_brandFeedbackDialog_confirm"></focusBrandFilter>
+      <focusBrandFilter v-show="focusBrandFilter_show" id="focusBrandFilter" ref='focusBrandFilter' @confirm="on_brandFeedbackDialog_confirm"></focusBrandFilter>
       <!-- 选择品牌-方式 -->
 
 
 
 
-      <searchBrandList id="searchBrandListid" ref="searchBrandList" @refreshlist="refreshlist" />
+      <searchBrandList id="searchBrandListid" ref="searchBrandList" @refreshlist="refreshlist" @loadMore="searchBrandList_loadMore" />
       <div class="fc-brandNoDataBox" v-if="searchList.length==0">
         <dl>
           <dt>
@@ -157,8 +158,11 @@
           desc: "和超级目录合作，为经销商提供整套的配件目录数据系统。",
           href: 'https://www.51cjml.com/brandinvite.html'
         },
-        inputshow: true,
+        inputshow: false,
         nodataInput:true,
+        pageIndex:1, //第一页
+        focusBrandFilter_show:false, //默认隐藏滚动到顶部显示
+
       }
     },
     created() {
@@ -170,16 +174,30 @@
       this.$refs.focusBrandFilter.active({
         mode: 0,
       });
+      var _this = this;
       // this.searchData= this.$refs.focusBrandFilter.getResult();
       $(window).scroll(function (e) {
         // var top = $('#focusBrandFilter .fc-brandChoiceModeChild').offset().top-$(window).scrollTop();
         var listtop = $('#searchBrandListid').offset().top - $(window).scrollTop();
         console.log(listtop)
-        if (listtop > 86) {
-          $('#focusBrandFilter .fc-brandChoiceModeChild').removeClass("postionclass");
-        } else {
-          $('#focusBrandFilter .fc-brandChoiceModeChild').addClass("postionclass");
+        if(this.nodataInput){
+          if (listtop > 86) {
+            $('#focusBrandFilter .fc-brandChoiceModeChild').removeClass("postionclass");
+          } else {
+            _this.focusBrandFilter_show=true;
+            $('#focusBrandFilter .fc-brandChoiceModeChild').addClass("postionclass");
+          }
+        }else {
+          if (listtop > 40) {
+            $('#focusBrandFilter .fc-brandChoiceModeChild').removeClass("postionclass");
+            
+          } else {
+            _this.focusBrandFilter_show=true;
+            $('#focusBrandFilter .fc-brandChoiceModeChild').addClass("postionclass");
+            // $('#searchBrandListid').css('')
+          }
         }
+        
         // debugger;
       })
     },
@@ -235,22 +253,75 @@
       brandFeedbackDialog_commit() {
         this.brandFeedbackDialog_launched = false;
       },
+      //搜索組建获取焦点
+      searchInput_focus(val){
+        this.nodataInput = false;
+        this.focusBrandFilter_show = true;
+      },
       refreshlist() {
-
-        this.searchDat(this.inputvalue);
+        var _this = this;
+        this.pageIndex =1
+        this.searchList=[];
+        this.searchData.pageIndex = this.pageIndex;
+        this.SearchCJMLBrand(function(data){
+          _this.$refs.searchBrandList.listOneBusy = data;
+        });
+      },
+      searchBrandList_loadMore(listOneBusy){
+        this.$refs.searchBrandList.listOneBusy = true;
+        // listOneBusy=true;
+        this.pageIndex++
+        if(this.pageIndex >1){
+          this.searchData.pageIndex = this.pageIndex;
+          var _this = this;
+          this.SearchCJMLBrand(function(data){
+            _this.$refs.searchBrandList.listOneBusy = data;
+            // listOneBusy=data;
+          });
+        }
+        
       },
       on_brandFeedbackDialog_confirm(data) {
+        // debugger;
         this.searchData = data;
+        this.searchData.keyWord = this.inputvalue;
+
         this.inputshow = false;
-        this.searchDat(this.inputvalue);
-        this.nodataInput = true;
-      },
-      searchDat(value) {
-        this.inputshow = true;
-        this.nodataInput = false;
-        this.inputvalue = value || "";
+        this.pageIndex =1
+        this.searchList=[];
+        this.searchData.pageIndex = this.pageIndex;
         var _this = this;
-        this.searchData.keyWord = value;
+        this.SearchCJMLBrand(function(data){
+           _this.$refs.searchBrandList.listOneBusy = data;
+        });
+      },
+      searchDat(value,type) {
+        if(type==0){
+          this.nodataInput = true;
+        }else {
+          this.nodataInput = false;
+        }
+        if(value){
+          this.inputshow = true;
+        }else{
+          this.inputshow = false;
+        }
+        
+        // debugger;
+        this.inputvalue = value || "";
+        this.searchList=[];
+        this.searchData.keyWord = this.inputvalue;
+        this.pageIndex =1
+        this.searchData.pageIndex = this.pageIndex;
+        var _this = this;
+        this.SearchCJMLBrand(function(data){
+            _this.$refs.searchBrandList.listOneBusy = data;
+        });
+       
+        
+      },
+      SearchCJMLBrand(callback){
+        var _this = this;
         _this.ajax({
           method: "POST",
           url: resourceUrl + "/Common/SearchCJMLBrand",
@@ -258,12 +329,58 @@
           data: _this.searchData,
           success: function (str) {
             if (str.Header.ErrorCode == 0) {
-              _this.searchList = str.Body.searchList;
-              _this.$refs.searchBrandList.setValue(_this.searchList);
+              _this.searchList = _this.searchList.concat(str.Body.searchList);
+
+              if(_this.searchList.length>0){
+                var arr= [];
+                for(var i=0;i<_this.searchList.length;i++){
+                  arr.push(_this.searchList[i].alphabet);
+                }
+                arr = _this.uniq(arr);
+                
+                var searchList =[]
+                for(var i=0;i<arr.length;i++){
+                  var obj={
+                    searchList:[]
+                  };
+                  for(var j=0;j<_this.searchList.length;j++){
+                    if(arr[i] ==_this.searchList[j].alphabet ){
+                      
+                      obj.alphabet = arr[i];
+                      obj.searchList.push(_this.searchList[j])
+                    }
+                  }
+                  searchList.push(obj);
+                }
+                _this.$refs.searchBrandList.setValue(searchList);
+              }else {
+                _this.$refs.searchBrandList.setValue([]);
+              }
+              if(str.Body.searchList.length>0){
+                 if(callback){
+                  callback(false);
+                }
+              }else {
+
+                if(callback){
+                  callback(true);
+                }
+                $('#focusBrandFilter .fc-screenChildMain').css('margin-bottom','2rem')
+              }
+              
             }
           }
         })
-
+      },
+      //数组去重
+      uniq(arr){
+        for (var i = 0;i < arr.length; i++) {
+          if(arr.indexOf(arr[i]) != i){
+            arr.splice(i,1);
+            i--;
+          }
+    }
+        return arr;
       },
       // 邀请品牌厂商
       shareBrandShop() {
@@ -287,25 +404,9 @@
         this.shareFriends_displaying = false;
       },
       nextpage() {
-          var flug=false;
-          if(this.searchList.length>0){
-            for(var i=0;i<this.searchList.length;i++){
-                if(this.searchList[i].brandList.length>0){
-                    for(var j=0;j<this.searchList[i].brandList.length;j++){
-                        if(this.searchList[i].brandList[j].isUserBrand){
-                            flug=true;
-                            
-                            break;
-                        }
-                    }   
-                }
-            }
-          }
-          if(flug){
+         
             window.history.go(-1);
-          }else {
-              Toast('至少添加一个品牌')
-          }
+         
         
       }
     },
